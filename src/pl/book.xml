@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+[
+<!ENTITY preface SYSTEM "preface.xml">
+<!ENTITY ch01 SYSTEM "ch01-introduction.xml">
+<!ENTITY ch02 SYSTEM "ch02-preparation.xml">
+<!ENTITY ch03 SYSTEM "ch03-working.xml">
+<!ENTITY ch04 SYSTEM "ch04-tracking.xml">
+<!ENTITY ch05 SYSTEM "ch05-administration.xml">
+<!ENTITY ch06 SYSTEM "ch06-customization.xml">
+<!ENTITY appa SYSTEM "appa-resources.xml">
+<!ENTITY appb SYSTEM "appb-licenses.xml">
+]>
+
+<book id="webissues" lang="pl">
+
+<bookinfo>
+  <title>Podręcznik WebIssues</title>
+  <subtitle>Wersja 1.0-beta1</subtitle>
+  <copyright>
+    <year>2007-2011</year>
+    <holder>Zespół WebIssues</holder>
+  </copyright>
+  <legalnotice>
+    <para>Udziela się zezwolenia na kopiowanie, rozpowszechnianie i modyfikację tego dokumentu zgodnie z zasadami Licencji GNU Wolnej Dokumentacji w wersji 1.2 lub dowolnej późniejszej wersji opublikowanej przez Free Software Foundation; bez Części Stałych, bez Treści Przedniej Okładki oraz bez Treści Tylnej Okładki. Kopia licencji załączona jest w części zatytułowanej <quote>Licencja GNU Wolnej Dokumentacji</quote>.</para>
+  </legalnotice>
+</bookinfo>
+
+&preface;
+&ch01;
+&ch02;
+&ch03;
+&ch04;
+&ch05;
+&ch06;
+&appa;
+&appb;
+
+</book>
