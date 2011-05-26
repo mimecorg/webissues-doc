@@ -5,6 +5,9 @@
 
 <xsl:param name="html.stylesheet">common/style.css</xsl:param>
 
+<xsl:param name="make.clean.html" select="1"/>
+<xsl:param name="docbook.css.source"></xsl:param>
+
 <xsl:param name="logo.path">common/webissues.png</xsl:param>
 <xsl:param name="logo.name">WebIssues</xsl:param>
 
@@ -57,6 +60,7 @@
               </h1>
             </div>
             <div id="header-right">
+              <xsl:apply-templates select="/book/bookinfo/subtitle[1]" mode="titlepage.mode" />
             </div>
           </div>
           <div id="infobar">

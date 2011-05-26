@@ -1,6 +1,131 @@
 <preface id="webissues.preface">
 <title>Przedmowa</title>
 
-<para>TODO</para>
+<sect1 id="webissues.preface.about">
+<title>O podręczniku</title>
+
+<para>Niniejszy podręcznik przeznaczony jest dla użytkowników i administratorów systemu wspomagającego pracę zespołową WebIssues. Został on napisany zarówno z myślą o osobach, które nigdy nie korzystały z oprogramowania do śledzenia spraw i systemów wspomagających pracę zespołową, jak i tych, które mają już doświadczenie z podobnym oprogramowaniem.</para>
+
+<para>Podręcznik ten został napisany przez twórców systemu WebIssues, z uwzględnieniem pytań i uwag zgłaszanych przez użytkowników w ciągu kilku lat rozwoju tego systemu. Naszym celem było stworzenie jak najbardziej użytecznej i pomocnej dokumentacji. Dlatego, w odróżnieniu od poprzedniej wersji, koncentruje się on bardziej na najczęściej wykonywanych zadaniach, a nie na opisie poszczególnych okien i funkcji.</para>
+
+<para>Podobnie jak cały system WebIssues, niniejszy podręcznik jest oparty na wolnej licencji, co oznacza, że może on być swobodnie modyfikowany i rozpowszechniany. Zachęcamy zatem do przesyłania uwag oraz propozycji ulepszeń.</para>
+
+<para>Aktualnie trwają jeszcze prace nad tym podręcznikiem, więc w niektórych miejscach może on być niekompletny lub mało szczegółowy.</para>
+
+</sect1>
+
+<sect1 id="webissues.preface.howtoread">
+<title>Jak czytać podręcznik</title>
+
+<para>Jeśli jesteś odpowiedzialny za administrację i wdrożenie systemu, powinieneś generalnie przeczytać ten podręcznik po kolei, od początku do końca, gdyż przeprowadzi cię przez cały proces przygotowania systemu do pracy i kolejno wprowadzi w różne zagadnienia związane z użytkowaniem i administrowaniem systemem.</para>
+
+<para>Użytkownicy końcowi powinni przeczytać przede wszystkim <xref linkend="webissues.intro"/> oraz <xref linkend="webissues.work"/> i <xref linkend="webissues.track"/>, które omawiają podstawy pracy z systemem WebIssues.</para>
+
+<para>Jeśli jesteś zaawansowanym użytkownikiem i chcesz od razu przystąpić do pracy, możesz czytać ten podręcznik w dowolnej kolejności. Aby uzyskać informacje na interesujący cię temat, skorzystaj z zamieszczonego na początku spisu treści.</para>
+
+</sect1>
+
+<sect1 id="webissues.preface.conventions">
+<title>Stosowane konwencje</title>
+
+<para>Aby ułatwić czytanie tego podręcznika, zostały w nim zastosowane następujące konwencje typograficzne:</para>
+
+<variablelist>
+  <varlistentry>
+    <term><firstterm>Pojęcie</firstterm></term>
+    <listitem>
+      <para>Pierwszy raz użyte pojęcie wraz z jego definicją.</para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><guilabel>Nazwa</guilabel></term>
+    <listitem>
+      <para>Nazwa elementu interfejsu użytkownika – okna, przycisku, etykiety, itp.</para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><filename>Plik</filename></term>
+    <listitem>
+      <para>Nazwa pliku lub katalogu.</para>
+    </listitem>
+  </varlistentry>
+</variablelist>	
+
+<para>Niektóre informacje zostały umieszczone w specjalnych ramkach:</para>
+
+<tip>
+<title>Wskazówka</title>
+<para>Przydatna informacja, podpowiedź lub zalecana praktyka.</para>
+</tip>
+
+<warning>
+<title>Ostrzeżenie</title>
+<para>Ważna informacja, na którą należy zwrócić szczególną uwagę.</para>
+</warning>
+
+<note>
+<title>Notatka</title>
+<para>Dodatkowa informacja przeznaczona dla zaawansowanych użytkowników.</para>
+</note>
+
+</sect1>
+
+<sect1 id="webissues.preface.organization">
+<title>Organizacja podręcznika</title>
+
+<para>Poniżej przedstawiona została lista rozdziałów tego podręcznika oraz ich zawartość:</para>
+
+<variablelist>
+  <varlistentry>
+    <term><xref linkend="webissues.intro"/></term>
+    <listitem>
+      <para>Wyjaśnia podstawowe zagadnienia związane ze śledzeniem spraw i wspomaganiem pracy zespołowej. Opisuje organizację danych w systemie WebIssues oraz przedstawia cykl życia przykładowych spraw.</para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><xref linkend="webissues.prep"/></term>
+    <listitem>
+      <para>Opisuje krok po kroku proces instalowania nowego systemu i przygotowania go do pracy.</para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><xref linkend="webissues.work"/></term>
+    <listitem>
+      <para>Wprowadza w podstawy indywidualnej pracy z systemem &mdash; tworzenie i edycję spraw oraz wyszukiwanie informacji.</para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><xref linkend="webissues.track"/></term>
+    <listitem>
+      <para>Prezentuje sposób współpracy wielu użytkowników systemu i efektywnej komunikacji w zespole.</para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><xref linkend="webissues.admin"/></term>
+    <listitem>
+      <para>Opisuje zagadnienia związane z administrowaniem projektami i użytkownikami oraz konserwacją systemu.</para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><xref linkend="webissues.custom"/></term>
+    <listitem>
+      <para>Opisuje sposoby konfigurowania i dostosowywania systemu do własnych potrzeb dla zaawansowanych administratorów.</para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><xref linkend="webissues.resources"/></term>
+    <listitem>
+      <para>Prezentuje listę dodatkowych źródeł informacji na temat systemu WebIssues.</para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><xref linkend="webissues.licenses"/></term>
+    <listitem>
+      <para>Zawiera informacje o prawach autorskich oraz kopie licencji programu i niniejszego podręcznika.</para>
+    </listitem>
+  </varlistentry>
+</variablelist>	
+
+</sect1>
 
 </preface>

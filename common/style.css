@@ -140,8 +140,15 @@ img, a img {
 }
 
 #header-right {
-  margin: 27px 17px 0 0;
+  margin: 20px 15px 0 0;
   float: right;
+}
+
+#header-right h2 {
+  line-height: 35px;
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0;
   color: #dddddd;
 }
 
@@ -208,10 +215,6 @@ h2.subtitle {
   float: right;
 }
 
-.screenshot {
-  margin: 1em 0.5em;
-}
-
 .toc .preface, .toc .chapter, .toc .appendix {
   font-weight: bold;
 }
@@ -236,16 +239,28 @@ h2.subtitle {
   margin-bottom: 0;
 }
 
-.guilabel, .literal, .shortcut, .firstterm {
-  color: #607080;
+.figure-title {
+  margin-top: 0.5em;
+}
+
+.guilabel, .guimenu, .guimenuitem, .guibutton, .shortcut {
   font-weight: bold;
 }
 
-.guimenu, .guimenuitem, .guibutton {
-  color: #485868;
-  font-weight: bold;
+.tip, .warning, .note {
+  border: 1px solid #cccccc;
+  padding: 0 1em;
+  margin: 1em 0.5in;
 }
 
-.command {
-  font-family: monospace;
+.tip {
+  background: #ddddff;
+}
+
+.warning {
+  background: #ffffcc;
+}
+
+.note {
+  background: #eeeeee;
 }
