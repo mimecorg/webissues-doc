@@ -1,6 +1,406 @@
 <chapter id="webissues.work">
-<title>Praca ze sprawami</title>
+  <title>Praca ze sprawami</title>
 
-<para>TODO</para>
+  <para>Niniejszy rozdział opisuje najważniejsze funkcje związane z pracą z systemem WebIssues, takie jak tworzenie i edycję spraw oraz wyszukiwanie informacji. Powinni go przeczytać wszyscy użytkownicy systemu.</para>
+
+  <sect1 id="webissues.work.clients">
+    <title>Programy klienckie</title>
+
+    <para>Dostęp do systemu WebIssues jest możliwy zarówno przez program WebIssues Web Client, dostępny przez przeglądarkę internetową, jak i przez dedykowaną aplikację kliencką &mdash; WebIssues Desktop Client. Możesz wybrać to rozwiązanie, które lepiej pasuje do twoich potrzeb.</para>
+
+    <para>Główną zaletą programu Web Client jest to, że możesz korzystać z systemu WebIssues na dowolnym komputerze (a nawet urządzeniu mobilnym) w dowolnym miejscu na świecie, jeśli tylko system jest dostępny przez Internet. Możesz skorzystać z dowolnej przeglądarki i nie musisz instalować żadnego dodatkowego oprogramowania.</para>
+
+    <para>Zaletą programu Desktop Client jest przede wszystkim to, że jest dużo szybsza i wygodniejsza, niż interfejs webowy. Wyszukiwanie i filtrowanie działa w czasie rzeczywistym, program na bieżąco aktualizuje również statystyki wszystkich skonfigurowanych alertów. Jest to więc najlepsza opcja dla tych, którzy intensywnie korzystają z systemu WebIssues.</para>
+
+    <para>Różnorodność ta jest podobna do korzystania z poczty elektronicznej. Jedni korzystają z programów pocztowych zainstalowanych na swoim komputerze, inni wolą korzystać z poczty za pośrednictwem przeglądarki internetowej.</para>
+
+    <para>Na tym zresztą nie kończą się podobieństwa, gdyż główne okno programu składa się z trzech paneli, których układ przypomina popularne programy pocztowe. Po lewej stronie znajduje się drzewo projektów i folderów. Po prawej stronie u góry wyświetlana jest lista spraw w wybranym w drzewie folderze. Z kolei po prawej stronie na dole pokazane są szczegóły wybranej na liście sprawy. Wybrany folder i sprawa są podświetlone i możesz na nich wykonywać różne operacje.</para>
+
+    <para>Poniżej przedstawione jest okno programu Web Client z widoczną przykładową listą spraw i historią sprawy:</para>
+
+    <figure>
+      <title>Program Web Client</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig01.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Poniżej okno programu Desktop Client wyświetlające te same informacje:</para>
+
+    <figure>
+      <title>Program Desktop Client</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig02.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Jak widać na powyższych rysunkach, interfejs użytkownika jest bardzo podobny w przypadku obu aplikacji klienckich. Poniżej znajduje się zestawienie najważniejszych różnic:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Polecenia w programie Desktop Client są dostępne za pośrednictwem jednego paska narzędzi, którego zawartość zmienia się w zależności od tego, który panel jest w danym momencie aktywny. Można również używać menu kontekstowego (dostępnego po kliknięciu prawym przyciskiem myszy na wybranym elemencie) oraz skrótów klawiszowych. Z kolei w programie Web Client polecenia są dostępne osobno w obrębie każdego z paneli.</para>
+      </listitem>
+      <listitem>
+        <para>W programie Desktop Client dostępna jest cała lista spraw oraz cała historia wybranej sprawy. Możesz przewijać zawartość poszczególnych paneli za pomocą suwaków. Natomiast program Web Client wyświetla ograniczoną liczbę spraw lub wpisów w historii, musisz zatem przechodzić między stronami, aby zobaczyć dalsze sprawy lub wpisy.</para>
+      </listitem>
+      <listitem>
+        <para>Program Desktop Client automatycznie odświeża listy oraz szczegóły spraw, a więc niemal od razu widzisz zmiany dokonywane przez inne osoby. W przypadku programu Web Client musisz ręcznie odświeżać stronę, aby zaktualizować widoczne informacje.</para>
+      </listitem>
+      <listitem>
+        <para>W programie Desktop Client może otwierać osobne okna zawierające listy spraw oraz szczegóły sprawy. Wystarczy, że klikniesz dwukrotnie na folderze lub sprawie. Dzięki temu możesz wyświetlić zawartość kilku folderów albo historię kilku spraw obok siebie. Z kolei większość przeglądarek internetowych daje możliwość otwierania odnośników w nowym oknie lub nowej karcie, więc możesz uzyskać podobny efekt w programie Web Client.</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Dla ułatwienia pracy, zarówno nazwy funkcji, jak i graficzne symbole różnych obiektów, są takie same w obu programach. Poniżej znajduje się lista podstawowych symboli graficznych używanych w systemie WebIssues oraz ich znaczenie:</para>
+     
+    <figure>
+      <title>Symbole graficzne</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig03.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <tip>
+      <title>Wskazówka</title>
+      <para>Oba programy oferują dostęp do najczęściej używanych funkcji administracyjnych, takich jak zarządzanie projektami, użytkownikami i typami spraw. Jednak niektóre funkcje administracyjne są dostępne tylko poprzez przeglądarkę internetową. Należą do nich m.in. konfigurowanie systemu oraz dziennik zdarzeń.</para>
+    </tip>
+
+    <para>Program Desktop Client można zainstalować na komputerze z systemem operacyjnym Windows (w wersji XP lub nowszej), Linux lub Mac OS X. Dla systemów tych dostępne są gotowe pakiety instalacyjne. Możliwe jest również zainstalowanie programu ze źródeł &mdash; więcej informacji na ten temat znajdziesz w załączonym pliku <literal>INSTALL</literal>.</para>
+
+    <para>Dostępny jest również program WebIssues Portable Client, który można uruchomić z dowolnego urządzenia przenośnego (np. pendrive'a) lub nośnika (np. płyty CD) bez konieczności instalowania na komputerze. Może on być używany wraz z platformą <ulink url="http://portableapps.com">PortableApps.com</ulink> lub samodzielnie. Poza tym niczym nie różni się on od programu Desktop Client.</para>
+
+  </sect1>
+
+  <sect1 id="webissues.work.login">
+    <title>Logowanie do systemu</title>
+
+    <para>Aby zalogować się do systemu za pośrednictwem przeglądarki internetowej, wpisz po prostu adres URL serwera WebIssues w pasku adresu, np. <literal>http://www.example.com</literal>, i naciśnij <shortcut><keycap>ENTER</keycap></shortcut>. Możesz dodać adres serwera jako zakładkę w przeglądarce, aby nie musieć go wpisywać za każdym razem.</para>
+
+    <figure>
+      <title>Logowanie do Web Client</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig04.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>W oknie logowania wpisz swój login oraz hasło. Jeśli są one prawidłowe, zostaniesz przeniesiony do głównego okna programu. Możesz również zostać poproszony o podanie nowego hasła, jeśli hasło było ustawione przez administratora systemu i wymusił on jego zmianę. W zależności od ustawień, przeglądarka może zaoferować zapamiętanie hasła.</para>
+
+    <para>Aby zalogować się poprzez program Desktop Client, uruchom go i wpisz adres URL serwera w pasku adresu, a następnie naciśnij <shortcut><keycap>ENTER</keycap></shortcut>. Gdy pojawi się okno logowania, podaj swój login i hasło. Podobnie jak w przypadku programu Web Client, możesz zostać poproszony o zmianę hasła.</para>
+
+    <figure>
+      <title>Logowanie do Desktop Client</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig05.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Program Desktop Client automatycznie zapamiętuje adresy wszystkich serwerów WebIssues, z którymi się łączy. Możesz wybrać serwer z listy i kliknąć dwa razy, aby się z nim połączyć. Możesz także wybrać zapamiętywanie hasła przez program, aby nie musieć go wpisywać za każdym razem. Jeśli chcesz się zalogować jako inny użytkownik, wybierz serwer z listy, kliknij prawym przyciskiem i wybierz opcję <guilabel>Połącz jako</guilabel>. Program zapamiętuje ostatnio używane loginy dla każdego serwera i wyświetla je w menu kontekstowym.</para>
+
+  </sect1>
+
+  <sect1 id="webissues.work.issues">
+    <title>Tworzenie i edycja spraw</title>
+
+    <para>Kliknij na folderze Błędy, aby go otworzyć. Jeśli dopiero utworzyłeś nowy serwer, będzie on pusty, a więc zacznijmy od utworzenia pierwszej sprawy.</para>
+
+    <sect2 id="webissues.work.issues.attributes">
+      <title>Atrybuty sprawy</title>
+
+      <para>Wybierz polecenie <guilabel>Dodaj sprawę</guilabel> (jeśli korzystasz z programu Desktop Client, musisz kliknąć na liście spraw, aby polecenie to się pojawiło). Zostanie wyświetlone okno jak poniżej:</para>
+
+      <figure>
+        <title>Dodawanie sprawy</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig06.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Nazwa sprawy jest wymaganym polem, wpiszmy więc <quote>Moja pierwsza sprawa</quote>. Pozostałe pola to atrybuty sprawy. Pola Status i Priorytet są wymagane, ale mają domyślną wartość początkową. W zależności od rodzaju atrybutu, akceptują one różne typy wartości:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>Tekst</term>
+          <listitem>
+            <para>Jest to najprostszy atrybut, który może mieć dowolną wartość. Może mieć określoną minimalną oraz maksymalną długość. Może również mieć postać pojedynczej linii tekstu albo pola, w którym można wpisać więcej linii tekstu. Przykładem atrybutu tekstowego jest pole Wersja.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Lista wyboru</term>
+          <listitem>
+            <para>Ten atrybut może przyjmować tylko jedną z określonych wartości, tak jak pole Status, gdzie do wyboru mamy Aktywny, Rozwiązany i Zamknięty. Istnieje również wariant tego atrybutu, który może przyjmować dowolne wartości, a lista ma jedynie charakter pomocniczy.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Użytkownik</term>
+          <listitem>
+            <para>Wartością tego atrybutu może być nazwa dowolnego użytkownika z całego systemu WebIssues lub z określonego projektu. Przykładem jest atrybut Przypisany do.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Liczba</term>
+          <listitem>
+            <para>Wartościami tego atrybutu mogą być liczby całkowite lub o określonej liczbie miejsc po przecinku. Może mieć określoną wartość minimalną oraz maksymalną. Przykładem atrybutu liczbowego jest Krytyczność, która może przyjmować wartości z przedziału od 1 (najbardziej krytyczny błąd) do 3 (mało istotny błąd).</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Data</term>
+          <listitem>
+            <para>Wartością tego atrybutu może być dowolna poprawna data, którą można wpisać ręcznie lub wybrać za pomocą kalendarza. Przykładem jest atrybut Termin dla typu spraw Zadania. Istnieje również wersja przyjmująca zarówno datę, jak i godzinę.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+      <para>Na początek przypisz nowy błąd do siebie i zmień jego krytyczność na 1 &mdash; w końcu to pierwszy błąd zarejestrowany w systemie.</para>
+
+      <tip>
+        <title>Wskazówka</title>
+        <para>Jeśli nie widzisz jakiegoś użytkownika w liście wyboru, prawdopodobnie oznacza to, że nie został on dodany do listy członków projektu &mdash; patrz <xref linkend="webissues.admin"/>.</para>
+      </tip>
+
+      <para>Następnie naciśnij <guibutton>OK</guibutton>. Jeśli wartość któregoś z atrybutów jest niepoprawna, zostanie wyświetlony błąd. W przeciwnym wypadku, nowa sprawa pojawi się na liście, a poniżej zostaną wyświetlone szczegółowe informacje:</para>
+
+      <figure>
+        <title>Szczegóły utworzonej sprawy</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig07.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+    </sect2>
+
+    <sect2 id="webissues.work.issues.comments">
+      <title>Komentarze i edycja</title>
+
+      <para>Na razie nie wygląda to zbyt imponująco. System zarejestrował, że utworzyłeś sprawę, nadałeś jej nazwę i zmieniłeś wartość dwóch atrybutów. Napiszmy teraz jakiś komentarz. W tym celu wybierz polecenie <guilabel>Dodaj komentarz</guilabel> (upewnij się, że aktywna jest historia sprawy, jeśli korzystasz z programu Desktop Client).</para>
+
+      <para>Nowe okno składa się niemal wyłącznie z pola edycji tekstu. W przypadku programu Desktop Client, możesz zostawić to okno otwarte i wrócić do innego okna, na przykład aby przejrzeć historię sprawy. Korzystając z przeglądarki również możesz dodać nowy komentarz w osobnym oknie, jeśli klikniesz prawym przyciskiem na odnośniku i wybierzesz odpowiednią opcję.</para>
+
+      <para>Wracając do naszego okna, wpisz tekst komentarza dotyczącego pierwszej sprawy:</para>
+
+      <figure>
+        <title>Dodawanie komentarza</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig08.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Tekst zostanie wyświetlony dokładnie tak, jak został wpisany, z zachowaniem odstępów i podziału na linie. Umożliwia to wklejanie np. fragmentów kodu źródłowego czy logów bez obaw, że staną się one nieczytelne. Długie linie zostaną automatycznie podzielone, w zależności od szerokości okna. Adresy stron internetowych i adresy e-mail zostaną automatycznie zamienione na odnośniki.</para>
+
+      <figure>
+        <title>Historia sprawy z komentarzem</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig09.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <tip>
+        <title>Wskazówka</title>
+        <para>Automatyczne rozpoznawanie odnośników działa nie tylko w tekście komentarzy, ale także w nazwach spraw i wartościach atrybutów, a nawet w opisach załączników.</para>
+      </tip>
+
+      <para>Można również tworzyć odnośniki do innych spraw, a także do komentarzy lub załączników. Aby to zademonstrować, utwórzmy drugą sprawę i nadajmy jej nazwę <quote>Druga sprawa</quote>, pozostawiając domyślne wartości atrybutów. Załóżmy, że identyfikator pierwszej sprawy to #1, a drugiej #5.</para>
+
+      <para>Jeśli dodasz komentarz do pierwszej sprawy i wpiszesz w nim tekst <quote>#5</quote>, zostanie on zamieniony na odnośnik do drugiej sprawy. Podobnie, jeśli teraz dodasz komentarz do drugiej sprawy, wpisując tekst <quote>#1</quote>, stanie się on odnośnikiem do pierwszej sprawy. W ten sposób możesz tworzyć powiązania między sprawami, odnosić się do innych komentarzy w swoich komentarzach, itp.</para>
+
+      <figure>
+        <title>Odnośnik do sprawy</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig09.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <note>
+        <title>Notatka</title>
+        <para>Identyfikatory spraw są unikalne i rosnące, ale nie koniecznie są kolejnymi liczbami. W naszym przykładzie druga sprawa ma identyfikator #5, a nie #2, ponieważ identyfikatory są również przypisane komentarzom, załącznikom i innym zmianom, co ułatwia zarządzanie nimi przez system.</para>
+      </note>
+
+      <para>Aby szybko przejść do sprawy, komentarza lub załącznika o podanym identyfikatorze, możesz również skorzystać z polecenia Idź do elementu. W programie Web Client kliknij <guilabel>Narzędzia</guilabel> w prawym górnym rogu ekranu, a następnie kliknij <guilabel>Idź do elementu</guilabel>. W programie Desktop Client polecenie to jest zawsze dostępne w pasku narzędzi głównego okna, możesz również nacisnąć <shortcut><keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo></shortcut>.</para>
+
+      <figure>
+        <title>Przejście do elementu</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig11.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Następnie wpisz szukany identyfikator i naciśnij <guibutton>OK</guibutton>. Jeśli istnieje sprawa o tym identyfikatorze, zostanie ona wyświetlona. Jeśli natomiast identyfikator reprezentuje komentarz lub załącznik, zostanie wyświetlona sprawa zawierająca ten element, a historia zostanie ustawiona na szukanym elemencie.</para>
+
+      <para>Polecenie <guilabel>Zmień atrybuty</guilabel> umożliwia edycję sprawy, tzn. zmianę wartości poszczególnych atrybutów oraz nazwy sprawy. Zaznacz pierwszą sprawę i wybierz to polecenie. Zostanie wyświetlone takie samo okno, jak w przypadku dodawania nowej sprawy, zawierające aktualne wartości atrybutów. Zmień status sprawy na Rozwiązany, a w polu Powód wybierz wartość Naprawiony. Następnie naciśnij <guibutton>OK</guibutton>, aby zapisać zmiany.</para>
+
+      <figure>
+        <title>Zmiana atrybutów sprawy</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig12.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Zauważ że system WebIssues automatycznie zapamiętał wprowadzone przez ciebie zmiany i wyświetla je w historii sprawy. Umożliwia to śledzenie całego cyklu życia sprawy, zmian statusu i wszystkich operacji wykonywanych na sprawie.</para>
+
+      <figure>
+        <title>Historia sprawy po zmianie</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig13.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+    </sect2>
+
+    <sect2 id="webissues.work.issues.attach">
+      <title>Dodawanie załączników</title>
+
+      <para>Wiesz już jak dodać komentarz, aby opisać sprawę lub dyskutować na jej temat. Długie fragmenty tekstu (np. logi błędów) lepiej jednak zamieszczać w postaci osobnych załączników. W ten sposób możesz również dołączać do sprawy pliki graficzne, dokumenty i inne typy plików, podobnie jak załączniki w wiadomościach e-mail.</para>
+
+      <para>Aby dołączyć plik, wybierz polecenie <guilabel>Dodaj załącznik</guilabel>. Następnie wybierz plik, który chcesz dodać, i opcjonalnie wprowadź krótki opis załącznika.</para>
+
+      <figure>
+        <title>Dodawanie załącznika</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig14.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Nowy załącznik jest widoczny w historii sprawy:</para>
+
+      <figure>
+        <title>Historia sprawy z załącznikiem</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig15.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Kliknij odnośnik, aby otworzyć dołączony do sprawy plik lub zapisać go na dysku. Program Desktop Client domyślnie zawsze pyta, czy chcesz otworzyć czy zapisać plik. Możesz również kliknąć prawym przyciskiem, aby wybrać odpowiednią opcję z menu kontekstowego. Zmieniając ustawienia programu możesz wybrać domyślną akcję dla załączników oraz zmienić maksymalną ilość miejsca na dysku przeznaczoną na przechowywanie plików tymczasowych.</para>
+
+      <para>W przypadku programu Web Client domyślna akcja po kliknięciu na odnośnik zależy od konfiguracji twojej przeglądarki. W większości przeglądarek możesz również kliknąć na załączniku prawym przyciskiem, aby wybrać akcję z menu kontekstowego.</para>
+
+      <note>
+        <title>Notatka</title>
+        <para>Maksymalny rozmiar załącznika, jaki możesz dołączyć do sprawy, zależy od konfiguracji systemu WebIssues. Możesz go zmienić w ustawieniach systemu WebIssues (przeczytaj <xref linkend="webissues.admin"/> aby uzyskać więcej informacji). Przesyłanie dużych załączników wymaga również odpowiedniej konfiguracji serwera HTTP oraz PHP. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
+        <para>Domyślnie małe załączniki są przechowywane w bazie danych, a duże bezpośrednio w systemie plików. W zależności od potrzeb możesz zmienić wartość progową lub wymusić przechowywanie wszystkich załączników tylko w bazie danych lub w systemie plików, zmieniając ustawienia systemu WebIssues. Sposób przechowywania załączników nie ma znaczenia z punktu widzenia programów klienckich.</para>
+      </note>
+
+    </sect2>
+
+  </sect1>
+
+  <sect1 id="webissues.work.views">
+    <title>Filtrowanie i wyszukiwanie</title>
+
+    <para>Z upływem czasu foldery zawierają coraz więcej spraw i znalezienie pożądanej informacji może być trudne. Możesz oczywiście posortować listę spraw po dowolnej kolumnie, nie tylko według identyfikatorów, ale również według nazwy lub wartości dowolnego atrybutu. Może to ułatwić wyszukanie potrzebnej informacji, ale nie zawsze jest wystarczające.</para>
+
+    <para>Lista spraw posiada również funkcję szybkiego wyszukiwania. Wpisz szukane słowo lub jego fragment w polu tekstowym po prawej stronie nad listą, a wyświetlone zostaną tylko sprawy zawierające w nazwie szukany fragment tekstu.</para>
+
+    <para>Najbardziej przydatne w codziennej pracy jest jednak korzystanie z widoków. Każdy widok posiada warunki filtrowania, które ograniczają listę wyświetlonych spraw do tych, które spełniają określone kryteria. Każdy widok posiada również własny układ kolumn oraz domyślny porządek sortowania. Innymi słowy, widok mówi o tym, które sprawy spośród wszystkich spraw w danym folderze są widoczne, oraz które kolumny spośród wszystkich dostępnych kolumn są wyświetlone.</para>
+
+    <para>To, jakie widoki są dostępne, zależy od typu spraw w danym folderze. Wyjątkiem jest widok <quote>Wszystkie sprawy</quote>, który istnieje dla każdego typu spraw i nie posiada warunków filtrowania, a więc (jak sugeruje nazwa) wyświetla wszystkie sprawy w bieżącym folderze.</para>
+
+    <para>Otwórz folder Błędy i rozwiń listę widoków po lewej stronie nad listą spraw. Zobaczysz domyślny widok <quote>Wszystkie sprawy</quote>, a pod nim kilka publicznych widoków:</para>
+
+    <figure>
+      <title>Wybór widoku</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig16.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Wybierz z listy widok <quote>Aktywne błędy</quote>. Zauważ, że na liście wyświetlona jest teraz tylko druga sprawa, ponieważ status pierwszej sprawy zmieniłeś przed chwilą na Rozwiązany.</para>
+
+    <figure>
+      <title>Lista aktywnych błędów</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig17.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Wybierz inne dostępne widoki, aby przekonać się, że za każdym razem wyświetlane są inne sprawy i zmienia się układ widocznych kolumn. Dzięki temu każdy użytkownik może skupić się tylko na tych sprawach, które go w danym momencie interesują &mdash; np. tester może oglądać listę rozwiązanych błędów, które musi zweryfikować, a programista listę przypisanych do niego błędów, które musi rozwiązać.</para>
+
+    <tip>
+      <title>Wskazówka</title>
+      <para>Mimo że widoki znacznie ułatwiają pracę z dużą liczbą spraw, powinieneś przewidzieć, co się będzie działo z twoim systemem w ciągu kilku najbliższych lat. Jeśli na przykład codziennie rejestrowanych jest średnio 10 nowych spraw, to za rok będzie ich ponad 3000.</para>
+      <para>Wprawdzie nie ma określonego limitu spraw przypadających na jeden folder, to jednak duża ich liczba może negatywnie wpływać na wydajność systemu. W takiej sytuacji powinieneś podzielić sprawy na osobne foldery, na przykład według daty wprowadzenia lub wersji projektu, którego dotyczą.</para>
+    </tip>
+
+    <para>Korzystanie z istniejących, publicznych widoków może być czasem niewystarczające. W takiej sytuacji możesz utworzyć swój własny, prywatny widok, który może mieć dowolne kryteria filtrowania, kolumny oraz sortowanie.</para>
+
+    <para>Kliknij <guilabel>Dodaj widok</guilabel>, aby szybko utworzyć nowy widok dla bieżącego typu spraw. Załóżmy, że chcemy wyświetlać tylko krytyczne błędy, zatem nazwiemy nasz widok <quote>Krytyczne błędy</quote>. Kolumna Krytyczność nie jest potrzebna, ponieważ zawsze będzie miała wartość 1, więc ją odznacz na liście kolumn. Dodaj natomiast kolumny Utworzona przez oraz Data utworzenia, aby wiedzieć, kto i kiedy zarejestrował sprawę. Aby przenieść kolumny Przypisany do i Status na koniec listy, ustaw wartości określające kolejność odpowiednio na 10 i 11.</para>
+
+    <figure>
+      <title>Edycja kolumn widoku</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig18.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć jak będzie wyglądać układ kolumn w widoku. Pozostaw domyślny porządek sortowania, aby wyświetlić sprawy od najstarszych do najnowszych. Następnie przejdź do edycji filtrów. Włącz filtr dla kolumny Krytyczność i wpisz wartość 1 jako parametr warunku:</para>
+
+    <figure>
+      <title>Edycja filtra</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig19.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Zapisz zmiany klikając <guibutton>OK</guibutton>. Rozwijana lista widoków zawiera teraz jeden widok prywatny o nazwie <quote>Krytyczne błędy</quote>. Po jego wybraniu lista będzie zawierała tylko pierwszą sprawę, zgodnie z wybranymi kryteriami filtrowania.</para>
+
+    <para>Załóżmy teraz, że interesują nas tylko te krytyczne sprawy, które są aktywne i w dodatku starsze niż 7 dni. Taki widok byłby bardzo przydatny dla osób nadzorujących rozwiązywanie błędów. Kliknij <guilabel>Zmień widok</guilabel>, aby przejść do edycji aktywnego widoku (przedtem upewnij się, że jest on wybrany).</para>
+
+    <para>Wybierz dwa dodatkowe warunki dla kolumn Data utworzenia i Status. W pierwszym wybierz operator <quote>jest mniejszy niż</quote>, a za pomocą rozwijanego kalendarza wybierz opcję Dzisiaj. Następnie zmień wartość parametru filtra na <quote>[Dzisiaj]-7</quote>. W jego miejsce zawsze będzie wstawiona bieżąca data minus 7 dni, a więc warunek będą spełniały tylko te sprawy, które zostały utworzone więcej niż 7 dni temu. Ustaw również parametr filtra dla pola Status na Aktywny.</para>
+
+    <tip>
+      <title>Wskazówka</title>
+      <para>W definicji filtru można używać dwóch specjalnych wartości. Wartość <quote>[Dzisiaj]</quote> jest zamieniana na bieżącą datę (z możliwością odjęcia lub dodania określonej liczby dni), natomiast wartość <quote>[Ja]</quote> jest zamieniana na nazwę bieżącego użytkownika.</para>
+    </tip>
+
+    <figure>
+      <title>Zmiana filtra</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig20.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć wszystkie filtry. Zauważ że ponownie można dodać warunki zawierające te pola, które są już wykorzystane. Możesz więc tworzyć złożone filtry w rodzaju <quote>starszy niż 7 dni i jednocześnie nie starszy niż miesiąc</quote>.</para>
+
+    <para>Zapisz zmiany klikając <guibutton>OK</guibutton>. Oczywiście lista nie będzie teraz zawierać żadnej sprawy, ponieważ w systemie nie ma jeszcze spraw starszych niż 7 dni.</para>
+
+    <para>Możesz utworzyć dowolną liczbę prywatnych widoków. Nie będą one widoczne dla żadnego innego użytkownika. Będą natomiast dostępne w każdym folderze zawierającym sprawy tego samego typu. Aby tworzyć, modyfikować, zmieniać nazwę i usuwać swoje widoki, otwórz folder danego typu i kliknij <guilabel>Zarządzaj widokami</guilabel>. Zostanie otwarte nowe okno zawierające listę wszystkich twoich widoków ze szczegółowymi informacjami.</para>
+
+    <figure>
+      <title>Zarządzanie widokami</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig21.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Jeśli jesteś administratorem systemu, możesz również publikować swoje widoki, aby były dostępne dla wszystkich użytkowników, a także zarządzać widokami publicznymi dla poszczególnych typów spraw. Aby uzyskać więcej informacji na ten temat, przeczytaj <xref linkend="webissues.custom"/>.</para>
+
+  </sect1>
+
+  <sect1 id="webissues.work.advanced">
+    <title>Zaawansowana edycja</title>
+
+    <para>System WebIssues umożliwia edycję oraz usuwanie komentarzy. Może to zrobić użytkownik, który utworzył dany komentarz, a także administrator systemu lub projektu, do którego należy dana sprawa. Administrator może więc pełnić rolę moderatora komentarzy. Użytkownik bez uprawnień administratora nie może natomiast modyfikować ani usuwać komentarzy innych użytkowników.</para>
+
+    <para>Możliwa jest także zmiana nazwy oraz opisu załączników, a także ich usuwanie. Podobnie jak w przypadku komentarzy, może to zrobić użytkownik, który utworzył załącznik lub administrator. Nie można natomiast zmodyfikować lub podmienić dołączonego pliku &mdash; aby to zrobić, musisz usunąć załącznik i dodać nowy plik jako osobny załącznik.</para>
+
+    <para>Aby edytować lub usunąć komentarz lub załącznik, kliknij odnośnik <guilabel>Edytuj</guilabel> lub <guilabel>Usuń</guilabel> znajdujący się w prawym górnym rogu danego elementu w historii sprawy. Jeśli komentarz lub załącznik był edytowany, oprócz daty utworzenia i autora, wyświetlona jest także data jego ostatniej modyfikacji i osoba, która go edytowała.</para>
+
+    <figure>
+      <title>Historia po edycji komentarza</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig22.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Usuwać istniejące sprawy może tylko administrator systemu lub administrator projektu, korzystając z polecenia <guilabel>Usuń sprawę</guilabel>.</para>
+
+    <warning>
+      <title>Uwaga</title>
+      <para>Usunięcie sprawy jest nieodwracalne i powoduje utratę całej jej historii, dlatego powinieneś to robić tylko w szczególnych sytuacjach.</para>
+    </warning>
+
+    <para>Administrator może także przenosić sprawy do innego folderu za pomocą polecenia <guilabel>Przenieś sprawę</guilabel>. Docelowy folder musi być jednak tego samego typu, co przenoszona sprawa, ponieważ nie można łączyć w jednym folderze spraw różnego typu. Aby przenieść sprawę do folderu znajdującego się w innym projekcie, musisz być administratorem obu projektów albo administratorem systemu. Operacja przeniesienia sprawy zostaje zarejestrowana w jej historii.</para>
+
+    <para>Nie ma natomiast żadnych ograniczeń, jeśli chodzi o edycję atrybutów sprawy. Każdy użytkownik może je dowolnie modyfikować, jednak każda zmiana jest trwale rejestrowana przez system i jedyną możliwością jej cofnięcia jest ponowna edycja.</para>
+
+  </sect1>
 
 </chapter>

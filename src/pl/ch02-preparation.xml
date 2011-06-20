@@ -1,220 +1,293 @@
 <chapter id="webissues.prep">
-<title>Przygotowanie systemu</title>
+  <title>Przygotowanie systemu</title>
 
-<para>Aby korzystać z systemu WebIssues, niezbędne jest skonfigurowanie serwera, który jest jego centralną  i najważniejszą częścią. Niniejszy rozdział opisuje on krok po kroku proces instalowania serwera WebIssues i przygotowania go do pracy. Jeśli korzystasz z już istniejącego serwera, możesz pominąć ten rozdział.</para>
+  <para>Aby korzystać z systemu WebIssues, niezbędne jest skonfigurowanie serwera, który jest jego centralną  i najważniejszą częścią. Niniejszy rozdział opisuje on krok po kroku proces instalowania serwera WebIssues i przygotowania go do pracy. Jeśli korzystasz z już istniejącego serwera, możesz pominąć ten rozdział.</para>
 
-<sect1 id="webissues.prep.requirements">
-<title>Wymagania</title>
+  <sect1 id="webissues.prep.requirements">
+    <title>Wymagania</title>
 
-<para>Możesz zainstalować oprogramowanie serwera WebIssues na komputerze z systemem Unix/Linux, OS X lub Windows. Przed przystąpieniem do instalacji potrzebujesz następujących komponentów:</para>
+    <para>Możesz zainstalować oprogramowanie serwera WebIssues na komputerze z systemem Unix/Linux, OS X lub Windows. Przed przystąpieniem do instalacji potrzebujesz następujących komponentów:</para>
 
-<itemizedlist>
-  <listitem>
-    <para>Serwer HTTP</para>
-  </listitem>
-  <listitem>
-    <para>Serwer bazy danych</para>
-  </listitem>
-  <listitem>
-    <para>PHP</para>
-  </listitem>
-</itemizedlist>
+    <itemizedlist>
+      <listitem>
+        <para>Serwer HTTP</para>
+      </listitem>
+      <listitem>
+        <para>Serwer bazy danych</para>
+      </listitem>
+      <listitem>
+        <para>PHP</para>
+      </listitem>
+    </itemizedlist>
 
-<para>Możesz użyć serwera Apache, który działa na niemal wszystkich systemach operacyjnych (zalecana jest wersja 2.0 lub nowsza). Możesz również użyć serwera Microsoft IIS, który jest częścią systemu Windows (zalecana jest wersja 7.0 lub nowsza).</para>
+    <para>Możesz użyć serwera Apache, który działa na niemal wszystkich systemach operacyjnych (zalecana jest wersja 2.0 lub nowsza). Możesz również użyć serwera Microsoft IIS, który jest częścią systemu Windows (zalecana jest wersja 7.0 lub nowsza).</para>
 
-<para>Niezbędny jest jeden z następujących serwerów baz danych:</para>
+    <para>Niezbędny jest jeden z następujących serwerów baz danych:</para>
 
-<itemizedlist>
-  <listitem>
-    <para>MySQL (w wersji 4.1.2 lub nowszej)</para>
-  </listitem>
-  <listitem>
-    <para>PostgreSQL (w wersji 8.0 lub nowszej)</para>
-  </listitem>
-  <listitem>
-    <para>Microsoft SQL Server (w wersji 2005 lub nowszej)</para>
-  </listitem>
-</itemizedlist>
+    <itemizedlist>
+      <listitem>
+        <para>MySQL (w wersji 5.0.15 lub nowszej)</para>
+      </listitem>
+      <listitem>
+        <para>PostgreSQL (w wersji 8.0 lub nowszej)</para>
+      </listitem>
+      <listitem>
+        <para>Microsoft SQL Server (w wersji 2005 lub nowszej)</para>
+      </listitem>
+    </itemizedlist>
 
-<para>Aby zainstalować system, musisz utworzyć bazę danych na jednym z powyższych serwerów oraz konto użytkownika posiadające uprawnienia wystarczającymi do tworzenia tabel i indeksów w tej bazie danych.</para>
+    <para>Aby zainstalować system, musisz utworzyć bazę danych na jednym z powyższych serwerów oraz konto użytkownika posiadające uprawnienia wystarczającymi do tworzenia tabel i indeksów w tej bazie danych.</para>
 
-<para>W przypadku bazy MySQL wymagana jest obsługa silnika InnoDB. Baza danych PostgreSQL powinna być utworzona z kodowaniem znaków w standardzie Unicode. Pamiętaj także, że bazy SQL Server możesz użyć tylko, jeśli serwer WebIssues jest zainstalowany na komputerze z systemem Windows.</para>
+    <para>W przypadku bazy MySQL wymagana jest obsługa silnika InnoDB. Baza danych PostgreSQL powinna być utworzona z kodowaniem znaków w standardzie Unicode. Pamiętaj także, że bazy SQL Server możesz użyć tylko, jeśli serwer WebIssues jest zainstalowany na komputerze z systemem Windows.</para>
 
-<para>Serwer WebIssues wymaga również PHP w wersji 5.2.1 lub nowszej, zintegrowanego z serwerem HTTP. W przypadku serwera IIS, dla uzyskanie najlepszej wydajności zalecane jest użycie modułu <literal>fastcgi</literal> oraz rozszerzenia <literal>wincache</literal>. PHP musi mieć zainstalowane rozszerzenie <literal>mbstring</literal>, a jeśli korzystasz z bazy danych MySQL lub PostrgreSQL, również odpowiednio rozszerzenie <literal>mysqli</literal> lub <literal>pgsql</literal>.</para>
+    <para>Serwer WebIssues wymaga również PHP w wersji 5.2.1 lub nowszej, zintegrowanego z serwerem HTTP. W przypadku serwera IIS, dla uzyskanie najlepszej wydajności zalecane jest użycie modułu <literal>fastcgi</literal> oraz rozszerzenia <literal>wincache</literal>. PHP musi mieć zainstalowane rozszerzenie <literal>mbstring</literal>, a jeśli korzystasz z bazy danych MySQL lub PostrgreSQL, również odpowiednio rozszerzenie <literal>mysqli</literal> lub <literal>pgsql</literal>.</para>
 
-<para>Jeśli instalujesz serwer WebIssues korzystając z zewnętrznej usługi hostingowej, upewnij się, że spełnia ona wszystkie powyższe wymagania. Aby utworzyć bazę danych i skonfigurować serwer HTTP, skorzystaj z narzędzi dostarczonych przez dostawcę usług hostingowych i zapoznaj się z dostępną dokumentacją.</para>
+    <para>Jeśli instalujesz serwer WebIssues korzystając z zewnętrznej usługi hostingowej, upewnij się, że spełnia ona wszystkie powyższe wymagania. Aby utworzyć bazę danych i skonfigurować serwer HTTP, skorzystaj z narzędzi dostarczonych przez dostawcę usług hostingowych i zapoznaj się z dostępną dokumentacją.</para>
 
-<warning>
-<title>Ostrzeżenie</title>
-<para>Niektóre usługi hostingowe mogą mieć specyficzną konfigurację lub inne ograniczenia utrudniające lub nawet uniemożliwiające poprawne zainstalowanie serwera WebIssues. Mogą one na przykład ograniczać ilość dostępnej pamięci, rozmiar bazy danych, albo wielkość przesyłanych do serwera plików.</para>
-</warning>
+    <warning>
+      <title>Uwaga</title>
+      <para>Niektóre usługi hostingowe mogą mieć specyficzną konfigurację lub inne ograniczenia utrudniające lub nawet uniemożliwiające poprawne zainstalowanie serwera WebIssues. Mogą one na przykład ograniczać ilość dostępnej pamięci, rozmiar bazy danych, albo wielkość przesyłanych do serwera plików.</para>
+    </warning>
 
-<para>Przed zainstalowaniem serwera WebIssues na własnym komputerze (dla celów prywatnych lub testowych) lub komputerze należącym do twojej firmy bądź organizacji, zainstaluj i skonfiguruj niezbędne komponenty, a następnie utwórz bazę danych, korzystając z odpowiednich narzędzi administracyjnych. Zapoznaj się z dokumentacją tych narzędzi, aby uzyskać więcej informacji na ich temat.</para>
+    <para>Przed zainstalowaniem serwera WebIssues na własnym komputerze (dla celów prywatnych lub testowych) lub komputerze należącym do twojej firmy bądź organizacji, zainstaluj i skonfiguruj niezbędne komponenty, a następnie utwórz bazę danych, korzystając z odpowiednich narzędzi administracyjnych. Zapoznaj się z dokumentacją tych narzędzi, aby uzyskać więcej informacji na ich temat. Więcej informacji temat tworzenia bazy danych i konfigurowania serwera HTTP znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
 
-</sect1>
+  </sect1>
 
-<sect1 id="webissues.prep.instalation">
-<title>Instalacja</title>
+  <sect1 id="webissues.prep.installation">
+    <title>Instalacja</title>
 
-<para>Po upewnieniu się, że wymagane komponenty są zainstalowane i skonfigurowane, oraz utworzeniu bazy danych, możesz przystąpić do właściwej instalacji serwera WebIssues.</para>
-<para>Ściągnij i rozpakuj pakiet serwera WebIssues &mdash; zawiera on katalog o nazwie <literal>webissues-x.y</literal> (gdzie <literal>x.y</literal> to wersja pakietu). Następnie przenieś wszystkie pliki i podkatalogi z tego katalogu do katalogu głównego serwera HTTP. Jeśli korzystasz z zewnętrznego hostingu, na ogół do kopiowania plików na serwer używa się protokołu FTP, a więc będziesz potrzebował do tego celu klienta FTP.</para>
+    <para>Po upewnieniu się, że wymagane komponenty są zainstalowane i skonfigurowane, oraz utworzeniu bazy danych, możesz przystąpić do właściwej instalacji serwera WebIssues.</para>
 
-<note>
-<title>Notatka</title>
-<para>Istnieje możliwość zainstalowania serwera WebIssues wraz z innymi stronami i aplikacjami webowymi działającymi na tym samym komputerze. Możesz zainstalować serwer w podkatalogu umieszczonym w katalogu głównym serwera HTTP, a także na wirtualnym hoście lub w wirtualnym katalogu. Zapoznaj się z dokumentacją twojego serwera HTTP lub usługi hostingowej, aby uzyskać więcej informacji na ten temat.</para>
-<para>Możesz także utworzyć wiele odrębnych instancji serwera WebIssues w ramach jednej instalacji. Poszczególne instancje mogą być dostępne poprzez różne nazwy domen lub subdomen, albo w różnych wirtualnych podkatalogach. Więcej informacji na ten temat znajdziesz na Wiki systemu WebIssues.</para>
-</note>
+    <sect2 id="webissues.prep.installation.files">
+      <title>Kopiowanie plików</title>
 
-<para>Następnie nadaj prawo zapisu do podkatalogu <filename>data/sites</filename> wszystkim użytkownikom lub użytkownikowi, w kontekście którego działa usługa HTTP. W katalogu tym, podczas instalacji, zostanie utworzony plik konfiguracyjny. Będą w nim również przechowywane dołączone do spraw załączniki.</para>
+      <para>Ściągnij i rozpakuj pakiet serwera WebIssues &mdash; zawiera on katalog o nazwie <literal>webissues-x.y</literal> (gdzie <literal>x.y</literal> to wersja pakietu). Następnie przenieś wszystkie pliki i podkatalogi z tego katalogu do katalogu głównego serwera HTTP. Jeśli korzystasz z zewnętrznego hostingu, na ogół do kopiowania plików na serwer używa się protokołu FTP, a więc będziesz potrzebował do tego celu klienta FTP.</para>
 
-<warning>
-<title>Ostrzeżenie</title>
-<para>Upewnij się, że katalogi data oraz <filename>common/data</filename> są zabezpieczone przed niepowołanym dostępem przez przeglądarkę internetową. W przeciwnym wypadku nieuprawnione do tego osoby będą mogły np. pobierać przechowywane w systemie załączniki. Jeśli korzystasz z serwera Apache, możesz w tym celu wykorzystać załączone w pakiecie pliki <filename>.htaccess</filename>.</para>
-<para>Po zakończeniu instalacji, upewnij się również, że plik konfiguracyjny systemu WebIssues jest chroniony przed niepowołanym dostępem, ponieważ zawiera on między innymi login i hasło do bazy danych. Jest to szczególnie istotne w przypadku korzystania z publicznych usług hostingowych.</para>
-<para>Dla zapewnienia największego bezpieczeństwa, zaleca się, aby pliki konfiguracyjne i załączniki nie były przechowywane w katalogu <filename>data</filename>, ale w innej lokalizacji położonej poza katalogiem głównym serwera HTTP. Więcej informacji na temat zmiany lokalizacji katalogu zawierającego te pliki znajdziesz na Wiki systemu WebIssues.</para>
-</warning>
+      <note>
+        <title>Notatka</title>
+        <para>Istnieje możliwość zainstalowania serwera WebIssues wraz z innymi stronami i aplikacjami webowymi działającymi na tym samym komputerze. Możesz zainstalować serwer w podkatalogu umieszczonym w katalogu głównym serwera HTTP, a także na wirtualnym hoście lub w wirtualnym katalogu. Zapoznaj się z dokumentacją twojego serwera HTTP lub usługi hostingowej, aby uzyskać więcej informacji na ten temat.</para>
+        <para>Możesz także utworzyć wiele odrębnych instancji serwera WebIssues w ramach jednej instalacji. Poszczególne instancje mogą być dostępne poprzez różne nazwy domen lub subdomen, albo w różnych wirtualnych podkatalogach. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
+      </note>
 
-<para>Teraz możesz już otworzyć stronę główną systemu WebIssues. Uruchom przeglądarkę internetową i wpisz adres URL serwera, na przykład <literal>http://www.example.com</literal>. Powinieneś zobaczyć następujący komunikat:</para>
+      <para>Następnie nadaj prawo zapisu do podkatalogu <filename>data/sites</filename> wszystkim użytkownikom lub użytkownikowi, w kontekście którego działa usługa HTTP. Skorzystaj w tym celu z menedżera plików lub klienta FTP, albo uruchom polecenie <literal>chmod</literal> z linii poleceń. W katalogu tym, podczas instalacji, zostanie utworzony plik konfiguracyjny. Będą w nim również przechowywane dołączone do spraw załączniki.</para>
 
-<figure>
-  <title>Komunikat powitalny.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch02-fig01.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+      <warning>
+        <title>Uwaga</title>
+        <para>Upewnij się, że katalogi <filename>data</filename> oraz <filename>common/data</filename> są zabezpieczone przed niepowołanym dostępem przez przeglądarkę internetową. W przeciwnym wypadku nieuprawnione do tego osoby będą mogły np. pobierać przechowywane w systemie załączniki. Jeśli korzystasz z serwera Apache, możesz w tym celu wykorzystać załączone w pakiecie pliki <filename>.htaccess</filename>. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
+        <para>Po zakończeniu instalacji, upewnij się również, że plik konfiguracyjny systemu WebIssues jest chroniony przed niepowołanym dostępem, ponieważ zawiera on między innymi login i hasło do bazy danych. Jest to szczególnie istotne w przypadku korzystania z publicznych usług hostingowych.</para>
+        <para>Dla zapewnienia największego bezpieczeństwa, zaleca się, aby pliki konfiguracyjne i załączniki nie były przechowywane w katalogu <filename>data</filename>, ale w innej lokalizacji położonej poza katalogiem głównym serwera HTTP. Więcej informacji na temat zmiany lokalizacji katalogu zawierającego te pliki znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
+      </warning>
 
-<para>Nie przejmuj się, że komunikat jest po angielsku. Jeśli postąpisz zgodnie z instrukcją i klikniesz odnośnik, zostaniesz zapytany o język, który będzie używany w czasie instalacji. Będzie to również domyślny język, w jakim system WebIssues będzie wyświetlał wszystkie komunikaty.</para>
+    </sect2>
 
-<para>W następnym kroku instalacji wyświetlone zostaną podstawowe informacje na temat twojego serwera: jego nazwa (zwykle będzie to <literal>default</literal>, chyba że tworzysz wiele instancji serwera w ramach jednej instalacji), bazowy adres URL serwera oraz ścieżkę katalogu, w którym zostanie utworzony plik konfiguracyjny. Zostanie również wyświetlona wersja PHP, serwera HTTP i systemu operacyjnego oraz nazwa komputera, na którym instalujesz system WebIssues. Po zweryfikowaniu tych informacji, przejdź do następnego kroku.</para>
+    <sect2 id="webissues.prep.installation.setup">
+      <title>Konfiguracja systemu</title>
 
-<figure>
-  <title>Konfiguracja połączenia z bazą danych.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch02-fig02.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+      <para>Teraz możesz już otworzyć stronę główną systemu WebIssues. Uruchom swoją ulubioną przeglądarkę internetową i wpisz adres URL serwera, na przykład <literal>http://www.example.com</literal>. Powinieneś zobaczyć następujący komunikat:</para>
 
-<para>Zostaniesz poproszony o wprowadzenie informacji niezbędnych do połączenia z wcześniej utworzoną bazą danych. Musisz przede wszystkim określić jej rodzaj. W zależności od konfiguracji PHP, będziesz miał do dyspozycji bazę MySQL, PostgreSQL lub SQL Server. Jeśli któraś z opcji jest niedostępna, oznacza to, że niezbędne rozszerzenie PHP nie zostało zainstalowane lub jest wyłączone.</para>
+      <figure>
+        <title>Komunikat powitalny</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig01.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
 
-<para>Następnie podaj nazwę hosta bazy danych, jeśli znajduje się ona na innym komputerze niż serwer HTTP, nazwę bazy danych oraz login i hasło użytkownika posiadającego prawo tworzenia tabel w tej bazie danych. W przypadku bazy SQL Server możesz pozostawić login i hasło puste, aby użyć zintegrowanej autentykacji Windows.</para>
+      <para>Nie przejmuj się, że komunikat jest po angielsku. Jeśli postąpisz zgodnie z instrukcją i klikniesz odnośnik, zostaniesz zapytany o język, który będzie używany w czasie instalacji. Będzie to również domyślny język, w jakim system WebIssues będzie wyświetlał wszystkie komunikaty.</para>
 
-<note>
-<title>Notatka</title>
-<para>W trakcie instalacji możesz również określić prefiks, który zostanie dodany przed nazwami wszystkich tabel i innych obiektów w bazie danych. Jeśli na przykład wybierzesz prefiks <literal>wi_</literal>, zostaną utworzone tabele o nazwach <literal>wi_server</literal>, <literal>wi_users</literal>, itd.</para>
-</note>
+      <para>W następnym kroku instalacji wyświetlone zostaną podstawowe informacje na temat twojego serwera: jego nazwa (zwykle będzie to <literal>default</literal>, chyba że tworzysz wiele instancji serwera w ramach jednej instalacji), bazowy adres URL serwera oraz ścieżka katalogu, w którym zostanie utworzony plik konfiguracyjny. Zostanie również wyświetlona wersja PHP, serwera HTTP i systemu operacyjnego oraz nazwa komputera, na którym instalujesz system WebIssues. Po zweryfikowaniu tych informacji, przejdź do następnego kroku.</para>
 
-<para>Wybierając unikalny prefiks, możesz zainstalować wiele różnych aplikacji korzystających z jednej bazy danych. Możesz również utworzyć kilka oddzielnych instancji serwera WebIssues w ramach jednej bazy danych.</para>
+      <figure>
+        <title>Konfiguracja połączenia z bazą danych</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig02.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
 
-<para>Gdy podasz niezbędne informacje, przejdź do następnego kroku. Serwer spróbuje połączyć się z bazą danych, a w przypadku błędu wyświetli odpowiedni komunikat. Jeśli połączenie się powiedzie, a baza danych nie zawiera jeszcze tabel niezbędnych do działania systemu WebIssues, zostanie wyświetlona następująca strona:</para>
+      <para>Zostaniesz poproszony o wprowadzenie informacji niezbędnych do połączenia z wcześniej utworzoną bazą danych. Musisz przede wszystkim określić jej rodzaj. W zależności od konfiguracji PHP, będziesz miał do dyspozycji bazę MySQL, PostgreSQL lub SQL Server. Jeśli któraś z tych opcji jest niedostępna, oznacza to, że niezbędne rozszerzenie PHP nie zostało zainstalowane lub jest wyłączone.</para>
 
-<figure>
-  <title>Parametry nowego serwera.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch02-fig03.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+      <para>Następnie podaj nazwę hosta serwera bazy danych, jeśli znajduje się on na innym komputerze niż serwer HTTP, nazwę bazy danych oraz login i hasło użytkownika posiadającego prawo tworzenia tabel w tej bazie danych. W przypadku bazy SQL Server możesz pozostawić login i hasło puste, aby użyć zintegrowanej autentykacji Windows.</para>
 
-<para>Podaj nazwę serwera, która będzie widoczna dla wszystkich użytkowników w lewym górnym rogu strony. Wprowadź również hasło dla konta administratora, którego będziesz mógł później użyć, aby zalogować się do serwera i zmieniać jego ustawienia.</para>
+      <note>
+        <title>Notatka</title>
+        <para>W trakcie instalacji możesz również określić prefiks, który zostanie dodany przed nazwami wszystkich tabel i innych obiektów w bazie danych. Jeśli na przykład wybierzesz prefiks <literal>wi_</literal>, zostaną utworzone tabele o nazwach <literal>wi_server</literal>, <literal>wi_users</literal>, itd.</para>
+        <para>Wybierając unikalny prefiks, możesz zainstalować wiele różnych aplikacji korzystających z jednej bazy danych. Możesz również utworzyć kilka oddzielnych instancji serwera WebIssues w ramach jednej bazy danych.</para>
+      </note>
 
-<para>Domyślnie instalator utworzy kilka predefiniowanych typów spraw i widoków, abyś mógł szybko rozpocząć pracę z systemem. Zalecamy pozostawienie tego ustawienia, gdyż będziesz miał możliwość swobodnego dostosowania, a nawet usunięcia tych wbudowanych typów. Jeśli jednak chcesz samodzielnie utworzyć wszystkie typy spraw, wybierz opcję <guilabel>Nie instaluj żadnych typów spraw</guilabel>.</para>
+      <para>Podaj niezbędne informacje i przejdź do następnego kroku. System WebIssues spróbuje połączyć się z serwerem bazy danych, a w przypadku błędu wyświetli odpowiedni komunikat. Jeśli połączenie się powiedzie, a baza danych nie zawiera jeszcze tabel niezbędnych do działania systemu, zostanie wyświetlona następująca strona:</para>
 
-<note>
-<title>Notatka</title>
-<para>Istnieje możliwość zaimportowania danych z serwera WebIssues w wersji 0.8.5 do nowej wersji systemu. Nowy serwer musi być zainstalowany w tej samej bazie danych, co jego poprzednia wersja. Musisz więc użyć innego prefiksu dla nazw nowych tabel niż ten, który był użyty w wersji 0.8.5. Wybierz opcję <guilabel>Importuj dane z serwera WebIssues 0.8.5</guilabel> i opcjonalnie wprowadź prefiks dla starych tabel.</para>
-<para>Podczas instalacji nowego serwera wszystkie dane zostaną skopiowane, ale dane ze starych tabel nie zostaną zmodyfikowane ani usunięte. Jeśli proces importu się nie powiedzie, możesz poprawić ewentualne błędy i ponowić instalację nowej wersji.</para>
-<para>Jeśli w wersji 0.8.5 systemu używałeś bazy danych MySQL w wersji 4.0 lub starszej, przed rozpoczęciem instalacji musisz najpierw zaktualizować bazę danych do nowszej wersji. Ponieważ WebIssues przechowuje tekst używając kodowania <literal>UTF-8</literal>, ale starsze wersje MySQL nie obsługiwały tego kodowania, więc tekst będzie nieprawidłowo interpretowany jako zakodowany w formacie <literal>latin1</literal>. Przeczytaj <ulink url="http://dev.mysql.com/doc/refman/4.1/en/charset-conversion.html"/> aby uzyskać informacje na temat rozwiązania tego problemu.</para>
-</note>
+      <figure>
+        <title>Parametry nowego serwera</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig03.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
 
-<para>Przejdź do kolejnej strony, która zawiera krótkie podsumowanie czynności, które zostaną wykonane. Kliknij przycisk <guibutton>Instaluj</guibutton>, aby rozpocząć instalację. Może to potrwać kilka sekund, a w przypadku importu istniejących danych nieco dłużej. Jeśli instalacja zakończy się sukcesem, zostanie wyświetlony odpowiedni komunikat.</para>
+      <para>Podaj nazwę serwera, która będzie widoczna dla wszystkich użytkowników w lewym górnym rogu strony. Wprowadź również hasło dla konta administratora, którego będziesz mógł później użyć, aby zalogować się do serwera i zmieniać jego ustawienia.</para>
 
-<para>Jeśli tworzysz nowy plik konfiguracyjny dla wcześniej utworzonego serwera, podaj parametry połączenia do bazy danych zawierającej dane tej instancji. Strona służąca do wprowadzania parametrów nowego serwera zostanie w takim wypadku pominięta, a baza danych nie zostanie w żaden sposób zmodyfikowana. Zamiast tego wyświetlona zostanie nazwa i inne informacje na temat istniejącego serwera, a proces instalacji utworzy jedynie nowy plik konfiguracyjny.</para>
+      <para>Domyślnie instalator utworzy kilka predefiniowanych typów spraw i widoków. Najlepiej pozostaw to ustawienie, aby szybko rozpocząć pracę z systemem. Będziesz miał później możliwość swobodnego dostosowania, a nawet usunięcia tych wbudowanych typów. Jeśli jednak chcesz samodzielnie utworzyć wszystkie typy spraw od podstaw, wybierz opcję <guilabel>Nie instaluj żadnych typów spraw</guilabel>.</para>
 
-<tip>
-<title>Wskazówka</title>
-<para>Aby w przyszłości utworzyć nowy plik konfiguracyjny, na przykład po przeniesieniu bazy danych na inny serwer, musisz najpierw skasować istniejący plik konfiguracyjny. Jest to zabezpieczenie chroniące system przed niepowołanym dostępem do procedury instalacyjnej.</para>
-</tip>
+      <note>
+        <title>Notatka</title>
+        <para>Istnieje możliwość zaimportowania danych z serwera WebIssues w wersji 0.8.5 do nowej wersji systemu. Nowy serwer musi być zainstalowany w tej samej bazie danych, co jego poprzednia wersja. Musisz więc użyć innego prefiksu dla nazw nowych tabel niż ten, który był użyty w wersji 0.8.5. Wybierz opcję <guilabel>Importuj dane z serwera WebIssues 0.8.5</guilabel> i opcjonalnie wprowadź prefiks dla tabel źródłowych.</para>
+        <para>Podczas instalacji nowego serwera wszystkie dane zostaną skopiowane, ale tabele źródłowe nie zostaną zmodyfikowane ani usunięte. Jeśli zatem proces importu się nie powiedzie, możesz poprawić ewentualne błędy i ponowić instalację nowej wersji.</para>
+        <para>Jeśli w wersji 0.8.5 systemu używałeś starszej wersji bazy danych, niż jest obecnie wymagana, przed rozpoczęciem instalacji musisz najpierw zaktualizować bazę danych do nowszej wersji. Po zaktualizowaniu bazy MySQL z wersji starszej niż 4.1, musisz także skonwertować kolumny typu tekstowego na binarne, a następnie na tekstowe z kodowaniem <literal>utf8</literal>, aby zachować poprawne kodowanie tekstu. Przeczytaj <ulink url="http://dev.mysql.com/doc/refman/4.1/en/charset-conversion.html"/> aby uzyskać informacje na temat konwersji kolumn.</para>
+      </note>
 
-</sect1>
+      <para>Przejdź do kolejnej strony, która zawiera krótkie podsumowanie czynności, które zostaną wykonane. Kliknij przycisk <guibutton>Instaluj</guibutton>, aby rozpocząć instalację. Może to potrwać kilka sekund, a w przypadku importu istniejących danych nieco dłużej. Jeśli instalacja zakończy się sukcesem, zostanie wyświetlony odpowiedni komunikat.</para>
 
-<sect1 id="webissues.prep.setup">
-<title>Konfiguracja początkowa</title>
+      <para>Jeśli tworzysz nowy plik konfiguracyjny dla wcześniej utworzonego serwera, podaj parametry połączenia do bazy danych zawierającej dane tej instancji. Strona służąca do wprowadzania parametrów nowego serwera zostanie w takim wypadku pominięta, a baza danych nie zostanie w żaden sposób zmodyfikowana. Zamiast tego wyświetlona zostanie nazwa i inne informacje na temat istniejącego serwera, a proces instalacji utworzy jedynie nowy plik konfiguracyjny.</para>
 
-<para>Po zainstalowaniu nowego serwera WebIssues, zawiera on początkową konfigurację i ustawienia, ale zanim będzie można z niego korzystać, musisz wykonać jeszcze kilka kroków. Po pierwsze, musisz utworzyć konta użytkowników, którzy będą używać systemu. Po drugie, musisz utworzyć projekty i foldery, w których będą przechowywane sprawy.</para>
+      <tip>
+        <title>Wskazówka</title>
+        <para>Aby w przyszłości utworzyć nowy plik konfiguracyjny, na przykład po przeniesieniu bazy danych na inny serwer, musisz najpierw skasować istniejący plik konfiguracyjny. Jest to zabezpieczenie chroniące system przed niepowołanym dostępem do procedury instalacyjnej.</para>
+      </tip>
 
-<para>Zacznijmy od stworzenia kont użytkowników. Kliknij odnośnik <guilabel>Panel administracyjny</guilabel> w prawym górnym rogu okna, a następnie wybierz opcję <guilabel>Konta użytkowników</guilabel>. Powinieneś zobaczyć jednego użytkownika o nazwie Administrator, którego utworzył instalator.</para>
+    </sect2>
 
-<para>Utwórz swoje osobiste konto, żebyś nie musiał się logować jako administrator. W tym celu kliknij <guilabel>Dodaj użytkownika</guilabel>, a następnie podaj swoje imię i nazwisko oraz login i hasło, których będziesz użytkował do logowania się do systemu. Następnie naciśnij <guibutton>OK</guibutton>.</para>
+  </sect1>
 
-<figure>
-  <title>Tworzenie konta użytkownika.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch02-fig04.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+  <sect1 id="webissues.prep.setup">
+    <title>Konfiguracja początkowa</title>
 
-<para>Powtórz powyższe kroki, tworząc konta dla pozostałych osób, które będą korzystać z systemu. Dla każdego z nich musisz podać początkowe hasło, ale dla większego zaznaczenia możesz zaznaczyć opcję Użytkownik musi zmienić hasło przy następnym logowaniu, jeśli chcesz, aby każdy ustawił swoje własne hasło w momencie logowania do systemu.</para>
+    <para>Po zainstalowaniu nowego serwera WebIssues, zawiera on początkową konfigurację i ustawienia, ale zanim będzie można z niego korzystać, musisz wykonać jeszcze kilka kroków. Po pierwsze, musisz utworzyć konta użytkowników, którzy będą używać systemu. Po drugie, musisz utworzyć projekty i foldery, w których będą przechowywane sprawy.</para>
 
-<para>W systemie WebIssues może istnieć więcej użytkowników o uprawnieniach administratora. Aby zmienić uprawnienia użytkownika, wybierz go klikając jego nazwę na liście, a następnie kliknij <guilabel>Zmień dostęp</guilabel>. Możesz wybrać prawo administratora systemu lub zwykłego użytkownika, a także wyłączyć dostęp do systemu dla danego użytkownika. Naciśnij <guibutton>OK</guibutton>, aby zatwierdzić zmiany.</para>
+    <sect2 id="webissues.prep.setup.users">
+      <title>Konta użytkowników</title>
 
-<tip>
-<title>Wskazówka</title>
-<para>Administrator systemu ma dostęp do Panelu administracyjnego, a także jest administratorem wszystkich istniejących w systemie projektów, nawet jeśli nie jest ich członkiem. Nadawaj więc to uprawnienie tylko zaufanym osobom.</para>
-</tip>
+      <para>Zacznijmy od stworzenia kont użytkowników. Kliknij odnośnik <guilabel>Panel administracyjny</guilabel> w prawym górnym rogu okna, a następnie wybierz opcję <guilabel>Konta użytkowników</guilabel>. Powinieneś zobaczyć jednego użytkownika o nazwie Administrator, którego utworzył instalator.</para>
 
-<para>Skonfigurowana lista kont użytkowników może wyglądać jak na poniższym rysunku. Aby znaleźć więcej informacji na temat administrowania kontami użytkowników, przeczytaj <xref linkend="webissues.admin"/>.</para>
+      <para>Utwórz swoje osobiste konto, żebyś nie musiał się logować jako administrator. W tym celu kliknij <guilabel>Dodaj użytkownika</guilabel>, a następnie podaj swoje imię i nazwisko oraz login i hasło, których będziesz użytkował do logowania się do systemu. Następnie naciśnij <guibutton>OK</guibutton>.</para>
 
-<figure>
-  <title>Lista kont użytkowników.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch02-fig05.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+      <figure>
+        <title>Tworzenie konta użytkownika</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig04.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
 
-<para>Następnie kliknij odnośnik <guilabel>Klient webowy</guilabel> w prawym górnym rogu okna, aby przejść do głównej części systemu WebIssues. Po lewej stronie zobaczysz puste drzewo projektów i folderów. Kliknij <guilabel>Dodaj projekt</guilabel>, aby utworzyć pierwszy projekt. Nadaj mu nazwę <quote>Mój pierwszy projekt</quote> i naciśnij <guibutton>OK</guibutton>.</para>
+      <para>Powtórz powyższe kroki, tworząc konta dla pozostałych osób, które będą korzystać z systemu. Dla każdego z nich musisz podać początkowe hasło, ale dla większego bezpieczeństwa możesz zaznaczyć opcję <guilabel>Użytkownik musi zmienić hasło przy następnym logowaniu</guilabel>, jeśli chcesz, aby każdy ustawił swoje własne hasło w momencie logowania do systemu.</para>
 
-<figure>
-  <title>Tworzenie projektu.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch02-fig06.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+      <para>W systemie WebIssues może istnieć więcej użytkowników o uprawnieniach administratora. Aby zmienić uprawnienia użytkownika, wybierz go klikając jego nazwę na liście, a następnie kliknij <guilabel>Zmień dostęp</guilabel>. Możesz wybrać prawo administratora systemu lub zwykłego użytkownika, a także wyłączyć dostęp do systemu dla danego użytkownika. Naciśnij <guibutton>OK</guibutton>, aby zatwierdzić zmiany.</para>
 
-<para>Nowy projekt pojawi się w drzewie i zostanie automatycznie wybrany. Po prawej stronie pojawi się szereg operacji, które możesz wykonać na wybranym projekcie. Zacznijmy od utworzenia folderów. Kliknij <guilabel>Dodaj folder</guilabel> i utwórz projekt o nazwie <quote>Defekty</quote>, wybierając typ spraw o tej samej nazwie.</para>
+      <tip>
+        <title>Wskazówka</title>
+        <para>Administrator systemu ma dostęp do Panelu administracyjnego, a także jest administratorem wszystkich istniejących w systemie projektów, nawet jeśli nie jest ich członkiem. Nadawaj więc to uprawnienie tylko zaufanym osobom.</para>
+      </tip>
 
-<figure>
-  <title>Tworzenie folderu.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch02-fig07.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+      <para>Skonfigurowana lista kont użytkowników może wyglądać jak na poniższym rysunku. Aby znaleźć więcej informacji na temat administrowania kontami użytkowników, przeczytaj <xref linkend="webissues.admin"/>.</para>
 
-<para>Po utworzeniu folderu, zostanie on wyświetlony w drzewie poniżej projektu i automatycznie wybrany. Wybierz projekt, klikając na jego nazwie i dodaj kolejny folder typu Zadania. Następnie powtórz tą samą czynność, aby utworzyć folder typu Forum. Drzewo projektów będzie wyglądać następująco:</para>
+      <figure>
+        <title>Lista kont użytkowników</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig05.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
 
-<figure>
-  <title>Drzewo projektów.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch02-fig08.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+    </sect2>
 
-<para>Na razie nowo utworzony projekt jest dostępny tylko dla administratorów systemu. Aby udzielić dostępu do niego pozostałym użytkownikom, wybierz projekt i kliknij <guilabel>Członkowie projektu</guilabel>. Zostanie wyświetlona pusta lista. Teraz kliknij <guilabel>Dodaj członków</guilabel>, a następnie wybierz wszystkich użytkowników oprócz konta o nazwie Administrator. Kliknij <guibutton>OK</guibutton>.</para>
+    <sect2 id="webissues.prep.setup.projects">
+      <title>Projekty i foldery</title>
 
-<para>Możesz również nadać jednemu z członków prawo administratora projektu. Wybierz użytkownika i kliknij <guilabel>Zmień dostęp</guilabel>, a następnie wybierz poziom uprawnień w podobny sposób, jak w przypadku zmiany dostępu użytkownika do systemu.</para>
+      <para>Następnie kliknij odnośnik <guilabel>Klient webowy</guilabel> w prawym górnym rogu okna, aby przejść do głównej części systemu WebIssues. Po lewej stronie zobaczysz puste drzewo projektów i folderów. Kliknij <guilabel>Dodaj projekt</guilabel>, aby utworzyć pierwszy projekt. Nadaj mu nazwę <quote>Mój pierwszy projekt</quote> i naciśnij <guibutton>OK</guibutton>.</para>
 
-<tip>
-<title>Wskazówka</title>
-<para>Administrator projektu może tworzyć i modyfikować foldery, a także nadawać i odbierać uprawnienia innym użytkownikom w ramach tego projektu. Może również usuwać sprawy, a także usuwać i modyfikować komentarze innych użytkowników.</para>
-</tip>
+      <figure>
+        <title>Tworzenie projektu</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig06.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
 
-<para>Skonfigurowana lista członków projektu może wyglądać tak jak poniżej. Przeczytaj <xref linkend="webissues.admin"/> w dalszej części tego podręcznika, aby dowiedzieć się więcej na temat administrowania projektami, folderami i członkami.</para>
+      <para>Nowy projekt pojawi się w drzewie i zostanie automatycznie wybrany. Po prawej stronie pojawi się szereg operacji, które możesz wykonać na wybranym projekcie. Zacznijmy od utworzenia folderów. Kliknij <guilabel>Dodaj folder</guilabel> i utwórz folder o nazwie <quote>Błędy</quote>, wybierając typ spraw o tej samej nazwie.</para>
 
-<figure>
-  <title>Lista członków projektu.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch02-fig09.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+      <figure>
+        <title>Tworzenie folderu</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig07.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
 
-</sect1>
+      <para>Po utworzeniu folderu, zostanie on wyświetlony w drzewie poniżej projektu i automatycznie wybrany. Wybierz projekt, klikając na jego nazwie i dodaj kolejny folder typu Zadania. Następnie powtórz tą samą czynność, aby utworzyć folder typu Forum. Drzewo projektów będzie wyglądać następująco:</para>
+
+      <figure>
+        <title>Drzewo projektów</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig08.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Na razie nowo utworzony projekt jest dostępny tylko dla administratorów systemu. Aby udzielić dostępu do niego pozostałym użytkownikom, wybierz projekt i kliknij <guilabel>Członkowie projektu</guilabel>. Zostanie wyświetlona pusta lista. Teraz kliknij <guilabel>Dodaj członków</guilabel>, a następnie wybierz wszystkich użytkowników oprócz konta o nazwie Administrator. Kliknij <guibutton>OK</guibutton>.</para>
+
+      <para>Możesz również nadać jednemu z członków prawo administratora projektu. Wybierz użytkownika i kliknij <guilabel>Zmień dostęp</guilabel>, a następnie wybierz poziom uprawnień w podobny sposób, jak w przypadku zmiany dostępu użytkownika do systemu.</para>
+
+      <tip>
+        <title>Wskazówka</title>
+        <para>Administrator projektu może tworzyć i modyfikować foldery, a także nadawać i odbierać uprawnienia innym użytkownikom w ramach tego projektu. Może również usuwać sprawy, a także usuwać i modyfikować komentarze innych użytkowników.</para>
+      </tip>
+
+      <para>Skonfigurowana lista członków projektu może wyglądać tak jak poniżej. Przeczytaj <xref linkend="webissues.admin"/> w dalszej części tego podręcznika, aby dowiedzieć się więcej na temat administrowania projektami, folderami i członkami.</para>
+
+      <figure>
+        <title>Lista członków projektu</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig09.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+    </sect2>
+
+  </sect1>
+
+  <sect1 id="webissues.prep.notifications">
+    <title>Email notifications</title>
+
+    <para>System WebIssues ma możliwość wysyłania e-maili informujących o nowych i zmienionych sprawach w wybranych widokach. Jest to opcjonalne, ponieważ nie zawsze pozwala na to konfiguracja komputera lub usługi hostingowej i nie w każdym przypadku jest to potrzebne. Jeśli chcesz włączyć wysyłanie powiadomień mailowych, musisz wykonać dwa dodatkowe kroki konfiguracyjne.</para>
+
+    <sect2 id="webissues.prep.nofitications.email">
+      <title>Wysyłanie poczty</title>
+
+      <para>Najpierw przejdź do Panelu administracyjnego i kliknij <guilabel>Ustawienia e-maili</guilabel>, aby skonfigurować wysyłanie poczty.</para>
+
+      <figure>
+        <title>Ustawienia e-maili</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig10.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Jeśli PHP na twoim serwerze jest tak skonfigurowane, że ma możliwość wysyłania e-maili poprzez program <literal>sendmail</literal> lub lokalny serwer SMTP, wybierz opcję <guilabel>Standardowy mailer PHP</guilabel> i wpisz adres, z którego będą wysyłane wiadomości.</para>
+
+      <note>
+        <title>Notatka</title>
+        <para>Więcej informacji na temat konfigurowania standardowego mechanizmu wysyłania e-maili wbudowanego w PHP znajdziesz na stronie <ulink url="http://php.net/manual/en/mail.configuration.php"/>.</para>
+      </note>
+
+      <para>Istnieje również możliwość wysyłania e-maili za pośrednictwem zewnętrznego serwera SMTP. Możesz w tym celu wykorzystać serwer pocztowy twojej firmy lub organizacji, albo dowolną publiczną usługę pocztową (np. gmail). Wybierz opcję <guilabel>Własny serwer SMTP</guilabel> i wpisz adres nadawcy wiadomości. Następnie w ramce <guilabel>Serwer SMTP</guilabel> wpisz adres serwera i numer portu usługi pocztowej (zwykle 25 lub 465 dla połączeń szyfrowanych). Wybierz tryb szyfrowania, jeśli serwer SMTP obsługuje szyfrowanie komunikacji. Podaj także nazwę użytkownika i hasło dostępu do serwera SMTP.</para>
+
+      <para>Kliknij <guibutton>Testuj połączenie</guibutton> aby sprawdzić, czy konfiguracja SMTP jest poprawna. System WebIssues wyśle testową wiadomość na swój własny adres. Jeśli ją otrzymasz, oznacza to, że konfiguracja jest poprawna. Nie zapomnij również zapisać konfigurację klikając <guibutton>OK</guibutton>.</para>
+
+    </sect2>
+
+    <sect2 id="webissues.prep.nofitications.cron">
+      <title>Zadania cykliczne</title>
+
+      <para>Drugim krokiem jest skonfigurowanie cyklicznego zadania, które będzie wysyłać powiadomienia. Zadanie to powinno być wykonywane przynajmniej raz na godzinę, ale żeby szybciej otrzymywać powiadomienia natychmiastowe, zaleca się, żeby zadanie to było wykonywane w odstępach od 5 do 15 minut.</para>
+
+      <para>W przypadku systemów Unix/Linux, możesz wykorzystać mechanizm zadań <literal>cron</literal>. Aby dodać zadanie, zmodyfikuj plik <filename>/etc/crontab</filename> lub użyj graficznego narzędzia do zarządzania zadaniami. Jeśli używasz systemu Windows, otwórz Harmonogram zadań i utwórz nowe zadanie. Więcej informacji znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
+
+      <note>
+        <title>Notatka</title>
+        <para>Niektóre usługi hostingowe udostępniają możliwość definiowania zadań cyklicznych poprzez dostęp do powłoki lub przez panel administracyjny. Zapoznaj się z dokumentacją usługi, aby uzyskać więcej informacji na ten temat.</para>
+        <para>Jeśli twoja usługa hostingowa nie oferuje możliwości uruchamiania zadań cyklicznych, możesz zainstalować takie zadanie na innym komputerze. Możesz na przykład skorzystać z jednej z dostępnych usług <quote>cron online</quote> &mdash; niektóre z nich są dostępne za darmo.</para>
+      </note>
+
+      <para>Jeśli zadanie cyklicznie jest wykonywane lokalnie, powinno ono uruchamiać skrypt <literal>cron/job.php</literal> przy użyciu interpretera PHP. Więcej informacji na temat uruchamiania PHP z wiersza poleceń znajdziesz na stronie <ulink url="http://www.php.net/manual/en/features.commandline.options.php"/>.</para>
+
+      <para>Jeśli korzystasz z zewnętrznej usługi cron lub uruchamiasz zadanie na innym komputerze, skrypt powinien być uruchamiany zdalnie, poprzez pełny adres URL, na przykład <literal>http://www.example.com/cron/job.php</literal>. Możesz w tym celu na przykład skorzystać z programu <literal>wget</literal> lub <literal>curl</literal>, a także z dowolnej przeglądarki stron WWW działającej w trybie tekstowym.</para>
+
+      <para>Aby sprawdzić, czy cykliczne zadanie się uruchamia, przejdź do Panelu administracyjnego i kliknij <guilabel>Ogólne informacje</guilabel>. W ramce <guilabel>Zadanie cron</guilabel> powinna być wyświetlona data i czas ostatniego uruchomienia zadania. Każde uruchomienie zadania jest także zalogowane w Dzienniku zdarzeń systemu WebIssues.</para>
+
+    </sect2>
+
+  </sect1>
 
 </chapter>

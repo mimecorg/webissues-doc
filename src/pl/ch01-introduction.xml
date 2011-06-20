@@ -1,105 +1,120 @@
 <chapter id="webissues.intro">
-<title>Wprowadzenie</title>
+  <title>Wprowadzenie</title>
 
-<para>W tym rozdziale zostały przedstawione podstawowe zagadnienia związane ze śledzeniem spraw i wspomaganiem pracy zespołowej. Została również opisana organizacja danych w systemie WebIssues oraz cykl życia przykładowych spraw. Powinni go przeczytać zarówno początkujący, jak i zaawansowani użytkownicy.</para>
+  <para>W tym rozdziale zostały przedstawione podstawowe zagadnienia związane ze śledzeniem spraw i wspomaganiem pracy zespołowej. Została również opisana organizacja danych w systemie WebIssues oraz cykl życia przykładowych spraw. Powinni go przeczytać zarówno początkujący, jak i zaawansowani użytkownicy.</para>
 
-<sect1 id="webissues.intro.collaboration">
-<title>Śledzenie spraw i praca zespołowa</title>
+  <sect1 id="webissues.intro.collaboration">
+    <title>Śledzenie spraw i praca zespołowa</title>
 
-<para>W dzisiejszych czasach zarządzanie informacją i komunikacja jest kluczem do sukcesu w wielu dziedzinach. Komputery zapewniają duże usprawnienie w gromadzeniu informacji, jej wyszukiwaniu i przekazywaniu. Istnieje bardzo duża liczba programów ułatwiających komunikację, pracę zespołową i przechowywanie danych. Ich różnorodność powoduje jednocześnie, że skuteczne zarządzanie informacją i pracą zespołów nie jest łatwym zadaniem.</para>
+    <para>W dzisiejszych czasach zarządzanie informacją i komunikacja jest kluczem do sukcesu w wielu dziedzinach. Komputery zapewniają duże usprawnienie w gromadzeniu informacji, jej wyszukiwaniu i przekazywaniu. Istnieje bardzo duża liczba programów ułatwiających komunikację, pracę zespołową i przechowywanie danych. Ich różnorodność powoduje jednocześnie, że skuteczne zarządzanie informacją i pracą zespołów nie jest łatwym zadaniem.</para>
 
-<para>Podstawowa forma komunikacji, czyli poczta elektroniczna, jest najbardziej elastyczna i ma najwięcej zastosowań, ale jest ona trudna do skatalogowania i przeszukiwania. Gdzie znajduje się faktura przesłana w zeszłym miesiącu? Która wersja umowy została ostatecznie zatwierdzona? Również śledzenie statusu spraw wymaga dodatkowej pracy. Czy zadanie, które zleciłem pracownikowi wczoraj, zostało już wykonane? Czy problem zgłoszony w zeszłym tygodniu przez klienta został rozwiązany?</para>
+    <para>Podstawowa forma komunikacji, czyli poczta elektroniczna, jest najbardziej elastyczna i ma najwięcej zastosowań, ale jest ona trudna do skatalogowania i przeszukiwania. Gdzie znajduje się faktura przesłana w zeszłym miesiącu? Która wersja umowy została ostatecznie zatwierdzona? Również śledzenie statusu spraw wymaga dodatkowej pracy. Czy zadanie, które zleciłem pracownikowi wczoraj, zostało już wykonane? Czy problem zgłoszony w zeszłym tygodniu przez klienta został rozwiązany?</para>
 
-<para>Jednym z rozwiązań powyższych problemów jest stworzenie listy spraw do załatwienia i przypisanie im różnych atrybutów &mdash; termin wykonania, priorytet, status. Możesz w tym celu wykorzystać prosty arkusz kalkulacyjny, ale jeśli będzie musiało go modyfikować wiele osób jednocześnie, praca będzie utrudniona. Nie dość, że nie będzie wiadomo, kto co zmodyfikował, to jeszcze istnieje ryzyko, że poszczególne osoby będą nawzajem nadpisywać swoje wcześniej dokonane zmiany. Co więcej, aby dyskutować na temat poszczególnych spraw, albo przesłać związany z daną sprawą plik, i tak będziesz musiał skorzystać z innej formy komunikacji, na przykład poczty elektronicznej.</para>
+    <para>Jednym z rozwiązań powyższych problemów jest stworzenie listy spraw do załatwienia i przypisanie im różnych atrybutów &mdash; termin wykonania, priorytet, status. Możesz w tym celu wykorzystać prosty arkusz kalkulacyjny, ale jeśli będzie musiało go modyfikować wiele osób jednocześnie, praca będzie utrudniona. Nie dość, że nie będzie wiadomo, kto co zmodyfikował, to jeszcze istnieje ryzyko, że poszczególne osoby będą nawzajem nadpisywać swoje wcześniej dokonane zmiany. Co więcej, aby dyskutować na temat poszczególnych spraw, albo przesłać związany z daną sprawą plik, i tak będziesz musiał skorzystać z innej formy komunikacji, na przykład poczty elektronicznej.</para>
 
-<para>Istnieje również szereg programów przystosowanych do konkretnych zastosowań. Istnieją na przykład programy ułatwiające śledzenie defektów (ang. <foreignphrase>bug tracking</foreignphrase>) w oprogramowaniu. Umożliwiają one rejestrację defektów, przypisywanie im atrybutów, a także dyskusję i dodawanie załączników. Oferują również spore możliwości wyszukiwania i przeglądania historii poszczególnych defektów. Jednak rozwiązania takie są zwykle mało uniwersalne. Jedne systemy wspierają śledzenie defektów, inne zarządzanie zadaniami, a jeszcze inne obsługę zgłoszeń serwisowych. Zatem musiałbyś korzystać z kilku takich systemów, a ponadto musiałbyś dostosować sposób pracy do możliwości danego systemu, podczas gdy powinno być odwrotnie.</para>
+    <para>Istnieje również szereg programów przystosowanych do konkretnych zastosowań. Istnieją na przykład programy ułatwiające śledzenie błędów (ang. <foreignphrase>bug tracking</foreignphrase>) w oprogramowaniu. Umożliwiają one rejestrację błędów, przypisywanie im atrybutów, a także dyskusję i dodawanie załączników. Oferują również spore możliwości wyszukiwania i przeglądania historii poszczególnych błędów. Jednak rozwiązania takie są zwykle mało uniwersalne. Jedne systemy wspierają śledzenie błędów, inne zarządzanie zadaniami, a jeszcze inne obsługę zgłoszeń serwisowych. Zatem musiałbyś korzystać z kilku takich systemów, a ponadto musiałbyś dostosować sposób pracy do możliwości danego systemu, podczas gdy powinno być odwrotnie.</para>
 
-<para>System WebIssues oferuje dużo większe możliwości dostosowywania do potrzeb użytkowników niż inne podobne programy. Umożliwia on śledzenie spraw, defektów, zadań, zgłoszeń i dowolnych innych informacji z taką samą elastycznością, jak np. arkusz kalkulacyjny, w którym możesz swobodnie dodawać i zmieniać kolumny. Jednocześnie system umożliwia pracę wielu osób jednocześnie, zapamiętuje i udostępnia pełną historię zmian, kontroluje uprawnienia poszczególnych osób do różnych obszarów informacji, a także umożliwia swobodne dyskutowanie i wymianę informacji o poszczególnych sprawach oraz dołączanie do nich dowolnych plików.</para>
+    <para>System WebIssues oferuje dużo większe możliwości dostosowywania do potrzeb użytkowników niż inne podobne programy. Umożliwia on śledzenie spraw, błędów, zadań, zgłoszeń i dowolnych innych informacji z taką samą elastycznością, jak np. arkusz kalkulacyjny, w którym możesz swobodnie dodawać i zmieniać kolumny. Jednocześnie system umożliwia pracę wielu osób jednocześnie, zapamiętuje i udostępnia pełną historię zmian, kontroluje uprawnienia poszczególnych osób do różnych obszarów informacji, a także umożliwia swobodne dyskutowanie i wymianę informacji o poszczególnych sprawach oraz dołączanie do nich dowolnych plików.</para>
 
-<para>W najprostszym przypadku możesz używać systemu WebIssues podobnie jak forum dyskusyjne lub listę mailową, gdzie poszczególne osoby wymieniają się informacjami na różne tematy. Z drugiej strony możesz go wykorzystywać jako współdzieloną baza danych, w której poszczególne elementy (wiersze) mogą posiadać wiele atrybutów (kolumn) różnego typu, mogą być wyszukiwane według różnych kryteriów, czy drukowane w formie raportów. Możesz w końcu połączyć wszystkie jego zalety, aby uzyskać jednolite środowisko umożliwiające przechowywanie informacji i komunikację w zespole.</para>
+    <para>W najprostszym przypadku możesz używać systemu WebIssues podobnie jak forum dyskusyjne lub listę mailową, gdzie poszczególne osoby wymieniają się informacjami na różne tematy. Z drugiej strony możesz go wykorzystywać jako współdzieloną baza danych, w której poszczególne elementy (wiersze) mogą posiadać wiele atrybutów (kolumn) różnego typu, mogą być wyszukiwane według różnych kryteriów, czy drukowane w formie raportów. Możesz w końcu połączyć wszystkie jego zalety, aby uzyskać jednolite środowisko umożliwiające przechowywanie informacji i komunikację w zespole.</para>
 
-<para>Innym ograniczeniem tradycyjnego oprogramowania do śledzenia spraw jest to, że jest ono często dostępne tylko za pośrednictwem przeglądarki internetowej. Korzystając z poczty elektronicznej, masz możliwość dostępu zarówno przez interfejsy webowe (dzięki czemu masz dostęp do poczty z dowolnego miejsca na świecie), jak również przez program zainstalowany na swoim komputerze (co zapewnia wygodę pracy, szybkie wyszukiwanie oraz wygodną edycję). Jeśli system śledzenia spraw jest ważnym elementem twojego codziennego środowiska pracy, również powinien oferować taką swobodę. Dlatego system WebIssues oferuje dostęp zarówno przez przeglądarkę, jak i poprzez aplikację desktopową (tzn. uruchamianą bezpośrednio na twoim komputerze).</para>
+    <para>Innym ograniczeniem tradycyjnego oprogramowania do śledzenia spraw jest to, że jest ono często dostępne tylko za pośrednictwem przeglądarki internetowej. Korzystając z poczty elektronicznej, masz możliwość dostępu zarówno przez interfejsy webowe (dzięki czemu masz dostęp do poczty z dowolnego miejsca na świecie), jak również przez program zainstalowany na swoim komputerze (co zapewnia wygodę pracy, szybkie wyszukiwanie oraz wygodną edycję). Jeśli system śledzenia spraw jest ważnym elementem twojego codziennego środowiska pracy, również powinien oferować taką swobodę. Dlatego system WebIssues oferuje dostęp zarówno przez przeglądarkę, jak i poprzez aplikację desktopową (tzn. uruchamianą bezpośrednio na twoim komputerze).</para>
 
-</sect1>
+  </sect1>
 
-<sect1 id="webissues.intro.organization">
-<title>Logiczna organizacja danych</title>
+  <sect1 id="webissues.intro.organization">
+    <title>Logiczna organizacja danych</title>
 
-<para>W poprzednim rozdziale kilkukrotnie użyte zostało sformułowanie <firstterm>sprawa</firstterm>. Jest to najmniejsza samodzielna jednostka informacji występująca w systemie WebIssues. Jest to zarazem bardzo ogólne pojęcie &mdash; pojedyncza sprawa może reprezentować defekt w oprogramowaniu, zgłoszenie serwisowe, zadanie do wykonania, wątek w dyskusji, zasób będący własnością firmy, itp.</para>
+    <para>W poprzednim rozdziale kilkukrotnie użyte zostało sformułowanie <firstterm>sprawa</firstterm>. Jest to najmniejsza samodzielna jednostka informacji występująca w systemie WebIssues. Jest to zarazem bardzo ogólne pojęcie &mdash; pojedyncza sprawa może reprezentować błąd w oprogramowaniu, zgłoszenie serwisowe, zadanie do wykonania, wątek w dyskusji, zasób będący własnością firmy, itp.</para>
 
-<para>Każda sprawa w systemie posiada swój unikalny i niezmienny <firstterm>identyfikator</firstterm>, dzięki czemu możesz ją jednoznacznie zidentyfikować w całym cyklu życia. Sprawa posiada również nazwę, a także dowolną liczbę <firstterm>atrybutów</firstterm> różnych typów, analogicznie do tabeli w arkuszu kalkulacyjnym, w którym pojedynczy wiersz reprezentuje sprawę, a kolumna &mdash; atrybut. W systemie WebIssues mogą istnieć niezależnie od siebie sprawy różnych <firstterm>typów</firstterm>, posiadających odmienne zestawy atrybutów &mdash; podobnie jak arkusz kalkulacyjny może zawierać tabele o różnym układzie kolumn.</para>
+    <para>Każda sprawa w systemie posiada swój unikalny i niezmienny <firstterm>identyfikator</firstterm>, dzięki czemu możesz ją jednoznacznie zidentyfikować w całym cyklu życia. Sprawa posiada również nazwę, a także dowolną liczbę <firstterm>atrybutów</firstterm> różnych typów, analogicznie do tabeli w arkuszu kalkulacyjnym, w którym pojedynczy wiersz reprezentuje sprawę, a kolumna &mdash; atrybut. W systemie WebIssues mogą istnieć niezależnie od siebie sprawy różnych <firstterm>typów</firstterm>, posiadających odmienne zestawy atrybutów &mdash; podobnie jak arkusz kalkulacyjny może zawierać tabele o różnym układzie kolumn.</para>
 
-<figure>
-  <title>Tabela zawierająca sprawy i atrybuty.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch01-fig01.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+    <figure>
+      <title>Tabela zawierająca sprawy i atrybuty</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch01-fig01.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
 
-<para>Każda sprawa zarejestrowana w systemie posiada swoją historię, uszeregowaną chronologicznie począwszy od momentu utworzenia. Składają się na nią zmiany wartości poszczególnych atrybutów, a także komentarze oraz załączone pliki. Umożliwia to prześledzenie całego cyklu życia danej sprawy, odtworzenie jej stanu w dowolnym momencie, a także sprawdzenie, kto, kiedy i w jaki sposób zmodyfikował daną sprawę.</para>
+    <para>Każda sprawa zarejestrowana w systemie posiada swoją historię, uszeregowaną chronologicznie począwszy od momentu utworzenia. Składają się na nią zmiany wartości poszczególnych atrybutów, a także komentarze oraz załączone pliki. Umożliwia to prześledzenie całego cyklu życia danej sprawy, odtworzenie jej stanu w dowolnym momencie, a także sprawdzenie, kto, kiedy i w jaki sposób zmodyfikował daną sprawę.</para>
 
-<figure>
-  <title>Historia sprawy ze zmianami, komentarzami i załącznikami.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch01-fig02.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+    <figure>
+      <title>Historia sprawy ze zmianami, komentarzami i załącznikami</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch01-fig02.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
 
-<para>Aby zmaksymalizować produktywność i elastyczność, system WebIssues nie ma złożonego systemu uprawnień i opiera się na idei otwartej współpracy. Dlatego najlepiej nadaje się on do wewnętrznego użytku w zaufanej grupie pracowników lub członków organizacji. Każdy może tworzyć i dowolnie modyfikować wszystkie sprawy, do których ma dostęp. Każda zmiana jest jednak jawna i pozostaje trwale zarejestrowana przez system. Dodatkowo usuwanie spraw i inne potencjalne niebezpieczne lub nieodwracalne operacje wymagają specjalnych uprawnień.</para>
+    <para>Aby zmaksymalizować produktywność i elastyczność, system WebIssues nie ma złożonego systemu uprawnień i opiera się na idei otwartej współpracy. Dlatego najlepiej nadaje się on do wewnętrznego użytku w zaufanej grupie pracowników lub członków organizacji. Każdy może tworzyć i dowolnie modyfikować wszystkie sprawy, do których ma dostęp. Każda zmiana jest jednak jawna i pozostaje trwale zarejestrowana przez system. Dodatkowo usuwanie spraw i inne potencjalne niebezpieczne lub nieodwracalne operacje wymagają specjalnych uprawnień.</para>
 
-<para>Aby ułatwić zarządzanie sprawami, są one logicznie podzielone na <firstterm>foldery</firstterm>. Możesz utworzyć dowolną liczbę folderów różnych typów, przy czym pojedynczy folder musi zawierać sprawy tego samego typu. Kontynuując naszą analogię, folder jest więc odpowiednikiem tabeli w arkuszu. Korzystanie z folderów ułatwia wyszukiwanie informacji &mdash; możesz np. podzielić defekty według modułów, których dotyczą, albo wersji oprogramowania, listy dyskusyjne możesz podzielić według tematu, a zgłoszenia serwisowe według miesięcy, w których zostały zarejestrowane.</para>
+    <para>Aby ułatwić zarządzanie sprawami, są one logicznie podzielone na <firstterm>foldery</firstterm>. Możesz utworzyć dowolną liczbę folderów różnych typów, przy czym pojedynczy folder musi zawierać sprawy tego samego typu. Kontynuując naszą analogię, folder jest więc odpowiednikiem tabeli w arkuszu. Korzystanie z folderów ułatwia wyszukiwanie informacji &mdash; możesz np. podzielić błędy według modułów, których dotyczą, albo wersji oprogramowania, listy dyskusyjne możesz podzielić według tematu, a zgłoszenia serwisowe według miesięcy, w których zostały zarejestrowane.</para>
 
-<para>Foldery są z kolei pogrupowane w <firstterm>projekty</firstterm>. Dla każdego projektu możesz określić zbiór osób, którzy mają do niego dostęp, oraz ich uprawnienia w ramach tego projektu. Możesz zatem podzielić system na obszary, do których dostęp mają różne grupy użytkowników. Każdy projekt może również mieć swojego administratora (lub kilku administratorów). Administrator projektu ma większe uprawnienia niż zwykły użytkownik, np. ma możliwość usuwania spraw lub przenoszenia ich między folderami.</para>
-  
-<figure>
-  <title>Drzewo projektów i folderów.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch01-fig03.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+    <para>Foldery są z kolei pogrupowane w <firstterm>projekty</firstterm>. Dla każdego projektu możesz określić zbiór osób, którzy mają do niego dostęp, oraz ich uprawnienia w ramach tego projektu. Możesz zatem podzielić system na obszary, do których dostęp mają różne grupy użytkowników. Każdy projekt może również mieć swojego administratora (lub kilku administratorów). Administrator projektu ma większe uprawnienia niż zwykły użytkownik, np. ma możliwość usuwania spraw lub przenoszenia ich między folderami.</para>
+      
+    <figure>
+      <title>Drzewo projektów i folderów</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch01-fig03.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
 
-<para>Nie ma możliwości definiowania uprawnień na niższym poziomie szczegółowości niż pojedynczy projekt. Wszyscy członkowie projektu mają zatem równoprawny dostęp do wszystkich informacji zawartych w tym projekcie i możliwość ich modyfikowania. System WebIssues zapewnia natomiast bezpieczeństwo przed niepowołanym dostępem do danych przez nieuprawnione osoby.</para>
+    <para>Nie ma możliwości definiowania uprawnień na niższym poziomie szczegółowości niż pojedynczy projekt. Wszyscy członkowie projektu mają zatem równoprawny dostęp do wszystkich informacji zawartych w tym projekcie i możliwość ich modyfikowania. System WebIssues zapewnia natomiast bezpieczeństwo przed niepowołanym dostępem do danych przez nieuprawnione osoby.</para>
 
-</sect1>
+  </sect1>
 
-<sect1 id="webissues.intro.lifecycle">
-<title>Cykl życia sprawy</title>
+  <sect1 id="webissues.intro.lifecycle">
+    <title>Cykl życia sprawy</title>
 
-<para>Na początek załóżmy, że system WebIssues jest używany do wewnętrznej komunikacji między członkami zespołu, zastępując fora dyskusyjne bądź listy mailowe. Folder reprezentuje forum lub listę związaną z określonym tematem, a sprawa &mdash; wątek dyskusji.</para>
+    <para>Na początek załóżmy, że system WebIssues jest używany do wewnętrznej komunikacji między członkami zespołu, zastępując fora dyskusyjne bądź listy mailowe. Folder reprezentuje forum lub listę związaną z określonym tematem, a sprawa &mdash; wątek dyskusji.</para>
 
-<para>Jan Kowalski jest nowym pracownikiem w twojej firmie i dopiero uczy się używać różnych programów, które są mu potrzebne do pracy. Jeden z programów księgowych, Big Finances, nie chce się uruchomić i zamiast tego wyświetlił niezrozumiały komunikat błędu. Kowalski loguje się do systemu WebIssues i otwiera folder Pomoc. Następnie dodaje nową sprawę i nadaje jej nazwę <quote>Problem z Big Finances</quote>. Tworzy również komentarz, w którym opisuje, co robił kiedy wystąpił problem, a na koniec dołącza zrzut ekranu z komunikatem błędu w postaci pliku graficznego.</para>
+    <sect2 id="webissues.intro.lifecycle.forum">
+      <title>Proste forum</title>
 
-<para>Ponieważ starasz się pomagać nowym pracownikom, regularnie w ciągu dnia zaglądasz do folderu Pomoc. Wszystkie wątki (sprawy) są domyślnie posortowane według daty ostatniej modyfikacji. Co więcej, nowe wątki, których jeszcze nie czytałeś, są oznaczone żółtym symbolem zamkniętej koperty i dodatkowo pogrubione &mdash; podobnie jak w wielu programach pocztowych czy forach dyskusyjnych. Otwierasz sprawę, czytasz opis problemu i otwierasz załącznik.</para>
+      <para>Jan Kowalski jest nowym pracownikiem w twojej firmie i dopiero uczy się używać różnych programów, które są mu potrzebne do pracy. Jeden z programów księgowych, Big Finances, nie chce się uruchomić i zamiast tego wyświetlił niezrozumiały komunikat błędu. Kowalski loguje się do systemu WebIssues i otwiera folder Pomoc. Następnie dodaje nową sprawę i nadaje jej nazwę <quote>Problem z Big Finances</quote>. Tworzy również komentarz, w którym opisuje, co robił kiedy wystąpił problem, a na koniec dołącza zrzut ekranu z komunikatem błędu w postaci pliku graficznego.</para>
 
-<para>To dość częsty problem &mdash; wystarczy skasować jeden błędny plik i program Big Finances znowu powinien działać. Dodajesz do sprawy nowy komentarz, w którym opisujesz sposób postępowania. Niedługo potem Kowalski zagląda znowu do katalogu Pomoc i zauważa, że jego sprawa jest oznaczona zieloną, zamkniętą kopertą i pogrubiona. Oznacza to, że ktoś inny zmodyfikował sprawę od czasu, kiedy ją ostatnio otwierał. Kowalski czyta twój komentarz, wykonuje opisane kroki i uruchamia program. Następnie odpisuje, że zaproponowane przez ciebie rozwiązanie pomogło rozwiązać problem. Przeglądając ponownie folder Pomoc szybko zauważasz zieloną kopertę &mdash; kolejny raz pomogłeś komuś nawet nie ruszając się z miejsca.</para>
+      <para>Ponieważ starasz się pomagać nowym pracownikom, regularnie w ciągu dnia zaglądasz do folderu Pomoc. Wszystkie wątki (sprawy) są domyślnie posortowane według daty ostatniej modyfikacji. Co więcej, nowe wątki, których jeszcze nie czytałeś, są oznaczone żółtym symbolem zamkniętej koperty i dodatkowo pogrubione &mdash; podobnie jak w wielu programach pocztowych czy forach dyskusyjnych. Otwierasz sprawę, czytasz opis problemu i otwierasz załącznik.</para>
 
-<para>Pół roku później firma rozrosła się tak, że nie jesteś w stanie już pomagać wszystkim pracownikom, nie zaniedbując własnych obowiązków. Co gorsza pojawiło się nowe oprogramowanie Great Finances, którego nie znasz tak dobrze i nie potrafisz samodzielnie rozwiązać wszystkich problemów. Zwykłe forum dyskusyjne przestało już wystarczać i konieczne było wprowadzenie wirtualnego punktu serwisowego.</para>
+      <para>To dość częsty problem &mdash; wystarczy skasować jeden błędny plik i program Big Finances znowu powinien działać. Dodajesz do sprawy nowy komentarz, w którym opisujesz sposób postępowania. Niedługo potem Kowalski zagląda znowu do katalogu Pomoc i zauważa, że jego sprawa jest oznaczona zieloną, zamkniętą kopertą i pogrubiona. Oznacza to, że ktoś inny zmodyfikował sprawę od czasu, kiedy ją ostatnio otwierał. Kowalski czyta twój komentarz, wykonuje opisane kroki i uruchamia program. Następnie odpisuje, że zaproponowane przez ciebie rozwiązanie pomogło rozwiązać problem. Przeglądając ponownie folder Pomoc szybko zauważasz zieloną kopertę &mdash; kolejny raz pomogłeś komuś nawet nie ruszając się z miejsca.</para>
 
-<para>Kowalski od niedawna używa nowego programu Great Finances i radzi sobie dobrze, ale właśnie pojawił się problem przy rozliczaniu faktur. Kowalski loguje się do systemu WebIssues i otwiera folder <quote>Great Finances</quote> &mdash; ze względu na dużą liczbę zgłoszeń, trzeba je było podzielić na osobne foldery związane z poszczególnymi programami. Dodając nową sprawę, oprócz nazwy musi teraz także wypełnić kilka dodatkowych pól (atrybutów) &mdash; rodzaj problemu, nazwa modułu oraz wersja używanego programu. Następnie dodaje komentarz z dokładnym opisem problemu.</para>
+    </sect2>
 
-<para>W dalszym ciągu regularnie zaglądasz do systemu serwisowego, ale zajmujesz się głównie przypisywaniem nowych zgłoszeń innym osobom, a samodzielnie rozwiązujesz jedynie sprawy związane z programem Big Finances.</para>
+    <sect2 id="webissues.intro.lifecycle.service">
+      <title>Zgłoszenia serwisowe</title>
 
-<para>Ponieważ zgłoszeń w systemie jest bardzo dużo, korzystasz z widoku <quote>Nowe zgłoszenia</quote>, który wyświetla jedynie te zgłoszenia, które nie są jeszcze przypisane do żadnej osoby. W widoku tym pojawia się nowe zgłoszenie utworzone przez Kowalskiego. Nie czytając nawet opisu problemu, spoglądasz tylko na typ problemu i nazwę modułu, a następnie przechodzisz do trybu edycji sprawy. W polu <quote>Przypisany do</quote> wybierasz z listy użytkowników Adama Nowaka, który specjalizuje się w rozliczaniu faktur. Po zapisaniu sprawa znika z widoku Nowe zgłoszenie, ponieważ zostało ono już przypisane.</para>
+      <para>Pół roku później firma rozrosła się tak, że nie jesteś w stanie już pomagać wszystkim pracownikom, nie zaniedbując własnych obowiązków. Co gorsza pojawiło się nowe oprogramowanie Great Finances, którego nie znasz tak dobrze i nie potrafisz samodzielnie rozwiązać wszystkich problemów. Zwykłe forum dyskusyjne przestało już wystarczać i konieczne było wprowadzenie wirtualnego punktu serwisowego.</para>
 
-<para>Adam Nowak korzysta z widoku <quote>Aktywne zgłoszenia</quote>, w którym widzi tylko sprawy przypisane do niego i posiadające status Aktywny (który jest domyślny dla nowo utworzonych zgłoszeń). Ponieważ nie zawsze ma czas na bieżąco do niego zaglądać, włączył sobie dodatkowe powiadomienie, które informuje go o e-mailem o nowych sprawach w tym widoku. Nowak potrzebuje więcej informacji od Kowalskiego, zatem dodaje komentarz z prośbą o ich dostarczenie. Kowalski widzi sprawę w widoku <quote>Moje zgłoszenia</quote>, zawierającym wszystkie aktywne sprawy, które zostały przez niego utworzone, a zielona ikonka, tak jak poprzednio, informuje go o wszystkich zmianach atrybutów i nowych komentarzach.</para>
+      <para>Kowalski od niedawna używa nowego programu Great Finances i radzi sobie dobrze, ale właśnie pojawił się problem przy rozliczaniu faktur. Kowalski loguje się do systemu WebIssues i otwiera folder <quote>Great Finances</quote> &mdash; ze względu na dużą liczbę zgłoszeń, trzeba je było podzielić na osobne foldery związane z poszczególnymi programami. Dodając nową sprawę, oprócz nazwy musi teraz także wypełnić kilka dodatkowych pól (atrybutów) &mdash; rodzaj problemu, nazwa modułu oraz wersja używanego programu. Następnie dodaje komentarz z dokładnym opisem problemu.</para>
 
-<para>W wielu sytuacjach cykl życia sprawy może być jeszcze bardziej złożony, a w proces jego przetwarzania może być zaangażowanych wiele osób. Powszechnym przykładem jest cykl życia defektu w oprogramowaniu. Jest on tworzony przez testera, a następnie jest weryfikowany i przypisywany przez kierownika projektu do odpowiedniego programisty. Programista rozwiązuje (naprawia) defekt, a tester może albo zaakceptować rozwiązanie i zamknąć defekt, albo je odrzucić i przypisać z powrotem do programisty.</para>
-  
-<figure>
-  <title>Przykładowy cykl życia defektu.</title>
-  <mediaobject>
-    <imageobject><imagedata fileref="images/ch01-fig04.png" format="PNG"/></imageobject>
-  </mediaobject>
-</figure>
+      <para>W dalszym ciągu regularnie zaglądasz do systemu serwisowego, ale zajmujesz się głównie przypisywaniem nowych zgłoszeń innym osobom, a samodzielnie rozwiązujesz jedynie sprawy związane z programem Big Finances.</para>
 
-<para>Taki proces, w którego poszczególne kroki są zaangażowane różne osoby, nazywa się często przepływem pracy (ang. <foreignphrase>workflow</foreignphrase>). W niektórych systemach przepływ pracy jest zdefiniowany w sztywny sposób i nie może być zmieniany, lub może być modyfikowany jedynie w niewielkim stopniu. Inne systemy posiadają skomplikowane narzędzia służące do projektowania przepływu pracy.</para>
+      <para>Ponieważ zgłoszeń w systemie jest bardzo dużo, korzystasz z widoku <quote>Nowe zgłoszenia</quote>, który wyświetla jedynie te zgłoszenia, które nie są jeszcze przypisane do żadnej osoby. W widoku tym pojawia się nowe zgłoszenie utworzone przez Kowalskiego. Nie czytając nawet opisu problemu, spoglądasz tylko na typ problemu i nazwę modułu, a następnie przechodzisz do trybu edycji sprawy. W polu <quote>Przypisany do</quote> wybierasz z listy użytkowników Adama Nowaka, który specjalizuje się w rozliczaniu faktur. Po zapisaniu sprawa znika z widoku Nowe zgłoszenie, ponieważ zostało ono już przypisane.</para>
 
-<para>W systemie WebIssues przepływ pracy nie jest w żaden sposób wymuszony, ale można go w bardzo łatwy sposób modelować w odpowiedni sposób wykorzystując atrybuty (określające aktualny stan sprawy, a także przypisaną do niej osobę), widoki (ograniczające zbiór spraw do znajdujących się w określonym stanie i przypisane do odpowiedniej osoby) oraz śledzenie stanu spraw (wskazujące nowe i zmodyfikowane sprawy).</para>
+      <para>Adam Nowak korzysta z widoku <quote>Aktywne zgłoszenia</quote>, w którym widzi tylko sprawy przypisane do niego i posiadające status Aktywny (który jest domyślny dla nowo utworzonych zgłoszeń). Ponieważ nie zawsze ma czas na bieżąco do niego zaglądać, włączył sobie dodatkowe powiadomienie, które informuje go o e-mailem o nowych sprawach w tym widoku. Nowak potrzebuje więcej informacji od Kowalskiego, zatem dodaje komentarz z prośbą o ich dostarczenie. Kowalski widzi sprawę w widoku <quote>Moje zgłoszenia</quote>, zawierającym wszystkie aktywne sprawy, które zostały przez niego utworzone, a zielona ikonka, tak jak poprzednio, informuje go o wszystkich zmianach atrybutów i nowych komentarzach.</para>
 
-<para>Osoby uczestniczące w różnych etapach przepływu pracy mogą korzystać z różnych widoków, aby skoncentrować się tylko na tych sprawach, które wymagają ich interwencji. Przykładowo, programistę na ogół interesują tylko aktywne i przypisane do niego defekty, ale w razie potrzeby ma dostęp do wszystkich defektów niezależnie od ich stanu &mdash; na przykład aby odnaleźć inne defekty, które mogą być potencjalnie związane z aktualnie przetwarzanym.</para>
+    </sect2>
 
-<para>Również osoby nadzorujące cały proces mogą w odpowiedni sposób korzystać z widoków, aby kontrolować liczbę aktywnych spraw lub podejmować odpowiednie kroki w sytuacji, gdy jakiś defekt przez dłuższy czas pozostaje nierozwiązany. Dodatkowo mają do dyspozycji narzędzia umożliwiające tworzenie raportów czy eksport danych do innego programu (np. arkusza kalkulacyjnego) w celu dalszej analizy.</para>
+    <sect2 id="webissues.intro.lifecycle.workflow">
+      <title>Przepływ pracy</title>
 
-</sect1>
+      <para>W wielu sytuacjach cykl życia sprawy może być jeszcze bardziej złożony, a w proces jego przetwarzania może być zaangażowanych wiele osób. Powszechnym przykładem jest cykl życia błędu w oprogramowaniu. Jest on tworzony przez testera, a następnie jest weryfikowany i przypisywany przez kierownika projektu do odpowiedniego programisty. Programista rozwiązuje (naprawia) błąd, a tester może albo zaakceptować rozwiązanie i zamknąć błąd, albo je odrzucić i przypisać z powrotem do programisty.</para>
+        
+      <figure>
+        <title>Przykładowy cykl życia błędu</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch01-fig04.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Taki proces, w którego poszczególne kroki są zaangażowane różne osoby, nazywa się często przepływem pracy (ang. <foreignphrase>workflow</foreignphrase>). W niektórych systemach przepływ pracy jest zdefiniowany w sztywny sposób i nie może być zmieniany, lub może być modyfikowany jedynie w niewielkim stopniu. Inne systemy posiadają skomplikowane narzędzia służące do projektowania przepływu pracy.</para>
+
+      <para>W systemie WebIssues przepływ pracy nie jest w żaden sposób wymuszony, ale można go w bardzo łatwy sposób modelować w odpowiedni sposób wykorzystując atrybuty (określające aktualny stan sprawy, a także przypisaną do niej osobę), widoki (ograniczające zbiór spraw do znajdujących się w określonym stanie i przypisane do odpowiedniej osoby) oraz śledzenie stanu spraw (wskazujące nowe i zmodyfikowane sprawy).</para>
+
+      <para>Osoby uczestniczące w różnych etapach przepływu pracy mogą korzystać z różnych widoków, aby skoncentrować się tylko na tych sprawach, które wymagają ich interwencji. Przykładowo, programistę na ogół interesują tylko aktywne i przypisane do niego błędy, ale w razie potrzeby ma dostęp do wszystkich błędów niezależnie od ich stanu &mdash; na przykład aby odnaleźć inne błędy, które mogą być potencjalnie związane z aktualnie przetwarzanym.</para>
+
+      <para>Również osoby nadzorujące cały proces mogą w odpowiedni sposób korzystać z widoków, aby kontrolować liczbę aktywnych spraw lub podejmować odpowiednie kroki w sytuacji, gdy jakiś błąd przez dłuższy czas pozostaje nierozwiązany. Dodatkowo mają do dyspozycji narzędzia umożliwiające tworzenie raportów czy eksport danych do innego programu (np. arkusza kalkulacyjnego) w celu dalszej analizy.</para>
+
+    </sect2>
+
+  </sect1>
 
 </chapter>
