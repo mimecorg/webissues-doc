@@ -1,6 +1,33 @@
 <appendix id="webissues.resources">
-<title>Resources</title>
+  <title>Resources</title>
 
-<para>TODO</para>
+  <para>Refer to the resources listed below for more information about the WebIssues system:</para>
+
+  <variablelist>
+    <varlistentry>
+      <term><ulink url="http://webissues.mimec.org/"/></term>
+      <listitem>
+        <para>The main site of the project, where you will find information about the program and its new versions.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><ulink url="http://webissues.mimec.org/forum/general"/></term>
+      <listitem>
+        <para>On this forum you can get help with installing and configuring the system.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><ulink url="http://webissues.mimec.org/forum/tracker"/></term>
+      <listitem>
+        <para>On this forum you can report bugs and request new features.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><ulink url="http://wiki.mimec.org/wiki/WebIssues"/></term>
+      <listitem>
+        <para>Site containing information for advanced users, administrators and developers of the system.</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
 
 </appendix>
