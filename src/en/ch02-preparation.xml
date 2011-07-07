@@ -129,7 +129,7 @@
       <note>
         <title>Note</title>
         <para>You can import data from version 0.8.5 of the WebIssues server to the new version of the system. The new server must be installed in the same database as its previous version. Therefore you must use a different prefix for the names of the new tables than the one that was used in version 0.8.5. Select <guilabel>Import data from WebIssues Server 0.8.5</guilabel> and optionally enter a prefix for the source tables.</para>
-        <para>When installing a new server, all data is copied, but the source tables are not modified or removed. Thus, if the import process fails, you can correct any errors and try installing the new version again.</para>
+        <para>When installing a new server, all data stored in the database is copied, but the source tables are not modified or removed. Thus, if the import process fails, you can correct any errors and try installing the new version again. If attachments were stored in the file system, you must also copy them from the old version to the appropriate directory in the new version of the server; the installer will not do it automatically.</para>
         <para>If version 0.8.5 of the system used a version of the database earlier than the currently required version, before the installation you must first update the database to a newer version. After updating a MySQL database from a version older than 4.1, you also need to convert all text columns to binary, and then back to text with <literal>utf8</literal> encoding, in order to ensure proper encoding of text. Read <ulink url="http://dev.mysql.com/doc/refman/4.1/en/charset-conversion.html"/> for more information about converting columns.</para>
       </note>
 
