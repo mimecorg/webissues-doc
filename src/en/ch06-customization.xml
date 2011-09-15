@@ -1,9 +1,233 @@
 <chapter id="webissues.custom">
   <title>Customizing the system</title>
 
-  <note>
-    <title>Note</title>
-    <para>This chapter is still being prepared.</para>
-  </note>
+  <para>This chapter describes how to configure and customize the system to suit your needs. It is intended primarily for advanced administrators.</para>
+
+  <sect1 id="webissues.custom.types">
+    <title>Managing issue types</title>
+
+    <para>By default, the installer of WebIssues system creates several predefined types of issues, which can be used to track bugs and tasks in a typical software project, and to create discussion forums. You can modify these built-in issue types, adapting them to your needs, and create entirely new types of issues.</para>
+
+    <para>To manage the issue types, go to the Administration Panel and click <guilabel>Issue Types</guilabel>. In case of the Desktop Client, use the <guilabel>Issue Types</guilabel> command from the main window toolbar. Below is the list of standard issue types:</para>
+
+    <figure>
+      <title>Issue types</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig01.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>For each issue type its attributes are displayed. For each attribute, its type is displayed, the default value for new issues, and also information whether the attribute is required and additional details that depend on its type.</para>
+
+    <para>Let's start by adding a new attribute to an existing issue type. We will add the possibility of entering the module name to which the reported bug is related. Select the Bugs issue type and click <guilabel>Add Attribute</guilabel>. Then enter the name of the new attribute.</para>
+
+    <figure>
+      <title>Adding an attribute</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig02.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>By default, a new attribute has the <guilabel>Text</guilabel> type, which allows entering any text. Click <guibutton>Edit</guibutton> in the <guilabel>Attribute Details</guilabel> frame to change additional attribute settings that depend on its type.</para>
+
+    <figure>
+      <title>Details of a text attribute</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig03.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>In case of a text attribute, you can select <guilabel>Allow entering multiple lines of text</guilabel> to facilitate entering longer fragments of text which can be divided into lines. The field for editing attribute values ​​will then be bigger. You can specify the maximum length of the entered text to limit it to a specified number of characters. Remember, however, that the attribute value can never be longer than 255 characters. To enter longer fragments of text (for example, the description of the bug) it is better to use comments. In the same way, you can also specify a minimum length of the entered text.</para>
+
+    <para>If the list of modules, to which reported bugs are related, is known in advance, then a <guilabel>Dropdown list</guilabel> can be used instead of a text attribute. Select this type in the <guilabel>Attribute Type</guilabel> field and then click <guibutton>Edit</guibutton> to change the details of the attribute.</para>
+
+    <figure>
+      <title>Details of a dropdown list</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig04.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>You must provide a list of possible values ​​to select. To do this, enter each value, in this case the name of the module, in a separate line. By default it is only possible to select one of the defined values. However, if you select the <guilabel>Allow entering custom values​​</guilabel> option, then it will be possible to enter any value of the attribute when adding or editing an issue. This way, you can type the name of a module which was not included in the list. In this case, it is also possible to define the minimum and maximum length of text, like for text attributes.</para>
+
+    <para>The <guilabel>Allow selecting multiple values​​</guilabel> option makes it possible to select more than one values, separated by commas. This is useful if the reported bugs may be associated with several modules at the same time. Both options can be combined, in that case it is possible to enter several values​​, not necessarily selected from the list. This mode of operation, for example, allows marking issues with <quote>tags</quote>, which can be predefined, but can also be entered from outside the list.</para>
+
+    <para>Another type of attribute is <guilabel>Numeric</guilabel>. Let's assume that you want to add to the Tasks issue type a Level of effort attribute whose value is expressed in hours. Select the <guilabel>Numeric</guilabel> type from the list of attribute types and click <guibutton>Edit</guibutton>.</para>
+
+    <figure>
+      <title>Details of a numeric attribute</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig05.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Numeric values can be integer or specified with a certain number of decimal places, not more than 6. You can also specify the minimum and maximum value of the attribute. For example, the Priority attribute of a task by default accepts values ​​from 1 to 3. You can also choose to <guilabel>Strip trailing decimal zeros</guilabel> to ignore the zeros after the decimal point, for example, the value <quote>12.50</quote> will then be displayed as <quote>12.5</quote>.</para>
+
+    <para>Attributes can also store a date or a date and time. For example, the Tasks issue type contains an Due Date attribute that stores the planned date of completion of the task. We can add a Finished attribute, storing the actual date of completion of the task. Select the <guilabel>Date &amp; time</guilabel> attribute type and click <guibutton>Edit</guibutton> to specify the details of the attribute.</para>
+
+    <figure>
+      <title>Details of a date &amp; time attribute</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig06.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>The value of the attribute can be a date, for example <quote>9/5/2011</quote> or date and time with an accuracy of one minute, for example <quote>9/5/2011 6:34 pm</quote>. If you choose the <guilabel>Date and time without time zone conversion</guilabel> option, the time will always be the same, regardless of time zone. If you choose the <guilabel>Date and time using local time zone</guilabel>, the values are stored as GMT time, and when displayed the will be automatically converted to the local time zone. This option is useful if the server is used by people in different time zones.</para>
+
+    <para>The last type of attribute is <guilabel>User</guilabel>. Both Bugs and Tasks include attributes named Assigned To, but you can create more attributes of this type. In case of a bug, for example, you can use separate attributes to indicate the person who reported, fixed and tested the bug.</para>
+
+    <figure>
+      <title>Details of a user attribute</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig07.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Two options are available in the attribute settings. The <guilabel>Allow only members of the project</guilabel> option allows you to limit the list of users who may be assigned to an issue to those who are members of the project. This option is useful if the system has many projects and many users, and most users have access only to selected projects. The option to <guilabel>Allow selecting multiple values​​</guilabel> makes it possible to select more than one values, separated by commas, just like in case of the dropdown list.</para>
+
+    <para>Regardless of the type and detailed settings, each attribute has also some common settings. If you choose the <guilabel>Attribute is required</guilabel> option, the attribute must always have a certain value. Otherwise, you can leave an empty value when creating new issues, and also clear the value for an existing issue. Required attributes are marked with an asterisk when creating or editing an issue.</para>
+
+    <para>In the <guilabel>Default value</guilabel> field you can specify the value of the attribute for newly created issues. When creating an issues you can leave the default values ​​of individual attributes or modify them. If the attribute is required, and does not have a default value, the value must be provided when creating the issue. When specifying the default value, you can use similar special values​​, as in the case of filter definitions. The <quote>[Today]</quote> value is replaced with the current date when creating the issue (with the possibility of subtracting or adding a specified number of days), while the <quote>[Me]</quote> value is replaced with the name of the user who creates the issue.</para>
+
+    <para>At any time you can change the definitions of existing attributes. Let's assume that we want that the Assigned To attribute to be required and that bugs were assigned by default to the person who created them. Select the attribute and click <guilabel>Modify Attribute</guilabel>. Select the <guilabel>Attribute is required</guilabel> option, and in the <guilabel>Default Value</guilabel> field enter <quote>[Me]</quote>. Then click <guibutton>OK</guibutton> to confirm the changes.</para>
+
+    <figure>
+      <title>Modifying attribute definition</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig08.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Changes of definitions of existing attributes are taken into account when creating new issues and editing existing issues. They do not affect the current attribute values ​​for existing issues. In our example, if some bugs already exist in the system, then they will remain unassigned, although the Assigned To attribute is now required. However, when editing a bug, you must assign it to someone.</para>
+
+    <para>Now let's suppose that we want the Severity of a bug to be specified on a scale from 1 to 5, not from 1 to 3. Select the attribute and click <guilabel>Modify Attribute</guilabel>. Then click <guibutton>Edit</guibutton> to go to the details of the attribute. Change the <guilabel>Maximum value</guilabel> to 5 and click <guibutton>OK</guibutton>. Then change the default attribute value to 3 and click <guibutton>OK</guibutton> again to save the changes.</para>
+
+    <para>To a limited extent, you can also change the type of an existing attribute. For example, let's suppose that we want to define a list of choices for the Version attribute of Bugs issue type. Select the attribute and click <guilabel>Modify attribute</guilabel> and then from the <guilabel>Attribute type</guilabel> list select <guilabel>Dropdown List</guilabel>. Then click <guibutton>Edit</guibutton> to go to the attribute details and enter a list of values ​​to select. Also select the <guilabel>Allow entering own values​​</guilabel> option to allow entering values which are not in the list. Click <guibutton>OK</guibutton> twice to confirm the changes.</para>
+
+    <para>The Text, Dropdown List and User attributes store the value as plain text, so they can be used interchangeably, and you can change one type to another. The Numeric and Date And Time attributes cannot be changed to another type.</para>
+
+    <para>To change the name of an attribute, use the <guilabel>Rename Attribute</guilabel> commands. Attribute names can be arbitrary, but must be unique within the issue type. You can also remove an existing attribute if it is no longer needed. To do this, select the attribute and click <guilabel>Delete Attribute</guilabel>.</para>
+
+    <warning>
+      <title>Warning</title>
+      <para>When deleting attributes pay particular attention whether you do not unintentionally delete the wrong data. All current and historical values of the attribute ​​are permanently and irreversibly removed from the system and there is no possibility of restoring them.</para>
+    </warning>
+
+    <para>In addition to modifying predefined types issues, the WebIssues system also allows creating entirely new issue types. Let's suppose that we want to create a simple calendar with events related to different people. Click <guilabel>Add Type</guilabel> to create a new type of issues.</para>
+
+    <figure>
+      <title>Creating an issue type</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig09.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Enter the name of the type and click <guibutton>OK</guibutton>. The new type has no attributes, so select it and click <guilabel>Add Attribute</guilabel>. Create an attribute named <quote>Person</quote> and select the User type. Mark the attribute as required and enter <quote>[Me]</quote> as the default value. Then add another attribute named <quote>Date</quote>, with the Date And Time type, setting its default value to <quote>[Today]</quote>. The tree of issue types, after folding default types, will look like this:</para>
+
+    <figure>
+      <title>Issue types with the new type</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig10.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>To be able to create issues of the new type, you must also create a folder that uses this type. You can also change the order of attributes and the default view and public views for this type. For more information, refer to <xref linkend="webissues.custom.views"/>.</para>
+
+    <para>To change the name of an issue type, use the <guilabel>Rename Type</guilabel> command. You can also remove the type issues using the <guilabel>Delete Type</guilabel> command. If there are some folders of this type in the system, a warning will be displayed.</para>
+
+    <warning>
+      <title>Warning</title>
+      <para>When deleting issue types pay particular attention whether you do not unintentionally delete the wrong data. All folders and issues of this type ​​are permanently and irreversibly removed from the system and there is no possibility of restoring them.</para>
+    </warning>
+
+  </sect1>
+
+  <sect1 id="webissues.custom.views">
+    <title>View settings</title>
+
+    <para>For each type issues you can define the order of attributes, the default view and any number of public views, available to all users. By default, the WebIssues system installer creates predefined view settings for standard types of issues. You can change those settings for both standard and custom issue types.</para>
+
+    <para>Let's start with changing the view settings of the standard Bugs issue type. Go to Administration Panel and click <guilabel>Issue Types</guilabel>, then select the Bugs type and click <guilabel>View Settings</guilabel>. In case of the Desktop Client, use the <guilabel>Issue Types</guilabel> command from the main window toolbar to open the list of issue types. The default view settings for this issue type are as follows:</para>
+
+    <figure>
+      <title>View settings</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig11.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>You can change the order of attributes that will be taken into account both when displaying the details of issues and when creating and editing issues of that type. Click <guilabel>Modify</guilabel> to change the default order:</para>
+
+    <figure>
+      <title>Order of attributes</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig12.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Let's assume that we want the Assigned To attribute to appear after the Status and Reason attributes. Change the value indicating the order of this attribute from 1 to 3, to move it to third position. Then click <guibutton>Update</guibutton> to see how the new order of attributes will look like. Attributes Status and Reason will be automatically move to positions 1 and 2. Click <guibutton>OK</guibutton> to save the new order of attributes.</para>
+
+    <para>If you add new attributes to an issue type, they will be added to the end of the list of attributes whose sequence was previously defined. New attributes are by default sorted in alphabetical order.</para>
+
+    <para>The default view specifies the displayed columns and the default sort order for folders of that type. So this is simply the <quote>All Issues</quote> view, which exists for each issue types and has no filter conditions. Also all new public and private views are based on this view. Click <guilabel>Modify</guilabel> in the <guilabel>Default View</guilabel> frame to change this view:</para>
+
+    <figure>
+      <title>Default view</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig13.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Changing the settings of the view works the same as creating private views, as described in <xref linkend="webissues.work.views" />. So you can unselect the columns you want to remove and select the columns you want to add, and change the values defining the order of columns. For example, to add the Reason column to the default view, select the column and set its order to 7 to display it after the Status column. Click <guibutton>Update</guibutton> to see the new order of columns. You can also change the default sort order of issues. Finally, click <guibutton>OK</guibutton> to save your view.</para>
+
+    <para>Just like each user can define any number of private views for each issue type, the administrator of WebIssues system can define public views for each type. Everyone can use public views, but only the administrator has the right to create and modify them.</para>
+
+    <para>For standard issue types, Bugs and Tasks, there are several default public views, for example, Active Bugs and Created By Me. You can change these standard views and create new ones. The Forum issue type has no views, because it has no attributes, but you can define views using the built-in columns. For example, you can create the Created By Me view, analogous to the one that exists for Bugs and Tasks. However, you cannot define the order of attributes, unless you add some attributes to this type.</para>
+
+    <para>Now let's create a new view called <quote>Critical Bugs</quote>, similar to the private view with the same name, which we created in <xref linkend="webissues.work.views" />. Click <guilabel>Add Public View</guilabel> to create a new view. Unselect the Severity column and select the Created By and Created Date columns. To move Assigned To and Status columns to the end, set the values ​​that determine their order to 10 and 11</para>
+
+    <figure>
+      <title>Editing view columns</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig14.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Click <guibutton>Update</guibutton> to see how the new column layout of the view will look. Leave the default sort order and go to editing the filters. Enable the filter for the Severity column and type 1 as a parameter of the condition:</para>
+
+    <figure>
+      <title>Editing the filter</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig15.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Click <guibutton>OK</guibutton> to save changed. From now on, the new view is available to all users of the system.</para>
+
+    <para>Instead of creating a new public view, which is the same as an existing private view, you can simply publish the private view, to make it available to everyone. Open any folder of type Bugs and click <guilabel>Manage Views</guilabel> to view the list of private views. Then select the view you want to publish, and click <guilabel>Publish View</guilabel>. The view will disappear from the list of private views and will be moved to the list of public views. In the same way you can change a public view into a private view. To do this, select it from the list of public views and click <guilabel>Unpublish View</guilabel>.</para>
+
+    <para>To change the definition of an existing view, choose it from the list and click <guilabel>Change View</guilabel>. To rename a view, use the <guilabel>Rename View</guilabel> command. You can also delete an existing view, if it is no longer needed. To do this, select the view and click <guilabel>Delete View</guilabel>. Remember that this will remove all alerts based on this view.</para>
+
+  </sect1>
+
+  <sect1 id="webissues.custom.locale">
+    <title>Regional settings</title>
+
+    <note>
+      <title>Note</title>
+      <para>This section is still being prepared.</para>
+    </note>
+
+  </sect1>
+
+  <sect1 id="webissues.custom.settings">
+    <title>Advanced settings</title>
+
+    <note>
+      <title>Note</title>
+      <para>This section is still being prepared.</para>
+    </note>
+
+  </sect1>
 
 </chapter>

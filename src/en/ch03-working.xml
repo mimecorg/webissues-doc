@@ -330,7 +330,7 @@
       </mediaobject>
     </figure>
 
-    <para>Click the <guibutton>Update</guibutton> button to see how the new column layout of the view will look. Leave the default sort order in order to display issues from oldest to newest. Then go to editing the filters. Turn on a filter for the Severity column and type 1 as a parameter of the condition:</para>
+    <para>Click the <guibutton>Update</guibutton> button to see how the new column layout of the view will look. Leave the default sort order to display issues from oldest to newest. Then go to editing the filters. Enable the filter for the Severity column and type 1 as a parameter of the condition:</para>
 
     <figure>
       <title>Editing the filter</title>
@@ -370,7 +370,7 @@
       </mediaobject>
     </figure>
 
-    <para>If you are a system administrator, you can also publish your views, so that they become accessible to all users, and manage public views for different types of issues. For more information, please read <xref linkend="webissues.custom"/>.</para>
+    <para>If you are a system administrator, you can also publish your views, so that they become accessible to all users, and manage public views for different types of issues. For more information, please read <xref linkend="webissues.custom.views"/>.</para>
 
   </sect1>
 

@@ -10,7 +10,7 @@
 
     <itemizedlist>
       <listitem>
-        <para>Serwer HTTP</para>
+        <para>Serwer WWW</para>
       </listitem>
       <listitem>
         <para>Serwer bazy danych</para>
@@ -40,16 +40,16 @@
 
     <para>W przypadku bazy MySQL wymagana jest obsługa silnika InnoDB. Baza danych PostgreSQL powinna być utworzona z kodowaniem znaków w standardzie Unicode. Pamiętaj także, że bazy SQL Server możesz użyć tylko, jeśli serwer WebIssues jest zainstalowany na komputerze z systemem Windows.</para>
 
-    <para>Serwer WebIssues wymaga również PHP w wersji 5.2.1 lub nowszej, zintegrowanego z serwerem HTTP. W przypadku serwera IIS, dla uzyskanie najlepszej wydajności zalecane jest użycie modułu <literal>fastcgi</literal> oraz rozszerzenia <literal>wincache</literal>. PHP musi mieć zainstalowane rozszerzenie <literal>mbstring</literal>, a jeśli korzystasz z bazy danych MySQL lub PostrgreSQL, również odpowiednio rozszerzenie <literal>mysqli</literal> lub <literal>pgsql</literal>.</para>
+    <para>Serwer WebIssues wymaga również PHP w wersji 5.2.1 lub nowszej, zintegrowanego z serwerem WWW. W przypadku serwera IIS, dla uzyskanie najlepszej wydajności zalecane jest użycie modułu <literal>fastcgi</literal> oraz rozszerzenia <literal>wincache</literal>. PHP musi mieć zainstalowane rozszerzenie <literal>mbstring</literal>, a jeśli korzystasz z bazy danych MySQL lub PostrgreSQL, również odpowiednio rozszerzenie <literal>mysqli</literal> lub <literal>pgsql</literal>.</para>
 
-    <para>Jeśli instalujesz serwer WebIssues korzystając z zewnętrznej usługi hostingowej, upewnij się, że spełnia ona wszystkie powyższe wymagania. Aby utworzyć bazę danych i skonfigurować serwer HTTP, skorzystaj z narzędzi dostarczonych przez dostawcę usług hostingowych i zapoznaj się z dostępną dokumentacją.</para>
+    <para>Jeśli instalujesz serwer WebIssues korzystając z zewnętrznej usługi hostingowej, upewnij się, że spełnia ona wszystkie powyższe wymagania. Aby utworzyć bazę danych i skonfigurować serwer WWW, skorzystaj z narzędzi dostarczonych przez dostawcę usług hostingowych i zapoznaj się z dostępną dokumentacją.</para>
 
     <warning>
       <title>Uwaga</title>
       <para>Niektóre usługi hostingowe mogą mieć specyficzną konfigurację lub inne ograniczenia utrudniające lub nawet uniemożliwiające poprawne zainstalowanie serwera WebIssues. Mogą one na przykład ograniczać ilość dostępnej pamięci, rozmiar bazy danych, albo wielkość przesyłanych do serwera plików.</para>
     </warning>
 
-    <para>Przed zainstalowaniem serwera WebIssues na własnym komputerze (dla celów prywatnych lub testowych) lub komputerze należącym do twojej firmy bądź organizacji, zainstaluj i skonfiguruj niezbędne komponenty, a następnie utwórz bazę danych, korzystając z odpowiednich narzędzi administracyjnych. Zapoznaj się z dokumentacją tych narzędzi, aby uzyskać więcej informacji na ich temat. Więcej informacji temat tworzenia bazy danych i konfigurowania serwera HTTP znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
+    <para>Przed zainstalowaniem serwera WebIssues na własnym komputerze (dla celów prywatnych lub testowych) lub komputerze należącym do twojej firmy bądź organizacji, zainstaluj i skonfiguruj niezbędne komponenty, a następnie utwórz bazę danych, korzystając z odpowiednich narzędzi administracyjnych. Zapoznaj się z dokumentacją tych narzędzi, aby uzyskać więcej informacji na ich temat. Więcej informacji temat tworzenia bazy danych i konfigurowania serwera WWW znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
 
   </sect1>
 
@@ -61,21 +61,21 @@
     <sect2 id="webissues.prep.installation.files">
       <title>Kopiowanie plików</title>
 
-      <para>Ściągnij i rozpakuj pakiet serwera WebIssues &mdash; zawiera on katalog o nazwie <literal>webissues-x.y</literal> (gdzie <literal>x.y</literal> to wersja pakietu). Następnie przenieś wszystkie pliki i podkatalogi z tego katalogu do katalogu głównego serwera HTTP. Jeśli korzystasz z zewnętrznego hostingu, na ogół do kopiowania plików na serwer używa się protokołu FTP, a więc będziesz potrzebował do tego celu klienta FTP.</para>
+      <para>Ściągnij i rozpakuj pakiet serwera WebIssues &mdash; zawiera on katalog o nazwie <literal>webissues-x.y</literal> (gdzie <literal>x.y</literal> to wersja pakietu). Następnie przenieś wszystkie pliki i podkatalogi z tego katalogu do katalogu głównego serwera WWW. Jeśli korzystasz z zewnętrznego hostingu, na ogół do kopiowania plików na serwer używa się protokołu FTP, a więc będziesz potrzebował do tego celu klienta FTP.</para>
 
       <note>
         <title>Notatka</title>
-        <para>Istnieje możliwość zainstalowania serwera WebIssues wraz z innymi stronami i aplikacjami webowymi działającymi na tym samym komputerze. Możesz zainstalować serwer w podkatalogu umieszczonym w katalogu głównym serwera HTTP, a także na wirtualnym hoście lub w wirtualnym katalogu. Zapoznaj się z dokumentacją twojego serwera HTTP lub usługi hostingowej, aby uzyskać więcej informacji na ten temat.</para>
+        <para>Istnieje możliwość zainstalowania serwera WebIssues wraz z innymi stronami i aplikacjami WWW działającymi na tym samym komputerze. Możesz zainstalować serwer w podkatalogu umieszczonym w katalogu głównym serwera WWW, a także na wirtualnym hoście lub w wirtualnym katalogu. Zapoznaj się z dokumentacją twojego serwera WWW lub usługi hostingowej, aby uzyskać więcej informacji na ten temat.</para>
         <para>Możesz także utworzyć wiele odrębnych instancji serwera WebIssues w ramach jednej instalacji. Poszczególne instancje mogą być dostępne poprzez różne nazwy domen lub subdomen, albo w różnych wirtualnych podkatalogach. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
       </note>
 
-      <para>Następnie nadaj prawo zapisu do podkatalogu <filename>data/sites</filename> wszystkim użytkownikom lub użytkownikowi, w kontekście którego działa usługa HTTP. Skorzystaj w tym celu z menedżera plików lub klienta FTP, albo uruchom polecenie <literal>chmod</literal> z linii poleceń. W katalogu tym, podczas instalacji, zostanie utworzony plik konfiguracyjny. Będą w nim również przechowywane dołączone do spraw załączniki.</para>
+      <para>Następnie nadaj prawo zapisu do podkatalogu <filename>data/sites</filename> wszystkim użytkownikom lub użytkownikowi, w kontekście którego działa usługa WWW. Skorzystaj w tym celu z menedżera plików lub klienta FTP, albo uruchom polecenie <literal>chmod</literal> z linii poleceń. W katalogu tym, podczas instalacji, zostanie utworzony plik konfiguracyjny. Będą w nim również przechowywane dołączone do spraw załączniki.</para>
 
       <warning>
         <title>Uwaga</title>
         <para>Upewnij się, że katalogi <filename>data</filename> oraz <filename>common/data</filename> są zabezpieczone przed niepowołanym dostępem przez przeglądarkę internetową. W przeciwnym wypadku nieuprawnione do tego osoby będą mogły np. pobierać przechowywane w systemie załączniki. Jeśli korzystasz z serwera Apache, możesz w tym celu wykorzystać załączone w pakiecie pliki <filename>.htaccess</filename>. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
         <para>Po zakończeniu instalacji, upewnij się również, że plik konfiguracyjny systemu WebIssues jest chroniony przed niepowołanym dostępem, ponieważ zawiera on między innymi login i hasło do bazy danych. Jest to szczególnie istotne w przypadku korzystania z publicznych usług hostingowych.</para>
-        <para>Dla zapewnienia największego bezpieczeństwa, zaleca się, aby pliki konfiguracyjne i załączniki nie były przechowywane w katalogu <filename>data</filename>, ale w innej lokalizacji położonej poza katalogiem głównym serwera HTTP. Więcej informacji na temat zmiany lokalizacji katalogu zawierającego te pliki znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
+        <para>Dla zapewnienia największego bezpieczeństwa, zaleca się, aby pliki konfiguracyjne i załączniki nie były przechowywane w katalogu <filename>data</filename>, ale w innej lokalizacji położonej poza katalogiem głównym serwera WWW. Więcej informacji na temat zmiany lokalizacji katalogu zawierającego te pliki znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
       </warning>
 
     </sect2>
@@ -94,7 +94,7 @@
 
       <para>Nie przejmuj się, że komunikat jest po angielsku. Jeśli postąpisz zgodnie z instrukcją i klikniesz odnośnik, zostaniesz zapytany o język, który będzie używany w czasie instalacji. Będzie to również domyślny język, w jakim system WebIssues będzie wyświetlał wszystkie komunikaty.</para>
 
-      <para>W następnym kroku instalacji wyświetlone zostaną podstawowe informacje na temat twojego serwera: jego nazwa (zwykle będzie to <literal>default</literal>, chyba że tworzysz wiele instancji serwera w ramach jednej instalacji), bazowy adres URL serwera oraz ścieżka katalogu, w którym zostanie utworzony plik konfiguracyjny. Zostanie również wyświetlona wersja PHP, serwera HTTP i systemu operacyjnego oraz nazwa komputera, na którym instalujesz system WebIssues. Po zweryfikowaniu tych informacji, przejdź do następnego kroku.</para>
+      <para>W następnym kroku instalacji wyświetlone zostaną podstawowe informacje na temat twojego serwera: nazwa instancji (zwykle będzie to <literal>default</literal>, chyba że tworzysz wiele instancji serwera w ramach jednej instalacji), bazowy adres URL serwera oraz ścieżka katalogu, w którym zostanie utworzony plik konfiguracyjny. Zostanie również wyświetlona wersja PHP, serwera WWW i systemu operacyjnego oraz nazwa komputera, na którym instalujesz system WebIssues. Po zweryfikowaniu tych informacji, przejdź do następnego kroku.</para>
 
       <figure>
         <title>Konfiguracja połączenia z bazą danych</title>
@@ -105,7 +105,7 @@
 
       <para>Zostaniesz poproszony o wprowadzenie informacji niezbędnych do połączenia z wcześniej utworzoną bazą danych. Musisz przede wszystkim określić jej rodzaj. W zależności od konfiguracji PHP, będziesz miał do dyspozycji bazę MySQL, PostgreSQL lub SQL Server. Jeśli któraś z tych opcji jest niedostępna, oznacza to, że niezbędne rozszerzenie PHP nie zostało zainstalowane lub jest wyłączone.</para>
 
-      <para>Następnie podaj nazwę hosta serwera bazy danych, jeśli znajduje się on na innym komputerze niż serwer HTTP, nazwę bazy danych oraz login i hasło użytkownika posiadającego prawo tworzenia tabel w tej bazie danych. W przypadku bazy SQL Server możesz pozostawić login i hasło puste, aby użyć zintegrowanej autentykacji Windows.</para>
+      <para>Następnie podaj nazwę hosta serwera bazy danych, jeśli znajduje się on na innym komputerze niż serwer WWW, nazwę bazy danych oraz login i hasło użytkownika posiadającego prawo tworzenia tabel w tej bazie danych. W przypadku bazy SQL Server możesz pozostawić login i hasło puste, aby użyć zintegrowanej autentykacji Windows.</para>
 
       <note>
         <title>Notatka</title>
@@ -188,7 +188,7 @@
     <sect2 id="webissues.prep.setup.projects">
       <title>Projekty i foldery</title>
 
-      <para>Następnie kliknij odnośnik <guilabel>Klient webowy</guilabel> w prawym górnym rogu okna, aby przejść do głównej części systemu WebIssues. Po lewej stronie zobaczysz puste drzewo projektów i folderów. Kliknij <guilabel>Dodaj projekt</guilabel>, aby utworzyć pierwszy projekt. Nadaj mu nazwę <quote>Mój pierwszy projekt</quote> i naciśnij <guibutton>OK</guibutton>.</para>
+      <para>Następnie kliknij odnośnik <guilabel>Klient WWW</guilabel> w prawym górnym rogu okna, aby przejść do głównej części systemu WebIssues. Po lewej stronie zobaczysz puste drzewo projektów i folderów. Kliknij <guilabel>Dodaj projekt</guilabel>, aby utworzyć pierwszy projekt. Nadaj mu nazwę <quote>Mój pierwszy projekt</quote> i naciśnij <guibutton>OK</guibutton>.</para>
 
       <figure>
         <title>Tworzenie projektu</title>
@@ -238,7 +238,7 @@
   </sect1>
 
   <sect1 id="webissues.prep.notifications">
-    <title>Email notifications</title>
+    <title>Powiadomienia mailowe</title>
 
     <para>System WebIssues ma możliwość wysyłania e-maili informujących o nowych i zmienionych sprawach w wybranych widokach. Jest to opcjonalne, ponieważ nie zawsze pozwala na to konfiguracja komputera lub usługi hostingowej i nie w każdym przypadku jest to potrzebne. Jeśli chcesz włączyć wysyłanie powiadomień mailowych, musisz wykonać dwa dodatkowe kroki konfiguracyjne.</para>
 
@@ -284,7 +284,7 @@
 
       <para>Jeśli korzystasz z zewnętrznej usługi cron lub uruchamiasz zadanie na innym komputerze, skrypt powinien być uruchamiany zdalnie, poprzez pełny adres URL, na przykład <literal>http://www.example.com/cron/job.php</literal>. Możesz w tym celu na przykład skorzystać z programu <literal>wget</literal> lub <literal>curl</literal>, a także z dowolnej przeglądarki stron WWW działającej w trybie tekstowym.</para>
 
-      <para>Aby sprawdzić, czy cykliczne zadanie się uruchamia, przejdź do Panelu administracyjnego i kliknij <guilabel>Ogólne informacje</guilabel>. W ramce <guilabel>Zadanie cron</guilabel> powinna być wyświetlona data i czas ostatniego uruchomienia zadania. Każde uruchomienie zadania jest także zalogowane w Dzienniku zdarzeń systemu WebIssues.</para>
+      <para>Aby sprawdzić, czy cykliczne zadanie się uruchamia, przejdź do Panelu administracyjnego i kliknij <guilabel>Ogólne informacje</guilabel>. W ramce <guilabel>Zadanie cykliczne</guilabel> powinna być wyświetlona data i czas ostatniego uruchomienia zadania. Każde uruchomienie zadania jest także zalogowane w Dzienniku zdarzeń systemu WebIssues.</para>
 
     </sect2>
 

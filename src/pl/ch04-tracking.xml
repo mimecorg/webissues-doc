@@ -127,7 +127,7 @@
 
     <para>To jak często wysyłane są powiadomienia natychmiastowe, zależy od konfiguracji zadania cyklicznego na serwerze. Możesz je zatem otrzymywać co kilka minut lub co godzinę.</para>
 
-    <para>Aby otrzymywać powiadomienia, musisz zmienić swoje ustawienia użytkownika. Jeśli korzystasz z przeglądarki, kliknij <guilabel>Narzędzia</guilabel>, a następnie <guilabel>Ustawienia użytkownika</guilabel>. Aby zmienić je a programie Desktop Client, wybierz polecenie <guilabel>Ustawienia użytkownika</guilabel> z paska narzędzi okna głównego.</para>
+    <para>Aby otrzymywać powiadomienia, musisz zmienić swoje ustawienia użytkownika. Jeśli korzystasz z przeglądarki, kliknij <guilabel>Narzędzia</guilabel>, a następnie <guilabel>Ustawienia użytkownika</guilabel>. Aby zmienić je w programie Desktop Client, wybierz polecenie <guilabel>Ustawienia użytkownika</guilabel> z paska narzędzi okna głównego.</para>
 
     <figure>
       <title>Ustawienia powiadomień</title>
@@ -141,8 +141,8 @@
     <para>Skonfiguruj również harmonogram powiadomień, wybierając dni i godziny, w jakich będą wysyłane podsumowania powiadomień oraz raporty podsumowujące. W zależności od potrzeb, możesz otrzymywać podsumowania raz w tygodniu lub kilka razy w tygodniu, codziennie o określonej godzinie lub kilka razy dziennie.</para>
 
     <warning>
-    <title>Uwaga</title>
-    <para>Nie będziesz otrzymywać żadnych powiadomień, jeśli nie ustawisz prawidłowego adresu e-mail w ustawieniach użytkownika. Nie będziesz otrzymywać podsumowań, jeśli nie zaznaczysz żadnego dnia ani godziny.</para>
+      <title>Uwaga</title>
+      <para>Nie będziesz otrzymywać żadnych powiadomień, jeśli nie ustawisz prawidłowego adresu e-mail w ustawieniach użytkownika. Nie będziesz otrzymywać podsumowań, jeśli nie zaznaczysz żadnego dnia ani godziny.</para>
     </warning>
 
     <para>Rodzaj powiadomień możesz określić w momencie tworzenia alertu. Możesz go także w dowolnej chwili zmienić dla istniejącego alertu. W tym celu wybierz alert w oknie zarządzania alertami i wybierz polecenie <guilabel>Zmień alert</guilabel>.</para>

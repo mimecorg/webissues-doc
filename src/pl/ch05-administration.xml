@@ -1,9 +1,336 @@
 <chapter id="webissues.admin">
   <title>Administrowanie systemem</title>
 
-  <note>
-    <title>Notatka</title>
-    <para>Ten rozdział jest jeszcze w trakcie przygotowywania.</para>
-  </note>
+  <para>Rozdział ten opisuje zagadnienia związane z bieżącym administrowaniem projektami i użytkownikami oraz konserwacją systemu.</para>
+
+  <sect1 id="webissues.admin.panel">
+    <title>Panel administracyjny</title>
+
+    <para>Większość czynności związanych z administracją, konserwacją i zmianą ustawień systemu można dokonać poprzez Panel administracyjny. Wyjątkiem są operacje związane z zarządzaniem projektami i folderami, które można wykonywać bezpośrednio w głównym oknie programu.</para>
+
+    <para>Aby otworzyć Panel administracyjny w programie Web Client, kliknij <guilabel>Panel administracyjny</guilabel> w prawym górnym rogu okna. Opcja ta jest dostępna tylko dla użytkowników mających uprawnienia administratora serwera.</para>
+
+    <figure>
+      <title>Panel administracyjny</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch05-fig01.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Panel administracyjny jest podzielony na następujące moduły:</para>
+
+    <variablelist>
+      <varlistentry>
+        <term>Ogólne informacje</term>
+        <listitem>
+          <para>Wyświetla informacje o serwerze WebIssues, bazie danych i środowisku, w którym działa serwer. Patrz sekcja <xref linkend="webissues.admin.info"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Dziennik zdarzeń</term>
+        <listitem>
+          <para>Pozwala przeglądać zdarzenia z dziennika zdarzeń serwera WebIssues. Patrz sekcja <xref linkend="webissues.admin.log"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Ustawienia serwera</term>
+        <listitem>
+          <para>Pozwala zmienić ustawienia językowe i inne ustawienia serwera WebIssues. Patrz sekcje <xref linkend="webissues.custom.locale"/> oraz <xref linkend="webissues.custom.settings"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Ustawienia e-maili</term>
+        <listitem>
+          <para>Pozwala zmienić ustawienia powiadomień mailowych. Patrz sekcja <xref linkend="webissues.prep.notifications"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Konta użytkowników</term>
+        <listitem>
+          <para>Pozwala zarządzać kontami użytkowników systemu WebIssues. Patrz sekcja <xref linkend="webissues.admin.users"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Typy spraw</term>
+        <listitem>
+          <para>Pozwala dostosować typy spraw oraz publiczne widoki. Patrz sekcje <xref linkend="webissues.custom.types"/> oraz <xref linkend="webissues.custom.views"/>.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>W programie Desktop Client istnieje możliwość administrowania użytkownikami i projektami oraz zarządzania typami spraw i widokami. Polecenia <guilabel>Użytkownicy</guilabel> oraz <guilabel>Typy spraw</guilabel> są dostępne bezpośrednio z paska narzędzi głównego okna. Nie jest natomiast dostępny pełny Panel administracyjny. Aby uzyskać dostęp do dziennika zdarzeń lub zmienić ustawienia systemu, musisz zatem skorzystać z programu Web Client.</para>
+
+  </sect1>
+
+  <sect1 id="webissues.admin.info">
+    <title>Informacje o serwerze</title>
+
+    <para>Aby wyświetlić ogólne informacje o serwerze, przejdź do Panelu administracyjnego i kliknij <guilabel>Ogólne informacje</guilabel>.</para>
+
+    <figure>
+      <title>Ogólne informacje</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch05-fig02.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Zostanie wyświetlony numer wersji aktualnie zainstalowanego schematu bazy danych, nazwa serwera oraz jego unikalny identyfikator. Za pomocą polecenia <guilabel>Zmień nazwę serwera</guilabel> możesz zmienić nazwę serwera, widoczną w lewym górnym rogu programu Web Client oraz na pasku tytułowym obu programów klienckich. Za pomocą polecenia <guilabel>Wygeneruj nowy unikalny identyfikator</guilabel> możesz natomiast zmienić identyfikator serwera na nowy, losowo wygenerowany identyfikator.</para>
+
+    <note>
+      <title>Notatka</title>
+      <para>Unikalny identyfikator umożliwia rozróżnienie poszczególnych instancji serwera WebIssues przez program Desktop Client, niezależnie od ich nazwy i adresu URL. Jest on automatycznie generowany w momencie instalacji i normalnie nie ma potrzeby go zmieniać. Zmiana tego identyfikatora może być potrzebna w sytuacji, gdy instancja serwera zostanie sklonowana (na przykład jeśli przed wdrożeniem aktualizacji na środowisku produkcyjnym jest ona testowana na tymczasowej kopii), a także po ręcznym wprowadzeniu zmian w bazie danych (na przykład po przywróceniu poprzedniej wersji bazy danych z kopii zapasowej).</para>
+    </note>
+
+    <para>W kolejnej części okna wyświetlone są podstawowe informacje na temat twojego serwera: nazwa instancji (zwykle będzie to <literal>default</literal>, chyba że tworzysz wiele instancji serwera w ramach jednej instalacji), bazowy adres URL serwera oraz ścieżka katalogu, w którym znajduje się plik konfiguracyjny. Jest również wyświetlona wersja PHP, serwera WWW i systemu operacyjnego oraz nazwa komputera, na którym jest zainstalowany system WebIssues.</para>
+
+    <para>Wyświetlone są również informacje na temat bazy danych: rodzaj i wersja serwera bazy danych, nazwa hosta i nazwa bazy danych oraz opcjonalny prefiks nazw tabel w bazie danych.</para>
+
+    <para>Ostatnia część okna zawiera informacje na temat ostatniego uruchomienia zadania cyklicznego. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.nofitications.cron"/>.</para>
+
+  </sect1>
+
+  <sect1 id="webissues.admin.log">
+    <title>Dziennik zdarzeń</title>
+
+    <para>Aby wyświetlić dziennik zdarzeń serwera WebIssues, przejdź do Panelu administracyjnego i kliknij <guilabel>Dziennik zdarzeń</guilabel>.</para>
+
+    <figure>
+      <title>Dziennik zdarzeń</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch05-fig03.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Dziennik zdarzeń zawiera informacje o błędach, dostępie do systemu, ważnych operacjach administracyjnych oraz uruchomieniach zadań cyklicznych. Jest on niezależny od dzienników PHP, serwera WWW oraz systemu operacyjnego. Jego zadaniem jest uzupełnienie tych informacji, a nie ich zastąpienie. W szczególności, niektóre poważne błędy (na przykład brak dostępu do bazy danych) mogą nie być zapisane w dzienniku zdarzeń serwera WebIssues.</para>
+
+    <para>Zdarzenia w dzienniku zdarzeń dzielą się na cztery typy:</para>
+
+    <variablelist>
+      <varlistentry>
+        <term>Błędy</term>
+        <listitem>
+          <para>Błędy i ostrzeżenia w systemie WebIssues. Mogą one wynikać z niepoprawnych danych wejściowych, braku uprawnień do wykonania operacji, konfliktu między dokonywanymi równolegle zmianami lub błędnej konfiguracji systemu.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Dostęp</term>
+        <listitem>
+          <para>Informacje o udanych i nieudanych próbach logowania użytkowników do systemu, a także błędy związane z odmową dostępu do określonych stron lub operacji.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Audyt</term>
+        <listitem>
+          <para>Informacje o ważnych operacjach administracyjnych, takich jak: tworzenie i zmiana hasła lub uprawnień użytkowników oraz tworzenie, usuwanie i modyfikacja typów spraw, atrybutów, projektów i folderów oraz usuwanie spraw.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Zadania</term>
+        <listitem>
+          <para>Informacje o uruchomieniu zadań cyklicznych. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.nofitications.cron"/>.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>Zdarzenia mają również trzy różne poziomy: informacja, ostrzeżenie i błąd. Są one oznaczane różnymi ikonami.</para>
+
+    <para>Domyślnie dziennik wyświetla wszystkie zdarzenia, posortowane od najnowszych do najstarszych. Jeśli interesuje cię tylko określony typ zdarzeń, kliknij na jednej z opcji w prawym górnym rogu okna, aby włączyć filtrowanie.</para>
+
+    <para>Kliknij na zdarzeniu, aby wyświetlić szczegółowe informacje na jego temat. Oprócz typu, poziomu i pełnego komunikatu, wyświetlana jest również nazwa użytkownika, który wykonał daną operację oraz nazwa hosta lub adres IP komputera, z którego zostało dokonane połączenie.</para>
+
+    <note>
+      <title>Notatka</title>
+      <para>Choć szczegółowe informacje o błędach są zapisywane w dzienniku zdarzeń, to ze względów bezpieczeństwa nie są one wyświetlane na stronach błędów. Istnieje jednak możliwość włączenia szczegółowych komunikatów o błędach dla celów deweloperskich lub podczas rozwiązywania problemów. Istnieje również możliwość włączenia dodatkowego logu tekstowego, ułatwiającego debugowanie programu. Nie włączaj tych ustawień w środowisku produkcyjnym. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
+    </note>
+
+    <para>Zdarzenia są automatycznie usuwane z dziennika po upłynięciu określonego czasu. Więcej informacji na temat konfigurowania tego okresu znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
+
+  </sect1>
+
+  <sect1 id="webissues.admin.users">
+    <title>Zarządzanie użytkownikami</title>
+
+    <para>Zarządzanie użytkownikami w systemie WebIssues obejmuje zarówno tworzenie kont użytkowników i nadawanie im globalnych uprawnień do systemu, jak i nadawanie uprawnień użytkowników do poszczególnych projektów.</para>
+
+    <sect2 id="webissues.admin.users.accounts">
+      <title>Konta użytkowników</title>
+
+      <para>Aby zarządzać użytkownikami systemu WebIssues, przejdź do Panelu administracyjnego i kliknij <guilabel>Konta użytkowników</guilabel>. W przypadku programu Desktop Client, użyj polecenia <guilabel>Użytkownicy</guilabel> z paska narzędzi głównego okna.</para>
+
+      <figure>
+        <title>Konta użytkowników</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig04.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Każdy użytkownik posiada unikalny, niezmienny login, używany wraz z hasłem podczas logowania do systemu. Posiada również nazwę, widoczną dla innych użytkowników, którą administrator może w razie potrzeby zmieniać. W zależności od przyjętej konwencji może to być imię i nazwisko, adres e-mail lub dowolna inna nazwa.</para>
+
+      <para>Zarządzanie uprawnieniami w systemie WebIssues jest stosunkowo proste. Istnieją trzy globalne poziomy dostępu:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>Administrator systemu</term>
+          <listitem>
+            <para>Użytkownik o tym poziomie ma dostęp do wszystkich funkcji Panelu administracyjnego. Może więc zarządzać kontami użytkowników i dostosowywać typy spraw i publiczne widoki. Jest również członkiem i administratorem wszystkich istniejących w systemie projektów, nawet jeśli nie zostały mu jawnie nadane odpowiednie uprawnienia. Pierwsze takie konto jest tworzone w momencie instalacji.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Zwykły użytkownik</term>
+          <listitem>
+            <para>Użytkownik o tym poziomie dostępu może zalogować się do systemu i zmieniać swoje personalne ustawienia. Ma dostęp jedynie do tych projektów, do których zostały mu nadane określone uprawnienia. Może być administratorem wybranych projektów, ale nie może tworzyć nowych projektów.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Wyłączony</term>
+          <listitem>
+            <para>Użytkownik o tym poziomie dostępu nie może zalogować się do systemu i nie ma dostępu do żadnej jego części.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+      <para>Aby utworzyć nowe konto użytkownika, wybierz polecenie <guilabel>Dodaj użytkownika</guilabel>.</para>
+
+      <figure>
+        <title>Tworzenie konta użytkownika</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig05.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Podaj nazwę użytkownika oraz login i początkowe hasło. Aby uniknąć pomyłek, hasło musisz wpisać dwukrotnie. Możesz zaznaczyć opcję <guilabel>Użytkownik musi zmienić hasło przy następnym logowaniu</guilabel>, aby wymusić ustawienie własnego hasła przez użytkownika w momencie pierwszego logowania do systemu.</para>
+
+      <para>Jeśli użytkownik nie pamięta swojego hasła, możesz je zresetować, wybierając użytkownika z listy i klikając <guilabel>Zmień hasło</guilabel>. Zostaniesz poproszony o dwukrotne wpisanie nowego hasła. Również w tym wypadku możesz zaznaczyć opcję <guilabel>Użytkownik musi zmienić hasło przy następnym logowaniu</guilabel>.</para>
+
+      <figure>
+        <title>Zmiana hasła użytkownika</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig06.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Jeśli zmieniasz swoje własne hasło, dla większego bezpieczeństwa musisz dodatkowo wpisać swoje aktualne hasło. Każdy użytkownik może w dowolnej chwili zmienić swoje własne hasło, korzystając z opcji <guilabel>Zmień hasło</guilabel> dostępnej w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna progamu Desktop Client.</para>
+
+      <note>
+        <title>Notatka</title>
+        <para>Jeśli zapomniałeś hasła administratora systemu, nie możesz w prosty sposób go odzyskać. Wszystkie hasła są przechowywane w bazie danych w postaci bezpiecznych hashów, które praktycznie uniemożliwiają odtworzenie oryginalnego hasła. Mając dostęp do bazy danych możesz jednak zresetować hasło administratora, generując nowy hash i wpisując go do kolumny <literal>user_passwd</literal> dla odpowiedniego użytkownika w tabeli <literal>users</literal>. System WebIssues używa algorytmu <quote>Portable PHP password hashing framework</quote>, zgodnego z takimi programami jak Wordpress czy Drupal, możesz więc użyć jednego z dostępnych dla tych programów <ulink url="http://scriptserver.mainframe8.com/wordpress_password_hasher.php">generatorów hashów</ulink>.</para>
+      </note>
+
+      <para>Aby zmienić globalny poziom dostępu użytkownika, wybierz go z listy i kliknij <guilabel>Zmień dostęp</guilabel>. Następnie wybierz nowy poziom dostępu i kliknij <guibutton>OK</guibutton>. Nie możesz sam pozbawić się prawa administratora systemu, ponieważ w systemie musi istnieć przynajmniej jedno aktywne konto administratora.</para>
+
+      <figure>
+        <title>Zmiana dostępu użytkownika</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig07.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Aby zmienić nazwę użytkownika, wybierz go z listy i kliknij <guilabel>Zmień nazwę użytkownika</guilabel>. Podaj nową nazwę i kliknij <guibutton>OK</guibutton>.</para>
+
+      <tip>
+        <title>Wskazówka</title>
+        <para>Unikaj zmieniania nazwy użytkowników, którzy mają przypisane do siebie sprawy. Wartości atrybutów są przechowywane jako tekst, więc zmiana nazwy użytkownika nie spowoduje automatycznej zmiany wartości atrybutów <quote>Przypisany do</quote>. Może to spowodować, że użytkownik przestanie widzieć przypisane do siebie sprawy.</para>
+      </tip>
+
+      <para>Możesz również zmienić ustawienia dowolnego użytkownika za pomocą polecenia <guilabel>Ustawienia użytkownika</guilabel>. Każdy użytkownik może również zmienić własne ustawienia, korzystając z opcji <guilabel>Ustawienia użytkownika</guilabel> w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna progamu Desktop Client. Więcej informacji na temat ustawień użytkownika znajdziesz w sekcjach <xref linkend="webissues.track.alerts"/> oraz <xref linkend="webissues.custom.locale"/>.</para>
+
+      <para>System WebIssues nie pozwala na usuwanie istniejących użytkowników, ponieważ przechowuje on wszystkie informacje historyczne, na przykład zmiany dokonane przez poszczególnych użytkowników. Zamiast tego możesz zmienić poziom uprawnień użytkowników, którzy nie powinni już mieć dostępu do systemu, na wyłączony.</para>
+
+    </sect2>
+
+    <sect2 id="webissues.admin.users.members">
+      <title>Członkowie projektu</title>
+
+      <para>Nowo utworzony użytkownik nie ma dostępu do żadnego projektu, chyba że jest administratorem systemu. Aby zarządzać uprawnieniami użytkowników do poszczególnych projektów, wybierz projekt, a następnie użyj polecenia <guilabel>Członkowie projektu</guilabel>.</para>
+
+      <figure>
+        <title>Lista członków projektu</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig08.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Istnieją dwa poziomy dostępu użytkowników do projektów:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>Administrator projektu</term>
+          <listitem>
+            <para>Użytkownik o tym poziomie dostępu może zarządzać członkami i folderami danego projektu. Może również usuwać i przenosić sprawy oraz edytować i usuwać wszystkie komentarze i załączniki w ramach tego projektu.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Zwykły członek</term>
+          <listitem>
+            <para>Użytkownik o tym poziomie dostępu może przeglądać sprawy we wszystkich folderach, zarządzać swoimi alertami, a także tworzyć nowe sprawy i edytować istniejące. Może również dodawać komentarze i załączniki oraz edytować i usuwać własne komentarze i załączniki.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+      <para>Globalny poziom uprawnień użytkownika jest zawsze ważniejszy, niż uprawnienia dla danego projektu. Administrator systemu automatycznie staje się administratorem wszystkich projektów, a użytkownik wyłączony traci dostęp do wszystkich projektów. Natomiast zwykły użytkownik ma dostęp tylko do tych projektów, których jest członkiem, zgodnie z nadanymi mu uprawnieniami.</para>
+
+      <para>Aby dodać członków projektu, wybierz polecenie <guilabel>Dodaj członków</guilabel>.</para>
+
+      <figure>
+        <title>Dodawanie członków projektu</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig09.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Zaznacz jednego lub więcej użytkowników, którzy nie są jeszcze członkami projektu. Następnie wybierz odpowiedni poziom dostępu i kliknij <guibutton>OK</guibutton>.</para>
+
+      <para>Aby zmienić poziom dostępu członka, wybierz go z listy i kliknij <guilabel>Zmień dostęp</guilabel>. Następnie wybierz nowy poziom dostępu i kliknij <guibutton>OK</guibutton>. Nie możesz sam pozbawić się prawa administratora projektu, chyba że jesteś administratorem systemu.</para>
+
+      <figure>
+        <title>Zmiana dostępu członka</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig10.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Aby usunąć członka projektu, wybierz go z listy i kliknij <guilabel>Usuń członka</guilabel>. W przypadku programu Desktop Client, możesz wybrać kilku członków z listy i zmienić ich poziom dostępu lub usunąć z projektu jednocześnie.</para>
+
+    </sect2>
+
+  </sect1>
+
+  <sect1 id="webissues.admin.projects">
+    <title>Zarządzanie projektami</title>
+
+    <para>Możesz zarządzać projektami i folderami bezpośrednio z głównego okna programu Web Client lub Desktop Client. Jeśli jesteś administratorem systemu, możesz zarządzać wszystkimi projektami oraz tworzyć nowe projekty. Jeśli jesteś administratorem projektu, możesz zarządzać jego członkami i folderami.</para>
+
+    <para>Aby dodać nowy projekt, wybierz polecenie <guilabel>Dodaj projekt</guilabel>, a następnie podaj nazwę projektu i naciśnij <guibutton>OK</guibutton>.</para>
+
+    <figure>
+      <title>Tworzenie projektu</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch05-fig11.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Po utworzeniu nowego projektu, żaden użytkownik nie ma do niego dostępu. Więcej informacji na temat udzielania użytkownikom dostępu do projektów znajdziesz w sekcji <xref linkend="webissues.admin.users.members"/>.</para>
+
+    <para>Administrator systemu może zmienić nazwę dowolnego projektu. W tym celu wybierz projekt i kliknij <guilabel>Zmień nazwę projektu</guilabel>. Możesz również usuwać projekty używając polecenia <guilabel>Usuń projekt</guilabel>. Jeśli projekt nie jest pusty, zostanie wyświetlone odpowiednie ostrzeżenie.</para>
+
+    <warning>
+      <title>Uwaga</title>
+      <para>Usuwając projekty lub foldery zwracaj szczególną uwagę, czy omyłkowo nie kasujesz niewłaściwych danych. Wszystkie zawarte w nich sprawy są trwale i nieodwracalnie usuwane z systemu i nie ma możliwości ich przywrócenia.</para>
+    </warning>
+
+    <para>Aby dodać nowy folder, wybierz projekt i kliknij <guilabel>Dodaj folder</guilabel>.</para>
+
+    <figure>
+      <title>Tworzenie folderu</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch05-fig12.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Tworząc folder, musisz nadać mu nazwę, która jest unikalna w ramach danego projektu, a także wybrać typ spraw, które będą w nim przechowywane. Po utworzeniu folderu nie możesz zmienić jego typu. Możesz natomiast zmienić nazwę folderu, używając polecenia <guilabel>Zmień nazwę folderu</guilabel> oraz usunąć go za pomocą polecenia <guilabel>Usuń folder</guilabel>.</para>
+
+    <para>Możesz również przenieść folder z jednego projektu do drugiego. Aby to zrobić, musisz być administratorem systemu lub obu projektów &mdash; źródłowego i docelowego. Wybierz folder, który chcesz przenieść i kliknij <guilabel>Przenieś folder</guilabel>. Następnie wybierz z listy docelowy projekt i kliknij <guibutton>OK</guibutton>.</para>
+
+  </sect1>
 
 </chapter>

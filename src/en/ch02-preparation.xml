@@ -94,7 +94,7 @@
 
       <para>If you follow the instructions and click on the link, you will be prompted for the language that will be used during the installation. It will also be the default language in which the WebIssues system will display all messages.</para>
 
-      <para>In the next step of the installation, basic information about your server will be displayed: its name (usually <literal>default</literal>, unless you create multiple instances of the server within a single installation), the base URL of the server and the path of the directory in which the configuration file will be created. You will also see the version of PHP, the web server and the operating system and the name of the computer on which you're installing WebIssues. After verifying this information, go to the next step.</para>
+      <para>In the next step of the installation, basic information about your server will be displayed: the name of the instance (usually <literal>default</literal>, unless you create multiple instances of the server within a single installation), the base URL of the server and the path of the directory in which the configuration file will be created. You will also see the version of PHP, the web server and the operating system and the name of the computer on which you're installing WebIssues. After verifying this information, go to the next step.</para>
 
       <figure>
         <title>Configuring the database connection</title>

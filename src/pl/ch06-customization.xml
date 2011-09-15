@@ -1,9 +1,233 @@
 <chapter id="webissues.custom">
   <title>Dostosowywanie systemu</title>
 
-  <note>
-    <title>Notatka</title>
-    <para>Ten rozdział jest jeszcze w trakcie przygotowywania.</para>
-  </note>
+  <para>Niniejszy rozdział opisuje sposoby konfigurowania i dostosowywania systemu do własnych potrzeb. Jest on przeznaczony głównie dla zaawansowanych administratorów.</para>
+
+  <sect1 id="webissues.custom.types">
+    <title>Zarządzanie typami spraw</title>
+
+    <para>Domyślnie instalator systemu WebIssues tworzy kilka predefiniowanych typów spraw, umożliwiających śledzenie błędów i zadań w typowym projekcie informatycznym, a także tworzenie forum dyskusyjnych. Możesz modyfikować te wbudowane typy spraw, dostosowując je do swoich potrzeb, a także tworzyć całkiem nowe typy spraw.</para>
+
+    <para>Aby zarządzać typami spraw, przejdź do Panelu administracyjnego i kliknij <guilabel>Typy spraw</guilabel>. W przypadku programu Desktop Client, użyj polecenia <guilabel>Typy spraw</guilabel> z paska narzędzi głównego okna. Lista standardowych typów spraw wygląda następująco:</para>
+
+    <figure>
+      <title>Typy spraw</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig01.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Dla każdego typu spraw są wyświetlane jego atrybuty. Dla każdego atrybutu jest wyświetlony jego typ, domyślna wartość dla nowych spraw, a także informacja, czy atrybut jest wymagany i dodatkowe szczegóły, które zależą od jego typu.</para>
+
+    <para>Zacznijmy od dodania nowego atrybutu do istniejącego typu spraw. Dodamy możliwość wpisania nazwy modułu, którego dotyczy zgłoszony błąd. Wybierz typ spraw Błędy i kliknij <guilabel>Dodaj atrybut</guilabel>. Następnie podaj nazwę nowego atrybutu.</para>
+
+    <figure>
+      <title>Dodawanie atrybutu</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig02.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Domyślnie nowy atrybut ma typ <guilabel>Tekst</guilabel>, umożliwia więc wpisanie dowolnego tekstu. Klikając przycisk <guibutton>Edytuj</guibutton> w ramce <guilabel>Szczegóły atrybutu</guilabel>, możesz zmienić dodatkowe ustawienia atrybutu, które zależą od jego typu.</para>
+
+    <figure>
+      <title>Szczegóły atrybutu tekstowego</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig03.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>W przypadku atrybutu tekstowego, możesz zaznaczyć opcję <guilabel>Zezwól na wprowadzanie wielu linii tekstu</guilabel>, aby ułatwić wprowadzanie dłuższych fragmentów tekstu z możliwością podziału na linie. Pole edycji wartości atrybutu będzie wtedy większe. Możesz podać maksymalną długość tekstu, aby ograniczyć wprowadzony tekst do określonej liczby znaków. Pamiętaj jednak, że wartość atrybutu nigdy nie może być dłuższa niż 255 znaków. Do wprowadzania dłuższych fragmentów tekstu (na przykład opisu błędu) lepiej jest użyć komentarzy. W analogiczny sposób możesz również określić minimalną długość wprowadzonego tekstu.</para>
+
+    <para>Jeśli lista modułów, których mogą dotyczyć zgłaszane błędy, jest znana z góry, to zamiast atrybutu tekstowego można użyć atrybutu <guilabel>Lista wyboru</guilabel>. Wybierz ten typ w polu <guilabel>Typ atrybutu</guilabel>, a następnie kliknij <guibutton>Edytuj</guibutton>, aby zmienić szczegóły atrybutu.</para>
+
+    <figure>
+      <title>Szczegóły listy wyboru</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig04.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Musisz przede wszystkim podać listę możliwych do wybrania wartości. W tym celu wpisz każdą wartość, w tym wypadku nazwę modułu, w osobnym wierszu. Domyślnie lista wyboru wymusza wybranie jednej ze zdefiniowanych wartości. Jeśli jednak wybierzesz opcję <guilabel>Zezwól na podawanie własnych wartości</guilabel>, to w momencie dodawania lub edycji sprawy będzie możliwe wpisanie dowolnej wartości atrybutu. Dzięki temu będzie można wpisać nazwę modułu, który nie został uwzględniony na liście. W tym wypadku możliwe jest również podanie minimalnej i maksymalnej długości tekstu, podobnie jak dla atrybutów tekstowych.</para>
+
+    <para>Opcja <guilabel>Zezwól na wybieranie wielu wartości</guilabel> umożlwia wybranie z listy więcej niż jednej wartości, oddzielonych przecinkami. Jest to przydatne, jeśli zgłaszane błędy mogą być powiązane z kilkoma modułami jednocześnie. Obie opcje można ze sobą łączyć, wtedy będzie możliwe wpisanie kilku wartości, niekoniecznie wybranych z listy. Taki tryb działania atrybutu umożliwia na przykład oznaczanie spraw <quote>tagami</quote>, które mogą być predefiniowane, ale mogą być również wpisywane spoza listy.</para>
+
+    <para>Kolejnym typem atrybutu jest <guilabel>Liczba</guilabel>. Załóżmy, że chcemy do typu spraw Zadania dodać atrybut Pracochłonność, którego wartość jest wyrażona w godzinach. Wybierz typ <guilabel>Liczba</guilabel> z listy typów atrybutów i kliknij <guibutton>Edytuj</guibutton>.</para>
+
+    <figure>
+      <title>Szczegóły atrybutu liczbowego</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig05.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Wartości liczbowe mogą być całkowite lub podawane z dokładnością do określonej liczby miejsc po przecinku, nie większej niż 6. Można również określić minimalną i maksymalną wartość atrybutu. Przykładowo, atrybut Priorytet zadania domyślnie może przyjmować wartości z zakresu od 1 do 3. Możesz również wybrać opcję <guilabel>Usuń końcowe zera dziesiętne</guilabel>, aby pomijać zera po przecinku, na przykład wartość <quote>12,50</quote> będzie wtedy wyświetlana jako <quote>12,5</quote>.</para>
+
+    <para>Atrybuty mogą również zawierać datę lub datę i czas. Dla przykładu, typ spraw Zadania zawiera atrybut Termin, przechowujący planowaną datę zakończenia zadania. Możemy dodać atrybut Zakończone, przechowujący rzeczywistą datę zakończenia zadania. Wybierz typ atrybutu <guilabel>Data i czas</guilabel> i kliknij <guibutton>Edytuj</guibutton>, aby określić szczegóły atrybutu.</para>
+
+    <figure>
+      <title>Szczegóły daty i czasu</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig06.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Wartością atrybutu może być data, na przykład <quote>2011-09-05</quote> lub data i czas z dokładnością do minut, na przykład <quote>2011-09-05 18:34</quote>. Jeśli wybierzesz typ <guilabel>Data i czas bez konwersji strefy czasowej</guilabel>, wyświetlany czas będzie zawsze taki sam, niezależnie od strefy czasowej. Jeśli natomiast wybierzesz wariant <guilabel>Data i czas w lokalnej strefie czasowej</guilabel>, to wartość zostanie zapisana jako czas GMT, a przy wyświetlaniu zostanie automatycznie skonwertowana do lokalnej strefy czasowej. Opcja ta jest przydatna, jeśli z serwera korzystają osoby znajdujące się w różnych strefach czasowych.</para>
+
+    <para>Ostatnim typem atrybutu jest <guilabel>Użytkownik</guilabel>. Zarówno Błędy, jak i Zadania zawierają atrybuty o nazwie Przypisany do, ale nic nie stoi na przeszkodzie, żeby utworzyć większą liczbę atrybutów tego typu. W przypadku błędu można na przykład użyć osobnych atrybutów dla oznaczenia osoby, która go zgłosiła, poprawiła i przetestowała.</para>
+
+    <figure>
+      <title>Szczegóły atrybutu użytkownik</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig07.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>W szczegółowych ustawieniach atrybutu dostępne są dwie opcje. Opcja <guilabel>Zezwól tylko na wybieranie członków projektu</guilabel> pozwala ograniczyć listę użytkowników, którzy mogą zostać przypisani do sprawy, do tych osób, które są członkami danego projektu. Opcja ta jest przydatna, jeśli w systemie istnieje wiele projektów i wielu użytkowników, i większość użytkowników ma dostęp jedynie do wybranych projektów. Z kolei opcja <guilabel>Zezwól na wybieranie wielu wartości</guilabel> umożlwia wybranie z listy więcej niż jednej wartości, oddzielonych przecinkami, analogicznie jak w przypadku listy wyboru.</para>
+
+    <para>Niezależnie od typu i szczegółowych ustawień, każdy atrybut posiada również pewne wspólne ustawienia. Jeśli wybierzesz opcję <guilabel>Atrybut jest wymagany</guilabel>, to atrybut zawsze musi mieć określoną wartość. W przeciwnym wypadku można pozostawić pustą wartość przy tworzeniu nowej sprawy, a także wyczyścić jego wartość dla istniejącej sprawy. Atrybuty wymagane są oznaczane gwiazdką w momencie tworzenia lub edycji sprawy.</para>
+
+    <para>W polu <guilabel>Domyślna wartość</guilabel> możesz natomiast określić wartość atrybutu dla nowo tworzonych spraw. W momencie tworzenia sprawy można pozostawić domyślne wartości poszczególnych atrybutów lub je zmodyfikować. Jeśli atrybut jest wymagany, a nie posiada domyślnej wartości, to musi on zostać wypełniony w momencie tworzenia sprawy. Przy podawaniu domyślnych wartości możesz użyć podobnych specjalnych wartości, jak w przypadku definicji filtru. Wartość <quote>[Dzisiaj]</quote> jest zamieniana na bieżącą datę w momencie tworzenia sprawy (z możliwością odjęcia lub dodania określonej liczby dni), natomiast wartość <quote>[Ja]</quote> jest zamieniana na nazwę użytkownika, który tworzy daną sprawę.</para>
+
+    <para>Możesz w każdej chwili zmienić definicje istniejących atrybutów. Załóżmy, że chcemy, żeby atrybut Przypisany do był wymagany i żeby domyślnie błędy były przypisane do osoby, która je utworzyła. Wybierz ten atrybut i kliknij <guilabel>Zmień atrybut</guilabel>. Zaznacz opcję <guilabel>Atrybut jest wymagany</guilabel>, a w polu <guilabel>Domyślna wartość</guilabel> wpisz <quote>[Ja]</quote>. Następnie kliknij <guibutton>OK</guibutton>, aby zatwierdzić zmiany.</para>
+
+    <figure>
+      <title>Zmiana definicji atrybutu</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig08.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Zmiana definicji istniejących atrybutów jest brana pod uwagę przy tworzeniu nowych spraw i edycji istniejących spraw. Nie wpływa jednak na aktualne wartości atrybutów dla istniejących spraw. W naszym przykładzie, jeśli w systemie istnieją już błędy, to pozostaną one nieprzepisane, choć atrybut Przypisany do jest teraz wymagany. Jednak w momencie edycji błędu, trzeba go do kogoś przypisać.</para>
+
+    <para>Załóżmy teraz, że chcemy, aby Krytyczność błędu była określana w skali od 1 do 5, a nie od 1 do 3. Wybierz ten atrybut i kliknij <guilabel>Zmień atrybut</guilabel>. Następnie kliknij <guibutton>Edytuj</guibutton>, aby przejść do edycji szczegółów atrybutu. Zmień <guilabel>Maksymalną wartość</guilabel> na 5 i kliknij <guibutton>OK</guibutton>. Następnie zmień domyślną wartość atrybutu na 3 i ponownie kliknij <guibutton>OK</guibutton>, aby zapisać zmiany.</para>
+
+    <para>W ograniczonym zakresie można także zmieniać typ istniejącego atrybutu. Załóżmy na przykład, że chcemy zdefiniować listę wyboru wartości dla atrybutu Wersja typu spraw Błędy. Wybierz atrybut i kliknij <guilabel>Zmień atrybut</guilabel>, a następnie z listy <guilabel>Typ atrybutu</guilabel> wybierz <guilabel>Lista wyboru</guilabel>. Następnie kliknij <guibutton>Edytuj</guibutton>, aby przejść do edycji szczegółów i wpisz listę wartości do wyboru, zaznaczając <guilabel>Zezwól na podawanie własnych wartości</guilabel>, aby można było wpisywać wartości spoza listy. Kliknij dwukrotnie <guibutton>OK</guibutton>, aby zatwierdzić zmiany.</para>
+
+    <para>Atrybuty Tekst, Lista wyboru oraz Użytkownik przechowują wartości jako zwykły tekst, można je więc stosować wymiennie i zmieniać z jednego typu na inny. Atrybutów Liczba oraz Data i czas nie można natomiast zmienić na inny typ.</para>
+
+    <para>Aby zmienić nazwę atrybutu, użyj polecenia <guilabel>Zmień nazwę atrybutu</guilabel>. Nazwy atrybutów mogą być dowolne, ale muszą być unikalne w ramach danego typu spraw. Możesz również usunąć istniejący atrybut, jeśli nie jest już potrzebny. W tym celu wybierz atrybut i kliknij <guilabel>Usuń atrybut</guilabel>.</para>
+
+    <warning>
+      <title>Uwaga</title>
+      <para>Usuwając atrybuty zwracaj szczególną uwagę, czy omyłkowo nie kasujesz niewłaściwych danych. Wszystkie aktualne oraz historyczne wartości atrybutu są trwale i nieodwracalnie usuwane z systemu i nie ma możliwości ich przywrócenia.</para>
+    </warning>
+
+    <para>Oprócz modyfikowania predefiniowanych typów spraw, system WebIssues umożliwia również tworzenie zupełnie nowych typów spraw. Załóżmy, że chcemy utworzyć prosty kalendarz zawierający zdarzenia związane z różnymi osobami. Kliknij <guilabel>Dodaj typ</guilabel>, aby utworzyć nowy typ spraw.</para>
+
+    <figure>
+      <title>Tworzenie typu spraw</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig09.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Podaj nazwę typu i kliknij <guibutton>OK</guibutton>. Nowy typ nie ma żadnych atrybutów, wybierz go więc i kliknij <guilabel>Dodaj atrybut</guilabel>. Utwórz atrybut o nazwie <quote>Osoba</quote> i wybierz typ Użytkownik. Oznacz atrybut jako wymagany i jako domyślną wartość wpisz <quote>[Ja]</quote>. Następnie dodaj kolejny atrybut o nazwie <quote>Data</quote>, wybierając typ Data i czas, ustawiając jego domyślną wartość na <quote>[Dzisiaj]</quote>. Drzewo typów spraw, po zwinięciu domyślnych typów, będzie wyglądać następująco:</para>
+
+    <figure>
+      <title>Typy spraw z nowym typem</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig10.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Aby móc tworzyć sprawy nowego typu, musisz jeszcze utworzyć folder używający tego typu. Możesz również zmienić kolejność atrybutów i domyślny widok oraz zdefiniować publiczne widoki dla tego typu. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.custom.views"/>.</para>
+
+    <para>Aby zmienić nazwę typu spraw, użyj polecenia <guilabel>Zmień nazwę typu</guilabel>. Możesz również usunąć typ spraw za pomocą polecenia <guilabel>Usuń typ</guilabel>. Jeśli w systemie istnieją foldery tego typu, zostanie wyświetlone odpowiednie ostrzeżenie.</para>
+
+    <warning>
+      <title>Uwaga</title>
+      <para>Usuwając typy spraw zwracaj szczególną uwagę, czy omyłkowo nie kasujesz niewłaściwych danych. Wszystkie foldery i sprawy tego typu są trwale i nieodwracalnie usuwane z systemu i nie ma możliwości ich przywrócenia.</para>
+    </warning>
+
+  </sect1>
+
+  <sect1 id="webissues.custom.views">
+    <title>Ustawienia widoków</title>
+
+    <para>Dla każdego typu spraw można zdefiniować kolejność atrybutów, domyślny widok oraz dowolną liczbę publicznych widoków, dostępnych dla wszystkich użytkowników. Domyślnie instalator systemu WebIssues tworzy predefiniowane ustawienia widoków dla standardowych typów spraw. Możesz zmieniać te ustawienia zarówno dla standardowych, jak i własnych typów spraw.</para>
+
+    <para>Zacznijmy od zmiany ustawień widoków dla standardowego typu Błędy. Przejdź do Panelu administracyjnego i kliknij <guilabel>Typy spraw</guilabel>, a następnie wybierz typ Błędy i kliknij <guilabel>Ustawienia widoków</guilabel>. W przypadku programu Desktop Client, użyj polecenia <guilabel>Typy spraw</guilabel> z paska narzędzi głównego okna, aby otworzyć listę typów spraw. Domyślne ustawienia widoków dla tego typu spraw wyglądają następująco:</para>
+
+    <figure>
+      <title>Ustawienia widoków</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig11.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Możesz zmienić kolejność atrybutów, która będzie brana pod uwagę zarówno przy wyświetlaniu szczegółów spraw, jak i przy tworzeniu i edycji spraw danego typu. Kliknij <guilabel>Zmień</guilabel>, aby zmienić domyślną kolejność:</para>
+
+    <figure>
+      <title>Kolejność atrybutów</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig12.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Załóżmy, że chcemy, aby atrybut Przypisany do był wyświetlany po atrybutach Status i Powód. Zmień wartość określającą kolejność tego atrybutu z 1 na 3, aby przesunąć go na trzecią pozycję. Następnie kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć, jak będzie wyglądać nowa kolejność atrybutów. Atrybuty Status i Powód zostaną automatycznie przeniesione na pozycje 1 i 2. Kliknij <guibutton>OK</guibutton>, aby zapisać nową kolejność atrybutów.</para>
+
+    <para>Jeśli dodasz nowe atrybuty do typu spraw, to zostaną one dołączone na końcu listy atrybutów, dla których wcześniej została zdefiniowana kolejność. Nowe atrybuty będą domyślnie posortowane w porządku alfabetycznym.</para>
+
+    <para>Domyślny widok określa wyświetlane kolumny oraz domyślny porządek sortowania dla folderów danego typu. Jest to więc po prostu widok <quote>Wszystkie sprawy</quote>, który istnieje dla każdego typu spraw i nie posiada warunków filtrowania. Widok ten stanowi również wzór, na podstawie którego tworzone są wszystkie nowe widoki publiczne i prywatne. Kliknij <guilabel>Zmień</guilabel> w ramce <guilabel>Domyślny widok</guilabel>, aby zmienić ten widok:</para>
+
+    <figure>
+      <title>Domyślny widok</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig13.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Zmiana ustawień widoku działa podobnie, jak tworzenie prywatnych widoków, opisane w sekcji <xref linkend="webissues.work.views" />. Możesz więc odznaczyć kolumny, które chcesz usunąć i zaznaczyć kolumny, które chcesz dodać, a także zmieniać wartości określające kolejność kolumn. Aby na przykład dodać kolumnę Powód do domyślnego widoku, zaznacz tą kolumnę i ustaw jej kolejność na 7, aby wyświetlać ją po kolumnie Status. Kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć nową kolejność kolumn. Możesz również zmienić domyślny porządek sortowania spraw. Na końcu kliknij <guibutton>OK</guibutton>, aby zapisać widok.</para>
+
+    <para>Podobnie jak każdy użytkownik może dla każdego typu spraw zdefiniować dowolną liczbę widoków prywatnych, tak administrator systemu WebIssues może dla każdego typu zdefiniować widoki publiczne. Każdy może korzystać z publicznych widoków, ale tylko administrator ma prawo je tworzyć i zmieniać.</para>
+
+    <para>Dla standardowych typów Błędy i Zadania istnieje już kilka domyślnych widoków publicznych, na przykład Aktywne błędy czy Utworzone przeze mnie. Możesz zmieniać te standardowe widoki lub tworzyć nowe. Dla typu spraw Forum nie ma żadnych widoków, ponieważ nie ma on żadnych atrybutów, ale możesz definiować widoki za pomocą wbudowanych kolumn. Możesz na przykład utworzyć widok Utworzone przeze mnie, analogiczny do tych, które istnieją dla Błędów i Zadań. Nie możesz jednak definiować kolejności atrybutów, chyba że dodasz atrybuty do tego typu.</para>
+
+    <para>Utwórzmy teraz nowy widok o nazwie <quote>Krytyczne błędy</quote>, podobny do prywatnego widoku o tej samej nazwie, który tworzyliśmy w sekcji <xref linkend="webissues.work.views" />. Kliknij <guilabel>Dodaj publiczny widok</guilabel>, aby utworzyć nowy widok. Odznacz kolumnę Krytyczność i zaznacz kolumny Utworzona przez oraz Data utworzenia. Aby przenieść kolumny Przypisany do i Status na koniec, ustaw wartości określające ich kolejność na 10 i 11.</para>
+
+    <figure>
+      <title>Edycja kolumn widoku</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig14.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć jak będzie wyglądać układ kolumn w widoku. Pozostaw domyślny porządek sortowania i przejdź do edycji filtrów. Włącz filtr dla kolumny Krytyczność i wpisz wartość 1 jako parametr warunku:</para>
+
+    <figure>
+      <title>Edycja filtra</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig15.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Kliknij <guibutton>OK</guibutton>, aby zapisać zmiany. Od tej chwili nowy widok jest dostępny dla wszystkich użytkowników systemu.</para>
+
+    <para>Zamiast tworzyć nowy publiczny widok, który jest taki sam, jak istniejący już widok prywatny, możesz również po prostu opublikować widok prywatny, aby stał się dostępny dla wszystkich. Otwórz dowolny folder typu Błędy i kliknij <guilabel>Zarządzaj widokami</guilabel>, aby wyświetlić listę widoków prywatnych. Następnie wybierz widok, który chcesz opublikować, i kliknij <guilabel>Opublikuj widok</guilabel>. Widok zniknie z listy widoków prywatnych i zostanie przeniesiony na listę widoków publicznych. W analogiczny sposób możesz zmienić widok publiczny w widok prywatny. W tym celu zaznacz go na liście widoków publicznych i kliknij <guilabel>Cofnij publikację widoku</guilabel>.</para>
+
+    <para>Aby zmienić definicję istniejącego widoku, wybierz go z listy i kliknij <guilabel>Zmień widok</guilabel>. Aby zmienić nazwę widoku, użyj polecenia <guilabel>Zmień nazwę widoku</guilabel>. Możesz również usunąć istniejący widok, jeśli nie jest już potrzebny. W tym celu wybierz widok i kliknij <guilabel>Usuń widok</guilabel>. Pamiętaj jednak, że spowoduje to usunięcie wszystkich alertów utworzonych na bazie tego widoku.</para>
+
+  </sect1>
+
+  <sect1 id="webissues.custom.locale">
+    <title>Ustawienia regionalne</title>
+
+    <note>
+      <title>Notatka</title>
+      <para>Ta sekcja jest jeszcze w trakcie przygotowywania.</para>
+    </note>
+
+  </sect1>
+
+  <sect1 id="webissues.custom.settings">
+    <title>Ustawienia zaawansowane</title>
+
+    <note>
+      <title>Notatka</title>
+      <para>Ta sekcja jest jeszcze w trakcie przygotowywania.</para>
+    </note>
+
+  </sect1>
 
 </chapter>

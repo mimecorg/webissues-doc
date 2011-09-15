@@ -10,7 +10,7 @@
 
     <para>Główną zaletą programu Web Client jest to, że możesz korzystać z systemu WebIssues na dowolnym komputerze (a nawet urządzeniu mobilnym) w dowolnym miejscu na świecie, jeśli tylko system jest dostępny przez Internet. Możesz skorzystać z dowolnej przeglądarki i nie musisz instalować żadnego dodatkowego oprogramowania.</para>
 
-    <para>Zaletą programu Desktop Client jest przede wszystkim to, że jest dużo szybsza i wygodniejsza, niż interfejs webowy. Wyszukiwanie i filtrowanie działa w czasie rzeczywistym, program na bieżąco aktualizuje również statystyki wszystkich skonfigurowanych alertów. Jest to więc najlepsza opcja dla tych, którzy intensywnie korzystają z systemu WebIssues.</para>
+    <para>Zaletą programu Desktop Client jest przede wszystkim to, że jest dużo szybsza i wygodniejsza, niż interfejs WWW. Wyszukiwanie i filtrowanie działa w czasie rzeczywistym, program na bieżąco aktualizuje również statystyki wszystkich skonfigurowanych alertów. Jest to więc najlepsza opcja dla tych, którzy intensywnie korzystają z systemu WebIssues.</para>
 
     <para>Różnorodność ta jest podobna do korzystania z poczty elektronicznej. Jedni korzystają z programów pocztowych zainstalowanych na swoim komputerze, inni wolą korzystać z poczty za pośrednictwem przeglądarki internetowej.</para>
 
@@ -370,7 +370,7 @@
       </mediaobject>
     </figure>
 
-    <para>Jeśli jesteś administratorem systemu, możesz również publikować swoje widoki, aby były dostępne dla wszystkich użytkowników, a także zarządzać widokami publicznymi dla poszczególnych typów spraw. Aby uzyskać więcej informacji na ten temat, przeczytaj <xref linkend="webissues.custom"/>.</para>
+    <para>Jeśli jesteś administratorem systemu, możesz również publikować swoje widoki, aby były dostępne dla wszystkich użytkowników, a także zarządzać widokami publicznymi dla poszczególnych typów spraw. Aby uzyskać więcej informacji na ten temat, przeczytaj <xref linkend="webissues.custom.views"/>.</para>
 
   </sect1>
 

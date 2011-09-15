@@ -10,7 +10,7 @@
 
     <para>Just as the entire WebIssues system, this book is licensed under a free license, which means that it can be freely modified and redistributed. I encourage you to send comments and suggestions for improvement.</para>
 
-    <para>Currently I am still working on this book, so some parts are incomplete, especially <xref linkend="webissues.admin"/> and <xref linkend="webissues.custom"/>.</para>
+    <para>Currently I am still working on this book, so some parts are incomplete, especially <xref linkend="webissues.custom"/>.</para>
 
   </sect1>
 
