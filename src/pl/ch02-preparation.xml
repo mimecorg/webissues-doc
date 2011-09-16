@@ -1,7 +1,7 @@
 <chapter id="webissues.prep">
   <title>Przygotowanie systemu</title>
 
-  <para>Aby korzystać z systemu WebIssues, niezbędne jest skonfigurowanie serwera, który jest jego centralną  i najważniejszą częścią. Niniejszy rozdział opisuje on krok po kroku proces instalowania serwera WebIssues i przygotowania go do pracy. Jeśli korzystasz z już istniejącego serwera, możesz pominąć ten rozdział.</para>
+  <para>Aby korzystać z systemu WebIssues, niezbędne jest skonfigurowanie serwera, który jest jego centralną  i najważniejszą częścią. Niniejszy rozdział opisuje krok po kroku proces instalowania serwera WebIssues i przygotowania go do pracy. Jeśli korzystasz z już istniejącego serwera, możesz pominąć ten rozdział. Informacje na temat aktualizowania systemu do nowej wersji znajdziesz w sekcji <xref linkend="webissues.admin.updating"/>.</para>
 
   <sect1 id="webissues.prep.requirements">
     <title>Wymagania</title>
@@ -174,7 +174,7 @@
         <para>Administrator systemu ma dostęp do Panelu administracyjnego, a także jest administratorem wszystkich istniejących w systemie projektów, nawet jeśli nie jest ich członkiem. Nadawaj więc to uprawnienie tylko zaufanym osobom.</para>
       </tip>
 
-      <para>Skonfigurowana lista kont użytkowników może wyglądać jak na poniższym rysunku. Aby znaleźć więcej informacji na temat administrowania kontami użytkowników, przeczytaj <xref linkend="webissues.admin"/>.</para>
+      <para>Skonfigurowana lista kont użytkowników może wyglądać jak na poniższym rysunku:</para>
 
       <figure>
         <title>Lista kont użytkowników</title>
@@ -182,6 +182,8 @@
           <imageobject><imagedata fileref="images/ch02-fig05.png" format="PNG"/></imageobject>
         </mediaobject>
       </figure>
+
+      <para>Aby znaleźć więcej informacji na temat administrowania kontami użytkowników, przeczytaj sekcję <xref linkend="webissues.admin.users"/>.</para>
 
     </sect2>
 
@@ -224,7 +226,7 @@
         <para>Administrator projektu może tworzyć i modyfikować foldery, a także nadawać i odbierać uprawnienia innym użytkownikom w ramach tego projektu. Może również usuwać sprawy, a także usuwać i modyfikować komentarze innych użytkowników.</para>
       </tip>
 
-      <para>Skonfigurowana lista członków projektu może wyglądać tak jak poniżej. Przeczytaj <xref linkend="webissues.admin"/> w dalszej części tego podręcznika, aby dowiedzieć się więcej na temat administrowania projektami, folderami i członkami.</para>
+      <para>Skonfigurowana lista członków projektu może wyglądać tak jak poniżej:</para>
 
       <figure>
         <title>Lista członków projektu</title>
@@ -232,6 +234,8 @@
           <imageobject><imagedata fileref="images/ch02-fig09.png" format="PNG"/></imageobject>
         </mediaobject>
       </figure>
+
+      <para>Przeczytaj sekcję <xref linkend="webissues.admin.projects"/> w dalszej części tego podręcznika, aby dowiedzieć się więcej na temat administrowania projektami i folderami.</para>
 
     </sect2>
 

@@ -1,7 +1,7 @@
 <chapter id="webissues.prep">
   <title>Preparing the system</title>
 
-  <para>In order to use the WebIssues system, it's necessary to configure a server which is its central and most important part. This chapter describes a step-by-step process of installing the WebIssues server and preparing it to work. If you use an already existing server, you can skip this chapter.</para>
+  <para>In order to use the WebIssues system, it's necessary to configure a server which is its central and most important part. This chapter describes a step-by-step process of installing the WebIssues server and preparing it to work. If you use an already existing server, you can skip this chapter. For more information on updating the system to a new version refer to <xref linkend="webissues.admin.updating"/>.</para>
 
   <sect1 id="webissues.prep.requirements">
     <title>Requirements</title>
@@ -174,7 +174,7 @@
         <para>The System Administrator has access to the Administration Panel, and is the administrator of all existing projects, even if he's not implicitly their member. Thus grant this permission only to persons that you trust.</para>
       </tip>
 
-      <para>A configured list of user accounts may look like the figure below. For more information on administering user accounts, read <xref linkend="webissues.admin"/>.</para>
+      <para>A configured list of user accounts may look like the figure below:</para>
 
       <figure>
         <title>List of user accounts</title>
@@ -182,6 +182,8 @@
           <imageobject><imagedata fileref="images/ch02-fig05.png" format="PNG"/></imageobject>
         </mediaobject>
       </figure>
+
+      <para>For more information on administering user accounts, read <xref linkend="webissues.admin.users"/>.</para>
 
     </sect2>
 
@@ -224,7 +226,7 @@
         <para>Project Administrator can create and modify folders, as well as change permissions of other users for this project. He can also delete issues and delete and modify other users' comments.</para>
       </tip>
 
-      <para>A configured list of members of the project may look like below. Read <xref linkend="webissues.admin"/> later in this book to learn more about administration of projects, folders and members.</para>
+      <para>A configured list of members of the project may look like below:</para>
 
       <figure>
         <title>List of project members</title>
@@ -232,6 +234,8 @@
           <imageobject><imagedata fileref="images/ch02-fig09.png" format="PNG"/></imageobject>
         </mediaobject>
       </figure>
+
+      <para>Read <xref linkend="webissues.admin.projects"/> later in this book to learn more about administration of projects and folders.</para>
 
     </sect2>
 

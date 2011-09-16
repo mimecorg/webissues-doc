@@ -333,4 +333,33 @@
 
   </sect1>
 
+  <sect1 id="webissues.admin.updating">
+    <title>Aktualizacja systemu</title>
+
+    <para>Jedną z czynności konserwacyjnych jest aktualizacja systemu WebIssues do nowej wersji. Nowe wersje rozwiązują problemy i dodają nowe funkcje, więc zalecana jest okresowa aktualizacja oprogramowania.</para>
+
+    <para>Przed rozpoczęciem aktualizacji, zaleca się utworzyć kopię zapasową bazy danych i plików systemu WebIssues, a także wyłączyć serwer WWW, aby zapobiec korzystaniu z systemu w trakcie aktualizacji.</para>
+
+    <note>
+      <title>Notatka</title>
+      <para>Jeśli nie możesz wyłączyć serwera ani zablokować dostępu do niego, to możesz również tymczasowo zmienić nazwę pliku konfiguracyjnego <literal>config.inc.php</literal>, który domyślnie znajduje się w podkatalogu <literal>data/sites/default</literal>. Możesz nawet całkowicie usunąć ten plik, a potem odtworzyć go za pomocą instalatora, gdyż w momencie instalacji istniejąca baza danych zostanie zachowana i w razie potrzeby zaktualizowana do nowej wersji.</para>
+    </note>
+
+    <para>Najpierw usuń wszystkie pliki i podkatalogi z katalogu, w którym został zainstalowany serwer WebIssues, pamiętając o pozostawieniu podkatalogu <literal>data</literal>, który przechowuje pliki związane z daną instalacją, na przykład pliki konfiguracyjne i załączniki spraw. Jeśli utworzyłeś własny plik <literal>.htaccess</literal> lub <literal>web.config</literal> (w przypadku serwera IIS), to również zachowaj jego kopię, aby móc go później przywrócić.</para>
+
+    <para>Ściągnij i rozpakuj nowy pakiet serwera WebIssues &mdash; zawiera on katalog o nazwie <literal>webissues-x.y</literal> (gdzie <literal>x.y</literal> to wersja pakietu). Następnie przenieś wszystkie pliki i podkatalogi z tego katalogu do katalogu, w którym był wcześniej zainstalowany serwer WebIssues.</para>
+
+    <para>Po zakończeniu kopiowania plików włącz serwer WWW i otwórz główną stronę systemu WebIssues w przeglądarce. Jeśli istnieje konieczność aktualizacji bazy danych, to postępuj zgodnie z wyświetlonymi instrukcjami. W przeciwnym wypadku system jest gotowy do pracy.</para>
+
+    <para>Zaleca się również aktualizować program Desktop Client do nowszej wersji na komputerach osób, które z niego korzystają. Generalnie jednak program Desktop Client może się komunikować zarówno ze starszą, jak i nowszą wersją serwera, pod warunkiem że pierwsza cyfra numeru wersji jest zgodna. Klient w wersji 0.9.x nie będzie zatem działał z systemem 1.0, a klient 1.0 z systemem 0.8.x, ale można te wersje zainstalować równolegle na jednym komputerze.</para>
+
+    <note>
+      <title>Notatka</title>
+      <para>Wersje systemu oznaczone jako <literal>alpha</literal> lub <literal>beta</literal> to tak zwane wersje deweloperskie. Umożliwiają one testowanie nowych funkcji przed wydaniem oficjalnej wersji, jednak nie zaleca się ich używać do celów produkcyjnych. Wersja deweloperska systemu może być używana tylko z tą samą wersją programu Desktop Client. Dodatkowo w przypadku wersji <literal>alpha</literal> nie ma możliwości aktualizacji bazy danych do nowszej wersji.</para>
+    </note>
+
+    <para>Bezpośrednia aktualizacja z wersji 0.8.5 serwera nie jest możliwa, jednak istnieje możliwość zaimportowania instniejących danych z serwera WebIssues w wersji 0.8.5 podczas instalacji nowej wersji systemu. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.installation"/>.</para>
+
+    </sect1>
+
 </chapter>

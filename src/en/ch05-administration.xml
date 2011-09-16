@@ -148,7 +148,7 @@
   </sect1>
 
   <sect1 id="webissues.admin.users">
-    <title>User management</title>
+    <title>Managing users</title>
 
     <para>Managing users in the WebIssues system includes both the creation and managing global rights of user accounts, and giving users access to specific projects.</para>
 
@@ -332,5 +332,34 @@
     <para>You can also move a folder from one project to another. In order to do this, you must be the administrator of the system or of both projects &mdash; the source one and destination one. Select the folder you want to move and click <guilabel>Move Folder</guilabel>. Then select the destination project from the list and click <guibutton>OK</guibutton>.</para>
 
   </sect1>
+
+  <sect1 id="webissues.admin.updating">
+    <title>Updating the system</title>
+
+    <para>One of the maintenance tasks is updating the WebIssues system to a new version. New versions solve problems and add new features, so it is recommended to periodically update the software.</para>
+
+    <para>Before the upgrade, it is recommended to back up the database and WebIssues system files, and also disable the web server to prevent the use of the system during the upgrade.</para>
+
+    <note>
+      <title>Note</title>
+      <para>If you cannot disable the server or block access to it, you can also temporarily rename the <literal>config.inc.php</literal> configuration file, which by default is located in the <literal>data/sites/default</literal> subdirectory. You may even completely remove the file, and then recreate it using the installer, because at the time of installation the existing database will be preserved and if necessary updated to the new version.</para>
+    </note>
+
+    <para>First, delete all files and subdirectories from the directory where you installed the WebIssues server, remembering to keep the <literal>date</literal> subdirectory, which stores all files related to the particular installation, for example, configuration files and attachments of issues. If you created your own <literal>.htaccess</literal> or <literal>web.config</literal> file (in case of IIS), then also make a copy of it to be able to restore it later.</para>
+
+    <para>Download and unpack the new WebIssues server package &mdash; it contains a directory named <literal>webissues-x.y</literal> (where <literal>x.y</literal> is the version of the package). Then move all files and subdirectories from that directory to the directory where the WebIssues server was previously installed.</para>
+
+    <para>After copying the files, enable the web server and open the main page of the WebIssues system in the browser. If there is a need to update the database, then follow the instructions. Otherwise, the system is ready to work.</para>
+
+    <para>It is also recommended to update the Desktop Client to a newer version on the computers of people who use it. Generally, however, the Desktop Client can communicate with both older and newer version of the server, provided that the first digit of the version number is the same. Therefore, client version 0.9.x will not work with the 1.0 system, and client version 1.0 will not work with the 0.8.x system, but both versions can be installed side by side on a single computer.</para>
+
+    <note>
+      <title>Note</title>
+      <para>Versions marked as <literal>alpha</literal> or <literal>beta</literal> are the so-called developer versions. They allow for testing new features before the official version is released, but it is not recommended to use them for production purposes. Development versions of the system can only be used with the same version of the Desktop Client. Additionally in case of an <literal>alpha</literal> version it is not possible to update the database to a newer version.</para>
+    </note>
+
+    <para>Although a direct upgrade from version 0.8.5 of the server is not possible, existing data can be imported from version 0.8.5 of the WebIssues server when installing a new version of the system. More information can be found in <xref linkend="webissues.prep.installation"/>.</para>
+
+    </sect1>
 
 </chapter>
