@@ -72,7 +72,7 @@
       </mediaobject>
     </figure>
 
-    <para>Wartością atrybutu może być data, na przykład <quote>2011-09-05</quote> lub data i czas z dokładnością do minut, na przykład <quote>2011-09-05 18:34</quote>. Jeśli wybierzesz typ <guilabel>Data i czas bez konwersji strefy czasowej</guilabel>, wyświetlany czas będzie zawsze taki sam, niezależnie od strefy czasowej. Jeśli natomiast wybierzesz wariant <guilabel>Data i czas w lokalnej strefie czasowej</guilabel>, to wartość zostanie zapisana jako czas GMT, a przy wyświetlaniu zostanie automatycznie skonwertowana do lokalnej strefy czasowej. Opcja ta jest przydatna, jeśli z serwera korzystają osoby znajdujące się w różnych strefach czasowych.</para>
+    <para>Wartością atrybutu może być data, na przykład <quote>2011-09-05</quote> lub data i czas z dokładnością do minut, na przykład <quote>2011-09-05 18:34</quote>. Jeśli wybierzesz typ <guilabel>Data i czas bez konwersji strefy czasowej</guilabel>, wyświetlany czas będzie zawsze taki sam, niezależnie od strefy czasowej. Jeśli natomiast wybierzesz wariant <guilabel>Data i czas w lokalnej strefie czasowej</guilabel>, to wartość zostanie zapisana jako czas GMT, a przy wyświetlaniu zostanie automatycznie skonwertowana do lokalnej strefy czasowej. Opcja ta jest przydatna, jeśli z serwera korzystają osoby znajdujące się w różnych strefach czasowych. Więcej informacji na temat stref czasowych znajdziesz w sekcji <xref linkend="webissues.custom.locale"/>.</para>
 
     <para>Ostatnim typem atrybutu jest <guilabel>Użytkownik</guilabel>. Zarówno Błędy, jak i Zadania zawierają atrybuty o nazwie Przypisany do, ale nic nie stoi na przeszkodzie, żeby utworzyć większą liczbę atrybutów tego typu. W przypadku błędu można na przykład użyć osobnych atrybutów dla oznaczenia osoby, która go zgłosiła, poprawiła i przetestowała.</para>
 
@@ -178,13 +178,13 @@
       </mediaobject>
     </figure>
 
-    <para>Zmiana ustawień widoku działa podobnie, jak tworzenie prywatnych widoków, opisane w sekcji <xref linkend="webissues.work.views" />. Możesz więc odznaczyć kolumny, które chcesz usunąć i zaznaczyć kolumny, które chcesz dodać, a także zmieniać wartości określające kolejność kolumn. Aby na przykład dodać kolumnę Powód do domyślnego widoku, zaznacz tą kolumnę i ustaw jej kolejność na 7, aby wyświetlać ją po kolumnie Status. Kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć nową kolejność kolumn. Możesz również zmienić domyślny porządek sortowania spraw. Na końcu kliknij <guibutton>OK</guibutton>, aby zapisać widok.</para>
+    <para>Zmiana ustawień widoku działa podobnie, jak tworzenie prywatnych widoków, opisane w sekcji <xref linkend="webissues.work.views"/>. Możesz więc odznaczyć kolumny, które chcesz usunąć i zaznaczyć kolumny, które chcesz dodać, a także zmieniać wartości określające kolejność kolumn. Aby na przykład dodać kolumnę Powód do domyślnego widoku, zaznacz tą kolumnę i ustaw jej kolejność na 7, aby wyświetlać ją po kolumnie Status. Kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć nową kolejność kolumn. Możesz również zmienić domyślny porządek sortowania spraw. Na końcu kliknij <guibutton>OK</guibutton>, aby zapisać widok.</para>
 
     <para>Podobnie jak każdy użytkownik może dla każdego typu spraw zdefiniować dowolną liczbę widoków prywatnych, tak administrator systemu WebIssues może dla każdego typu zdefiniować widoki publiczne. Każdy może korzystać z publicznych widoków, ale tylko administrator ma prawo je tworzyć i zmieniać.</para>
 
     <para>Dla standardowych typów Błędy i Zadania istnieje już kilka domyślnych widoków publicznych, na przykład Aktywne błędy czy Utworzone przeze mnie. Możesz zmieniać te standardowe widoki lub tworzyć nowe. Dla typu spraw Forum nie ma żadnych widoków, ponieważ nie ma on żadnych atrybutów, ale możesz definiować widoki za pomocą wbudowanych kolumn. Możesz na przykład utworzyć widok Utworzone przeze mnie, analogiczny do tych, które istnieją dla Błędów i Zadań. Nie możesz jednak definiować kolejności atrybutów, chyba że dodasz atrybuty do tego typu.</para>
 
-    <para>Utwórzmy teraz nowy widok o nazwie <quote>Krytyczne błędy</quote>, podobny do prywatnego widoku o tej samej nazwie, który tworzyliśmy w sekcji <xref linkend="webissues.work.views" />. Kliknij <guilabel>Dodaj publiczny widok</guilabel>, aby utworzyć nowy widok. Odznacz kolumnę Krytyczność i zaznacz kolumny Utworzona przez oraz Data utworzenia. Aby przenieść kolumny Przypisany do i Status na koniec, ustaw wartości określające ich kolejność na 10 i 11.</para>
+    <para>Utwórzmy teraz nowy widok o nazwie <quote>Krytyczne błędy</quote>, podobny do prywatnego widoku o tej samej nazwie, który tworzyliśmy w sekcji <xref linkend="webissues.work.views"/>. Kliknij <guilabel>Dodaj publiczny widok</guilabel>, aby utworzyć nowy widok. Odznacz kolumnę Krytyczność i zaznacz kolumny Utworzona przez oraz Data utworzenia. Aby przenieść kolumny Przypisany do i Status na koniec, ustaw wartości określające ich kolejność na 10 i 11.</para>
 
     <figure>
       <title>Edycja kolumn widoku</title>
@@ -208,25 +208,105 @@
 
     <para>Aby zmienić definicję istniejącego widoku, wybierz go z listy i kliknij <guilabel>Zmień widok</guilabel>. Aby zmienić nazwę widoku, użyj polecenia <guilabel>Zmień nazwę widoku</guilabel>. Możesz również usunąć istniejący widok, jeśli nie jest już potrzebny. W tym celu wybierz widok i kliknij <guilabel>Usuń widok</guilabel>. Pamiętaj jednak, że spowoduje to usunięcie wszystkich alertów utworzonych na bazie tego widoku.</para>
 
+    <para>Możesz również utworzyć nowy publiczny widok na bazie już istniejącego widoku. W tym celu użyj polecenia <guilabel>Klonuj widok</guilabel>. Domyślnie zostaną wyświetlone ustawienia kolumn i kryteria filtrowania klonowanego widoku. Zmodyfikuj je i kliknij <guibutton>OK</guibutton>, aby utworzyć nowy publiczny widok. Jeśli natomiast chcesz utworzyć prywatny widok na bazie istniejącego widoku publicznego, możesz użyć podobnej opcji dostępnej w głównym oknie programu (patrz sekcja <xref linkend="webissues.work.views"/>).</para>
+
   </sect1>
 
   <sect1 id="webissues.custom.locale">
     <title>Ustawienia regionalne</title>
 
+    <para>System WebIssues umożliwia pełną lokalizację &mdash; zmianę języka, strefy czasowej, oraz formatu liczb, daty i czasu. Domyślny język systemu wybiera się podczas instalacji (patrz sekcja <xref linkend="webissues.prep.installation"/>). Aby zmienić domyślny język systemu, przejdź do Panelu administracyjnego i kliknij <guilabel>Ustawienia serwera</guilabel>.</para>
+
+    <figure>
+      <title>Ustawienia regionalne</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig16.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Zmiana języka systemu wpłynie na wszystkich użytkowników (o ile nie wybrali własnego preferowanego języka), a także na język nowych komunikatów w Dzienniku zdarzeń systemu WebIssues. Nazwy istniejących typów spraw, atrybutów i innych danych, oraz istniejące komunikaty w Dzienniku zdarzeń pozostaną niezmienione.</para>
+
+    <para>Każdy użytkownik może wybrać własny preferowany język. W tym celu kliknij <guilabel>Narzędzia</guilabel>, a następnie <guilabel>Ustawienia użytkownika</guilabel> (w przypadku programu Desktop Client, polecenie <guilabel>Ustawienia użytkownika</guilabel> jest dostępne bezpośrednio z paska narzędzi okna głównego). Ustawienie to określa język dla programu Web Client (po zalogowaniu do systemu), a także język, w jakim wysłane są powiadomienia mailowe dla danego użytkownika.</para>
+
+    <para>W przypadku programu Destkop Client, język interfejsu użytkownika zależy od ustawień programu i nie zmienia się po zalogowaniu do serwera. Użyj polecenia <guilabel>Ustawienia WebIssues</guilabel>, dostępnego w postaci ikony w prawym górnym rogu okna, aby zmienić te ustawienia. Zmiana języka wymaga zamknięcia i ponownego uruchomienia programu.</para>
+
     <note>
       <title>Notatka</title>
-      <para>Ta sekcja jest jeszcze w trakcie przygotowywania.</para>
+      <para>System WebIssues został przetłumaczony na kilka języków, instnieje jednak możliwość tworzenia nowych tłumaczeń. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Translation"/>. Tłumaczenia są tworzone przez wolontariuszy, więc jeśli utworzyłeś własne tłumaczenie, skontaktuj się z autorami systemu, aby udostępnić je innym użytkownikom.</para>
     </note>
+
+    <para>Domyślnie system WebIssues używa lokalnej strefy czasowej serwera, na którym jest zainstalowany. Administrator systemu można zmienić domyślną strefę czasową poprzez <guilabel>Ustawienia serwera</guilabel> w Panelu administracyjnym. Zmiana ta wpłynie na wszystkich użytkowników (o ile nie wybrali własnej strefy czasowej). Wyświetlane daty są automatycznie przeliczane zgodnie z wybraną strefą czasową.</para>
+
+    <para>Każdy użytkownik może wybrać własną preferowaną strefę czasową, korzystając z polecenia <guilabel>Ustawienia użytkownika</guilabel>. Ustawienie to określa strefę czasową dla dat wyświetlanych w programie Web Client, a także dla powiadomień mailowych. Natomiast program Desktop Client zawsze wyświetla daty zgodnie z lokalną strefą czasową komputera, na którym jest uruchomiony, i nie bierze pod uwagę ustawień serwera ani preferencji użytkownika.</para>
+
+    <note>
+      <title>Notatka</title>
+      <para>W zależności od ustawień, atrybuty typu Data i czas mogą być automatycznie przeliczane, zgodnie z aktualną strefą czasową, lub wyświetlane bez konwersji strefy czasowej. Opcja bez konwersji jest pozostawiona głównie dla zachowania zgodności z wersją 0.8 serwera, jeśli jednak z systemu korzystają użytkownicy znajdujących się w różnych strefach czasowych, zaleca się użyć opcji automatycznego dostosowania czasu do lokalnej strefy czasowej.</para>
+    </note>
+
+    <para>Format w jakim wyświetlane są liczby, data i czas, a także pierwszy dzień tygodnia w kalendarzu, zależą od aktualnego języka, w jakim wyświetlany jest interfejs użytkownika. Administrator systemu może dostosować te ustawienia dla wszystkich użytkowników, korzystając z polecenia <guilabel>Ustawienia serwera</guilabel> w Panelu administracyjnym. Każdy użytkownik może natomiast wybrać własne ustawienia, korzystając z polecenia <guilabel>Ustawienia użytkownika</guilabel>.</para>
+
+    <figure>
+      <title>Formaty</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig17.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
 
   </sect1>
 
   <sect1 id="webissues.custom.settings">
     <title>Ustawienia zaawansowane</title>
 
+    <para>Aby zmienić zaawansowane ustwienia serwera, przejdź do Panelu administracyjnego i kliknij <guilabel>Ustawienia serwera</guilabel>. Opcja ta nie jest dostępna w programie Desktop Client. Zmiany ustawień może dokonać jedynie administrator systemu.</para>
+
+    <para>Grupy opcji <guilabel>Ustawienia regionalne</guilabel> oraz <guilabel>Formaty</guilabel> zostały opisane w sekcji <xref linkend="webissues.custom.locale"/>.</para>
+
+    <para>Grupa opcji <guilabel>Rozmiar strony</guilabel> umożliwia określenie domyślnej liczby spraw wyświetlanych na pojedynczej stronie w liście spraw oraz domyślnej liczby elementów na stronie historii sprawy. Każdy użytkownik może natomiast wybrać własne preferowane ustawienia, korzystając z polecenia <guilabel>Ustawienia użytkownika</guilabel>. Opcje te wpływają jedynie na program Web Client, ponieważ program Desktop Client zawsze wyświetla wszystkie sprawy i pełną historię, bez podziału na strony.</para>
+
+    <figure>
+      <title>Rozmiar strony</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig18.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Opcje z grupy <guilabel>Ograniczenia</guilabel> umożliwiają administratorowi systemu określenie maksymalnej długości komentarzy oraz maksymalnej wielkości załączników, jakie mogą być dodawane przez użytkowników.</para>
+
+    <figure>
+      <title>Ograniczenia</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig19.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
     <note>
       <title>Notatka</title>
-      <para>Ta sekcja jest jeszcze w trakcie przygotowywania.</para>
+      <para>Maksymalny rozmiar załącznika, jaki może być przesłany do systemu, zależy również od odpowiedniej konfiguracji serwera WWW oraz PHP. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
     </note>
+
+    <para>Domyślnie małe załączniki są przechowywane w bazie danych, a duże bezpośrednio w systemie plików. W zależności od potrzeb możesz zmienić wartość progową lub wymusić przechowywanie wszystkich załączników tylko w bazie danych lub w systemie plików. Maksymalny rozmiar załączników przechowywanych w bazie danych możesz określić w grupie <guilabel>Przechowywanie załączników</guilabel>.</para>
+
+    <figure>
+      <title>Przechowywanie załączników</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig20.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <note>
+      <title>Notatka</title>
+      <para>Przechowywanie dużych załączników w bazie danych może wymagać odpowiedniej konfiguracji serwera bazy danych i może być nieoptymalne w porównaniu z systemem plików. Ponadto wiele usług hostingowych znacznie ogranicza maksymalny rozmiar bazy danych, jednocześnie oferując dużo dostępnej przestrzeni dyskowej. Z drugiej strony, przechowywanie załączników wyłącznie w bazie danych ułatwia tworzenie kopii zapasowych systemu, gdyż nie ma w tym wypadku konieczności dodatkowego archiwizowania plików. W niektórych przypadkach może być również bezpieczniejsze.</para>
+    </note>
+
+    <para>Opcje z grupy <guilabel>Maksymalny czas życia</guilabel> pozwalają na zdefiniowanie czasu, po jakim nieaktywne sesje użytkowników są usuwane, a także czasu, przez jaki w systemie przechowywane są wpisy w Dzienniku zdarzeń. Natomiast ustawienie <guilabel>Usuwanie śmieci</guilabel> pozwala określić prawdopodobieństwo, z jakim uruchamiany jest proces usuwania nieaktywnych sesji i starych wpisów w Dzienniku zdarzeń. Zmniejsz to prawdopodobieństwo, jeśli serwer jest mocno obciążony, lub wybierz opcję <quote>Użyj zadania cyklicznego</quote>, jeśli w systemie jest aktywny mechanizm wysyłania powiadomień mailowych (patrz sekcja <xref linkend="webissues.prep.nofitications.cron"/>).</para>
+
+    <figure>
+      <title>Maksymalny czas życia i Usuwanie śmieci</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig21.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
 
   </sect1>
 

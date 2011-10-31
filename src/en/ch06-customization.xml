@@ -72,7 +72,7 @@
       </mediaobject>
     </figure>
 
-    <para>The value of the attribute can be a date, for example <quote>9/5/2011</quote> or date and time with an accuracy of one minute, for example <quote>9/5/2011 6:34 pm</quote>. If you choose the <guilabel>Date and time without time zone conversion</guilabel> option, the time will always be the same, regardless of time zone. If you choose the <guilabel>Date and time using local time zone</guilabel>, the values are stored as GMT time, and when displayed the will be automatically converted to the local time zone. This option is useful if the server is used by people in different time zones.</para>
+    <para>The value of the attribute can be a date, for example <quote>9/5/2011</quote> or date and time with an accuracy of one minute, for example <quote>9/5/2011 6:34 pm</quote>. If you choose the <guilabel>Date and time without time zone conversion</guilabel> option, the time will always be the same, regardless of time zone. If you choose the <guilabel>Date and time using local time zone</guilabel>, the values are stored as GMT time, and when displayed the will be automatically converted to the local time zone. This option is useful if the server is used by people in different time zones. For more information about time zones, see <xref linkend="webissues.custom.locale"/>.</para>
 
     <para>The last type of attribute is <guilabel>User</guilabel>. Both Bugs and Tasks include attributes named Assigned To, but you can create more attributes of this type. In case of a bug, for example, you can use separate attributes to indicate the person who reported, fixed and tested the bug.</para>
 
@@ -178,13 +178,13 @@
       </mediaobject>
     </figure>
 
-    <para>Changing the settings of the view works the same as creating private views, as described in <xref linkend="webissues.work.views" />. So you can unselect the columns you want to remove and select the columns you want to add, and change the values defining the order of columns. For example, to add the Reason column to the default view, select the column and set its order to 7 to display it after the Status column. Click <guibutton>Update</guibutton> to see the new order of columns. You can also change the default sort order of issues. Finally, click <guibutton>OK</guibutton> to save your view.</para>
+    <para>Changing the settings of the view works the same as creating private views, as described in <xref linkend="webissues.work.views"/>. So you can unselect the columns you want to remove and select the columns you want to add, and change the values defining the order of columns. For example, to add the Reason column to the default view, select the column and set its order to 7 to display it after the Status column. Click <guibutton>Update</guibutton> to see the new order of columns. You can also change the default sort order of issues. Finally, click <guibutton>OK</guibutton> to save your view.</para>
 
     <para>Just like each user can define any number of private views for each issue type, the administrator of WebIssues system can define public views for each type. Everyone can use public views, but only the administrator has the right to create and modify them.</para>
 
     <para>For standard issue types, Bugs and Tasks, there are several default public views, for example, Active Bugs and Created By Me. You can change these standard views and create new ones. The Forum issue type has no views, because it has no attributes, but you can define views using the built-in columns. For example, you can create the Created By Me view, analogous to the one that exists for Bugs and Tasks. However, you cannot define the order of attributes, unless you add some attributes to this type.</para>
 
-    <para>Now let's create a new view called <quote>Critical Bugs</quote>, similar to the private view with the same name, which we created in <xref linkend="webissues.work.views" />. Click <guilabel>Add Public View</guilabel> to create a new view. Unselect the Severity column and select the Created By and Created Date columns. To move Assigned To and Status columns to the end, set the values ​​that determine their order to 10 and 11</para>
+    <para>Now let's create a new view called <quote>Critical Bugs</quote>, similar to the private view with the same name, which we created in <xref linkend="webissues.work.views"/>. Click <guilabel>Add Public View</guilabel> to create a new view. Unselect the Severity column and select the Created By and Created Date columns. To move Assigned To and Status columns to the end, set the values ​​that determine their order to 10 and 11</para>
 
     <figure>
       <title>Editing view columns</title>
@@ -208,25 +208,105 @@
 
     <para>To change the definition of an existing view, choose it from the list and click <guilabel>Change View</guilabel>. To rename a view, use the <guilabel>Rename View</guilabel> command. You can also delete an existing view, if it is no longer needed. To do this, select the view and click <guilabel>Delete View</guilabel>. Remember that this will remove all alerts based on this view.</para>
 
+    <para>You can also create a new public view based on an existing view. To do this, use the <guilabel>Clone View</guilabel> command. By default the column settings and filtering criteria of the cloned view will be displayed. Modify them and click <guibutton>OK</guibutton> to create a new public view. If you want to create a private view based on an existing public view, you can use a similar function available in the main window (see <xref linkend="webissues.work.views"/>).</para>
+
   </sect1>
 
   <sect1 id="webissues.custom.locale">
     <title>Regional settings</title>
 
+    <para>The WebIssues system enables full localization &mdash; changing the language, time zone and format of numbers, date and time. The default system language is selected during installation (see <xref linkend="webissues.prep.installation"/>). To change the default system language, go to the Administration Panel and click <guilabel>Server Settings</guilabel>.</para>
+
+    <figure>
+      <title>Regional options</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig16.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Changing the system language will affect all users (unless they have chosen their own preferred language) and also the language of new messages in the Event Log of the WebIssues system. Names of existing issue types, attributes and other data, and existing messages in the Event Log will remain unchanged.</para>
+
+    <para>Each user can choose their own preferred language. To do this, click <guilabel>Tools</guilabel> and then <guilabel>User Preferences</guilabel> (for the Desktop Client, the <guilabel>User Preferences</guilabel> command is available directly from the toolbar of the main window). This setting determines the language of the Web Client (after logging into the system), and also the language of e-mail notifications sent to the given user.</para>
+
+    <para>In case of the Destkop Client, the language of the user interface depends on the settings of the program and does not change after you log into the server. Use the <guilabel>WebIssues settings</guilabel> command, available as an icon in the upper right corner of the window, to change these settings. After changing the language you need to close and restart the program.</para>
+
     <note>
       <title>Note</title>
-      <para>This section is still being prepared.</para>
+      <para>The WebIssues system has been translated into several languages, but it is possible to create new translations. For more information, please visit <ulink url="http://wiki.mimec.org/wiki/WebIssues/Translation"/>. Translations are created by volunteers, so if you have created your own translation, please contact the authors of the system to share it with other users.</para>
     </note>
+
+    <para>By default the WebIssues system uses the local time zone of the server on which it is installed. The system administrator can change the default time zone through the <guilabel>Server Settings</guilabel> command in the Administration Panel. This change will affect all users (unless they they chose their own time zone). Displayed dates are automatically recalculated according to the selected time zone.</para>
+
+    <para>Each user can select their own preferred time zone using the <guilabel>User Preferences</guilabel> command. This setting determines the time zone for dates displayed in the Web Client, and also for mail notifications. However Desktop Client always displays dates according to the local time zone of the computer it is running on, and it does not take into account server settings or user preferences.</para>
+
+    <note>
+      <title>Note</title>
+      <para>Depending on the settings, the date and time attributes can be automatically recalculated according to the current time zone, or displayed without time zone conversions. The no conversion option is left mainly for compatibility with version 0.8 of the server, but when users of the system are located in different time zones, it is recommended to use the option of automatically adjusting the time to the local time zone.</para>
+    </note>
+
+    <para>The format in which numbers, date and time are displayed, and the first day of the week in the calendar, depend on the current language of the user interface. The system administrator can customize these settings for all users using the <guilabel>Server Settings</guilabel> command in the Administration Panel. Each user can choose their own settings using the <guilabel>User Preferences</guilabel> command.</para>
+
+    <figure>
+      <title>Formats</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig17.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
 
   </sect1>
 
   <sect1 id="webissues.custom.settings">
     <title>Advanced settings</title>
 
+    <para>To change the advanced settings of the server, go to the Administration Panel and click <guilabel>Server Settings</guilabel>. This option is not available in the Desktop Client. Only the  system administrator can change these settings.</para>
+
+    <para>The <guilabel>Regional Options</guilabel> and <guilabel>Formats</guilabel> groups of options are described in <xref linkend="webissues.custom.locale"/>.</para>
+
+    <para>The <guilabel>Page Size</guilabel> groups of options allows you to specify the default number of issues displayed on a single page in the list of issues and the default number of elements per page in the issue history. Each user can choose their own preferred settings using the <guilabel>User Preferences</guilabel> command. These options only affect the Web Client, because the Desktop Client always displays all issues and complete history without pagination.</para>
+
+    <figure>
+      <title>Page Size</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig18.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Options from the <guilabel>Limits</guilabel> group allow the system administrator to specify the maximum length of comments and the maximum size of attachments that can be added by users.</para>
+
+    <figure>
+      <title>Limits</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig19.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
     <note>
       <title>Note</title>
-      <para>This section is still being prepared.</para>
+      <para>The maximum size of the attachment that can be sent to the system also depends on appropriate configuration of the web server and PHP. For more information, please visit <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
     </note>
+
+    <para>By default, small attachments are stored in the database, and large directly in the filesystem. Depending on your needs, you can change the threshold value or force storing all attachments only in the database or file system. The maximum size of attachments stored in the database can be specified in the <guilabel>Attachment Storage</guilabel> group.</para>
+
+    <figure>
+      <title>Attachment Storage</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig20.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <note>
+      <title>Note</title>
+      <para>Storing large attachments in the database may require an appropriate configuration of the database server, and can be less optimal compared to the file system. In addition many hosting services significantly limit the maximum size of the database, while offering plenty of available disk space. On the other hand, storing attachments only in the database makes it easier to backup the system, since there is no need to backup additional files. In some cases it may also be safer.</para>
+    </note>
+
+    <para>Options from the <guilabel>Maximum Lifetime</guilabel> group allow you to define the time after which inactive user sessions are removed, and the maximum time the entries in the Event Log are stored by the system. The <guilabel>Garbage Collection</guilabel> setting determines the probability of running the process which removes inactive sessions and old entries in the Event Log. Reduce the probability if the server is heavily loaded, or select <quote>Use cron job</quote> if the mechanism of sending email notifications is active (see <xref linkend="webissues.prep.nofitications.cron"/>).</para>
+
+    <figure>
+      <title>Maximum Lifetime &amp; Garbage Collection</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig21.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
 
   </sect1>
 

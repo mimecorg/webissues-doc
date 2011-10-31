@@ -96,6 +96,8 @@
 
     <para>Program Desktop Client automatycznie zapamiętuje adresy wszystkich serwerów WebIssues, z którymi się łączy. Możesz wybrać serwer z listy i kliknąć dwa razy, aby się z nim połączyć. Możesz także wybrać zapamiętywanie hasła przez program, aby nie musieć go wpisywać za każdym razem. Jeśli chcesz się zalogować jako inny użytkownik, wybierz serwer z listy, kliknij prawym przyciskiem i wybierz opcję <guilabel>Połącz jako</guilabel>. Program zapamiętuje ostatnio używane loginy dla każdego serwera i wyświetla je w menu kontekstowym.</para>
 
+    <para>Po zalogowaniu się do systemu WebIssues, możesz zmienić swoje hasło. W programie Web Client kliknij <guilabel>Narzędzia</guilabel> w prawym górnym rogu ekranu, a następnie kliknij <guilabel>Zmień hasło</guilabel>. W programie Desktop Client polecenie to jest zawsze dostępne w pasku narzędzi głównego okna. Wpisz stare hasło, a następnie dwukrotnie podaj swoje nowe hasło i kliknij <guibutton>OK</guibutton>.</para>
+
   </sect1>
 
   <sect1 id="webissues.work.issues">
@@ -274,7 +276,7 @@
 
       <note>
         <title>Notatka</title>
-        <para>Maksymalny rozmiar załącznika, jaki możesz dołączyć do sprawy, zależy od konfiguracji systemu WebIssues. Możesz go zmienić w ustawieniach systemu WebIssues (przeczytaj <xref linkend="webissues.admin"/> aby uzyskać więcej informacji). Przesyłanie dużych załączników wymaga również odpowiedniej konfiguracji serwera HTTP oraz PHP. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
+        <para>Maksymalny rozmiar załącznika, jaki możesz dołączyć do sprawy, zależy od konfiguracji systemu WebIssues. Możesz go zmienić w ustawieniach systemu WebIssues (przeczytaj <xref linkend="webissues.admin"/> aby uzyskać więcej informacji). Przesyłanie dużych załączników wymaga również odpowiedniej konfiguracji serwera WWW oraz PHP. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
         <para>Domyślnie małe załączniki są przechowywane w bazie danych, a duże bezpośrednio w systemie plików. W zależności od potrzeb możesz zmienić wartość progową lub wymusić przechowywanie wszystkich załączników tylko w bazie danych lub w systemie plików, zmieniając ustawienia systemu WebIssues. Sposób przechowywania załączników nie ma znaczenia z punktu widzenia programów klienckich.</para>
       </note>
 
@@ -341,6 +343,8 @@
 
     <para>Zapisz zmiany klikając <guibutton>OK</guibutton>. Rozwijana lista widoków zawiera teraz jeden widok prywatny o nazwie <quote>Krytyczne błędy</quote>. Po jego wybraniu lista będzie zawierała tylko pierwszą sprawę, zgodnie z wybranymi kryteriami filtrowania.</para>
 
+    <para>To, jakie operatory filtrowania są dostępne, zależy od typu kolumny. Dla wszystkich typów dostępne są operatory <quote>jest równy</quote> oraz <quote>nie jest równy</quote>. Operatory te mogą również porównywać wartość kolumny z wartością pustą. W przypadku kolumn tekstowych, list wyboru i nazw użytkowników, można również wyszukiwać fragment tekstu za pomocą operatorów <quote>zaczyna się od</quote>, <quote>zawiera</quote> oraz <quote>kończy się na</quote>. Można także tworzyć kryteria, które spełnia kilka różnych wartości, używając operatora <quote>w liście</quote> i wpisując poszczególne wartości oddzielone przecinkami. Z kolei w przypadku wartości liczbowych i dat można używać operatorów porównania &mdash; <quote>jest mniejszy niż</quote>, <quote>jest mniejszy lub równy</quote>, itd.</para>
+
     <para>Załóżmy teraz, że interesują nas tylko te krytyczne sprawy, które są aktywne i w dodatku starsze niż 7 dni. Taki widok byłby bardzo przydatny dla osób nadzorujących rozwiązywanie błędów. Kliknij <guilabel>Zmień widok</guilabel>, aby przejść do edycji aktywnego widoku (przedtem upewnij się, że jest on wybrany).</para>
 
     <para>Wybierz dwa dodatkowe warunki dla kolumn Data utworzenia i Status. W pierwszym wybierz operator <quote>jest mniejszy niż</quote>, a za pomocą rozwijanego kalendarza wybierz opcję Dzisiaj. Następnie zmień wartość parametru filtra na <quote>[Dzisiaj]-7</quote>. W jego miejsce zawsze będzie wstawiona bieżąca data minus 7 dni, a więc warunek będą spełniały tylko te sprawy, które zostały utworzone więcej niż 7 dni temu. Ustaw również parametr filtra dla pola Status na Aktywny.</para>
@@ -360,6 +364,8 @@
     <para>Kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć wszystkie filtry. Zauważ że ponownie można dodać warunki zawierające te pola, które są już wykorzystane. Możesz więc tworzyć złożone filtry w rodzaju <quote>starszy niż 7 dni i jednocześnie nie starszy niż miesiąc</quote>.</para>
 
     <para>Zapisz zmiany klikając <guibutton>OK</guibutton>. Oczywiście lista nie będzie teraz zawierać żadnej sprawy, ponieważ w systemie nie ma jeszcze spraw starszych niż 7 dni.</para>
+
+    <para>Możesz również utworzyć nowy widok na bazie już istniejącego. W tym celu wybierz widok, który chcesz sklonować i użyj polecenia <guilabel>Klonuj widok</guilabel>. Domyślnie zostaną wyświetlone ustawienia kolumn i kryteria filtrowania klonowanego widoku. Dostosuj je do swoich potrzeb i kliknij <guibutton>OK</guibutton>, aby utworzyć nowy widok. W ten sposób możesz również tworzyć własne widoki na bazie istniejących widoków publicznych.</para>
 
     <para>Możesz utworzyć dowolną liczbę prywatnych widoków. Nie będą one widoczne dla żadnego innego użytkownika. Będą natomiast dostępne w każdym folderze zawierającym sprawy tego samego typu. Aby tworzyć, modyfikować, zmieniać nazwę i usuwać swoje widoki, otwórz folder danego typu i kliknij <guilabel>Zarządzaj widokami</guilabel>. Zostanie otwarte nowe okno zawierające listę wszystkich twoich widoków ze szczegółowymi informacjami.</para>
 
@@ -397,9 +403,11 @@
       <para>Usunięcie sprawy jest nieodwracalne i powoduje utratę całej jej historii, dlatego powinieneś to robić tylko w szczególnych sytuacjach.</para>
     </warning>
 
-    <para>Administrator może także przenosić sprawy do innego folderu za pomocą polecenia <guilabel>Przenieś sprawę</guilabel>. Docelowy folder musi być jednak tego samego typu, co przenoszona sprawa, ponieważ nie można łączyć w jednym folderze spraw różnego typu. Aby przenieść sprawę do folderu znajdującego się w innym projekcie, musisz być administratorem obu projektów albo administratorem systemu. Operacja przeniesienia sprawy zostaje zarejestrowana w jej historii.</para>
+    <para>Administrator może także przenieść sprawę do innego folderu za pomocą polecenia <guilabel>Przenieś sprawę</guilabel>. Docelowy folder musi być tego samego typu, co przenoszona sprawa, ponieważ nie można łączyć w jednym folderze spraw różnego typu. Aby przenieść sprawę do folderu znajdującego się w innym projekcie, musisz być administratorem obu projektów albo administratorem systemu. Operacja przeniesienia sprawy zostaje zarejestrowana w jej historii.</para>
 
-    <para>Nie ma natomiast żadnych ograniczeń, jeśli chodzi o edycję atrybutów sprawy. Każdy użytkownik może je dowolnie modyfikować, jednak każda zmiana jest trwale rejestrowana przez system i jedyną możliwością jej cofnięcia jest ponowna edycja.</para>
+    <para>Każdy użytkownik może sklonować istniejącą sprawę, tworząc nową sprawę w tym samym folderze lub w innym folderze tego samego typu. Aby sklonować sprawę, wybierz polecenie <guilabel>Sklonuj sprawę</guilabel>, a następnie wybierz docelowy folder i kliknij <guibutton>OK</guibutton>. Nowa sprawa ma domyślnie taką samą nazwę i wartości atrybutów, jak klonowana sprawa. Możesz w razie potrzeby zmienić te wartości, a następnie ponownie kliknij <guibutton>OK</guibutton>. Nowa sprawa nie jest w żaden sposób powiązana z originalną sprawą, jednak możesz takie powiązanie utworzyć, używając odnośnika do sprawy (patrz sekcja <xref linkend="webissues.work.issues.comments"/>). Nie zachowuje również historii zmian oraz komentarzy i załączników dodanych do klonowanej sprawy.</para>
+
+    <para>Nie ma również żadnych ograniczeń, jeśli chodzi o edycję atrybutów sprawy. Każdy użytkownik może je dowolnie modyfikować, jednak każda zmiana jest trwale rejestrowana przez system i jedyną możliwością jej cofnięcia jest ponowna edycja.</para>
 
   </sect1>
 

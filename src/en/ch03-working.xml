@@ -96,6 +96,8 @@
 
     <para>The Desktop Client automatically remembers the addresses of all WebIssues servers it connects to. You can select a server from the list and double-click to connect to it. You can also choose to remember the password to avoid having to enter it each time. If you want to log in as another user, select a server from the list, right click and select <guilabel>Connect as</guilabel>. The program remembers the previously used logins for each server and displays them in the context menu.</para>
 
+    <para>After logging into the WebIssues system, you can change your password. In the Web Client, click <guilabel>Tools</guilabel> in the upper right corner of the screen, and then click <guilabel>Change Password</guilabel>. In the Desktop Client, this command is always available in the main window toolbar. Enter your old password, and then enter your new password twice and click <guibutton>OK</guibutton>.</para>
+
   </sect1>
 
   <sect1 id="webissues.work.issues">
@@ -341,6 +343,8 @@
 
     <para>Save your changes by clicking <guibutton>OK</guibutton>. The Views drop-down list now includes a private view named <quote>Critical bugs</quote>. After selecting it, the list of issues will only contain the first the issue, according to the selected filter criteria.</para>
 
+    <para>Different filtering operators are available depending on the type of the column. For all types the <quote>is equal to</quote> and <quote>is not equal to</quote> operators are available. These operators can also compare the value of the column with the blank value. For text columns, drop-down lists, and user names, you can also search for a fragment of text using operators <quote>begins with</quote>, <quote>contains</quote> and <quote>ends with</quote>. You can also create criteria that can be fulfilled by a number of different values​​, using the <quote>in list</quote> operator and entering the individual values ​​separated by commas. In case of numbers and dates, you can use comparison operators &mdash; <quote>is less than</quote>, <quote>is less than or equal to</quote>, etc.</para>
+
     <para>Now suppose that we are only interested these critical issues, which are active and in addition older than 7 days. Such view would be very useful for people supervising the process of resolving bugs. Click <guilabel>Edit View</guilabel> to edit the active view (first make sure that it's selected).</para>
 
     <para>Select two additional conditions for the Created Date and Status columns. In the first condition, select the <quote>is less than</quote> operator, and using the drop-down calendar, select Today. Then change the value of the parameter to <quote>[Today]-7</quote>. This value will be replaced by the current date minus 7 days, so only issues created more than 7 days ago will satisfy this condition. Also set the filter parameter for the Status field to Active.</para>
@@ -360,6 +364,8 @@
     <para>Click <guibutton>Update</guibutton> to see all the filters. Note that you can add new conditions containing those fields that are already used. Thanks to this you can create complex filters, such as <quote>older than seven days but not older than a month</quote>.</para>
 
     <para>Save your changes by clicking <guibutton>OK</guibutton>. Of course the list of issues will now be empty, since at this time there are no issues older than 7 days in the system.</para>
+
+    <para>You can also create a new view based on an existing one. To do this, select the view you want to clone and use the <guilabel>Clone View</guilabel> command. By default the column settings and filtering criteria of the cloned view will be displayed. Customize them according to your needs and click <guibutton>OK</guibutton> to create a new view. This way you can also create personal views based on existing public views.</para>
 
     <para>You can create any number of private views. They won't be visible to any other user. However they will be available for each folder that contains issues of the same type. To create, modify, rename, and delete your views, open the folder of the given type, and click <guilabel>Manage Views</guilabel>. A new window will be opened containing a list of all your views with detailed information.</para>
 
@@ -397,9 +403,11 @@
       <para>Deleting an issue is irreversible and its entire history to be lost, so you should only do it in special circumstances.</para>
     </warning>
 
-    <para>The administrator can also move an issue to another folder using the <guilabel>Move Issue</guilabel> command. The target folder must be, however, of the same type as the issue being moved, because issues of various types can't be combined in a single folder. To move the issue to a folder belonging to another project, you must be an administrator of both projects, or the system administrator. The transfer operation is registered in the history of the issue.</para>
+    <para>The administrator can also move an issue to another folder using the <guilabel>Move Issue</guilabel> command. The target folder must be of the same type as the issue being moved, because issues of various types can't be combined in a single folder. To move the issue to a folder belonging to another project, you must be an administrator of both projects, or the system administrator. The transfer operation is registered in the history of the issue.</para>
 
-    <para>There are no restrictions when it comes to editing the attributes of the issue. Each user can freely modify them, but all changes are permanently recorded by the system and the only way of undoing them is to edit them once again.</para>
+    <para>Each user can clone an existing issue, creating a new issue in the same folder, or another folder of the same type. To clone the issue, select the <guilabel>Clone Issue</guilabel> command, then select the destination folder and click <guibutton>OK</guibutton>. The new issue by default has the same name and attribute values​​, as the cloned issues matter. If necessary, you can change these values, and then click <guibutton>OK</guibutton>. The new issue is in no way connected with the original issue, but you can create such connection using a link to the issue (see <xref linkend="webissues.work.issues.comments"/>). Also the history of changes won't be retained, and neither the comments and attachments added to the cloned issue.</para>
+
+    <para>There are also no restrictions when it comes to editing the attributes of the issue. Each user can freely modify them, but all changes are permanently recorded by the system and the only way of undoing them is to edit them once again.</para>
 
   </sect1>
 

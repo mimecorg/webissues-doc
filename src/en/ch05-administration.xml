@@ -349,7 +349,7 @@
 
     <para>Download and unpack the new WebIssues server package &mdash; it contains a directory named <literal>webissues-x.y</literal> (where <literal>x.y</literal> is the version of the package). Then move all files and subdirectories from that directory to the directory where the WebIssues server was previously installed.</para>
 
-    <para>After copying the files, enable the web server and open the main page of the WebIssues system in the browser. If there is a need to update the database, then follow the instructions. Otherwise, the system is ready to work.</para>
+    <para>After copying the files, enable the web server and open the main page of the WebIssues system in the browser. If there is a need to update the database, a message will be displayed. You will be asked to enter the login and password of the WebIssues system administrator, and then the database will be updated to the current version. Otherwise, the system is ready to work.</para>
 
     <para>It is also recommended to update the Desktop Client to a newer version on the computers of people who use it. Generally, however, the Desktop Client can communicate with both older and newer version of the server, provided that the first digit of the version number is the same. Therefore, client version 0.9.x will not work with the 1.0 system, and client version 1.0 will not work with the 0.8.x system, but both versions can be installed side by side on a single computer.</para>
 

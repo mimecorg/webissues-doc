@@ -219,7 +219,7 @@
 
       <para>Na razie nowo utworzony projekt jest dostępny tylko dla administratorów systemu. Aby udzielić dostępu do niego pozostałym użytkownikom, wybierz projekt i kliknij <guilabel>Członkowie projektu</guilabel>. Zostanie wyświetlona pusta lista. Teraz kliknij <guilabel>Dodaj członków</guilabel>, a następnie wybierz wszystkich użytkowników oprócz konta o nazwie Administrator. Kliknij <guibutton>OK</guibutton>.</para>
 
-      <para>Możesz również nadać jednemu z członków prawo administratora projektu. Wybierz użytkownika i kliknij <guilabel>Zmień dostęp</guilabel>, a następnie wybierz poziom uprawnień w podobny sposób, jak w przypadku zmiany dostępu użytkownika do systemu.</para>
+      <para>Możesz również nadać wybranym członkom prawo administratora projektu. Wybierz użytkownika i kliknij <guilabel>Zmień dostęp</guilabel>, a następnie wybierz poziom uprawnień w podobny sposób, jak w przypadku zmiany dostępu użytkownika do systemu.</para>
 
       <tip>
         <title>Wskazówka</title>

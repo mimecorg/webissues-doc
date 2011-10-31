@@ -219,7 +219,7 @@
 
       <para>For now, the newly created project is only available to system administrators. To grant access to other users, select the project and click <guilabel>Project Members</guilabel>. You will see an empty list. Now click <guilabel>Add members</guilabel> and select all users except the Administrator account. Click <guibutton>OK</guibutton>.</para>
 
-      <para>You can also assign one of the members an administrator right for the project. Select a user and click <guilabel>Change Access</guilabel>. Then select the access level in a similar way as in case of changing user's access to the system.</para>
+      <para>You can also assign an administrator right for the project to selected members. Select a user and click <guilabel>Change Access</guilabel>. Then select the access level in a similar way as in case of changing user's access to the system.</para>
 
       <tip>
         <title>Tip</title>
