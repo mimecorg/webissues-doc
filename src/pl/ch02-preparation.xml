@@ -190,7 +190,7 @@
     <sect2 id="webissues.prep.setup.projects">
       <title>Projekty i foldery</title>
 
-      <para>Następnie kliknij odnośnik <guilabel>Klient WWW</guilabel> w prawym górnym rogu okna, aby przejść do głównej części systemu WebIssues. Po lewej stronie zobaczysz puste drzewo projektów i folderów. Kliknij <guilabel>Dodaj projekt</guilabel>, aby utworzyć pierwszy projekt. Nadaj mu nazwę <quote>Mój pierwszy projekt</quote> i naciśnij <guibutton>OK</guibutton>.</para>
+      <para>Kliknij odnośnik <guilabel>Klient WWW</guilabel> w prawym górnym rogu okna, aby przejść do głównej części systemu WebIssues. Po lewej stronie zobaczysz puste drzewo projektów i folderów. Kliknij <guilabel>Zarządzaj projektami</guilabel>, a następnie użyj polecenia <guilabel>Dodaj projekt</guilabel>, aby utworzyć pierwszy projekt. Nadaj mu nazwę <quote>Mój pierwszy projekt</quote> i naciśnij <guibutton>OK</guibutton>.</para>
 
       <figure>
         <title>Tworzenie projektu</title>
@@ -199,7 +199,7 @@
         </mediaobject>
       </figure>
 
-      <para>Nowy projekt pojawi się w drzewie i zostanie automatycznie wybrany. Po prawej stronie pojawi się szereg operacji, które możesz wykonać na wybranym projekcie. Zacznijmy od utworzenia folderów. Kliknij <guilabel>Dodaj folder</guilabel> i utwórz folder o nazwie <quote>Błędy</quote>, wybierając typ spraw o tej samej nazwie.</para>
+      <para>Nowy projekt pojawi się w drzewie. Kliknij na tym projekcie, aby go zaznaczyć, a w pasku narzędzi pojawi się szereg operacji, które możesz na nim wykonać. Zacznijmy od utworzenia folderów. Kliknij <guilabel>Dodaj folder</guilabel> i utwórz folder o nazwie <quote>Błędy</quote>, wybierając typ spraw o tej samej nazwie.</para>
 
       <figure>
         <title>Tworzenie folderu</title>
@@ -208,7 +208,7 @@
         </mediaobject>
       </figure>
 
-      <para>Po utworzeniu folderu, zostanie on wyświetlony w drzewie poniżej projektu i automatycznie wybrany. Wybierz projekt, klikając na jego nazwie i dodaj kolejny folder typu Zadania. Następnie powtórz tą samą czynność, aby utworzyć folder typu Forum. Drzewo projektów będzie wyglądać następująco:</para>
+      <para>Po utworzeniu folderu, zostanie on wyświetlony w drzewie poniżej projektu. Wybierz ponownie projekt i dodaj kolejny folder typu Zadania. Następnie powtórz tą samą czynność, aby utworzyć folder typu Forum. Drzewo projektów będzie wyglądać następująco:</para>
 
       <figure>
         <title>Drzewo projektów</title>
@@ -234,6 +234,13 @@
           <imageobject><imagedata fileref="images/ch02-fig09.png" format="PNG"/></imageobject>
         </mediaobject>
       </figure>
+
+      <para>Kliknij <guibutton>OK</guibutton>, aby wrócić do głównego okna programu. Projekt wraz z folderami pojawi się w drzewie po lewej stronie okna.</para>
+
+      <tip>
+        <title>Wskazówka</title>
+        <para>Jeśli używasz programu Desktop Client, polecenia służące do zarządzania projektami i folderami są dostępne bezpośrednio w głównym oknie programu. Uaktywnij drzewo projektów, klikając na nim, aby uzyskać do nich dostęp (pod warunkiem, że masz odpowiednie uprawnienia).</para>
+      </tip>
 
       <para>Przeczytaj sekcję <xref linkend="webissues.admin.projects"/> w dalszej części tego podręcznika, aby dowiedzieć się więcej na temat administrowania projektami i folderami.</para>
 

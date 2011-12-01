@@ -1,7 +1,7 @@
 <chapter id="webissues.track">
   <title>Śledzenie spraw</title>
 
-  <para>Rozdział ten prezentuje mechanizmy ułatwiające współpracę wielu użytkowników systemu WebIssues i efektywną komunikacji w zespole. Powinni go przeczytać wszyscy, którzy współpracują z innymi użytkownikami systemu.</para>
+  <para>Rozdział ten prezentuje mechanizmy ułatwiające współpracę wielu użytkowników systemu WebIssues i efektywną komunikację w zespole. Powinni go przeczytać wszyscy, którzy współpracują z innymi użytkownikami systemu.</para>
 
   <sect1 id="webissues.track.unread">
     <title>Nieprzeczytane sprawy</title>

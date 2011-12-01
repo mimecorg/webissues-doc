@@ -190,7 +190,7 @@
     <sect2 id="webissues.prep.setup.projects">
       <title>Projects and folders</title>
 
-      <para>Then click on the <guilabel>Web Client</guilabel> link in the upper right corner to go to the main part of the WebIssues system. On the left you'll see an empty projects and folders tree. Click <guilabel>Add Project</guilabel> to create the first project. Name it <quote>My first project</quote> and press <guibutton>OK</guibutton>.</para>
+      <para>Click on the <guilabel>Web Client</guilabel> link in the upper right corner of the window to go to the main part of the WebIssues system. On the left you'll see an empty projects and folders tree. Click <guilabel>Manage Projects</guilabel> and then use the <guilabel>Add Project</guilabel> command to create the first project. Name it <quote>My first project</quote> and press <guibutton>OK</guibutton>.</para>
 
       <figure>
         <title>Creating a project</title>
@@ -199,7 +199,7 @@
         </mediaobject>
       </figure>
 
-      <para>The new project will appear in the tree and will be automatically selected. On the right side there will be a number of operations that you can perform on the selected project. Let's begin by creating folders. Click <guilabel>Add Folder</guilabel> and create a folder called <quote>Bugs</quote>, selecting the type of issues with the same name.</para>
+      <para>The new project will appear in the tree. Click on this project to select it, and you will see a number of operations that you can perform on that project. Let's begin by creating folders. Click <guilabel>Add Folder</guilabel> and create a folder called <quote>Bugs</quote>, selecting the type of issues with the same name.</para>
 
       <figure>
         <title>Creating a folder</title>
@@ -208,7 +208,7 @@
         </mediaobject>
       </figure>
 
-      <para>After creating a folder, it will be displayed in the tree below the project and automatically selected. Select the project again by clicking on its name and add another folder of type Tasks. Then repeat the same step to create a Forums folder. The projects tree will look like this:</para>
+      <para>After creating a folder, it will be displayed in the tree below the project. Select the project again and add another folder of type Tasks. Then repeat the same step to create a Forums folder. The projects tree will look like this:</para>
 
       <figure>
         <title>Projects tree</title>
@@ -234,6 +234,13 @@
           <imageobject><imagedata fileref="images/ch02-fig09.png" format="PNG"/></imageobject>
         </mediaobject>
       </figure>
+
+      <para>Click <guibutton>OK</guibutton> to return to the main window. The project and folders will appear in the tree on the left side on the window..</para>
+
+      <tip>
+        <title>Tip</title>
+        <para>If you use the Desktop Client, the commands for managing projects and folders are available directly in the main window of the program. Activate the projects tree by clicking on it to be able to access these commands (provided that you have appropriate permissions).</para>
+      </tip>
 
       <para>Read <xref linkend="webissues.admin.projects"/> later in this book to learn more about administration of projects and folders.</para>
 

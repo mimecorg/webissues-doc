@@ -298,7 +298,9 @@
   <sect1 id="webissues.admin.projects">
     <title>Managing projects</title>
 
-    <para>You can manage projects and folders directly from the main window of the Web Client or Desktop Client. If you are a system administrator you can manage all projects and create new projects. If you are the administrator of a project you can manage its members and folders.</para>
+    <para>If you use the Desktop Client, you can manage projects and folders directly from the main window of the program. The relevant commands are available if you activate the project tree by clicking on it. In case of the Web Client, select the <guilabel>Manage Projects</guilabel> command, located above the projects tree, to manage projects and folders.</para>
+
+    <para>If you are a system administrator you can manage all projects and create new projects. If you are the administrator of a project, you can manage its members and folders.</para>
 
     <para>To add a new project, select <guilabel>Add Project</guilabel>, enter the name of the project name and click <guibutton>OK</guibutton>.</para>
 

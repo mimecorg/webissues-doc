@@ -298,7 +298,9 @@
   <sect1 id="webissues.admin.projects">
     <title>Zarządzanie projektami</title>
 
-    <para>Możesz zarządzać projektami i folderami bezpośrednio z głównego okna programu Web Client lub Desktop Client. Jeśli jesteś administratorem systemu, możesz zarządzać wszystkimi projektami oraz tworzyć nowe projekty. Jeśli jesteś administratorem projektu, możesz zarządzać jego członkami i folderami.</para>
+    <para>Jeśli używasz programu Desktop Client, możesz zarządzać projektami i folderami bezpośrednio z głównego okna programu. Odpowiednie polecenia są dostępne, jeśli uaktywnisz drzewo projektów, klikając na nim. W przypadku programu Web Client, wybierz polecenie <guilabel>Zarządzaj projektami</guilabel>, widoczne nad drzewem projektu, aby przejść do okna zarządzania projektami i folderami.</para>
+    
+    <para>Jeśli jesteś administratorem systemu, możesz zarządzać wszystkimi projektami oraz tworzyć nowe projekty. Jeśli jesteś administratorem projektu, możesz zarządzać jego członkami i folderami.</para>
 
     <para>Aby dodać nowy projekt, wybierz polecenie <guilabel>Dodaj projekt</guilabel>, a następnie podaj nazwę projektu i naciśnij <guibutton>OK</guibutton>.</para>
 
