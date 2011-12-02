@@ -378,7 +378,7 @@
 
     <para>Zapisz zmiany klikając <guibutton>OK</guibutton>. Oczywiście lista nie będzie teraz zawierać żadnej sprawy, ponieważ w systemie nie ma jeszcze spraw starszych niż 7 dni.</para>
 
-    <para>Możesz również utworzyć nowy widok na bazie już istniejącego. W tym celu wybierz widok, który chcesz sklonować i użyj polecenia <guilabel>Klonuj widok</guilabel>. Domyślnie zostaną wyświetlone ustawienia kolumn i kryteria filtrowania klonowanego widoku. Dostosuj je do swoich potrzeb i kliknij <guibutton>OK</guibutton>, aby utworzyć nowy widok. W ten sposób możesz również tworzyć własne widoki na bazie istniejących widoków publicznych.</para>
+    <para>Możesz również utworzyć nowy widok na bazie już istniejącego. W tym celu wybierz widok, który chcesz sklonować i użyj polecenia <guilabel>Sklonuj widok</guilabel>. Domyślnie zostaną wyświetlone ustawienia kolumn i kryteria filtrowania klonowanego widoku. Dostosuj je do swoich potrzeb i kliknij <guibutton>OK</guibutton>, aby utworzyć nowy widok. W ten sposób możesz również tworzyć własne widoki na bazie istniejących widoków publicznych.</para>
 
     <para>Możesz utworzyć dowolną liczbę prywatnych widoków. Nie będą one widoczne dla żadnego innego użytkownika. Będą natomiast dostępne w każdym folderze zawierającym sprawy tego samego typu. Aby tworzyć, modyfikować, zmieniać nazwę i usuwać swoje widoki, otwórz folder danego typu i kliknij <guilabel>Zarządzaj widokami</guilabel>. Zostanie otwarte nowe okno zawierające listę wszystkich twoich widoków ze szczegółowymi informacjami.</para>
 
