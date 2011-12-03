@@ -79,7 +79,7 @@
       </mediaobject>
     </figure>
 
-    <para>Program co minutę aktualizuje zawartość wszystkich folderów, dla których zdefiniowałeś alerty, zatem możesz śledzić ich stan niemal w czasie rzeczywistym. Jeśli w którymś z widoków pojawią się nieprzeczytane sprawy, zmieni się ikona alertu, jego nazwa zostanie pogrubiona, a liczba nowych i zmienionych spraw zostanie wyświetlona w nawiasie:</para>
+    <para>Program okresowo aktualizuje zawartość wszystkich folderów, dla których zdefiniowałeś alerty, zatem możesz śledzić ich stan niemal w czasie rzeczywistym. Jeśli w którymś z widoków pojawią się nieprzeczytane sprawy, zmieni się ikona alertu, jego nazwa zostanie pogrubiona, a liczba nowych i zmienionych spraw zostanie wyświetlona w nawiasie:</para>
 
     <figure>
       <title>Drzewo z aktywnymi alertami</title>

@@ -226,9 +226,7 @@
 
     <para>Zmiana języka systemu wpłynie na wszystkich użytkowników (o ile nie wybrali własnego preferowanego języka), a także na język nowych komunikatów w Dzienniku zdarzeń systemu WebIssues. Nazwy istniejących typów spraw, atrybutów i innych danych, oraz istniejące komunikaty w Dzienniku zdarzeń pozostaną niezmienione.</para>
 
-    <para>Każdy użytkownik może wybrać własny preferowany język. W tym celu kliknij <guilabel>Narzędzia</guilabel>, a następnie <guilabel>Ustawienia użytkownika</guilabel> (w przypadku programu Desktop Client, polecenie <guilabel>Ustawienia użytkownika</guilabel> jest dostępne bezpośrednio z paska narzędzi okna głównego). Ustawienie to określa język dla programu Web Client (po zalogowaniu do systemu), a także język, w jakim wysłane są powiadomienia mailowe dla danego użytkownika.</para>
-
-    <para>W przypadku programu Destkop Client, język interfejsu użytkownika zależy od ustawień programu i nie zmienia się po zalogowaniu do serwera. Użyj polecenia <guilabel>Ustawienia WebIssues</guilabel>, dostępnego w postaci ikony w prawym górnym rogu okna, aby zmienić te ustawienia. Zmiana języka wymaga zamknięcia i ponownego uruchomienia programu.</para>
+    <para>Każdy użytkownik może wybrać własny preferowany język. Natomiast w przypadku programu Destkop Client, język interfejsu użytkownika zależy od ustawień programu i nie zmienia się po zalogowaniu do serwera. Przeczytaj sekcję <xref linkend="webissues.work.personal"/>, aby uzyskać więcej informacji na ten temat.</para>
 
     <note>
       <title>Notatka</title>
@@ -237,11 +235,11 @@
 
     <para>Domyślnie system WebIssues używa lokalnej strefy czasowej serwera, na którym jest zainstalowany. Administrator systemu można zmienić domyślną strefę czasową poprzez <guilabel>Ustawienia serwera</guilabel> w Panelu administracyjnym. Zmiana ta wpłynie na wszystkich użytkowników (o ile nie wybrali własnej strefy czasowej). Wyświetlane daty są automatycznie przeliczane zgodnie z wybraną strefą czasową.</para>
 
-    <para>Każdy użytkownik może wybrać własną preferowaną strefę czasową, korzystając z polecenia <guilabel>Ustawienia użytkownika</guilabel>. Ustawienie to określa strefę czasową dla dat wyświetlanych w programie Web Client, a także dla powiadomień mailowych. Natomiast program Desktop Client zawsze wyświetla daty zgodnie z lokalną strefą czasową komputera, na którym jest uruchomiony, i nie bierze pod uwagę ustawień serwera ani preferencji użytkownika.</para>
+    <para>Ustawienie strefy czasowej ma wpływ na daty wyświetlane w programie Web Client, a także na powiadomienia mailowe. Natomiast program Desktop Client zawsze wyświetla daty zgodnie z lokalną strefą czasową komputera, na którym jest uruchomiony, i nie bierze pod uwagę ustawień serwera ani preferencji użytkownika.</para>
 
     <note>
       <title>Notatka</title>
-      <para>W zależności od ustawień, atrybuty typu Data i czas mogą być automatycznie przeliczane, zgodnie z aktualną strefą czasową, lub wyświetlane bez konwersji strefy czasowej. Opcja bez konwersji jest pozostawiona głównie dla zachowania zgodności z wersją 0.8 serwera, jeśli jednak z systemu korzystają użytkownicy znajdujących się w różnych strefach czasowych, zaleca się użyć opcji automatycznego dostosowania czasu do lokalnej strefy czasowej.</para>
+      <para>W zależności od ustawień, atrybuty typu Data i czas mogą być automatycznie przeliczane, zgodnie z aktualną strefą czasową, lub wyświetlane bez konwersji strefy czasowej (patrz <xref linkend="webissues.custom.types"/>). Opcja bez konwersji jest pozostawiona głównie dla zachowania zgodności z wersją 0.8 serwera, jeśli jednak z systemu korzystają użytkownicy znajdujących się w różnych strefach czasowych, zaleca się użyć opcji automatycznego dostosowania czasu do lokalnej strefy czasowej.</para>
     </note>
 
     <para>Format w jakim wyświetlane są liczby, data i czas, a także pierwszy dzień tygodnia w kalendarzu, zależą od aktualnego języka, w jakim wyświetlany jest interfejs użytkownika. Administrator systemu może dostosować te ustawienia dla wszystkich użytkowników, korzystając z polecenia <guilabel>Ustawienia serwera</guilabel> w Panelu administracyjnym. Każdy użytkownik może natomiast wybrać własne ustawienia, korzystając z polecenia <guilabel>Ustawienia użytkownika</guilabel>.</para>

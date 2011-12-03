@@ -232,7 +232,7 @@
         <para>Unikaj zmieniania nazwy użytkowników, którzy mają przypisane do siebie sprawy. Wartości atrybutów są przechowywane jako tekst, więc zmiana nazwy użytkownika nie spowoduje automatycznej zmiany wartości atrybutów <quote>Przypisany do</quote>. Może to spowodować, że użytkownik przestanie widzieć przypisane do siebie sprawy.</para>
       </tip>
 
-      <para>Możesz również zmienić ustawienia dowolnego użytkownika za pomocą polecenia <guilabel>Ustawienia użytkownika</guilabel>. Każdy użytkownik może również zmienić własne ustawienia, korzystając z opcji <guilabel>Ustawienia użytkownika</guilabel> w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna progamu Desktop Client. Więcej informacji na temat ustawień użytkownika znajdziesz w sekcjach <xref linkend="webissues.track.alerts"/> oraz <xref linkend="webissues.custom.locale"/>.</para>
+      <para>Możesz również zmienić ustawienia dowolnego użytkownika za pomocą polecenia <guilabel>Ustawienia użytkownika</guilabel>. Każdy użytkownik może również zmienić własne ustawienia, korzystając z opcji <guilabel>Ustawienia użytkownika</guilabel> w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna progamu Desktop Client. Więcej informacji na temat ustawień użytkownika znajdziesz w sekcjach <xref linkend="webissues.work.personal"/>.</para>
 
       <para>System WebIssues nie pozwala na usuwanie istniejących użytkowników, ponieważ przechowuje on wszystkie informacje historyczne, na przykład zmiany dokonane przez poszczególnych użytkowników. Zamiast tego możesz zmienić poziom uprawnień użytkowników, którzy nie powinni już mieć dostępu do systemu, na wyłączony.</para>
 
@@ -241,7 +241,7 @@
     <sect2 id="webissues.admin.users.members">
       <title>Członkowie projektu</title>
 
-      <para>Nowo utworzony użytkownik nie ma dostępu do żadnego projektu, chyba że jest administratorem systemu. Aby zarządzać uprawnieniami użytkowników do poszczególnych projektów, wybierz projekt, a następnie użyj polecenia <guilabel>Członkowie projektu</guilabel>.</para>
+      <para>Nowo utworzony użytkownik nie ma dostępu do żadnego projektu, chyba że jest administratorem systemu. Aby zarządzać uprawnieniami użytkowników do poszczególnych projektów, kliknij <guilabel>Zarządzaj projektami</guilabel> w oknie głównym, wybierz projekt, a następnie użyj polecenia <guilabel>Członkowie projektu</guilabel>. W przypadku programu Desktop Client, polecenie to jest dostępne bezpośrednio w oknie głównym, jeśli uaktywnisz drzewo projektów.</para>
 
       <figure>
         <title>Lista członków projektu</title>
@@ -311,7 +311,7 @@
       </mediaobject>
     </figure>
 
-    <para>Po utworzeniu nowego projektu, żaden użytkownik nie ma do niego dostępu. Więcej informacji na temat udzielania użytkownikom dostępu do projektów znajdziesz w sekcji <xref linkend="webissues.admin.users.members"/>.</para>
+    <para>Po utworzeniu nowego projektu, żaden zwykły użytkownik nie ma do niego dostępu. Więcej informacji na temat udzielania użytkownikom dostępu do projektów znajdziesz w sekcji <xref linkend="webissues.admin.users.members"/>.</para>
 
     <para>Administrator systemu może zmienić nazwę dowolnego projektu. W tym celu wybierz projekt i kliknij <guilabel>Zmień nazwę projektu</guilabel>. Możesz również usuwać projekty używając polecenia <guilabel>Usuń projekt</guilabel>. Jeśli projekt nie jest pusty, zostanie wyświetlone odpowiednie ostrzeżenie.</para>
 
@@ -353,7 +353,7 @@
 
     <para>Po zakończeniu kopiowania plików włącz serwer WWW i otwórz główną stronę systemu WebIssues w przeglądarce. Jeśli istnieje konieczność aktualizacji bazy danych, to zostanie wyświetlony odpowiedni komunikat. Zostaniesz poproszony o wpisanie loginu i hasła administratora systemu WebIssues, a następnie baza danych zostanie zaktualizowana do bieżącej wersji. W przeciwnym wypadku system jest od razu gotowy do pracy.</para>
 
-    <para>Zaleca się również aktualizować program Desktop Client do nowszej wersji na komputerach osób, które z niego korzystają. Generalnie jednak program Desktop Client może się komunikować zarówno ze starszą, jak i nowszą wersją serwera, pod warunkiem że pierwsza cyfra numeru wersji jest zgodna. Klient w wersji 0.9.x nie będzie zatem działał z systemem 1.0, a klient 1.0 z systemem 0.8.x, ale można te wersje zainstalować równolegle na jednym komputerze.</para>
+    <para>Zaleca się również aktualizować program Desktop Client do nowszej wersji na komputerach osób, które z niego korzystają. Generalnie jednak program Desktop Client może się komunikować zarówno ze starszą, jak i nowszą wersją serwera, pod warunkiem że dwie pierwsze cyfry numeru wersji są zgodne. Klient w wersji 0.9.x nie będzie zatem działał z systemem 1.0, a klient 1.0 z systemem 0.8.x, ale można te wersje zainstalować równolegle na jednym komputerze.</para>
 
     <note>
       <title>Notatka</title>

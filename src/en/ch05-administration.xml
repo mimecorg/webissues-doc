@@ -1,12 +1,12 @@
 <chapter id="webissues.admin">
   <title>System administration</title>
 
-  <para>This chapter describes issues related to the administration of projects and users, and with system maintenance.</para>
+  <para>This chapter describes topics related to the administration of projects and users, and system maintenance.</para>
 
   <sect1 id="webissues.admin.panel">
     <title>Administration panel</title>
 
-    <para>Most of the activities related to the administration, maintenance and configuring the system can be performed through the Administration Panel. The exceptions are operations associated with projects and folders management, which can be performed directly in the main window.</para>
+    <para>Most of the activities related to the administration, maintenance and configuration of the system can be performed through the Administration Panel. The exceptions are operations associated with projects and folders management, which can be performed directly in the main window.</para>
 
     <para>To access the Administration Panel in the Web Client, click <guilabel>Administration Panel</guilabel> in the upper right corner of the window. This option is available only to users with server administrator privileges.</para>
 
@@ -41,7 +41,7 @@
       <varlistentry>
         <term>Email Settings</term>
         <listitem>
-          <para>Allows configuring the email notification settings. See <xref linkend="webissues.prep.notifications"/>.</para>
+          <para>Allows configuring the settings of notification emails . See <xref linkend="webissues.prep.notifications"/>.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -58,7 +58,7 @@
       </varlistentry>
     </variablelist>
 
-    <para>In the Desktop Client it is possible to administer users and projects and and to manageme issue types and views. The <guilabel>Users</guilabel> and <guilabel>Types</guilabel> commands are available directly from the main window toolbar. The full Administration Panel is however not available. In order to access the event log or change system settings, you must therefore use the Web Client.</para>
+    <para>In the Desktop Client it is possible to administer users and projects and and to manage issue types and views. The <guilabel>Users</guilabel> and <guilabel>Types</guilabel> commands are available directly from the main window's toolbar. However, the full Administration Panel is not available. In order to access the event log or change system settings, you must therefore use the Web Client.</para>
 
   </sect1>
 
@@ -81,11 +81,11 @@
       <para>The unique identifier allows the Desktop Client to distinguish individual instances of the WebIssues server, regardless of their name and URL. It is automatically generated during the installation, and normally there is no need to change it. Changing this identifier may be needed when a server instance is cloned (for example, when an update is tested on a temporary copy before deploying to production environment), and also after manually making changes to the database (for example, when you restore a previous version of the database from the backup).</para>
     </note>
 
-    <para>In the next part of the window you can see basic information about your server: the name of the instance (usually it will be <literal>default</literal>, unless you create multiple instances of the server within a single installation), the base URL of the server and the path of the directory where the configuration file is located. Also there is the version of PHP, the web server and operating system and the name of the computer on which WebIssues is installed.</para>
+    <para>In the next part of the window you can see basic information about your server: the name of the instance (usually it will be <literal>default</literal>, unless you created multiple instances of the server within a single installation), the base URL of the server and the path of the directory where the configuration file is located. Also there is the version of PHP, the web server and the operating system, and the name of the computer on which WebIssues is installed.</para>
 
-    <para>You can also see information about the type and version of the database server, the name of the host and the database and an optional prefix for table names in the database.</para>
+    <para>You can also see information about the type and version of the database server, the name of the host and the database, and an optional prefix for table names in the database.</para>
 
-    <para>The last part of the window contains information about the last run of the cron job. For more information, see <xref linkend="webissues.prep.nofitications.cron"/>.</para>
+    <para>The last part of the window contains information about the last execution of the cron job. For more information, see <xref linkend="webissues.prep.nofitications.cron"/>.</para>
 
   </sect1>
 
@@ -109,19 +109,19 @@
       <varlistentry>
         <term>Errors</term>
         <listitem>
-          <para>Errors and warnings in the system WebIssues. They may result from incorrect input data, lack of permission to perform operations, conflict between parallel changes or incorrect system configuration.</para>
+          <para>Errors and warnings in the system WebIssues. They may result from incorrect input data, lack of permission to perform some operations, conflicts between parallel changes or incorrect system configuration.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>Access</term>
         <listitem>
-          <para>Information about successful and unsuccessful attempts to log into the system, as well as errors associated with the denial of access to specific pages or operations.</para>
+          <para>Information about successful and failed attempts to log into the system, as well as errors associated with the denial of access to specific pages or operations.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>Audit</term>
         <listitem>
-          <para>Information about important administrative operations, such as: creating and changing passwords or permissions of user, creating, deleting and modifying issue types, attributes, projects and folders, and deleting issues.</para>
+          <para>Information about important administrative operations, such as: creating and changing passwords or permissions of users, creating, deleting and modifying issue types, attributes, projects and folders, and deleting issues.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -136,21 +136,21 @@
 
     <para>By default, the log displays all events, sorted from newest to oldest. If you are interested only in a specific type of events, click on one of the options in the upper right corner of the window to enable filtering.</para>
 
-    <para>Click on an event to view detailed information about it. In addition to the type, severity and full message, also the name of the user who performed the operation and the host name or IP address from which the connection was made is displayed.</para>
+    <para>Click on an event to view detailed information about it. In addition to the type, severity and full message, also the name of the user who performed the operation and the host name or IP address, from which the connection was made, are displayed.</para>
 
     <note>
       <title>Note</title>
-      <para>Although detailed information about errors are stored in the event log, for security reasons they are not displayed on error pages. However, you can enable detailed error messages for development or troubleshooting purposes. You can also enable an additional text log which makes debugging easier. Do not enable those settings in production environment. For more information, please visit <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
+      <para>Although detailed information about errors are stored in the event log, for security reasons they are not displayed on error pages. However, you can enable detailed error messages for development or troubleshooting purposes. You can also enable an additional text log which makes debugging easier. However, you should not enable those settings in production environment. For more information, please visit <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
     </note>
 
-    <para>Events are automatically removed from the log after a specified amount of time. For more information about configuring this period, please refer to <xref linkend="webissues.custom.settings"/>.</para>
+    <para>Events are automatically removed from the log after a specified amount of time. For more information about configuring this period, refer to <xref linkend="webissues.custom.settings"/>.</para>
 
   </sect1>
 
   <sect1 id="webissues.admin.users">
     <title>Managing users</title>
 
-    <para>Managing users in the WebIssues system includes both the creation and managing global rights of user accounts, and giving users access to specific projects.</para>
+    <para>Managing users in the WebIssues system includes the creation of user accounts, managing global rights of users, and giving users access to specific projects.</para>
 
     <sect2 id="webissues.admin.users.accounts">
       <title>User accounts</title>
@@ -164,7 +164,7 @@
         </mediaobject>
       </figure>
 
-      <para>Each user has a unique, fixed login, which is used along with the password when logging into the system. Each user also has a name that is visible to other users and that the administrator can change if necessary. Depending on the convention, it can be the first and last name, the email address or any other name.</para>
+      <para>Each user has a unique, fixed login, which is used along with the password when logging into the system. Each user also has a name that is visible to other users and that can be changed by the administrator if necessary. Depending on the convention, it can be the first and last name, the email address, or any other name.</para>
 
       <para>Managing privileges in the WebIssues system is relatively simple. There are three global access levels:</para>
 
@@ -172,13 +172,13 @@
         <varlistentry>
           <term>System administrator</term>
           <listitem>
-            <para>User of this level have access to all functions of Administration Panel. They can manage user accounts and customize the issue types and public views. They are also members and administrators of all existing projects in the system, even if they are not explicitly granted such permissions. The first such account is created upon installation.</para>
+            <para>Users with this level have access to all functions of the Administration Panel. They can manage user accounts and customize the issue types and public views. They are also members and administrators of all existing projects in the system, even if they are not explicitly granted such permissions. The first such account is created upon installation.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term>Regular user</term>
           <listitem>
-            <para>Users with this level of access can log into the system and change their personal settings. They have access only to those projects for which they were granted specific privileges. They can be administrators of selected projects, but they can not create new projects.</para>
+            <para>Users with this level of access can log into the system and change their personal settings. They can access only those projects to which they were granted specific privileges. They can be administrators of selected projects, but they can't create new projects.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
@@ -198,9 +198,9 @@
         </mediaobject>
       </figure>
 
-      <para>Enter the name of the user, login and initial password. To avoid mistakes, you must enter the password twice. You can select <guilabel>User must change password at next logon</guilabel> to force the user to change password when logging into the system for the first time.</para>
+      <para>Enter the name of the user, the login and initial password. To avoid mistakes, you must enter the password twice. You can select <guilabel>User must change password at next logon</guilabel> to force the user to change password when logging into the system for the first time.</para>
 
-      <para>If the user does not remember their password, you can reset it by selecting the user from the list and clicking <guilabel>Change Password</guilabel>. You will be asked to enter a new password twice. Also in this case, you can select <guilabel>User must change password at next logon</guilabel>.</para>
+      <para>If the user doesn't remember their password, you can reset it by selecting the user from the list and clicking <guilabel>Change Password</guilabel>. You will be asked to enter a new password twice. Also in this case you can select <guilabel>User must change password at next logon</guilabel>.</para>
 
       <figure>
         <title>Changing user's password</title>
@@ -209,14 +209,14 @@
         </mediaobject>
       </figure>
 
-      <para>If you change your own password, for greater security you must also enter your current password. All users can also change their own password at any time, using the <guilabel>Change Password</guilabel> command, which is available in the <guilabel>Tools</guilabel> window or in the toolbar of the Desktop Client main window.</para>
+      <para>When you're changing your own password, for greater security you must also enter your current password. All users can also change their own password at any time, using the <guilabel>Change Password</guilabel> command, which is available in the <guilabel>Tools</guilabel> window or in the toolbar of the Desktop Client main window.</para>
 
       <note>
         <title>Note</title>
-        <para>If the forget the password for system administrator, you can not easily recover it. All passwords are stored in a database in the form of secure hashes, from which it is practically impossible to recreate the original password. However by accessing the database you can reset the administrator password, by generating a new hash and storing it into the <literal>user_passwd</literal> column for the corresponding user in the <literal>users</literal> table. WebIssues uses the <quote>Portable PHP password hashing framework</quote> which is compatible with such programs as Wordpress or Drupal, so you can use one of the available <ulink url="http://scriptserver.mainframe8.com/wordpress_password_hasher.php">hash generators</ulink> for these programs.</para>
+        <para>If you forget the system administrator's password, you cann't easily recover it. All passwords are stored in a database as secure hashes, and it's practically impossible to recreate the original password. However, if you have  access to the database, you can reset the administrator's password, by generating a new hash and storing it in the <literal>user_passwd</literal> column for the corresponding user in the <literal>users</literal> table. WebIssues uses the <quote>Portable PHP password hashing framework</quote>, which is compatible with such programs as Wordpress or Drupal, so you can use one of the available <ulink url="http://scriptserver.mainframe8.com/wordpress_password_hasher.php">hash generators</ulink> for these programs.</para>
       </note>
 
-      <para>To change the global access level of a user, select that user on the list and click <guilabel>Change Access</guilabel>. Then choose the new access level and click <guibutton>OK</guibutton>. You can not deprive your own administrator right, because the system must have at least one active administrator account.</para>
+      <para>To change the global access level of a user, select that user on the list and click <guilabel>Change Access</guilabel>. Then choose the new access level and click <guibutton>OK</guibutton>. You can't deprive your own administrator right, because the system must have at least one active administrator account.</para>
 
       <figure>
         <title>Changing user's access</title>
@@ -229,19 +229,19 @@
 
       <tip>
         <title>Tip</title>
-        <para>Avoid changing the names of users who have assigned issues. Attribute values ​​are stored as text, so changing the user name will not automatically change the values ​​of <quote> Assigned to</quote> attributes. This may cause the user to no longer see those assigned issues.</para>
+        <para>Avoid changing the names of users who have assigned issues. Attribute values ​​are stored as text, so changing the user name will not automatically change the values ​​of <quote>Assigned to</quote> attributes. This may cause the user to no longer see those assigned issues.</para>
       </tip>
 
-      <para>You can also change the preferences of any user using the <guilabel>User Preferences</guilabel> command. All users can also change their own settings, using the <guilabel>User Prererences</guilabel> command in the <guilabel>Tools</guilabel> window or in the toolbar of the Desktop Client main window. For more information about user preferences, see <xref linkend="webissues.track.alerts"/> and <xref linkend="webissues.custom.locale"/>.</para>
+      <para>You can also change the preferences of any user using the <guilabel>User Preferences</guilabel> command. All users can also change their own settings, using the <guilabel>User Prererences</guilabel> command in the <guilabel>Tools</guilabel> window or in the toolbar of the Desktop Client main window. For more information about user preferences, see <xref linkend="webissues.work.personal"/>.</para>
 
-      <para>WebIssues system does not allow to delete existing users, because it keeps all the historical information, for example, changes made by individual users. Instead, you can change the access level of users to disabled when they should no longer be able to use the system.</para>
+      <para>The WebIssues system does not allow to delete existing users, because it keeps all the historical information; for example, changes made by individual users. Instead, you can change the access level of users to disabled, when they should no longer be able to use the system.</para>
 
     </sect2>
 
     <sect2 id="webissues.admin.users.members">
       <title>Project members</title>
 
-      <para>A newly created user has no access to any project, unless he is the system administrator. To manage user privileges for specific projects, select the project, and then click <guilabel>Project Members</guilabel>.</para>
+      <para>A newly created user has no access to any project, unless he is the system administrator. To manage user privileges for specific projects, go to <guilabel>Manage Projects</guilabel> from the main window, select the project, and then click <guilabel>Project Members</guilabel>. In case of the Desktop Client, this command is available directly from the main window if you activate the projects tree.</para>
 
       <figure>
         <title>List of project members</title>
@@ -262,12 +262,12 @@
         <varlistentry>
           <term>Regular member</term>
           <listitem>
-            <para>Users with this level of access can view issues in all folders, manage their own alerts and create new and edit existing issues. They can also add comments and attachments, and edit and delete their own comments and attachments.</para>
+            <para>Users with this level of access can view issues in all folders, manage their own alerts, and create new issues and edit existing ones. They can also add comments and attachments, and edit and delete their own comments and attachments.</para>
           </listitem>
         </varlistentry>
       </variablelist>
 
-      <para>The global access level is always more important than permissions for a given project. A system administrator automatically becomes the administrator of all projects, and a disabled user has no access to any project. Regular users only have access to projects that they are members of, according to permissions that were assigned to them.</para>
+      <para>The global access level is always more important than permissions for a given project. A system administrator automatically becomes the administrator of all projects, and a disabled user has no access to any project. Regular users only have access to projects that they are members of, according to the permissions that were assigned to them.</para>
 
       <para>To add members of the project, select <guilabel>Add Members</guilabel>.</para>
 
@@ -280,7 +280,7 @@
 
       <para>Select one or more users who are not yet members of the project. Then select the appropriate level of access and click <guibutton>OK</guibutton>.</para>
 
-      <para>To change the access level of a member, select the member on the list and click <guilabel>Change Access</guilabel>. Then select the new access level and click <guibutton>OK </guibutton>. You can not deprive your own project administrator rights, unless you are a system administrator.</para>
+      <para>To change the access level of a member, select the member on the list and click <guilabel>Change Access</guilabel>. Then select the new access level and click <guibutton>OK </guibutton>. You can't deprive your own project administrator rights, unless you are a system administrator.</para>
 
       <figure>
         <title>Changing member's access</title>
@@ -289,7 +289,7 @@
         </mediaobject>
       </figure>
 
-      <para>To remove a member of the project, select the member on the list and click <guilabel>Remove Member</guilabel>. In case of the Desktop Client, you can choose several members on the list and change their access level or remove them from the project simultaneously.</para>
+      <para>To remove a member of the project, select the member on the list and click <guilabel>Remove Member</guilabel>. In case of the Desktop Client, you can choose several members on the list, and change their access level or remove them from the project simultaneously.</para>
 
     </sect2>
 
@@ -298,9 +298,9 @@
   <sect1 id="webissues.admin.projects">
     <title>Managing projects</title>
 
-    <para>If you use the Desktop Client, you can manage projects and folders directly from the main window of the program. The relevant commands are available if you activate the project tree by clicking on it. In case of the Web Client, select the <guilabel>Manage Projects</guilabel> command, located above the projects tree, to manage projects and folders.</para>
+    <para>If you are using the Desktop Client, you can manage projects and folders directly from the main window of the program. The relevant commands are available if you activate the project tree by clicking on it. In case of the Web Client, select the <guilabel>Manage Projects</guilabel> command, located above the projects tree, to manage projects and folders.</para>
 
-    <para>If you are a system administrator you can manage all projects and create new projects. If you are the administrator of a project, you can manage its members and folders.</para>
+    <para>If you are a system administrator, you can manage all projects and create new projects. If you are the administrator of a project, you can manage its members and folders.</para>
 
     <para>To add a new project, select <guilabel>Add Project</guilabel>, enter the name of the project name and click <guibutton>OK</guibutton>.</para>
 
@@ -311,13 +311,13 @@
       </mediaobject>
     </figure>
 
-    <para>After creating a new project, no user has access to it. For more information on granting users access to projects, see <xref linkend="webissues.admin.users.members"/>.</para>
+    <para>After creating a new project, no regular user has access to it. For more information on granting users access to projects, see <xref linkend="webissues.admin.users.members"/>.</para>
 
     <para>The system administrator can change the name of any project. To do this, select the project and click <guilabel>Rename Project</guilabel>. You can also delete projects using the <guilabel>Delete Project</guilabel> command. If the project is not empty, a warning will be displayed.</para>
 
     <warning>
       <title>Warning</title>
-      <para>When deleting projects or folders, pay special attention whether you are not mistakenly deleting the wrong data. All issues contained in them are permanently and irreversibly removed from the system and it is not possible to restore them.</para>
+      <para>When deleting projects or folders, pay special attention whether you are not mistakenly deleting the wrong data. All issues contained in them are permanently and irreversibly removed from the system, and it's not possible to restore them.</para>
     </warning>
 
     <para>To add a new folder, select a project and click <guilabel>Add Folder</guilabel>.</para>
@@ -329,7 +329,7 @@
       </mediaobject>
     </figure>
 
-    <para>When creating a folder, you have to give it a name that is unique within the project and select the type of issues that will be stored in it. After creating a folder its type can not be changed. However, you can rename a folder using the <guilabel>Rename Folder</guilabel> command and delete it using the <guilabel>Delete Folder</guilabel> command.</para>
+    <para>When creating a folder, you have to give it a name that is unique within the project and select the type of issues that will be stored in it. After creating a folder its type can't be changed. However, you can rename a folder using the <guilabel>Rename Folder</guilabel> command and delete it using the <guilabel>Delete Folder</guilabel> command.</para>
 
     <para>You can also move a folder from one project to another. In order to do this, you must be the administrator of the system or of both projects &mdash; the source one and destination one. Select the folder you want to move and click <guilabel>Move Folder</guilabel>. Then select the destination project from the list and click <guibutton>OK</guibutton>.</para>
 
@@ -338,26 +338,26 @@
   <sect1 id="webissues.admin.updating">
     <title>Updating the system</title>
 
-    <para>One of the maintenance tasks is updating the WebIssues system to a new version. New versions solve problems and add new features, so it is recommended to periodically update the software.</para>
+    <para>One of the maintenance tasks is updating the WebIssues system to a new version. New versions fix potential problems and add new features, so it is recommended to periodically update the software.</para>
 
-    <para>Before the upgrade, it is recommended to back up the database and WebIssues system files, and also disable the web server to prevent the use of the system during the upgrade.</para>
+    <para>Before the upgrade, it is recommended to back up the database and WebIssues system files, and also disable the web server to prevent other users from accessing the system during the upgrade.</para>
 
     <note>
       <title>Note</title>
-      <para>If you cannot disable the server or block access to it, you can also temporarily rename the <literal>config.inc.php</literal> configuration file, which by default is located in the <literal>data/sites/default</literal> subdirectory. You may even completely remove the file, and then recreate it using the installer, because at the time of installation the existing database will be preserved and if necessary updated to the new version.</para>
+      <para>If you cannot disable the server or block access to it, you can also temporarily rename the <literal>config.inc.php</literal> configuration file, which by default is located in the <literal>data/sites/default</literal> subdirectory. You may even completely remove the file, and then recreate it using the installer, because at the time of installation the existing database will be preserved and updated to the new version, if necessary.</para>
     </note>
 
-    <para>First, delete all files and subdirectories from the directory where you installed the WebIssues server, remembering to keep the <literal>date</literal> subdirectory, which stores all files related to the particular installation, for example, configuration files and attachments of issues. If you created your own <literal>.htaccess</literal> or <literal>web.config</literal> file (in case of IIS), then also make a copy of it to be able to restore it later.</para>
+    <para>First, delete all files and subdirectories from the directory where you installed the WebIssues server, remembering to keep the <literal>data</literal> subdirectory, which stores all files related to the particular installation; for example, configuration files and attachments of issues. If you created your own <literal>.htaccess</literal> file or <literal>web.config</literal> file (in case of IIS), then also make a copy of it to be able to restore it later.</para>
 
     <para>Download and unpack the new WebIssues server package &mdash; it contains a directory named <literal>webissues-x.y</literal> (where <literal>x.y</literal> is the version of the package). Then move all files and subdirectories from that directory to the directory where the WebIssues server was previously installed.</para>
 
-    <para>After copying the files, enable the web server and open the main page of the WebIssues system in the browser. If there is a need to update the database, a message will be displayed. You will be asked to enter the login and password of the WebIssues system administrator, and then the database will be updated to the current version. Otherwise, the system is ready to work.</para>
+    <para>After copying the files, enable the web server and open the main page of the WebIssues system in the browser. If there is a need to update the database, a message will be displayed. You will be asked to enter the login and password of the WebIssues system administrator, and then the database will be updated to the current version. Otherwise, the system is immediately ready to work.</para>
 
-    <para>It is also recommended to update the Desktop Client to a newer version on the computers of people who use it. Generally, however, the Desktop Client can communicate with both older and newer version of the server, provided that the first digit of the version number is the same. Therefore, client version 0.9.x will not work with the 1.0 system, and client version 1.0 will not work with the 0.8.x system, but both versions can be installed side by side on a single computer.</para>
+    <para>It is also recommended to update the Desktop Client to a newer version on the computers of all people who use it. Generally, however, the Desktop Client can communicate with both older and newer version of the server, provided that the first two digits of the version number is the same. Therefore, client version 0.9.x will not work with the 1.0 system, and client version 1.0 will not work with the 0.8.x system, but both versions can be installed side by side on a single computer.</para>
 
     <note>
       <title>Note</title>
-      <para>Versions marked as <literal>alpha</literal> or <literal>beta</literal> are the so-called developer versions. They allow for testing new features before the official version is released, but it is not recommended to use them for production purposes. Development versions of the system can only be used with the same version of the Desktop Client. Additionally in case of an <literal>alpha</literal> version it is not possible to update the database to a newer version.</para>
+      <para>Versions marked as <literal>alpha</literal> or <literal>beta</literal> are the so-called developer versions. They allow for testing new features before the official version is released, but it is not recommended to use them for production purposes. Development versions of the system can only be used with the same version of the Desktop Client. Additionally, in case of an <literal>alpha</literal> version, it's not possible to update the database to a newer version.</para>
     </note>
 
     <para>Although a direct upgrade from version 0.8.5 of the server is not possible, existing data can be imported from version 0.8.5 of the WebIssues server when installing a new version of the system. More information can be found in <xref linkend="webissues.prep.installation"/>.</para>

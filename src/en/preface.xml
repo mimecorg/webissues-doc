@@ -6,9 +6,9 @@
 
     <para>This book is intended for users and administrators of the WebIssues team collaboration system. It was written both for people who have never used any issue tracking software and team collaboration support systems, as well as those who already have experience with similar software.</para>
 
-    <para>This guide was written by the creator of WebIssues, taking into account questions and comments raised by users over several years of development of this system. My goal was to create the most useful and helpful documentation. Therefore, unlike the previous version, this book focuses more on the most commonly performed tasks and not on describing the various windows and functions.</para>
+    <para>This guide was written by the creator of WebIssues, taking into account questions and comments raised by users over several years of development of this system. My goal was to create the most useful and helpful documentation. Therefore, unlike the previous version, this book focuses mainly on the most commonly performed tasks, instead of simply describing the various windows and functions.</para>
 
-    <para>Just as the entire WebIssues system, this book is licensed under a free license, which means that it can be freely modified and redistributed. I encourage you to send comments and suggestions for improvement.</para>
+    <para>Just like the entire WebIssues system, this book is licensed under a free license, which means that it can be freely modified and redistributed. I therefore encourage everyone to send comments and suggestions for improvement.</para>
 
   </sect1>
 
@@ -19,7 +19,7 @@
 
     <para>End users should primarily read <xref linkend="webissues.intro"/>, <xref linkend="webissues.work"/> and <xref linkend="webissues.track"/>, which introduce the basics of working with the WebIssues system.</para>
 
-    <para>If you are an advanced user and want to start working immediately, you can read this book in whatever order. To get information about the topic you are interested in, use the Table of Contents included at the beginning of this book.</para>
+    <para>If you are an advanced user and want to start working immediately, you can read this book in whatever order you want. To find information about the topic you are interested in, use the Table of Contents included at the beginning of this book.</para>
 
   </sect1>
 
@@ -95,7 +95,7 @@
       <varlistentry>
         <term><xref linkend="webissues.track"/></term>
         <listitem>
-          <para>Presents the way of collaboration of many users of the system and effective communication in the team.</para>
+          <para>Presents how users of the system can collaborate and effectively communicate in the team.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -107,7 +107,7 @@
       <varlistentry>
         <term><xref linkend="webissues.custom"/></term>
         <listitem>
-          <para>Describes how to configure and customize the system to suit your needs for advanced administrators.</para>
+          <para>Describes how to configure and customize the system to suit your needs, intended for advanced administrators.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -119,7 +119,7 @@
       <varlistentry>
         <term><xref linkend="webissues.licenses"/></term>
         <listitem>
-          <para>Contains copies of the licenses of the program and this book.</para>
+          <para>Contains a copy of the license of this book.</para>
         </listitem>
       </varlistentry>
     </variablelist>	

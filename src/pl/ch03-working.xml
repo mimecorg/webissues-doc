@@ -135,13 +135,13 @@
         <varlistentry>
           <term>Lista wyboru</term>
           <listitem>
-            <para>Ten atrybut może przyjmować tylko jedną z określonych wartości, tak jak pole Status, gdzie do wyboru mamy Aktywny, Rozwiązany i Zamknięty. Istnieje również wariant tego atrybutu, który może przyjmować dowolne wartości, a lista ma jedynie charakter pomocniczy.</para>
+            <para>Ten atrybut może przyjmować jedną z określonych wartości, tak jak pole Status, gdzie do wyboru mamy Aktywny, Rozwiązany i Zamknięty. Istnieje również wariant tego atrybutu, który może przyjmować dowolne wartości, a lista ma jedynie charakter pomocniczy, oraz wariant, w którym możesz podać wiele wartości oddzielonych przecinkami.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term>Użytkownik</term>
           <listitem>
-            <para>Wartością tego atrybutu może być nazwa dowolnego użytkownika z całego systemu WebIssues lub z określonego projektu. Przykładem jest atrybut Przypisany do.</para>
+            <para>Wartością tego atrybutu może być nazwa dowolnego użytkownika z całego systemu WebIssues lub z określonego projektu. Przykładem jest atrybut Przypisany do. Istnieje rówież wariant pozwalający na wybranie wielu użytkowników oddzielonych przecinkami.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
@@ -162,7 +162,7 @@
 
       <tip>
         <title>Wskazówka</title>
-        <para>Jeśli nie widzisz jakiegoś użytkownika w liście wyboru, prawdopodobnie oznacza to, że nie został on dodany do listy członków projektu &mdash; patrz <xref linkend="webissues.admin"/>.</para>
+        <para>Jeśli nie widzisz jakiegoś użytkownika w liście wyboru, prawdopodobnie oznacza to, że nie został on dodany do listy członków projektu &mdash; patrz <xref linkend="webissues.admin.users"/>.</para>
       </tip>
 
       <para>Następnie naciśnij <guibutton>OK</guibutton>. Jeśli wartość któregoś z atrybutów jest niepoprawna, zostanie wyświetlony błąd. W przeciwnym wypadku, nowa sprawa pojawi się na liście, a poniżej zostaną wyświetlone szczegółowe informacje:</para>
@@ -284,7 +284,7 @@
 
       <note>
         <title>Notatka</title>
-        <para>Maksymalny rozmiar załącznika, jaki możesz dołączyć do sprawy, zależy od konfiguracji systemu WebIssues. Możesz go zmienić w ustawieniach systemu WebIssues (przeczytaj <xref linkend="webissues.admin"/> aby uzyskać więcej informacji). Przesyłanie dużych załączników wymaga również odpowiedniej konfiguracji serwera WWW oraz PHP. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
+        <para>Maksymalny rozmiar załącznika, jaki możesz dołączyć do sprawy, zależy od konfiguracji systemu WebIssues. Możesz go zmienić w ustawieniach systemu WebIssues (przeczytaj <xref linkend="webissues.custom.settings"/> aby uzyskać więcej informacji). Przesyłanie dużych załączników wymaga również odpowiedniej konfiguracji serwera WWW oraz PHP. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
         <para>Domyślnie małe załączniki są przechowywane w bazie danych, a duże bezpośrednio w systemie plików. W zależności od potrzeb możesz zmienić wartość progową lub wymusić przechowywanie wszystkich załączników tylko w bazie danych lub w systemie plików, zmieniając ustawienia systemu WebIssues. Sposób przechowywania załączników nie ma znaczenia z punktu widzenia programów klienckich.</para>
       </note>
 
@@ -297,7 +297,7 @@
 
     <para>Z upływem czasu foldery zawierają coraz więcej spraw i znalezienie pożądanej informacji może być trudne. Możesz oczywiście posortować listę spraw po dowolnej kolumnie, nie tylko według identyfikatorów, ale również według nazwy lub wartości dowolnego atrybutu. Może to ułatwić wyszukanie potrzebnej informacji, ale nie zawsze jest wystarczające.</para>
 
-    <para>Lista spraw posiada funkcję szybkiego wyszukiwania. Wpisz szukane słowo lub jego fragment w polu tekstowym po prawej stronie nad listą i naciśnij <guibutton>Szukaj</guibutton>, a wyświetlone zostaną tylko sprawy zawierające w nazwie szukany fragment tekstu. W programie Desktop Client wyszukiwanie działa od razu, gdy wpiszesz tekst, możesz również nacisnąć klawisz <shortcut><keycap>F3</keycap></shortcut>, aby szybko uaktywnić pole wyszukiwania. Możesz również wyszukiwać sprawy po nazwie użytkownika, który je utworzył lub zmodyfikował, a także po dowolnym atrybucie typu Tekst, Lista wyboru lub Użytkownik. Aby wybrać kolumnę, w której chcesz wyszukiwać, kliknij ikonkę znajdującą się z lewej strony pola wyszukiwania i wybierz odpowiednią opcję. Po wpisaniu szukanego fagmentu tekstu, zostaną wyświetlone tylko sprawy zawierające ten fragment w wybranej kolumnie.</para>
+    <para>Lista spraw posiada również funkcję szybkiego wyszukiwania. Wpisz szukane słowo lub jego fragment w polu tekstowym po prawej stronie nad listą i naciśnij <guibutton>Szukaj</guibutton>, a wyświetlone zostaną tylko sprawy zawierające w nazwie szukany fragment tekstu. W programie Desktop Client wyszukiwanie działa od razu, gdy wpiszesz tekst, możesz również nacisnąć klawisz <shortcut><keycap>F3</keycap></shortcut>, aby szybko uaktywnić pole wyszukiwania. Możesz również wyszukiwać sprawy po nazwie użytkownika, który je utworzył lub zmodyfikował, a także po dowolnym atrybucie typu Tekst, Lista wyboru lub Użytkownik. Aby wybrać kolumnę, w której chcesz wyszukiwać, kliknij ikonkę znajdującą się z lewej strony pola wyszukiwania i wybierz odpowiednią opcję. Po wpisaniu szukanego fagmentu tekstu, zostaną wyświetlone tylko sprawy zawierające ten fragment w wybranej kolumnie.</para>
 
     <tip>
       <title>Wskazówka</title>
@@ -551,7 +551,7 @@
 
       <para>Grupa opcji <guilabel>Zachowanie</guilabel> pozwala wybrać domyślną akcję po kliknięciu na odnośnik do załącznika. Domyślnie program wyświetli pytanie, czy chcesz go otworzyć w domyślnej aplikacji, czy zapisać w wybranym miejscu na dysku. Możesz również kliknąć prawym przyciskiem na odnośniku, aby szybko wybrać żądaną operację.</para>
 
-      <para><guilabel>Okresy odświeżania</guilabel> określają częstotliwość z jaką program automatycznie pobiera dane z serwera (w minutach). Pierwszy okres określa jak często program aktualizuje drzewo projektów i folderów, otwarte listy spraw oraz stan aktywnych alertów. Drugi okres określa jak często odświeżane są typy spraw, widoki i inne dane, które nie zmieniają się zbyt często.</para>
+      <para><guilabel>Okresy odświeżania</guilabel> określają częstotliwość z jaką program automatycznie pobiera dane z serwera (w minutach). Pierwszy okres określa jak często program aktualizuje drzewo projektów i folderów, listy spraw oraz stan aktywnych alertów. Drugi okres określa jak często odświeżane są typy spraw, widoki i inne dane, które nie zmieniają się zbyt często.</para>
 
       <para>Opcje <guilabel>Ustawienia cache'u</guilabel> pozwalają określić maksymalną liczbę spraw, dla których pamiętana jest pełna historia (osobno dla każdego serwera), a także maksymalny łączny rozmiar przechowywanych lokalnie załączników dla wszystkich serwerów.</para>
 

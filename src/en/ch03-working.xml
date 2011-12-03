@@ -16,7 +16,7 @@
 
     <para>Actually there are more similarities, because the main window of the application consists of three panels resembling popular email programs. On the left there is a tree of projects and folders. On the right at the top there is a list of issues in the selected folder. On the right at the bottom there are the details of the selected issue. The selected folder and issue are highlighted, and you can perform various operations with them.</para>
 
-    <para>Below is the Web Client window showing a sample of issues and history of an issue:</para>
+    <para>Below is the Web Client window showing a few issues and the history of an issue:</para>
 
     <figure>
       <title>Web Client application</title>
@@ -38,10 +38,10 @@
 
     <itemizedlist>
       <listitem>
-        <para>Commands in the Desktop Client are available through a single toolbar, which varies depending on which panel is currently active. You can also use the contextual menu (available by clicking the right mouse button on the selected item) and keyboard shortcuts. On the other hand, in the Web Client commands are available separately within each of the panels.</para>
+        <para>Commands in the Desktop Client are available through a single toolbar, which varies depending on which panel is currently active. You can also use the contextual menus (available by clicking the right mouse button on the selected item) and keyboard shortcuts. On the other hand, in the Web Client commands are available separately within each of the panels.</para>
       </listitem>
       <listitem>
-        <para>In the Desktop Client, the whole list of issues and the entire history of the selected issue is available. You can scroll through the contents of individual panels using sliders. The Web Client displays only a limited number of issues and records in the history, so you must navigate between pages to see further issues and records.</para>
+        <para>In the Desktop Client, the whole list of issues and the entire history of the selected issue is available. You can scroll through the contents of individual panels using sliders. The Web Client displays only a limited number of issues and items in the history, so you must navigate between pages to see further issues and history.</para>
       </listitem>
       <listitem>
         <para>The Desktop Client automatically refreshes the lists and details of issues, so you can almost immediately see changes made ​​by others. In the Web Client you have to manually refresh the page to see updated information.</para>
@@ -67,7 +67,7 @@
 
     <para>The Desktop Client can be installed on any computer with Windows (XP or later versions), Linux or Mac OS X. Installation packages exist for these systems. You can also compile and install the application from source &mdash; for more information, refer to the <literal>INSTALL</literal> file attached in the source package.</para>
 
-    <para>There is also a WebIssues Portable Client application which can run from any portable device (e.g. a USB flash drive) or media (e.g. a compact disk) without installing on your computer. It can be used together with the <ulink url="http://portableapps.com">PortableApps.com</ulink> platform or stand alone. Except for this, it is completely the same as the Desktop Client.</para>
+    <para>There is also a WebIssues Portable Client application which you can run from any portable device (e.g. a USB flash drive) or media (e.g. a compact disk) without installing on your computer. It can be used together with the <ulink url="http://portableapps.com">PortableApps.com</ulink> platform or stand alone. Except for this, it is completely the same as the Desktop Client.</para>
 
   </sect1>
 
@@ -83,7 +83,7 @@
       </mediaobject>
     </figure>
 
-    <para>In the login window, type your username and password. If they are correct, you will be redirected to the main window. You may also be asked to enter a new password if the password was set by the administrator of the system and he forced it to be changed. Depending on its settings, your browser may offer to remember passwords.</para>
+    <para>In the login window, type your username and password. If they are correct, you will be redirected to the main window. You may also be asked to enter a new password, if the password was set by the administrator of the system and he forced you to change it. Depending on its settings, your browser may offer to remember passwords.</para>
 
     <para>To log in through the Desktop Client, run it and enter the URL of the server in the address bar, and then press <shortcut><keycap>ENTER</keycap></shortcut>. When the login window appears, enter your username and password. As with the Web Client, you may be asked to change your password.</para>
 
@@ -94,9 +94,9 @@
       </mediaobject>
     </figure>
 
-    <para>The Desktop Client automatically remembers the addresses of all WebIssues servers it connects to. You can select a server from the list and double-click to connect to it. You can also choose to remember the password to avoid having to enter it each time. If you want to log in as another user, select a server from the list, right click and select <guilabel>Connect as</guilabel>. The program remembers the previously used logins for each server and displays them in the context menu.</para>
+    <para>The Desktop Client automatically remembers the addresses of all WebIssues servers it connects to. You can select a server from the list and double-click to connect to it. You can also choose to remember the password to avoid having to enter it each time. If you want to log in as another user, select a server from the list, right click and select <guilabel>Connect as</guilabel>. The program remembers the previously used logins for each server and displays them in the contextual menu.</para>
 
-    <para>After logging into the WebIssues system, you can change your password. In the Web Client, click <guilabel>Tools</guilabel> in the upper right corner of the window, and then click <guilabel>Change Password</guilabel>. In the Desktop Client, this command is always available in the main window toolbar. Enter your old password, and then enter your new password twice and click <guibutton>OK</guibutton>.</para>
+    <para>After logging into the WebIssues system, you can change your password at any time. In the Web Client, click <guilabel>Tools</guilabel> in the upper right corner of the window, and then click <guilabel>Change Password</guilabel>. In the Desktop Client, this command is always available in the main window's toolbar. Enter your old password, and then enter the new password twice and click <guibutton>OK</guibutton>.</para>
 
     <note>
       <title>Note</title>
@@ -109,7 +109,7 @@
   <sect1 id="webissues.work.issues">
     <title>Creating and editing issues</title>
 
-    <para>Click on the folder Bugs to open it. If you have just created a new server, the folder will be empty, so let's start with creating the first issue.</para>
+    <para>Click on the folder named Bugs to open it. If you have just created a new server, the folder will be empty, so let's start with creating the first issue.</para>
 
     <sect2 id="webissues.work.issues.attributes">
       <title>Attributes of an issue</title>
@@ -135,19 +135,19 @@
         <varlistentry>
           <term>Dropdown list</term>
           <listitem>
-            <para>This attribute can only accept one of the specific values​​, just like the Status field, where you have to choose one of Active, Resolved or Closed. There is also a variant of this attribute that accepts any value, and the list is merely auxiliary.</para>
+            <para>This attribute accepts one of the specific values​​, just like the Status field, where you have to choose one of Active, Resolved or Closed. There is also a variant of this attribute that accepts any value, and the list is merely auxiliary, and another variant where you can enter mutliple values separated with commas.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term>User</term>
           <listitem>
-            <para>The value of this attribute can be the name of any user of the WebIssues system or a member of the project. The Assigned To field is an example of such attribute.</para>
+            <para>The value of this attribute can be the name of any user of the WebIssues system or a member of the project. The Assigned To field is an example of such attribute. There is also a variant where you can select mutliple users separated with commas.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term>Numeric</term>
           <listitem>
-            <para>The value of this attribute can be an integer or a decimal value with specified number of decimal places. It may specify the minimum and maximum value. An example of a numeric attribute is Severity, which may be in the range from 1 (most critical bug) to 3 (insignificant bug).</para>
+            <para>The value of this attribute can be an integer or a decimal value with specified number of decimal places. It may have a specified minimum and maximum value. An example of a numeric attribute is Severity, which may be in the range from 1 (most critical bug) to 3 (insignificant bug).</para>
           </listitem>
         </varlistentry>
         <varlistentry>
@@ -162,7 +162,7 @@
 
       <tip>
         <title>Tip</title>
-        <para>If you don't see some user in the drop down list, it probably means that the user was not added to the project members; see <xref linkend="webissues.admin"/>.</para>
+        <para>If you don't see some user in the drop down list, it probably means that the user was not added to the project members; see <xref linkend="webissues.admin.users"/>.</para>
       </tip>
 
       <para>Then press <guibutton>OK</guibutton>. If the value of one of the attributes is incorrect, you will receive an error. Otherwise, the new issue will appear in the list and its details will be displayed below:</para>
@@ -181,7 +181,7 @@
 
       <para>For now, it doen't look very impressive. The system has registered that you have created the issue, you gave it the name and changed the value of two attributes. Now let's write a comment. To do this, choose <guilabel>Add Comment</guilabel> (make sure that the history of the issue is the active panel, if you are using the Desktop Client).</para>
 
-      <para>The new window consists almost entirely of text edit box. In case of the Desktop Client, you can leave this window open and return to another window, for example, to view the history of the issue. Using a web browser you can also add a new comment in a separate window, if you right-click on the link and select an appropriate option.</para>
+      <para>The new window consists almost entirely of a text edit box. In case of the Desktop Client, you can leave this window open and return to another window, for example, to view the history of the issue. Using a web browser you can also add a new comment in a separate window, if you right-click on the link and select an appropriate option.</para>
 
       <para>Returning to our window, type the text of the comment regarding the first issue:</para>
 
@@ -192,7 +192,7 @@
         </mediaobject>
       </figure>
 
-      <para>The text will appear exactly as typed, with all spaces and lines preserved. This allows you, for example, to paste fragments of code and error logs without worrying that they will become unreadable. Long lines are automatically wrapped, depending on the width of the window. Web addresses and email addresses are automatically converted into clickable links.</para>
+      <para>The text will appear exactly as typed, with all spaces and new lines preserved. This allows you, for example, to paste fragments of code and error logs without worrying that they will become unreadable. Long lines are automatically wrapped, depending on the width of the window. Web addresses and email addresses are automatically converted into clickable links.</para>
 
       <figure>
         <title>Issue history with a comment</title>
@@ -251,14 +251,14 @@
         </mediaobject>
       </figure>
 
-      <para>By default the issue history contains all changes, comments and attachments. If you do not want to see the full history of the issue, but for example only comments, select one of the filtering options available in the upper right corner of the history view. To search for a specific text in a comment or another change, in the Desktop Client you can use the <guilabel>Search</guilabel> command or press <shortcut><keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo></shortcut> to display the search bar. Enter the text you want to search and then use the <shortcut><keycap>F3</keycap></shortcut> and <shortcut><keycombo><keycap>Shift</keycap><keycap>F3</keycap></keycombo ></shortcut> keys to find the next or previous occurrence of text in the history of the issue. In the Web Client you can use the search function of the browser.</para>
+      <para>By default the issue history contains all changes, comments and attachments. If you don't want to see the full history of the issue, but for example only comments, select one of the filtering options available in the upper right corner of the history view. To search for a specific text in a comment or another change, in the Desktop Client you can use the <guilabel>Search</guilabel> command or press <shortcut><keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo></shortcut> to display the search bar. Enter the text you want to search and then use the <shortcut><keycap>F3</keycap></shortcut> and <shortcut><keycombo><keycap>Shift</keycap><keycap>F3</keycap></keycombo ></shortcut> keys to find the next or previous occurrence of text in the history of the issue. In the Web Client you can use the search function of the browser.</para>
 
     </sect2>
 
     <sect2 id="webissues.work.issues.attach">
       <title>Adding attachments</title>
 
-      <para>You already know how to add a comment to describe the issue or discuss about it. However it's better to add long passages of text (such as error logs) as separate attachments. This way you can also attach to image files, documents and other types of files to the issue, just like attachments to email messages.</para>
+      <para>You already know how to add a comment to describe the issue or discuss it. However it's better to add long passages of text (such as error logs) as separate attachments. This way you can also attach image files, documents and other types of files to the issue, just like attachments to email messages.</para>
 
       <para>To attach a file, select <guilabel>Add Attachment</guilabel>. Then select the file you want to add, and optionally enter a brief description of the attachment.</para>
 
@@ -284,7 +284,7 @@
 
       <note>
         <title>Note</title>
-        <para>The maximum size of files which can be attached to an issue depends on the configuration of the WebIssues system. You can change it in the WebIssues system settings (see <xref linkend="webissues.admin"/> for more information). Uploading large attachments also requires appropriate configuration of the web server and PHP. For more information, please visit <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
+        <para>The maximum size of files which can be attached to an issue depends on the configuration of the WebIssues system. You can change it in the WebIssues system settings (see <xref linkend="webissues.custom.settings"/> for more information). Uploading large attachments also requires appropriate configuration of the web server and PHP. For more information, please visit <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
         <para>By default, small attachments are stored in the database, and large files are stored directly in the file system. Depending on your needs, you can change the threshold value or force storing all attachments only in the database or the file system, by changing WebIssues system settings. For client applications it doesn't matter how the attachments are stored.</para>
       </note>
 
@@ -297,18 +297,18 @@
 
     <para>Over time, folders contain more and more issues and finding the desired information can become difficult. You can of course sort the list of issues using any column, not only by identifiers, but also by name or the value of any attribute. This can help you find the information you need, but it's not always enough.</para>
 
-    <para>The list of issues has a quick search function. Enter a word or its fragment in the text box on the right side above the list and press <guibutton>Search</guibutton>, and you will see only issues which contain the text in their name. In the Desktop Client the search is performed immediately as you type, you can also press <shortcut><keycap>F3</keycap></shortcut> to quickly activate the search box. You can also search by the name of the user who created or modified the issue, as well as by any Text, Dropdown List or User attribute. To select the column in which you want to search, click the icon to the left of the search box and select the appropriate option. After entering the text you want to search, only the issues containing this text in the selected column will be displayed.</para>
+    <para>The list of issues also has a quick search function. Enter a word or its fragment in the text box on the right side above the list and press <guibutton>Search</guibutton>, and you will see only issues which contain the text in their name. In the Desktop Client the search is performed immediately as you type, you can also press <shortcut><keycap>F3</keycap></shortcut> to quickly activate the search box. You can also search by the name of the user who created or modified the issue, as well as by any Text, Dropdown list or User attribute. To select the column in which you want to search, click the icon to the left of the search box and select the appropriate option. After entering the text you want to search, only the issues containing this text in the selected column will be displayed.</para>
 
     <tip>
       <title>Tip</title>
       <para>To quickly find a issue with given identifier, use the <guilabel>Go To item</guilabel> command. See <xref linkend="webissues.work.issues.comments"/> for more information about identifiers of issues, comments and attachments.</para>
     </tip>
 
-    <para>In everyday work, however, it's most useful to use views. Each view has filter conditions, which limit the displayed list issues to those that meet certain criteria. Each view also has its own column layout, and default sort order. In other words, the view defines which issues from all issues in the folder are visible, and which columns from all available columns are displayed.</para>
+    <para>In everyday work, however, it's most useful to use views. Each view has filter conditions, which limit the displayed list of issues to those that meet certain criteria. Each view also has its own column layout, and default sort order. In other words, the view defines which issues from all issues in the folder are visible, and which columns from all available columns are displayed.</para>
 
     <para>What views are available depends on the type of issues in the folder. The only exception is the <quote>All Issues</quote> view, which exists for each issue type and has no filter conditions, and therefore (as the name implies) displays all the issues in the current folder.</para>
 
-    <para>Open the Bugs folder, and then expand the list of views on the left above the list of issues. You'll see the default <quote>All Issues</quote> view, and a few public views:</para>
+    <para>Open the Bugs folder, and then expand the list of views on the left side above the list of issues. You'll see the default <quote>All Issues</quote> view, and a few public views:</para>
 
     <figure>
       <title>View selection</title>
@@ -326,7 +326,7 @@
       </mediaobject>
     </figure>
 
-    <para>Select other available views, to see that every time other issues are displayed and the layout of visible columns changes. This allows each user to focus only on those issues that are currently interesting &mdash; for example, a tester can view the list of fixed bugs, that need to be verified, and a developer can display the list of bugs assigned to him, that must be solved.</para>
+    <para>Select other available views, to see that every time different issues are displayed and the layout of visible columns changes. This allows each user to focus only on those issues that are currently interesting &mdash; for example, a tester can view the list of fixed bugs, that need to be verified, and a developer can display the list of bugs assigned to him, that must be solved.</para>
 
     <tip>
       <title>Tip</title>
@@ -334,7 +334,7 @@
       <para>Although there is no specified limit of issues per one folder, a large number of issues  may adversely affect system performance. In this situation, you should divide the issues into separate folders, for example, by date of creation or a version of the project to which they refer.</para>
     </tip>
 
-    <para>Sometimes it is not enough to use the existing public views. In that case, you can create your own, private views, which may have any filtering criteria, columns and sorting order.</para>
+    <para>Sometimes it is not enough to use the existing public views. In that case, you can create your own, personal views, which may have any filtering criteria, columns and sorting order.</para>
 
     <para>Click <guilabel>Add View</guilabel> to quickly create a new view for the current type of issues. Suppose you want to display only critical bugs, so we will call our view <quote>Critical bugs</quote>. The Severity column is not needed, because it will always have a value of 1, so uncheck it on the list of columns. Add the Created By and Created Date columns, so that you know who and when created the the issue. To move the Assigned To and Status columns to the end of the list, set the values defining their order to 10 and 11, respectively.</para>
 
@@ -345,7 +345,7 @@
       </mediaobject>
     </figure>
 
-    <para>Click the <guibutton>Update</guibutton> button to see how the new column layout of the view will look. Leave the default sort order to display issues from oldest to newest. Then go to editing the filters. Enable the filter for the Severity column and type 1 as a parameter of the condition:</para>
+    <para>Click the <guibutton>Update</guibutton> button to see how the new column layout of the view will look. Leave the default sort order to display issues from oldest to newest. Then proceed to editing the filters. Enable the filter for the Severity column and type 1 as the parameter of the condition:</para>
 
     <figure>
       <title>Editing the filter</title>
@@ -354,11 +354,11 @@
       </mediaobject>
     </figure>
 
-    <para>Save your changes by clicking <guibutton>OK</guibutton>. The Views drop-down list now includes a private view named <quote>Critical bugs</quote>. After selecting it, the list of issues will only contain the first the issue, according to the selected filter criteria.</para>
+    <para>Save your changes by clicking <guibutton>OK</guibutton>. The Views drop-down list now includes a personal view named <quote>Critical bugs</quote>. After selecting it, the list of issues will only contain the first the issue, according to the selected filter criteria.</para>
 
     <para>Different filtering operators are available depending on the type of the column. For all types the <quote>is equal to</quote> and <quote>is not equal to</quote> operators are available. These operators can also compare the value of the column with the blank value. For text columns, drop-down lists, and user names, you can also search for a fragment of text using operators <quote>begins with</quote>, <quote>contains</quote> and <quote>ends with</quote>. You can also create criteria that can be fulfilled by a number of different values​​, using the <quote>in list</quote> operator and entering the individual values ​​separated by commas. In case of numbers and dates, you can use comparison operators &mdash; <quote>is less than</quote>, <quote>is less than or equal to</quote>, etc.</para>
 
-    <para>Now suppose that we are only interested these critical issues, which are active and in addition older than 7 days. Such view would be very useful for people supervising the process of resolving bugs. Click <guilabel>Edit View</guilabel> to edit the active view (first make sure that it's selected).</para>
+    <para>Now suppose that we are only interested in these critical issues, which are active and in addition older than 7 days. Such view would be very useful for people supervising the process of resolving bugs. Click <guilabel>Edit View</guilabel> to edit the active view (first make sure that it's selected).</para>
 
     <para>Select two additional conditions for the Created Date and Status columns. In the first condition, select the <quote>is less than</quote> operator, and using the drop-down calendar, select Today. Then change the value of the parameter to <quote>[Today]-7</quote>. This value will be replaced by the current date minus 7 days, so only issues created more than 7 days ago will satisfy this condition. Also set the filter parameter for the Status field to Active.</para>
 
@@ -380,7 +380,7 @@
 
     <para>You can also create a new view based on an existing one. To do this, select the view you want to clone and use the <guilabel>Clone View</guilabel> command. By default the column settings and filtering criteria of the cloned view will be displayed. Customize them according to your needs and click <guibutton>OK</guibutton> to create a new view. This way you can also create personal views based on existing public views.</para>
 
-    <para>You can create any number of private views. They won't be visible to any other user. However they will be available for each folder that contains issues of the same type. To create, modify, rename, and delete your views, open the folder of the given type, and click <guilabel>Manage Views</guilabel>. A new window will be opened containing a list of all your views with detailed information.</para>
+    <para>You can create any number of personal views. They won't be visible to any other user. However they will be available for each folder that contains issues of the same type. To create, modify, rename, and delete your views, open the folder of the given type, and click <guilabel>Manage Views</guilabel>. A new window will be opened containing a list of all your views with detailed information.</para>
 
     <figure>
       <title>Managing views</title>
@@ -413,12 +413,12 @@
 
     <warning>
       <title>Warning</title>
-      <para>Deleting an issue is irreversible and its entire history to be lost, so you should only do it in special circumstances.</para>
+      <para>Deleting an issue is irreversible and causes its entire history to be lost, so you should only do it in special circumstances.</para>
     </warning>
 
     <para>The administrator can also move an issue to another folder using the <guilabel>Move Issue</guilabel> command. The target folder must be of the same type as the issue being moved, because issues of various types can't be combined in a single folder. To move the issue to a folder belonging to another project, you must be an administrator of both projects, or the system administrator. The transfer operation is registered in the history of the issue.</para>
 
-    <para>Each user can clone an existing issue, creating a new issue in the same folder, or another folder of the same type. To clone the issue, select the <guilabel>Clone Issue</guilabel> command, then select the destination folder and click <guibutton>OK</guibutton>. The new issue by default has the same name and attribute values​​, as the cloned issues matter. If necessary, you can change these values, and then click <guibutton>OK</guibutton>. The new issue is in no way connected with the original issue, but you can create such connection using a link to the issue (see <xref linkend="webissues.work.issues.comments"/>). Also the history of changes won't be retained, and neither the comments and attachments added to the cloned issue.</para>
+    <para>Each user can clone an existing issue, creating a new issue in the same folder, or another folder of the same type. To clone the issue, select the <guilabel>Clone Issue</guilabel> command, then select the destination folder and click <guibutton>OK</guibutton>. The new issue by default has the same name and attribute values​​, as the issue being cloned. If necessary, you can change these values, and then click <guibutton>OK</guibutton>. The new issue is in no way connected with the original issue, but you can create such connection using a link to the issue (see <xref linkend="webissues.work.issues.comments"/>). Also the history of changes won't be retained, and the comments and attachments won't be added to the cloned issue.</para>
 
     <para>There are also no restrictions when it comes to editing the attributes of the issue. Each user can freely modify them, but all changes are permanently recorded by the system and the only way of undoing them is to edit them once again.</para>
 
@@ -438,7 +438,7 @@
       </mediaobject>
     </figure>
 
-    <para>The report can be a simple table, which can contain only columns which are visible in the selected view, or all system columns and user-defined columns (attributes). The report may also have the form of issue summaries, including the properties and attributes of individual issues. When exporting to CSV format it is only possible create a table report.</para>
+    <para>The report can be a simple table, which can contain only columns which are visible in the selected view, or all system columns and user-defined columns (attributes). The report may also have the form of a summary, including the properties and attributes of individual issues. When exporting to CSV format it is only possible create a table report.</para>
 
     <para>If you are saving the report to a file, select the type of the report, press <guibutton>OK</guibutton> and then select the folder where you want to save the file and enter its name. When printing a report, press <guibutton>OK</guibutton> and then select the printer and possibly other printing options. You can also press the <guibutton>Print Preview</guibutton> button to see the report before printing.</para>
 
@@ -479,9 +479,9 @@
 
       <para>To change the user preferences in the Web Client, click <guilabel>Tools</guilabel> and then <guilabel>User Preferences</guilabel>. In the Desktop Client, the <guilabel>User Preferences</guilabel> command is available directly from the main window's toolbar.</para>
 
-      <para>The <guilabel>Regional Options</guilabel> allow you to select the language for the Web Client (after logging into the system), and the language in which you will receive e-mail notifications. In case of the Destkop Client, the language of the user interface depends on the program settings and do not change when you connect to a server. Use the WebIssues Settings command (see below) to change these settings.</para>
+      <para>The <guilabel>Regional Options</guilabel> allow you to select the language for the Web Client (after logging into the system), and the language in which you will receive email notifications. In case of the Destkop Client, the language of the user interface depends on the program settings and do not change when you connect to a server. Use the WebIssues Settings command (see below) to change these settings.</para>
 
-      <para>You can also select your preferred time zone. This setting determines the time zone for dates displayed in the Web Client, and for e-mail notifications. However the Desktop Client always displays dates according to local time zone the computer on which it is running, and it does not take into account server settings or user preferences.</para>
+      <para>You can also select your preferred time zone. This setting determines the time zone for dates displayed in the Web Client, and for email notifications. However the Desktop Client always displays dates according to local time zone the computer on which it is running, and it does not take into account server settings or user preferences.</para>
 
       <figure>
         <title>Regional options</title>
@@ -490,7 +490,7 @@
         </mediaobject>
       </figure>
 
-      <para>The format in which numbers, dates and time are displayed, and the first day of the week in the calendar, depend on the current language of the user interface. You can change these settings using the <guilabel>Formats</guilabel> group of options. These changes will impact both the Web Client and the Desktop Client (after connecting to the specific server).</para>
+      <para>The format in which numbers, dates and times are displayed, and the first day of the week in the calendar, depend on the current language of the user interface. You can change these settings using the <guilabel>Formats</guilabel> group of options. These changes will impact both the Web Client and the Desktop Client (after connecting to the specific server).</para>
 
       <figure>
         <title>Formats</title>
@@ -508,7 +508,7 @@
         </mediaobject>
       </figure>
 
-      <para>If the administrator of the WebIssues system enabled e-mail notifications, you can also configure these notifications in the preferences window. For more information, see <xref linkend="webissues.track.alerts"/>.</para>
+      <para>If the administrator of the WebIssues system enabled email notifications, you can also configure these notifications in the preferences window. For more information, see <xref linkend="webissues.track.alerts"/>.</para>
 
       <para>The system administrator can not only change the global settings, but also the individual settings for any user. To do this, open the list of user accounts, select the user whose settings you want to change, and use the <guilabel>User Preferences</guilabel> command.</para>
 
@@ -530,17 +530,17 @@
 
       <para>The <guilabel>Regional Settings</guilabel> allow you to select the language of the user interface for the Desktop Client. By default, it depends on the operating system settings. After changing the language you must close and restart the program.</para>
 
-      <para>If you enable the <guilabel>Dock main window in system tray</guilabel> option, the program keeps running in the background even when you close the main window. You can always re-open this window by clicking on the icon in the system notifications area. To exit the program, instead of closing the window, click the <guibutton>Exit</guibutton> button, available in the upper right corner of the window when you enable this option.</para>
+      <para>If you enable the <guilabel>Dock main window in system tray</guilabel> option, the program keeps running in the background even when you close the main window. You can always re-open this window by clicking on the icon in the system notifications area. To exit the program, instead of closing the window, click the <guibutton>Quit</guibutton> button, available in the upper right corner of the window when you enable this option.</para>
 
       <para>The <guilabel>Startup Options</guilabel> allow you to specify the behavior of the program when it is started. If the main window is docked, you can specify whether it is always visible at startup, always hidden, or either visible or hidden depending on its state when the program was closed. You can also specify whether the program should automatically connect to the last used server, display the server selection window, or connect only if it was connected when closing.</para>
 
       <para>In case of the Windows system, you can also specify whether the Desktop Client should be automatically run whenever you log into the system. This allows you to configure the program to be always running, connected to the server and instantly available.</para>
 
-      <para>Use the <guilabel>Fonts</guilabel> options to change the font used in the comment editing window, and in the issue history view.</para>
+      <para>Use the <guilabel>Fonts</guilabel> options to change the fonts used in the comment editing window, and in the issue history view.</para>
 
       <para>If the <guilabel>Enable automatic checking for latest version</guilabel> option is active, the program will notify you if a newer version available. If you disable this option, you can still manually check if an update is available. To do this, open the window with information about the program. In the Web Client, click <guilabel>Tools</guilabel> and then <guilabel>About WebIssues</guilabel> if you are the system administrator. In the Desktop Client, click the question mark icon in the upper right corner of the window or press <shortcut><keycap>F1</keycap></shortcut>. Then click the <guibutton>Check Now</guibutton> button. If an update is available, you can open a page containing information about it, and also a page that allows you to download it.</para>
 
-      <para>The second tab allows you to change more advanced settings for the Desktop Client:</para>
+      <para>The second tab allows you to change more advanced settings of the Desktop Client:</para>
 
       <figure>
         <title>Advanced settings</title>
@@ -549,13 +549,13 @@
         </mediaobject>
       </figure>
 
-      <para>The<guilabel>Behavior</guilabel> group of options allows you to select the default action when you click on a link to an attachment. By default the program will ask whether you want to open it the default application, or save it in a selected location on the disk. You can also right-click on the link to quickly select the desired operation.</para>
+      <para>The <guilabel>Behavior</guilabel> group of options allows you to select the default action when you click on a link to an attachment. By default the program will ask whether you want to open it using the default application, or save it in a selected location on the disk. You can also right-click on the link to quickly select the desired operation.</para>
 
-      <para>The <guilabel>Update Intervals</guilabel> determine the intervals at which the program automatically retrieves data from the server (in minutes). The first interval determines how often the program updates the tree of projects and folders, an open list of issues and the state of active alerts. The second interval specifies how often it updates issue types, views and other data that do not change very often.</para>
+      <para>The <guilabel>Update Intervals</guilabel> determine the intervals at which the program automatically retrieves data from the server (in minutes). The first interval determines how often the program updates the tree of projects and folders, lists of issues and the state of active alerts. The second interval specifies how often it updates issue types, views and other data that do not change very often.</para>
 
       <para>The <guilabel>Cache Settings</guilabel> options allow you to specify the maximum number of issues for which the full history is remembered (separately for each server), and the maximum total size of locally stored attachments for all servers.</para>
 
-      <para>The <guilabel>Proxy Settings</guilabel> allow you to define the parameters of the proxy server, which the program will use to connect to the WebIssues system. On Windows and OS X it will automatically detect your system settings, so manual configuration is usually not necessary. However, in case of Linux, you must enter the connection parameters if you want to use a proxy. If the proxy requires authentication, you will be prompted for a user name and password when opening a connection.</para>
+      <para>The <guilabel>Proxy Settings</guilabel> allow you to define the parameters of the proxy server, which will be used to connect to the WebIssues system. On Windows and OS X it will automatically detect your system settings, so manual configuration is usually not necessary. However, in case of Linux, you must enter the connection parameters if you want to use a proxy. If the proxy requires authentication, you will be prompted for a username and password when opening a connection.</para>
 
     </sect2>
 

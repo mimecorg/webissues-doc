@@ -1,7 +1,7 @@
 <chapter id="webissues.track">
   <title>Tracking issues</title>
 
-  <para>This chapter presents mechanisms that facilitate cooperation of many users of the system WebIssues and effective communication in the team. Everyone who collaborates with other users of the system should read it.</para>
+  <para>This chapter presents mechanisms that facilitate the cooperation of multiple users of the WebIssues system and effective communication in the team. Everyone who collaborates with other users of the system should read it.</para>
 
   <sect1 id="webissues.track.unread">
     <title>Unread issues</title>
@@ -30,15 +30,15 @@
       </mediaobject>
     </figure>
 
-    <para>The same will happen with the third issue, if you select it. The WebIssues system automatically marks all issues that you open as read. It also remembers the time when you open them &mdash; so if there are new changes, comments, etc., since that time, it will be marked with a green envelope again.</para>
+    <para>The same will happen with the third issue, if you select it. The WebIssues system automatically marks all issues that you open as read. It also remembers the time when you open them &mdash; so if there are new changes, comments, etc., since that time, they will be marked with a green envelope again.</para>
 
-    <para>You can also manually mark the selected issue as read or unread, using the <guilabel>Mark As Read</guilabel> and <guilabel>Mark As Unread</guilabel> commands. If you manually mark an issue as read, it will also its state, once it's modified by another user.</para>
+    <para>You can also manually mark the selected issue as read or unread, using the <guilabel>Mark As Read</guilabel> and <guilabel>Mark As Unread</guilabel> commands. If you manually mark an issue as read, it will also change its state, once it's modified by another user.</para>
 
     <para>If you want to mark all issues in the current folder as read or unread, you can use the <guilabel>Mark All As Read</guilabel> and <guilabel>Mark As Unread</guilabel> commands. Remember that this will change the status all issues in the folder, not only those that are visible in the current view.</para>
 
     <note>
       <title>Note</title>
-      <para>Unlike email, the status of each issue is stored by the system regardless of which client application you are using and on which computer you run it.</para>
+      <para>Unlike email, the status of each issue is stored by the system, regardless of which client application you are using and on which computer you run it.</para>
     </note>
 
   </sect1>
@@ -48,7 +48,7 @@
 
     <para>Even if you are using views and automatic statuses of issues, it's not always visible at the first glance that there is a new or modified issue that requires your attention. Because of that, the WebIssues system has a mechanism of alerts, which are automatic notifications about unread issues that meet certain criteria.</para>
 
-    <para>You can create an alert using any public or private view, as well as the built-in <quote>All Issues</quote> view. Each alert is assigned to a specific folder.</para>
+    <para>You can create an alert using any public or personal view, as well as the built-in <quote>All Issues</quote> view. Each alert is assigned to a specific folder.</para>
 
     <para>Suppose you want to keep an eye on active bugs and tasks which are assigned to you. Open the Bugs folder and select <guilabel>Manage Alerts</guilabel>. The list of alerts is initially empty, so choose <guilabel>Add Alert</guilabel> to define a new alert for this folder.</para>
 
@@ -79,7 +79,7 @@
       </mediaobject>
     </figure>
 
-    <para>The program updates every minute the contents of all folders for which you've defined alerts, so you can track their status almost in real time. If in any of the views there are some unread issues, the icon of the alert will be changed, its name will become bold, and the number of new and modified issues will appear in parentheses:</para>
+    <para>The program periodically updates the contents of all folders for which you've defined alerts, so you can track their status almost in real time. If in any of the views there are some unread issues, the icon of the alert will be changed, its name will become bold, and the number of new and modified issues will appear in parentheses:</para>
 
     <figure>
       <title>Tree with active alerts</title>
@@ -158,7 +158,7 @@
 
     <para>Summary reports contain a list of all issues, regardless of whether they have been changed since the last notification, and whether they were read by you. They are useful if you want to track the status of all issues that meet specific criteria, for example, to check whether the active bugs are being solved continuously.</para>
 
-    <para>All email notifications include the name of the associated project, folder and alert in the header, and also the list of issues. The list contains the same columns as the view, which is associated with the alert.</para>
+    <para>All email notifications include the name of the associated project, folder and alert in the header, and also the list of issues. The list contains the same columns as the view which is associated with the alert.</para>
 
     <figure>
       <title>An email notification</title>

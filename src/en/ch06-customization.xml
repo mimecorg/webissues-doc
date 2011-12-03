@@ -8,7 +8,7 @@
 
     <para>By default, the installer of WebIssues system creates several predefined types of issues, which can be used to track bugs and tasks in a typical software project, and to create discussion forums. You can modify these built-in issue types, adapting them to your needs, and create entirely new types of issues.</para>
 
-    <para>To manage the issue types, go to the Administration Panel and click <guilabel>Issue Types</guilabel>. In case of the Desktop Client, use the <guilabel>Issue Types</guilabel> command from the main window toolbar. Below is the list of standard issue types:</para>
+    <para>To manage the issue types, go to the Administration Panel and click <guilabel>Issue Types</guilabel>. In case of the Desktop Client, use the <guilabel>Issue Types</guilabel> command from the main window's toolbar. Below is the list of standard issue types:</para>
 
     <figure>
       <title>Issue types</title>
@@ -19,7 +19,7 @@
 
     <para>For each issue type its attributes are displayed. For each attribute, its type is displayed, the default value for new issues, and also information whether the attribute is required and additional details that depend on its type.</para>
 
-    <para>Let's start by adding a new attribute to an existing issue type. We will add the possibility of entering the module name to which the reported bug is related. Select the Bugs issue type and click <guilabel>Add Attribute</guilabel>. Then enter the name of the new attribute.</para>
+    <para>Let's start by adding a new attribute to an existing issue type. We will add the possibility of entering the name of the module to which the reported bug is related. Select the Bugs issue type and click <guilabel>Add Attribute</guilabel>. Then enter the name of the new attribute.</para>
 
     <figure>
       <title>Adding an attribute</title>
@@ -28,7 +28,7 @@
       </mediaobject>
     </figure>
 
-    <para>By default, a new attribute has the <guilabel>Text</guilabel> type, which allows entering any text. Click <guibutton>Edit</guibutton> in the <guilabel>Attribute Details</guilabel> frame to change additional attribute settings that depend on its type.</para>
+    <para>By default, a new attribute has the <guilabel>Text</guilabel> type, which allows entering any text. Click <guibutton>Edit</guibutton> in the <guilabel>Attribute Details</guilabel> box to change additional attribute settings that depend on its type.</para>
 
     <figure>
       <title>Details of a text attribute</title>
@@ -37,7 +37,7 @@
       </mediaobject>
     </figure>
 
-    <para>In case of a text attribute, you can select <guilabel>Allow entering multiple lines of text</guilabel> to facilitate entering longer fragments of text which can be divided into lines. The field for editing attribute values ​​will then be bigger. You can specify the maximum length of the entered text to limit it to a specified number of characters. Remember, however, that the attribute value can never be longer than 255 characters. To enter longer fragments of text (for example, the description of the bug) it is better to use comments. In the same way, you can also specify a minimum length of the entered text.</para>
+    <para>In case of a text attribute, you can select <guilabel>Allow entering multiple lines of text</guilabel> to facilitate entering longer fragments of text, which can be divided into lines. The field for editing attribute values ​​will then become bigger. You can specify the maximum length of the entered text to limit it to a specified number of characters. Remember, however, that the attribute value can never be longer than 255 characters. To enter longer fragments of text (for example, the description of the bug) it's better to use comments. In the same way, you can also specify a minimum length of the entered text.</para>
 
     <para>If the list of modules, to which reported bugs are related, is known in advance, then a <guilabel>Dropdown list</guilabel> can be used instead of a text attribute. Select this type in the <guilabel>Attribute Type</guilabel> field and then click <guibutton>Edit</guibutton> to change the details of the attribute.</para>
 
@@ -48,11 +48,11 @@
       </mediaobject>
     </figure>
 
-    <para>You must provide a list of possible values ​​to select. To do this, enter each value, in this case the name of the module, in a separate line. By default it is only possible to select one of the defined values. However, if you select the <guilabel>Allow entering custom values​​</guilabel> option, then it will be possible to enter any value of the attribute when adding or editing an issue. This way, you can type the name of a module which was not included in the list. In this case, it is also possible to define the minimum and maximum length of text, like for text attributes.</para>
+    <para>You must provide a list of possible values ​​to select. To do this, enter each value, in this case the name of the module, in a separate line. By default, it's only possible to select one of the defined values. However, if you select the <guilabel>Allow entering custom values​​</guilabel> option, then it will be possible to enter any value of the attribute when adding or editing an issue. This way, you can type the name of a module which was not included in the list. In this case, it's also possible to define the minimum and maximum length of text, like in case of text attributes.</para>
 
-    <para>The <guilabel>Allow selecting multiple values​​</guilabel> option makes it possible to select more than one values, separated by commas. This is useful if the reported bugs may be associated with several modules at the same time. Both options can be combined, in that case it is possible to enter several values​​, not necessarily selected from the list. This mode of operation, for example, allows marking issues with <quote>tags</quote>, which can be predefined, but can also be entered from outside the list.</para>
+    <para>The <guilabel>Allow selecting multiple values​​</guilabel> option makes it possible to select multiple values, separated by commas. This is useful if the reported bugs may be associated with several modules at the same time. Both options can be combined; in that case it's possible to enter several values​​, and not necessarily selected from the list. This mode of operation, for example, allows marking issues with <quote>tags</quote>, which can be predefined, but can also be entered manually.</para>
 
-    <para>Another type of attribute is <guilabel>Numeric</guilabel>. Let's assume that you want to add to the Tasks issue type a Level of effort attribute whose value is expressed in hours. Select the <guilabel>Numeric</guilabel> type from the list of attribute types and click <guibutton>Edit</guibutton>.</para>
+    <para>Another type of attributes is <guilabel>Numeric</guilabel>. Let's assume that you want to extend the Tasks issue type with a Level of effort attribute whose value is expressed in hours. Select the <guilabel>Numeric</guilabel> type from the list of attribute types and click <guibutton>Edit</guibutton>.</para>
 
     <figure>
       <title>Details of a numeric attribute</title>
@@ -61,9 +61,9 @@
       </mediaobject>
     </figure>
 
-    <para>Numeric values can be integer or specified with a certain number of decimal places, not more than 6. You can also specify the minimum and maximum value of the attribute. For example, the Priority attribute of a task by default accepts values ​​from 1 to 3. You can also choose to <guilabel>Strip trailing decimal zeros</guilabel> to ignore the zeros after the decimal point, for example, the value <quote>12.50</quote> will then be displayed as <quote>12.5</quote>.</para>
+    <para>Numeric values can be either integer, or specified with a certain number of decimal places; at most 6. You can also specify the minimum and maximum value of the attribute. For example, the Priority attribute of a Task by default accepts values ​​from 1 to 3. You can also choose to <guilabel>Strip trailing decimal zeros</guilabel> to ignore the zeros after the decimal point; for example, the value <quote>12.50</quote> will then be displayed as <quote>12.5</quote>.</para>
 
-    <para>Attributes can also store a date or a date and time. For example, the Tasks issue type contains an Due Date attribute that stores the planned date of completion of the task. We can add a Finished attribute, storing the actual date of completion of the task. Select the <guilabel>Date &amp; time</guilabel> attribute type and click <guibutton>Edit</guibutton> to specify the details of the attribute.</para>
+    <para>Attributes can also store a date or a date and time. For example, the Tasks issue type contains a Due Date attribute that stores the anticipated date of completion of the task. We can add a Finished attribute, which will store the actual date of completion of the task. Select the <guilabel>Date &amp; time</guilabel> attribute type and click <guibutton>Edit</guibutton> to specify the details of the attribute.</para>
 
     <figure>
       <title>Details of a date &amp; time attribute</title>
@@ -72,9 +72,9 @@
       </mediaobject>
     </figure>
 
-    <para>The value of the attribute can be a date, for example <quote>9/5/2011</quote> or date and time with an accuracy of one minute, for example <quote>9/5/2011 6:34 pm</quote>. If you choose the <guilabel>Date and time without time zone conversion</guilabel> option, the time will always be the same, regardless of time zone. If you choose the <guilabel>Date and time using local time zone</guilabel>, the values are stored as GMT time, and when displayed the will be automatically converted to the local time zone. This option is useful if the server is used by people in different time zones. For more information about time zones, see <xref linkend="webissues.custom.locale"/>.</para>
+    <para>The value of the attribute can be a date, for example <quote>9/5/2011</quote>, or date and time with an accuracy of one minute, for example <quote>9/5/2011 6:34 pm</quote>. If you choose the <guilabel>Date and time without time zone conversion</guilabel> option, the time will always be the same, regardless of the time zone. If you choose the <guilabel>Date and time using local time zone</guilabel>, the values are stored as GMT time, and when displayed, they will be automatically converted to the local time zone. This option is useful if the server is used by people in different time zones. For more information about time zones, see <xref linkend="webissues.custom.locale"/>.</para>
 
-    <para>The last type of attribute is <guilabel>User</guilabel>. Both Bugs and Tasks include attributes named Assigned To, but you can create more attributes of this type. In case of a bug, for example, you can use separate attributes to indicate the person who reported, fixed and tested the bug.</para>
+    <para>The last type of attributes is <guilabel>User</guilabel>. Both Bugs and Tasks include attributes named Assigned To, but you can create more attributes of this type. In case of a bug, for example, you can use separate attributes to indicate the person who reported, fixed and tested the bug.</para>
 
     <figure>
       <title>Details of a user attribute</title>
@@ -83,13 +83,13 @@
       </mediaobject>
     </figure>
 
-    <para>Two options are available in the attribute settings. The <guilabel>Allow only members of the project</guilabel> option allows you to limit the list of users who may be assigned to an issue to those who are members of the project. This option is useful if the system has many projects and many users, and most users have access only to selected projects. The option to <guilabel>Allow selecting multiple values​​</guilabel> makes it possible to select more than one values, separated by commas, just like in case of the dropdown list.</para>
+    <para>Two options are available in the attribute settings. The <guilabel>Allow only members of the project</guilabel> option allows you to limit the list of users, who may be assigned to an issue, to those who are members of the project. This option is useful if the system has many projects and many users, and most users have access only to selected projects. The <guilabel>Allow selecting multiple values​​</guilabel> option makes it possible to select multiple values, separated by commas, just like in case of the dropdown list.</para>
 
     <para>Regardless of the type and detailed settings, each attribute has also some common settings. If you choose the <guilabel>Attribute is required</guilabel> option, the attribute must always have a certain value. Otherwise, you can leave an empty value when creating new issues, and also clear the value for an existing issue. Required attributes are marked with an asterisk when creating or editing an issue.</para>
 
-    <para>In the <guilabel>Default value</guilabel> field you can specify the value of the attribute for newly created issues. When creating an issues you can leave the default values ​​of individual attributes or modify them. If the attribute is required, and does not have a default value, the value must be provided when creating the issue. When specifying the default value, you can use similar special values​​, as in the case of filter definitions. The <quote>[Today]</quote> value is replaced with the current date when creating the issue (with the possibility of subtracting or adding a specified number of days), while the <quote>[Me]</quote> value is replaced with the name of the user who creates the issue.</para>
+    <para>In the <guilabel>Default value</guilabel> field you can specify the value of the attribute for newly created issues. When creating an issue, you can leave the default values ​​of individual attributes, or modify them. If the attribute is required, and does not have a default value, the value must be provided when creating the issue. When specifying the default value, you can use similar special values​​, as in case of filter definitions. The <quote>[Today]</quote> value is replaced with the current date when creating the issue (with the possibility of subtracting or adding a specified number of days), while the <quote>[Me]</quote> value is replaced with the name of the user who creates the issue.</para>
 
-    <para>At any time you can change the definitions of existing attributes. Let's assume that we want that the Assigned To attribute to be required and that bugs were assigned by default to the person who created them. Select the attribute and click <guilabel>Modify Attribute</guilabel>. Select the <guilabel>Attribute is required</guilabel> option, and in the <guilabel>Default Value</guilabel> field enter <quote>[Me]</quote>. Then click <guibutton>OK</guibutton> to confirm the changes.</para>
+    <para>At any time you can change the definition of existing attributes. Let's assume that we want the Assigned To attribute to be required, and that bugs were assigned by default to the person who created them. Select the attribute and click <guilabel>Modify Attribute</guilabel>. Select the <guilabel>Attribute is required</guilabel> option, and in the <guilabel>Default Value</guilabel> field enter <quote>[Me]</quote>. Then click <guibutton>OK</guibutton> to confirm the changes.</para>
 
     <figure>
       <title>Modifying attribute definition</title>
@@ -102,15 +102,15 @@
 
     <para>Now let's suppose that we want the Severity of a bug to be specified on a scale from 1 to 5, not from 1 to 3. Select the attribute and click <guilabel>Modify Attribute</guilabel>. Then click <guibutton>Edit</guibutton> to go to the details of the attribute. Change the <guilabel>Maximum value</guilabel> to 5 and click <guibutton>OK</guibutton>. Then change the default attribute value to 3 and click <guibutton>OK</guibutton> again to save the changes.</para>
 
-    <para>To a limited extent, you can also change the type of an existing attribute. For example, let's suppose that we want to define a list of choices for the Version attribute of Bugs issue type. Select the attribute and click <guilabel>Modify attribute</guilabel> and then from the <guilabel>Attribute type</guilabel> list select <guilabel>Dropdown List</guilabel>. Then click <guibutton>Edit</guibutton> to go to the attribute details and enter a list of values ​​to select. Also select the <guilabel>Allow entering own values​​</guilabel> option to allow entering values which are not in the list. Click <guibutton>OK</guibutton> twice to confirm the changes.</para>
+    <para>To a limited extent, you can also change the type of an existing attribute. For example, let's suppose that we want to define a list of choices for the Version attribute of Bugs issue type. Select the attribute and click <guilabel>Modify Attribute</guilabel>, and then from the <guilabel>Attribute Type</guilabel> list select <guilabel>Dropdown list</guilabel>. Then click <guibutton>Edit</guibutton> to go to the attribute details and enter a list of values ​​to select. Also select the <guilabel>Allow entering own values​​</guilabel> option to allow entering values which are not in the list. Click <guibutton>OK</guibutton> twice to confirm the changes.</para>
 
-    <para>The Text, Dropdown List and User attributes store the value as plain text, so they can be used interchangeably, and you can change one type to another. The Numeric and Date And Time attributes cannot be changed to another type.</para>
+    <para>The Text, Dropdown List and User attributes store the value as plain text, so they can be used interchangeably, and you can change one type to another. However, the Numeric and Date &amp; time attributes cannot be changed to another type.</para>
 
-    <para>To change the name of an attribute, use the <guilabel>Rename Attribute</guilabel> commands. Attribute names can be arbitrary, but must be unique within the issue type. You can also remove an existing attribute if it is no longer needed. To do this, select the attribute and click <guilabel>Delete Attribute</guilabel>.</para>
+    <para>To change the name of an attribute, use the <guilabel>Rename Attribute</guilabel> command. Attribute names can be arbitrary, but must be unique within the issue type. You can also remove an existing attribute if it is no longer needed. To do this, select the attribute and click <guilabel>Delete Attribute</guilabel>.</para>
 
     <warning>
       <title>Warning</title>
-      <para>When deleting attributes pay particular attention whether you do not unintentionally delete the wrong data. All current and historical values of the attribute ​​are permanently and irreversibly removed from the system and there is no possibility of restoring them.</para>
+      <para>When deleting attributes, pay particular attention whether you do not unintentionally delete the wrong data. All current and historical values of the attribute ​​are permanently and irreversibly removed from the system and it's not possibile to restore them.</para>
     </warning>
 
     <para>In addition to modifying predefined types issues, the WebIssues system also allows creating entirely new issue types. Let's suppose that we want to create a simple calendar with events related to different people. Click <guilabel>Add Type</guilabel> to create a new type of issues.</para>
@@ -122,7 +122,7 @@
       </mediaobject>
     </figure>
 
-    <para>Enter the name of the type and click <guibutton>OK</guibutton>. The new type has no attributes, so select it and click <guilabel>Add Attribute</guilabel>. Create an attribute named <quote>Person</quote> and select the User type. Mark the attribute as required and enter <quote>[Me]</quote> as the default value. Then add another attribute named <quote>Date</quote>, with the Date And Time type, setting its default value to <quote>[Today]</quote>. The tree of issue types, after folding default types, will look like this:</para>
+    <para>Enter the name of the type and click <guibutton>OK</guibutton>. The new type has no attributes yet, so select it and click <guilabel>Add Attribute</guilabel>. Create an attribute named <quote>Person</quote> and select the User type. Mark the attribute as required and enter <quote>[Me]</quote> as the default value. Then add another attribute named <quote>Date</quote>, with the Date &amp; time type, setting its default value to <quote>[Today]</quote>. The tree issue types, after collapsing default types, will look like this:</para>
 
     <figure>
       <title>Issue types with the new type</title>
@@ -133,11 +133,11 @@
 
     <para>To be able to create issues of the new type, you must also create a folder that uses this type. You can also change the order of attributes and the default view and public views for this type. For more information, refer to <xref linkend="webissues.custom.views"/>.</para>
 
-    <para>To change the name of an issue type, use the <guilabel>Rename Type</guilabel> command. You can also remove the type issues using the <guilabel>Delete Type</guilabel> command. If there are some folders of this type in the system, a warning will be displayed.</para>
+    <para>To change the name of an issue type, use the <guilabel>Rename Type</guilabel> command. You can also remove the type of issues using the <guilabel>Delete Type</guilabel> command. If there are some folders of this type in the system, a warning will be displayed.</para>
 
     <warning>
       <title>Warning</title>
-      <para>When deleting issue types pay particular attention whether you do not unintentionally delete the wrong data. All folders and issues of this type ​​are permanently and irreversibly removed from the system and there is no possibility of restoring them.</para>
+      <para>When deleting issue types, pay particular attention whether you do not unintentionally delete the wrong data. All folders and issues of this type ​​are permanently and irreversibly removed from the system and it's not possibile to restore them.</para>
     </warning>
 
   </sect1>
@@ -145,9 +145,9 @@
   <sect1 id="webissues.custom.views">
     <title>View settings</title>
 
-    <para>For each type issues you can define the order of attributes, the default view and any number of public views, available to all users. By default, the WebIssues system installer creates predefined view settings for standard types of issues. You can change those settings for both standard and custom issue types.</para>
+    <para>For each type of issues you can define the order of attributes, the default view and any number of public views, which are available to all users. By default, the WebIssues system installer creates predefined view settings for standard types of issues. You can change those settings for both standard and custom issue types.</para>
 
-    <para>Let's start with changing the view settings of the standard Bugs issue type. Go to Administration Panel and click <guilabel>Issue Types</guilabel>, then select the Bugs type and click <guilabel>View Settings</guilabel>. In case of the Desktop Client, use the <guilabel>Issue Types</guilabel> command from the main window toolbar to open the list of issue types. The default view settings for this issue type are as follows:</para>
+    <para>Let's start with changing the view settings of the standard Bugs issue type. Go to Administration Panel and click <guilabel>Issue Types</guilabel>, then select the Bugs type and click <guilabel>View Settings</guilabel>. In case of the Desktop Client, use the <guilabel>Issue Types</guilabel> command from the main window's toolbar to open the list of issue types. The default view settings for this issue type are as follows:</para>
 
     <figure>
       <title>View settings</title>
@@ -156,7 +156,7 @@
       </mediaobject>
     </figure>
 
-    <para>You can change the order of attributes that will be taken into account both when displaying the details of issues and when creating and editing issues of that type. Click <guilabel>Modify</guilabel> to change the default order:</para>
+    <para>You can change the order of attributes, that will be taken into account both when displaying the details of issues, and when creating and editing issues of that type. Click <guilabel>Modify</guilabel> to change the default order:</para>
 
     <figure>
       <title>Order of attributes</title>
@@ -165,11 +165,11 @@
       </mediaobject>
     </figure>
 
-    <para>Let's assume that we want the Assigned To attribute to appear after the Status and Reason attributes. Change the value indicating the order of this attribute from 1 to 3, to move it to third position. Then click <guibutton>Update</guibutton> to see how the new order of attributes will look like. Attributes Status and Reason will be automatically move to positions 1 and 2. Click <guibutton>OK</guibutton> to save the new order of attributes.</para>
+    <para>Let's assume that we want the Assigned To attribute to appear after the Status and Reason attributes. Change the value indicating the order of this attribute from 1 to 3, to move it to third position. Then click <guibutton>Update</guibutton> to see how the new order of attributes will look like. The Status and Reason attributes will be automatically moved to positions 1 and 2. Click <guibutton>OK</guibutton> to save the new order of attributes.</para>
 
-    <para>If you add new attributes to an issue type, they will be added to the end of the list of attributes whose sequence was previously defined. New attributes are by default sorted in alphabetical order.</para>
+    <para>If you add new attributes to an issue type, they will be added to the end of the list of those attributes, whose sequence was previously defined. New attributes are by default sorted in alphabetical order.</para>
 
-    <para>The default view specifies the displayed columns and the default sort order for folders of that type. So this is simply the <quote>All Issues</quote> view, which exists for each issue types and has no filter conditions. Also all new public and private views are based on this view. Click <guilabel>Modify</guilabel> in the <guilabel>Default View</guilabel> frame to change this view:</para>
+    <para>The default view specifies the displayed columns and the default sort order for folders of that type. So this is simply the <quote>All Issues</quote> view, which exists for each issue type and has no filter conditions. Also all new public and personal views are based on this view. Click <guilabel>Modify</guilabel> in the <guilabel>Default View</guilabel> box to change this view:</para>
 
     <figure>
       <title>Default view</title>
@@ -178,13 +178,13 @@
       </mediaobject>
     </figure>
 
-    <para>Changing the settings of the view works the same as creating private views, as described in <xref linkend="webissues.work.views"/>. So you can unselect the columns you want to remove and select the columns you want to add, and change the values defining the order of columns. For example, to add the Reason column to the default view, select the column and set its order to 7 to display it after the Status column. Click <guibutton>Update</guibutton> to see the new order of columns. You can also change the default sort order of issues. Finally, click <guibutton>OK</guibutton> to save your view.</para>
+    <para>Changing the settings of the view works the same as creating personal views, as described in <xref linkend="webissues.work.views"/>. So you can unselect the columns you want to remove and select the columns you want to add, and change the values defining their order. For example, to add the Reason column to the default view, select the column and set its order to 7, to place it after the Status column. Click <guibutton>Update</guibutton> to see the new order of columns. You can also change the default sort order of issues. Finally, click <guibutton>OK</guibutton> to save your view.</para>
 
-    <para>Just like each user can define any number of private views for each issue type, the administrator of WebIssues system can define public views for each type. Everyone can use public views, but only the administrator has the right to create and modify them.</para>
+    <para>Just like each user can define any number of personal views for each issue type, the administrator of WebIssues system can define public views for each type. Everyone can use public views, but only the administrator has the right to create and modify them.</para>
 
-    <para>For standard issue types, Bugs and Tasks, there are several default public views, for example, Active Bugs and Created By Me. You can change these standard views and create new ones. The Forum issue type has no views, because it has no attributes, but you can define views using the built-in columns. For example, you can create the Created By Me view, analogous to the one that exists for Bugs and Tasks. However, you cannot define the order of attributes, unless you add some attributes to this type.</para>
+    <para>For standard issue types, Bugs and Tasks, there are several default public views; for example, Active Bugs and Created By Me. You can change these standard views and create new ones. The Forum issue type has no views, because it has no attributes, but you can define views using the built-in columns. For example, you can create the Created By Me view, analogous to the one that exists for Bugs and Tasks. However, you cannot define the order of attributes, unless you add some attributes to this type.</para>
 
-    <para>Now let's create a new view called <quote>Critical Bugs</quote>, similar to the private view with the same name, which we created in <xref linkend="webissues.work.views"/>. Click <guilabel>Add Public View</guilabel> to create a new view. Unselect the Severity column and select the Created By and Created Date columns. To move Assigned To and Status columns to the end, set the values ​​that determine their order to 10 and 11</para>
+    <para>Now let's create a new view called <quote>Critical Bugs</quote>, similar to the personal view with the same name, which we created in <xref linkend="webissues.work.views"/>. Click <guilabel>Add Public View</guilabel> to create a new view. Unselect the Severity column and select the Created By and Created Date columns. To move Assigned To and Status columns to the end, set the values ​​that determine their order to 10 and 11</para>
 
     <figure>
       <title>Editing view columns</title>
@@ -193,7 +193,7 @@
       </mediaobject>
     </figure>
 
-    <para>Click <guibutton>Update</guibutton> to see how the new column layout of the view will look. Leave the default sort order and go to editing the filters. Enable the filter for the Severity column and type 1 as a parameter of the condition:</para>
+    <para>Click <guibutton>Update</guibutton> to see how the new column layout of the view will look. Leave the default sort order and proceed to editing the filters. Enable the filter for the Severity column and type 1 as the parameter of the condition:</para>
 
     <figure>
       <title>Editing the filter</title>
@@ -202,13 +202,13 @@
       </mediaobject>
     </figure>
 
-    <para>Click <guibutton>OK</guibutton> to save changed. From now on, the new view is available to all users of the system.</para>
+    <para>Click <guibutton>OK</guibutton> to save changes. From now on, the new view is available to all users of the system.</para>
 
-    <para>Instead of creating a new public view, which is the same as an existing private view, you can simply publish the private view, to make it available to everyone. Open any folder of type Bugs and click <guilabel>Manage Views</guilabel> to view the list of private views. Then select the view you want to publish, and click <guilabel>Publish View</guilabel>. The view will disappear from the list of private views and will be moved to the list of public views. In the same way you can change a public view into a private view. To do this, select it from the list of public views and click <guilabel>Unpublish View</guilabel>.</para>
+    <para>Instead of creating a new public view, which is identical to an already existing personal view, you can simply publish the personal view, to make it available to everyone. Open any folder of type Bugs and click <guilabel>Manage Views</guilabel> to view the list of personal views. Then select the view you want to publish, and click <guilabel>Publish View</guilabel>. The view will disappear from the list of personal views and will be moved to the list of public views. In the same way you can change a public view into a personal view. To do this, select it from the list of public views and click <guilabel>Unpublish View</guilabel>.</para>
 
     <para>To change the definition of an existing view, choose it from the list and click <guilabel>Change View</guilabel>. To rename a view, use the <guilabel>Rename View</guilabel> command. You can also delete an existing view, if it is no longer needed. To do this, select the view and click <guilabel>Delete View</guilabel>. Remember that this will remove all alerts based on this view.</para>
 
-    <para>You can also create a new public view based on an existing view. To do this, use the <guilabel>Clone View</guilabel> command. By default the column settings and filtering criteria of the cloned view will be displayed. Modify them and click <guibutton>OK</guibutton> to create a new public view. If you want to create a private view based on an existing public view, you can use a similar function available in the main window (see <xref linkend="webissues.work.views"/>).</para>
+    <para>You can also create a new public view based on an existing view. To do this, use the <guilabel>Clone View</guilabel> command. By default the column settings and filtering criteria of the cloned view will be displayed. Modify them and click <guibutton>OK</guibutton> to create a new public view. If you want to create a personal view based on an existing public view, you can use a similar function available in the main window (see <xref linkend="webissues.work.views"/>).</para>
 
   </sect1>
 
@@ -226,9 +226,7 @@
 
     <para>Changing the system language will affect all users (unless they have chosen their own preferred language) and also the language of new messages in the Event Log of the WebIssues system. Names of existing issue types, attributes and other data, and existing messages in the Event Log will remain unchanged.</para>
 
-    <para>Each user can choose their own preferred language. To do this, click <guilabel>Tools</guilabel> and then <guilabel>User Preferences</guilabel> (for the Desktop Client, the <guilabel>User Preferences</guilabel> command is available directly from the toolbar of the main window). This setting determines the language of the Web Client (after logging into the system), and also the language of e-mail notifications sent to the given user.</para>
-
-    <para>In case of the Destkop Client, the language of the user interface depends on the settings of the program and does not change after you log into the server. Use the <guilabel>WebIssues settings</guilabel> command, available as an icon in the upper right corner of the window, to change these settings. After changing the language you need to close and restart the program.</para>
+    <para>Each user can choose their own preferred language. In case of the Destkop Client, the language of the user interface depends on the settings of the program and does not change after you log into the server. Read <xref linkend="webissues.work.personal"/> for more information.</para>
 
     <note>
       <title>Note</title>
@@ -237,11 +235,11 @@
 
     <para>By default the WebIssues system uses the local time zone of the server on which it is installed. The system administrator can change the default time zone through the <guilabel>Server Settings</guilabel> command in the Administration Panel. This change will affect all users (unless they they chose their own time zone). Displayed dates are automatically recalculated according to the selected time zone.</para>
 
-    <para>Each user can select their own preferred time zone using the <guilabel>User Preferences</guilabel> command. This setting determines the time zone for dates displayed in the Web Client, and also for mail notifications. However Desktop Client always displays dates according to the local time zone of the computer it is running on, and it does not take into account server settings or user preferences.</para>
+    <para>The time zone setting determines the time zone for dates displayed in the Web Client, and also for mail notifications. However, the Desktop Client always displays dates according to the local time zone of the computer on which it's running, and it does not take into account server settings or user preferences.</para>
 
     <note>
       <title>Note</title>
-      <para>Depending on the settings, the date and time attributes can be automatically recalculated according to the current time zone, or displayed without time zone conversions. The no conversion option is left mainly for compatibility with version 0.8 of the server, but when users of the system are located in different time zones, it is recommended to use the option of automatically adjusting the time to the local time zone.</para>
+      <para>Depending on the settings, the date and time attributes can be automatically recalculated according to the current time zone, or displayed without time zone conversions (see <xref linkend="webissues.custom.types"/>). The no conversion option is left mainly for compatibility with version 0.8 of the server, but when users of the system are located in different time zones, it's recommended to use the option of automatically adjusting the time to the local time zone.</para>
     </note>
 
     <para>The format in which numbers, date and time are displayed, and the first day of the week in the calendar, depend on the current language of the user interface. The system administrator can customize these settings for all users using the <guilabel>Server Settings</guilabel> command in the Administration Panel. Each user can choose their own settings using the <guilabel>User Preferences</guilabel> command.</para>
@@ -262,7 +260,7 @@
 
     <para>The <guilabel>Regional Options</guilabel> and <guilabel>Formats</guilabel> groups of options are described in <xref linkend="webissues.custom.locale"/>.</para>
 
-    <para>The <guilabel>Page Size</guilabel> groups of options allows you to specify the default number of issues displayed on a single page in the list of issues and the default number of elements per page in the issue history. Each user can choose their own preferred settings using the <guilabel>User Preferences</guilabel> command. These options only affect the Web Client, because the Desktop Client always displays all issues and complete history without pagination.</para>
+    <para>The <guilabel>Page Size</guilabel> groups of options allows you to specify the default number of issues displayed on a single page in the list of issues, and the default number of elements per page in the issue history. Each user can choose their own preferred settings using the <guilabel>User Preferences</guilabel> command. These options only affect the Web Client, because the Desktop Client always displays all issues and complete history without pagination.</para>
 
     <figure>
       <title>Page Size</title>
@@ -285,7 +283,7 @@
       <para>The maximum size of the attachment that can be sent to the system also depends on appropriate configuration of the web server and PHP. For more information, please visit <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
     </note>
 
-    <para>By default, small attachments are stored in the database, and large directly in the filesystem. Depending on your needs, you can change the threshold value or force storing all attachments only in the database or file system. The maximum size of attachments stored in the database can be specified in the <guilabel>Attachment Storage</guilabel> group.</para>
+    <para>By default, small attachments are stored in the database, and large ones directly in the filesystem. Depending on your needs, you can change the threshold value or force storing all attachments only in the database or file system. The maximum size of attachments stored in the database can be specified in the <guilabel>Attachment Storage</guilabel> group.</para>
 
     <figure>
       <title>Attachment Storage</title>
@@ -296,10 +294,10 @@
 
     <note>
       <title>Note</title>
-      <para>Storing large attachments in the database may require an appropriate configuration of the database server, and can be less optimal compared to the file system. In addition many hosting services significantly limit the maximum size of the database, while offering plenty of available disk space. On the other hand, storing attachments only in the database makes it easier to backup the system, since there is no need to backup additional files. In some cases it may also be safer.</para>
+      <para>Storing large attachments in the database may require appropriate configuration of the database server, and can be less optimal compared to the file system. In addition, many hosting services significantly limit the maximum size of the database, while offering plenty of available disk space. On the other hand, storing attachments only in the database makes it easier to backup the system, since there is no need to backup additional files. In some cases it may also be safer.</para>
     </note>
 
-    <para>Options from the <guilabel>Maximum Lifetime</guilabel> group allow you to define the time after which inactive user sessions are removed, and the maximum time the entries in the Event Log are stored by the system. The <guilabel>Garbage Collection</guilabel> setting determines the probability of running the process which removes inactive sessions and old entries in the Event Log. Reduce the probability if the server is heavily loaded, or select <quote>Use cron job</quote> if the mechanism of sending email notifications is active (see <xref linkend="webissues.prep.nofitications.cron"/>).</para>
+    <para>Options from the <guilabel>Maximum Lifetime</guilabel> group allow you to define the time after which inactive user sessions are removed, and the maximum amount of time the entries in the Event Log are stored by the system. The <guilabel>Garbage Collection</guilabel> setting determines the probability of running the clean up process, which removes inactive sessions and old entries in the Event Log. Reduce the probability if the server is heavily loaded, or select <quote>Use cron job</quote> if the mechanism of sending email notifications is active (see <xref linkend="webissues.prep.nofitications.cron"/>).</para>
 
     <figure>
       <title>Maximum Lifetime &amp; Garbage Collection</title>
