@@ -23,6 +23,10 @@
 
 <xsl:param name="body.font.master">9</xsl:param>
 
+<xsl:attribute-set name="toc.line.properties">
+  <xsl:attribute name="line-height">1.3</xsl:attribute>
+</xsl:attribute-set>
+
 <xsl:attribute-set name="component.title.properties">
   <xsl:attribute name="font-size">16pt</xsl:attribute>
 </xsl:attribute-set>

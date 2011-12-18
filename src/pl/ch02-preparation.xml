@@ -36,17 +36,17 @@
       </listitem>
     </itemizedlist>
 
-    <para>Aby zainstalować system, musisz utworzyć bazę danych na jednym z powyższych serwerów oraz konto użytkownika posiadające uprawnienia wystarczającymi do tworzenia tabel i indeksów w tej bazie danych.</para>
+    <para>Aby zainstalować system, musisz utworzyć bazę danych na jednym z powyższych serwerów oraz konto użytkownika posiadające uprawnienia wystarczające do tworzenia tabel i indeksów w tej bazie danych.</para>
 
     <para>W przypadku bazy MySQL wymagana jest obsługa silnika InnoDB. Baza danych PostgreSQL powinna być utworzona z kodowaniem znaków w standardzie Unicode. Pamiętaj także, że bazy SQL Server możesz użyć tylko, jeśli serwer WebIssues jest zainstalowany na komputerze z systemem Windows.</para>
 
-    <para>Serwer WebIssues wymaga również PHP w wersji 5.2.1 lub nowszej, zintegrowanego z serwerem WWW. W przypadku serwera IIS, dla uzyskanie najlepszej wydajności zalecane jest użycie modułu <literal>fastcgi</literal> oraz rozszerzenia <literal>wincache</literal>. PHP musi mieć zainstalowane rozszerzenie <literal>mbstring</literal>, a jeśli korzystasz z bazy danych MySQL lub PostrgreSQL, również odpowiednio rozszerzenie <literal>mysqli</literal> lub <literal>pgsql</literal>.</para>
+    <para>Serwer WebIssues wymaga również PHP w wersji 5.2.1 lub nowszej, zintegrowanego z serwerem WWW. W przypadku serwera IIS, dla uzyskania najlepszej wydajności zalecane jest użycie modułu <literal>fastcgi</literal> oraz rozszerzenia <literal>wincache</literal>. PHP musi mieć zainstalowane rozszerzenie <literal>mbstring</literal>, a jeśli korzystasz z bazy danych MySQL lub PostrgreSQL, również odpowiednio rozszerzenie <literal>mysqli</literal> lub <literal>pgsql</literal>.</para>
 
     <para>Jeśli instalujesz serwer WebIssues korzystając z zewnętrznej usługi hostingowej, upewnij się, że spełnia ona wszystkie powyższe wymagania. Aby utworzyć bazę danych i skonfigurować serwer WWW, skorzystaj z narzędzi dostarczonych przez dostawcę usług hostingowych i zapoznaj się z dostępną dokumentacją.</para>
 
     <warning>
       <title>Uwaga</title>
-      <para>Niektóre usługi hostingowe mogą mieć specyficzną konfigurację lub inne ograniczenia utrudniające lub nawet uniemożliwiające poprawne zainstalowanie serwera WebIssues. Mogą one na przykład ograniczać ilość dostępnej pamięci, rozmiar bazy danych, albo wielkość przesyłanych do serwera plików.</para>
+      <para>Niektóre usługi hostingowe mogą mieć specyficzną konfigurację lub inne ograniczenia utrudniające lub nawet uniemożliwiające poprawne zainstalowanie serwera WebIssues. Mogą one na przykład ograniczać ilość dostępnej pamięci, rozmiar bazy danych albo wielkość przesyłanych do serwera plików.</para>
     </warning>
 
     <para>Przed zainstalowaniem serwera WebIssues na własnym komputerze (dla celów prywatnych lub testowych) lub komputerze należącym do twojej firmy bądź organizacji, zainstaluj i skonfiguruj niezbędne komponenty, a następnie utwórz bazę danych, korzystając z odpowiednich narzędzi administracyjnych. Zapoznaj się z dokumentacją tych narzędzi, aby uzyskać więcej informacji na ich temat. Więcej informacji temat tworzenia bazy danych i konfigurowania serwera WWW znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
@@ -66,16 +66,16 @@
       <note>
         <title>Notatka</title>
         <para>Istnieje możliwość zainstalowania serwera WebIssues wraz z innymi stronami i aplikacjami WWW działającymi na tym samym komputerze. Możesz zainstalować serwer w podkatalogu umieszczonym w katalogu głównym serwera WWW, a także na wirtualnym hoście lub w wirtualnym katalogu. Zapoznaj się z dokumentacją twojego serwera WWW lub usługi hostingowej, aby uzyskać więcej informacji na ten temat.</para>
-        <para>Możesz także utworzyć wiele odrębnych instancji serwera WebIssues w ramach jednej instalacji. Poszczególne instancje mogą być dostępne poprzez różne nazwy domen lub subdomen, albo w różnych wirtualnych podkatalogach. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
+        <para>Możesz także utworzyć wiele odrębnych instancji serwera WebIssues w ramach jednej instalacji. Poszczególne instancje mogą być dostępne poprzez różne nazwy domen lub subdomen albo w różnych wirtualnych podkatalogach. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
       </note>
 
-      <para>Następnie nadaj prawo zapisu do podkatalogu <filename>data/sites</filename> wszystkim użytkownikom lub użytkownikowi, w kontekście którego działa usługa WWW. Skorzystaj w tym celu z menedżera plików lub klienta FTP, albo uruchom polecenie <literal>chmod</literal> z linii poleceń. W katalogu tym, podczas instalacji, zostanie utworzony plik konfiguracyjny. Będą w nim również przechowywane dołączone do spraw załączniki.</para>
+      <para>Następnie nadaj prawo zapisu do podkatalogu <filename>data/sites</filename> wszystkim użytkownikom lub użytkownikowi, w kontekście którego działa usługa WWW. Skorzystaj w tym celu z menedżera plików lub klienta FTP albo uruchom polecenie <literal>chmod</literal> z linii poleceń. W katalogu tym, podczas instalacji, zostanie utworzony plik konfiguracyjny. Będą w nim również przechowywane dołączone do spraw załączniki.</para>
 
       <warning>
         <title>Uwaga</title>
         <para>Upewnij się, że katalogi <filename>data</filename> oraz <filename>common/data</filename> są zabezpieczone przed niepowołanym dostępem przez przeglądarkę internetową. W przeciwnym wypadku nieuprawnione do tego osoby będą mogły np. pobierać przechowywane w systemie załączniki. Jeśli korzystasz z serwera Apache, możesz w tym celu wykorzystać załączone w pakiecie pliki <filename>.htaccess</filename>. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
-        <para>Po zakończeniu instalacji, upewnij się również, że plik konfiguracyjny systemu WebIssues jest chroniony przed niepowołanym dostępem, ponieważ zawiera on między innymi login i hasło do bazy danych. Jest to szczególnie istotne w przypadku korzystania z publicznych usług hostingowych.</para>
-        <para>Dla zapewnienia największego bezpieczeństwa, zaleca się, aby pliki konfiguracyjne i załączniki nie były przechowywane w katalogu <filename>data</filename>, ale w innej lokalizacji położonej poza katalogiem głównym serwera WWW. Więcej informacji na temat zmiany lokalizacji katalogu zawierającego te pliki znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
+        <para>Po zakończeniu instalacji upewnij się również, że plik konfiguracyjny systemu WebIssues jest chroniony przed niepowołanym dostępem, ponieważ zawiera on między innymi login i hasło do bazy danych. Jest to szczególnie istotne w przypadku korzystania z publicznych usług hostingowych.</para>
+        <para>Dla zapewnienia największego bezpieczeństwa zaleca się, aby pliki konfiguracyjne i załączniki nie były przechowywane w katalogu <filename>data</filename>, ale w innej lokalizacji położonej poza katalogiem głównym serwera WWW. Więcej informacji na temat zmiany lokalizacji katalogu zawierającego te pliki znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
       </warning>
 
     </sect2>
@@ -128,9 +128,9 @@
 
       <note>
         <title>Notatka</title>
-        <para>Istnieje możliwość zaimportowania danych z serwera WebIssues w wersji 0.8.5 do nowej wersji systemu. Nowy serwer musi być zainstalowany w tej samej bazie danych, co jego poprzednia wersja. Musisz więc użyć innego prefiksu dla nazw nowych tabel niż ten, który był użyty w wersji 0.8.5. Wybierz opcję <guilabel>Importuj dane z serwera WebIssues 0.8.5</guilabel> i opcjonalnie wprowadź prefiks dla tabel źródłowych.</para>
+        <para>Istnieje możliwość zaimportowania danych z serwera WebIssues w wersji 0.8.5 do nowej wersji systemu. Nowy serwer musi być zainstalowany w tej samej bazie danych co jego poprzednia wersja. Musisz więc użyć innego prefiksu dla nazw nowych tabel niż ten, który był użyty w wersji 0.8.5. Wybierz opcję <guilabel>Importuj dane z serwera WebIssues 0.8.5</guilabel> i opcjonalnie wprowadź prefiks dla tabel źródłowych.</para>
         <para>Podczas instalacji nowego serwera wszystkie dane przechowywane w bazie danych zostaną skopiowane, ale tabele źródłowe nie zostaną zmodyfikowane ani usunięte. Jeśli zatem proces importu się nie powiedzie, możesz poprawić ewentualne błędy i ponowić instalację nowej wersji. Jeśli załączniki były przechowywane w systemie plików, musisz je także skopiować ze starej wersji do odpowiedniego katalogu w nowej wersji serwera. Instalator nie zrobi tego automatycznie.</para>
-        <para>Jeśli w wersji 0.8.5 systemu używałeś starszej wersji bazy danych, niż jest obecnie wymagana, przed rozpoczęciem instalacji musisz najpierw zaktualizować bazę danych do nowszej wersji. Po zaktualizowaniu bazy MySQL z wersji starszej niż 4.1, musisz także skonwertować kolumny typu tekstowego na binarne, a następnie na tekstowe z kodowaniem <literal>utf8</literal>, aby zachować poprawne kodowanie tekstu. Przeczytaj <ulink url="http://dev.mysql.com/doc/refman/4.1/en/charset-conversion.html"/> aby uzyskać informacje na temat konwersji kolumn.</para>
+        <para>Jeśli w wersji 0.8.5 systemu używałeś starszej wersji bazy danych niż jest obecnie wymagana, przed rozpoczęciem instalacji musisz najpierw zaktualizować bazę danych do nowszej wersji. Po zaktualizowaniu bazy MySQL z wersji starszej niż 4.1, musisz także skonwertować kolumny typu tekstowego na binarne, a następnie na tekstowe z kodowaniem <literal>utf8</literal>, aby zachować poprawne kodowanie tekstu. Przeczytaj <ulink url="http://dev.mysql.com/doc/refman/4.1/en/charset-conversion.html"/> aby uzyskać informacje na temat konwersji kolumn.</para>
       </note>
 
       <para>Przejdź do kolejnej strony, która zawiera krótkie podsumowanie czynności, które zostaną wykonane. Kliknij przycisk <guibutton>Instaluj</guibutton>, aby rozpocząć instalację. Może to potrwać kilka sekund, a w przypadku importu istniejących danych nieco dłużej. Jeśli instalacja zakończy się sukcesem, zostanie wyświetlony odpowiedni komunikat.</para>
@@ -156,7 +156,7 @@
 
       <para>Zacznijmy od stworzenia kont użytkowników. Kliknij odnośnik <guilabel>Panel administracyjny</guilabel> w prawym górnym rogu okna, a następnie wybierz opcję <guilabel>Konta użytkowników</guilabel>. Powinieneś zobaczyć jednego użytkownika o nazwie Administrator, którego utworzył instalator.</para>
 
-      <para>Utwórz swoje osobiste konto, żebyś nie musiał się logować jako administrator. W tym celu kliknij <guilabel>Dodaj użytkownika</guilabel>, a następnie podaj swoje imię i nazwisko oraz login i hasło, których będziesz użytkował do logowania się do systemu. Następnie naciśnij <guibutton>OK</guibutton>.</para>
+      <para>Utwórz swoje osobiste konto, żebyś nie musiał się logować jako administrator. W tym celu kliknij <guilabel>Dodaj użytkownika</guilabel>, a następnie podaj swoje imię i nazwisko oraz login i hasło, których będziesz używał do logowania się do systemu. Następnie naciśnij <guibutton>OK</guibutton>.</para>
 
       <figure>
         <title>Tworzenie konta użytkownika</title>
@@ -272,7 +272,7 @@
         <para>Więcej informacji na temat konfigurowania standardowego mechanizmu wysyłania e-maili wbudowanego w PHP znajdziesz na stronie <ulink url="http://php.net/manual/en/mail.configuration.php"/>.</para>
       </note>
 
-      <para>Istnieje również możliwość wysyłania e-maili za pośrednictwem zewnętrznego serwera SMTP. Możesz w tym celu wykorzystać serwer pocztowy twojej firmy lub organizacji, albo dowolną publiczną usługę pocztową (np. gmail). Wybierz opcję <guilabel>Własny serwer SMTP</guilabel> i wpisz adres nadawcy wiadomości. Następnie w ramce <guilabel>Serwer SMTP</guilabel> wpisz adres serwera i numer portu usługi pocztowej (zwykle 25 lub 465 dla połączeń szyfrowanych). Wybierz tryb szyfrowania, jeśli serwer SMTP obsługuje szyfrowanie komunikacji. Podaj także nazwę użytkownika i hasło dostępu do serwera SMTP.</para>
+      <para>Istnieje również możliwość wysyłania e-maili za pośrednictwem zewnętrznego serwera SMTP. Możesz w tym celu wykorzystać serwer pocztowy twojej firmy lub organizacji albo dowolną publiczną usługę pocztową (np. gmail). Wybierz opcję <guilabel>Własny serwer SMTP</guilabel> i wpisz adres nadawcy wiadomości. Następnie w ramce <guilabel>Serwer SMTP</guilabel> wpisz adres serwera i numer portu usługi pocztowej (zwykle 25 lub 465 dla połączeń szyfrowanych). Wybierz tryb szyfrowania, jeśli serwer SMTP obsługuje szyfrowanie komunikacji. Podaj także nazwę użytkownika i hasło dostępu do serwera SMTP.</para>
 
       <para>Kliknij <guibutton>Testuj połączenie</guibutton> aby sprawdzić, czy konfiguracja SMTP jest poprawna. System WebIssues wyśle testową wiadomość na swój własny adres. Jeśli ją otrzymasz, oznacza to, że konfiguracja jest poprawna. Nie zapomnij również zapisać konfigurację klikając <guibutton>OK</guibutton>.</para>
 
@@ -283,7 +283,7 @@
 
       <para>Drugim krokiem jest skonfigurowanie cyklicznego zadania, które będzie wysyłać powiadomienia. Zadanie to powinno być wykonywane przynajmniej raz na godzinę, ale żeby szybciej otrzymywać powiadomienia natychmiastowe, zaleca się, żeby zadanie to było wykonywane w odstępach od 5 do 15 minut.</para>
 
-      <para>W przypadku systemów Unix/Linux, możesz wykorzystać mechanizm zadań <literal>cron</literal>. Aby dodać zadanie, zmodyfikuj plik <filename>/etc/crontab</filename> lub użyj graficznego narzędzia do zarządzania zadaniami. Jeśli używasz systemu Windows, otwórz Harmonogram zadań i utwórz nowe zadanie. Więcej informacji znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
+      <para>W przypadku systemów Unix/Linux możesz wykorzystać mechanizm zadań <literal>cron</literal>. Aby dodać zadanie, zmodyfikuj plik <filename>/etc/crontab</filename> lub użyj graficznego narzędzia do zarządzania zadaniami. Jeśli używasz systemu Windows, otwórz Harmonogram zadań i utwórz nowe zadanie. Więcej informacji znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
 
       <note>
         <title>Notatka</title>

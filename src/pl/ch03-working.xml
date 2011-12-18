@@ -10,7 +10,7 @@
 
     <para>Główną zaletą programu Web Client jest to, że możesz korzystać z systemu WebIssues na dowolnym komputerze (a nawet urządzeniu mobilnym) w dowolnym miejscu na świecie, jeśli tylko system jest dostępny przez Internet. Możesz skorzystać z dowolnej przeglądarki i nie musisz instalować żadnego dodatkowego oprogramowania.</para>
 
-    <para>Zaletą programu Desktop Client jest przede wszystkim to, że jest dużo szybszy i wygodniejszy, niż interfejs webowy. Wyszukiwanie i filtrowanie działa w czasie rzeczywistym, program na bieżąco aktualizuje również statystyki wszystkich skonfigurowanych alertów. Jest to więc najlepsza opcja dla tych, którzy intensywnie korzystają z systemu WebIssues.</para>
+    <para>Zaletą programu Desktop Client jest przede wszystkim to, że jest dużo szybszy i wygodniejszy niż interfejs webowy. Wyszukiwanie i filtrowanie działa w czasie rzeczywistym, program na bieżąco aktualizuje również statystyki wszystkich skonfigurowanych alertów. Jest to więc najlepsza opcja dla tych, którzy intensywnie korzystają z systemu WebIssues.</para>
 
     <para>Różnorodność ta jest podobna do korzystania z poczty elektronicznej. Jedni korzystają z programów pocztowych zainstalowanych na swoim komputerze, inni wolą korzystać z poczty za pośrednictwem przeglądarki internetowej.</para>
 
@@ -74,7 +74,7 @@
   <sect1 id="webissues.work.login">
     <title>Logowanie do systemu</title>
 
-    <para>Aby zalogować się do systemu za pośrednictwem przeglądarki internetowej, wpisz po prostu adres URL serwera WebIssues w pasku adresu, np. <literal>http://www.example.com</literal>, i naciśnij <shortcut><keycap>ENTER</keycap></shortcut>. Możesz dodać adres serwera jako zakładkę w przeglądarce, aby nie musieć go wpisywać za każdym razem.</para>
+    <para>Aby zalogować się do systemu za pośrednictwem przeglądarki internetowej, wpisz po prostu adres URL serwera WebIssues w pasku adresu, np. <literal>http://www.example.com</literal>, i naciśnij <shortcut><keycap>ENTER</keycap></shortcut>. Możesz dodać adres serwera jako zakładkę w przeglądarce, abyś nie musiał go wpisywać za każdym razem.</para>
 
     <figure>
       <title>Logowanie do Web Client</title>
@@ -219,7 +219,7 @@
 
       <note>
         <title>Notatka</title>
-        <para>Identyfikatory spraw są unikalne i rosnące, ale nie koniecznie są kolejnymi liczbami. W naszym przykładzie druga sprawa ma identyfikator #5, a nie #2, ponieważ identyfikatory są również przypisane komentarzom, załącznikom i innym zmianom, co ułatwia zarządzanie nimi przez system.</para>
+        <para>Identyfikatory spraw są unikalne i rosnące, ale niekoniecznie są kolejnymi liczbami. W naszym przykładzie druga sprawa ma identyfikator #5, a nie #2, ponieważ identyfikatory są również przypisane komentarzom, załącznikom i innym zmianom, co ułatwia zarządzanie nimi przez system.</para>
       </note>
 
       <para>Aby szybko przejść do sprawy, komentarza lub załącznika o podanym identyfikatorze, możesz również skorzystać z polecenia Idź do elementu. W programie Web Client kliknij <guilabel>Narzędzia</guilabel> w prawym górnym rogu okna, a następnie kliknij <guilabel>Idź do elementu</guilabel>. W programie Desktop Client polecenie to jest zawsze dostępne w pasku narzędzi głównego okna, możesz również nacisnąć <shortcut><keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo></shortcut>.</para>
@@ -285,7 +285,7 @@
       <note>
         <title>Notatka</title>
         <para>Maksymalny rozmiar załącznika, jaki możesz dołączyć do sprawy, zależy od konfiguracji systemu WebIssues. Możesz go zmienić w ustawieniach systemu WebIssues (przeczytaj <xref linkend="webissues.custom.settings"/> aby uzyskać więcej informacji). Przesyłanie dużych załączników wymaga również odpowiedniej konfiguracji serwera WWW oraz PHP. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
-        <para>Domyślnie małe załączniki są przechowywane w bazie danych, a duże bezpośrednio w systemie plików. W zależności od potrzeb możesz zmienić wartość progową lub wymusić przechowywanie wszystkich załączników tylko w bazie danych lub w systemie plików, zmieniając ustawienia systemu WebIssues. Sposób przechowywania załączników nie ma znaczenia z punktu widzenia programów klienckich.</para>
+        <para>Małe załączniki są domyślnie przechowywane w bazie danych, a duże bezpośrednio w systemie plików. W zależności od potrzeb możesz zmienić wartość progową lub wymusić przechowywanie wszystkich załączników tylko w bazie danych lub w systemie plików, zmieniając ustawienia systemu WebIssues. Sposób przechowywania załączników nie ma znaczenia z punktu widzenia programów klienckich.</para>
       </note>
 
     </sect2>
@@ -297,7 +297,7 @@
 
     <para>Z upływem czasu foldery zawierają coraz więcej spraw i znalezienie pożądanej informacji może być trudne. Możesz oczywiście posortować listę spraw po dowolnej kolumnie, nie tylko według identyfikatorów, ale również według nazwy lub wartości dowolnego atrybutu. Może to ułatwić wyszukanie potrzebnej informacji, ale nie zawsze jest wystarczające.</para>
 
-    <para>Lista spraw posiada również funkcję szybkiego wyszukiwania. Wpisz szukane słowo lub jego fragment w polu tekstowym po prawej stronie nad listą i naciśnij <guibutton>Szukaj</guibutton>, a wyświetlone zostaną tylko sprawy zawierające w nazwie szukany fragment tekstu. W programie Desktop Client wyszukiwanie działa od razu, gdy wpiszesz tekst, możesz również nacisnąć klawisz <shortcut><keycap>F3</keycap></shortcut>, aby szybko uaktywnić pole wyszukiwania. Możesz również wyszukiwać sprawy po nazwie użytkownika, który je utworzył lub zmodyfikował, a także po dowolnym atrybucie typu Tekst, Lista wyboru lub Użytkownik. Aby wybrać kolumnę, w której chcesz wyszukiwać, kliknij ikonkę znajdującą się z lewej strony pola wyszukiwania i wybierz odpowiednią opcję. Po wpisaniu szukanego fagmentu tekstu, zostaną wyświetlone tylko sprawy zawierające ten fragment w wybranej kolumnie.</para>
+    <para>Lista spraw posiada również funkcję szybkiego wyszukiwania. Wpisz szukane słowo lub jego fragment w polu tekstowym po prawej stronie nad listą i naciśnij <guibutton>Szukaj</guibutton>, a wyświetlone zostaną tylko sprawy zawierające w nazwie szukany fragment tekstu. W programie Desktop Client wyszukiwanie działa od razu, gdy wpiszesz tekst, możesz również nacisnąć klawisz <shortcut><keycap>F3</keycap></shortcut>, aby szybko uaktywnić pole wyszukiwania. Możesz również wyszukiwać sprawy po nazwie użytkownika, który je utworzył lub zmodyfikował, a także po dowolnym atrybucie typu Tekst, Lista wyboru lub Użytkownik. Aby wybrać kolumnę, w której chcesz wyszukiwać, kliknij ikonkę znajdującą się z lewej strony pola wyszukiwania i wybierz odpowiednią opcję. Po wpisaniu szukanego fragmentu tekstu, zostaną wyświetlone tylko sprawy zawierające ten fragment w wybranej kolumnie.</para>
 
     <tip>
       <title>Wskazówka</title>
@@ -308,7 +308,7 @@
 
     <para>To, jakie widoki są dostępne, zależy od typu spraw w danym folderze. Wyjątkiem jest widok <quote>Wszystkie sprawy</quote>, który istnieje dla każdego typu spraw i nie posiada warunków filtrowania, a więc (jak sugeruje nazwa) wyświetla wszystkie sprawy w bieżącym folderze.</para>
 
-    <para>Otwórz folder Błędy i rozwiń listę widoków po lewej stronie nad listą spraw. Zobaczysz domyślny widok <quote>Wszystkie sprawy</quote>, a pod nim kilka publicznych widoków:</para>
+    <para>Otwórz folder Błędy i rozwiń listę widoków znajdującą się po lewej stronie nad listą spraw. Zobaczysz domyślny widok <quote>Wszystkie sprawy</quote>, a pod nim kilka publicznych widoków:</para>
 
     <figure>
       <title>Wybór widoku</title>
@@ -356,7 +356,7 @@
 
     <para>Zapisz zmiany klikając <guibutton>OK</guibutton>. Rozwijana lista widoków zawiera teraz jeden widok prywatny o nazwie <quote>Krytyczne błędy</quote>. Po jego wybraniu lista będzie zawierała tylko pierwszą sprawę, zgodnie z wybranymi kryteriami filtrowania.</para>
 
-    <para>To, jakie operatory filtrowania są dostępne, zależy od typu kolumny. Dla wszystkich typów dostępne są operatory <quote>jest równy</quote> oraz <quote>nie jest równy</quote>. Operatory te mogą również porównywać wartość kolumny z wartością pustą. W przypadku kolumn tekstowych, list wyboru i nazw użytkowników, można również wyszukiwać fragment tekstu za pomocą operatorów <quote>zaczyna się od</quote>, <quote>zawiera</quote> oraz <quote>kończy się na</quote>. Można także tworzyć kryteria, które spełnia kilka różnych wartości, używając operatora <quote>w liście</quote> i wpisując poszczególne wartości oddzielone przecinkami. Z kolei w przypadku wartości liczbowych i dat można używać operatorów porównania &mdash; <quote>jest mniejszy niż</quote>, <quote>jest mniejszy lub równy</quote>, itd.</para>
+    <para>To, jakie operatory filtrowania są dostępne, zależy od typu kolumny. Dla wszystkich typów dostępne są operatory <quote>jest równy</quote> oraz <quote>nie jest równy</quote>. Operatory te mogą również porównywać wartość kolumny z wartością pustą. W przypadku kolumn tekstowych, list wyboru i nazw użytkowników można również wyszukiwać fragment tekstu za pomocą operatorów <quote>zaczyna się od</quote>, <quote>zawiera</quote> oraz <quote>kończy się na</quote>. Można także tworzyć kryteria, które spełnia kilka różnych wartości, używając operatora <quote>w liście</quote> i wpisując poszczególne wartości oddzielone przecinkami. Z kolei w przypadku wartości liczbowych i dat można używać operatorów porównania &mdash; <quote>jest mniejszy niż</quote>, <quote>jest mniejszy lub równy</quote>, itd.</para>
 
     <para>Załóżmy teraz, że interesują nas tylko te krytyczne sprawy, które są aktywne i w dodatku starsze niż 7 dni. Taki widok byłby bardzo przydatny dla osób nadzorujących rozwiązywanie błędów. Kliknij <guilabel>Zmień widok</guilabel>, aby przejść do edycji aktywnego widoku (przedtem upewnij się, że jest on wybrany).</para>
 
@@ -389,7 +389,7 @@
       </mediaobject>
     </figure>
 
-    <para>Jeśli jesteś administratorem systemu, możesz również publikować swoje widoki, aby były dostępne dla wszystkich użytkowników, a także zarządzać widokami publicznymi dla poszczególnych typów spraw. Aby uzyskać więcej informacji na ten temat, przeczytaj <xref linkend="webissues.custom.views"/>.</para>
+    <para>Jeśli jesteś administratorem systemu, możesz również publikować swoje widoki, aby były dostępne dla wszystkich użytkowników, a także zarządzać widokami publicznymi dla poszczególnych typów spraw. Aby uzyskać więcej informacji na ten temat, przeczytaj sekcję <xref linkend="webissues.custom.views"/>.</para>
 
   </sect1>
 
@@ -438,7 +438,7 @@
       </mediaobject>
     </figure>
 
-    <para>Raport może mieć postać prostej tabeli, w której mogą być zawarte tylko kolumny widoczne w wybranym widoku, lub wszystkie kolumny systemowe i kolumny zdefiniowane przez użytkownika (atrybuty). Raport może mieć również formę podsumowania zawierającego właściwości i atrybuty poszczególnych spraw. W przypadku eksportu do formatu CSV, dostępna jest tylko możliwość tworzenia raportu w postaci tabeli.</para>
+    <para>Raport może mieć postać prostej tabeli, w której mogą być zawarte tylko kolumny widoczne w wybranym widoku lub wszystkie kolumny systemowe i kolumny zdefiniowane przez użytkownika (atrybuty). Raport może mieć również formę podsumowania zawierającego właściwości i atrybuty poszczególnych spraw. W przypadku eksportu do formatu CSV, dostępna jest tylko możliwość tworzenia raportu w postaci tabeli.</para>
 
     <para>Jeśli zapisujesz raport do pliku, wybierz postać raportu, naciśnij <guibutton>OK</guibutton>, a następnie wybierz folder, w którym zostanie zapisany plik i wpisz jego nazwę. Jeśli drukujesz raport, naciśnij <guibutton>OK</guibutton>, a następnie wybierz drukarkę i ewentualnie inne opcje drukowania. Możesz również nacisnąć przycisk <guibutton>Podgląd wydruku</guibutton>, aby zobaczyć raport przed wydrukowaniem.</para>
 

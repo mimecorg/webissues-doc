@@ -46,7 +46,7 @@
   <sect1 id="webissues.track.alerts">
     <title>Zarządzanie alertami</title>
 
-    <para>Nawet jeśli korzystasz z widoków i automatycznego oznaczania stanu spraw, nie zawsze na pierwszy rzut oka widać, że pojawiła się nowa lub zmieniona sprawa, która wymaga twojej uwagi. Dlatego system WebIssues posiada mechanizm alertów, czyli automatycznych powiadomień o nieprzeczytanych sprawach spełniające określone kryteria.</para>
+    <para>Nawet jeśli korzystasz z widoków i automatycznego oznaczania stanu spraw, nie zawsze na pierwszy rzut oka widać, że pojawiła się nowa lub zmieniona sprawa, która wymaga twojej uwagi. Dlatego system WebIssues posiada mechanizm alertów, czyli automatycznych powiadomień o nieprzeczytanych sprawach spełniających określone kryteria.</para>
 
     <para>Alert można utworzyć korzystając z dowolnego widoku publicznego lub prywatnego, a także z wbudowanego widoku <quote>Wszystkie sprawy</quote>. Każdy alert jest przypisany do określonego folderu.</para>
 
@@ -154,7 +154,7 @@
       </mediaobject>
     </figure>
 
-    <para>Natychmiastowe powiadomienia są przydatne, jeśli chcesz być informowany na bieżąco o wszystkich zmianach, a nie korzystasz przez cały czas z systemu WebIssues. Jeśli jakiś alert generuje zbyt dużo takich powiadomień, lub jeśli nie są one zbyt pilne, możesz wybrać podsumowania powiadomień, aby dostawać zbiorcze informacje o ostatnich zmianach, na przykład raz dziennie.</para>
+    <para>Natychmiastowe powiadomienia są przydatne, jeśli chcesz być informowany na bieżąco o wszystkich zmianach, a nie korzystasz przez cały czas z systemu WebIssues. Jeśli jakiś alert generuje zbyt dużo takich powiadomień lub jeśli nie są one zbyt pilne, możesz wybrać podsumowania powiadomień, aby dostawać zbiorcze informacje o ostatnich zmianach, na przykład raz dziennie.</para>
 
     <para>Raporty podsumowujące zawierają listę wszystkich spraw, niezależnie od tego czy zostały one zmienione od ostatniego powiadomienia i czy były przez ciebie przeczytane. Są one więc przydatne, jeśli chcesz śledzić stan wszystkich spraw spełniających określone kryteria, na przykład aby kontrolować, czy aktywne błędy są rozwiązywane na bieżąco.</para>
 
