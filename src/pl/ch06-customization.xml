@@ -180,6 +180,11 @@
 
     <para>Zmiana ustawień widoku działa podobnie, jak tworzenie prywatnych widoków, opisane w sekcji <xref linkend="webissues.work.views"/>. Możesz więc odznaczyć kolumny, które chcesz usunąć i zaznaczyć kolumny, które chcesz dodać, a także zmieniać wartości określające kolejność kolumn. Aby na przykład dodać kolumnę Powód do domyślnego widoku, zaznacz tą kolumnę i ustaw jej kolejność na 7, aby wyświetlać ją po kolumnie Status. Kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć nową kolejność kolumn. Możesz również zmienić domyślny porządek sortowania spraw. Na końcu kliknij <guibutton>OK</guibutton>, aby zapisać widok.</para>
 
+    <tip>
+      <title>Wskazówka</title>
+      <para>Każdy widok zawiera kolumny ID oraz Nazwa, których nie możesz usunąć ani przenieść. Możesz jednak ukryć kolumnę ID we wszystkich widokach, jeśli uważasz, że jest ona niepotrzebna. W tym celu zaznacz opcję <guibutton>Ukryj kolumnę ID</guibutton> opisaną w sekcji <xref linkend="webissues.custom.settings"/>. Kolumna zostanie wtedy ukryta we wszystkich publicznych i prywatnych widokach.</para>
+    </tip>
+
     <para>Podobnie jak każdy użytkownik może dla każdego typu spraw zdefiniować dowolną liczbę widoków prywatnych, tak administrator systemu WebIssues może dla każdego typu zdefiniować widoki publiczne. Każdy może korzystać z publicznych widoków, ale tylko administrator ma prawo je tworzyć i zmieniać.</para>
 
     <para>Dla standardowych typów Błędy i Zadania istnieje już kilka domyślnych widoków publicznych, na przykład Aktywne błędy czy Utworzone przeze mnie. Możesz zmieniać te standardowe widoki lub tworzyć nowe. Dla typu spraw Forum nie ma żadnych widoków, ponieważ nie ma on żadnych atrybutów, ale możesz definiować widoki za pomocą wbudowanych kolumn. Możesz na przykład utworzyć widok Utworzone przeze mnie, analogiczny do tych, które istnieją dla Błędów i Zadań. Nie możesz jednak definiować kolejności atrybutów, chyba że dodasz atrybuty do tego typu.</para>
@@ -266,6 +271,15 @@
       <title>Rozmiar strony</title>
       <mediaobject>
         <imageobject><imagedata fileref="images/ch06-fig18.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>W grupie <guilabel>Ustawienia widoków</guilabel> dostępna jest opcja <guilabel>Ukryj kolumnę ID</guilabel>. Jej zaznaczenie powoduje, że kolumna ID nie będzie wyświetlona w liście spraw. Zmiana ta wpłynie na wszystkich użytkowników i wszystkie typy spraw. Po ukryciu kolumny ID, sprawy w dalszym ciągu mogą być domyślnie posortowane po tej kolumnie, a identyfikator wybranej sprawy będzie nadal wyświetlany w polu <guilabel>Właściwości</guilabel> szczegółów sprawy.</para>
+
+    <figure>
+      <title>Ustawienia widoków</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig18-01.png" format="PNG"/></imageobject>
       </mediaobject>
     </figure>
 

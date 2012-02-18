@@ -280,7 +280,7 @@
 
       <para>Kliknij odnośnik, aby otworzyć dołączony do sprawy plik lub zapisać go na dysku. Program Desktop Client domyślnie zawsze pyta, czy chcesz otworzyć czy zapisać plik. Możesz również kliknąć prawym przyciskiem, aby wybrać odpowiednią opcję z menu kontekstowego. Zmieniając ustawienia programu możesz wybrać domyślną akcję dla załączników oraz zmienić maksymalną ilość miejsca na dysku przeznaczoną na przechowywanie plików tymczasowych.</para>
 
-      <para>W przypadku programu Web Client domyślna akcja po kliknięciu na odnośnik zależy od konfiguracji twojej przeglądarki. W większości przeglądarek możesz również kliknąć na załączniku prawym przyciskiem, aby wybrać akcję z menu kontekstowego.</para>
+      <para>W przypadku programu Web Client, w zależności od typu pliku i konfiguracji twojej przeglądarki, kliknięcie na odnośnik spowoduje otwarcie załącznika lub zapisanie go na dysku. Obrazy i pliki tekstowe zwykle zostaną wyświetlone bezpośrednio w przeglądarce. W większości przeglądarek możesz również kliknąć na załączniku prawym przyciskiem, aby wybrać odpowiednią akcję z menu kontekstowego.</para>
 
       <note>
         <title>Notatka</title>

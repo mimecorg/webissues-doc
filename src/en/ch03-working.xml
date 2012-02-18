@@ -280,7 +280,7 @@
 
       <para>Click the link to open the attached file or to save it to disk. The Desktop Client by default always asks if you want to open or save the file. You can also right-click to select the appropriate option from the context menu. By changing the program settings you can select the default action for attachments, and change the maximum amount of disk space used to store temporary files.</para>
 
-      <para>In case of the Web Client, the default action performed when you click a link depends on the configuration of your browser. In most browsers you can also click the right mouse button above the link to choose an action from the context menu.</para>
+      <para>In case of the Web Client, depending on the file type and the configuration of your browser, clicking on a link will open the attachment or save it to the disk. Images and text files will generally be opened directly in the browser. In most browsers you can also click the right mouse button above the link to choose an action from the context menu.</para>
 
       <note>
         <title>Note</title>

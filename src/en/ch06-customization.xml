@@ -180,6 +180,11 @@
 
     <para>Changing the settings of the view works the same as creating personal views, as described in <xref linkend="webissues.work.views"/>. So you can unselect the columns you want to remove and select the columns you want to add, and change the values defining their order. For example, to add the Reason column to the default view, select the column and set its order to 7, to place it after the Status column. Click <guibutton>Update</guibutton> to see the new order of columns. You can also change the default sort order of issues. Finally, click <guibutton>OK</guibutton> to save your view.</para>
 
+    <tip>
+      <title>Tip</title>
+      <para>Each view contains the ID and Name columns, which you can't delete or move. However, you can hide the ID column from all views, if you think that it's unnecessary. To do this, select the <guibutton>Hide the ID Column</guibutton> option described in <xref linkend="webissues.custom.settings"/>. The column will then be hidden from all public and private views.</para>
+    </tip>
+
     <para>Just like each user can define any number of personal views for each issue type, the administrator of WebIssues system can define public views for each type. Everyone can use public views, but only the administrator has the right to create and modify them.</para>
 
     <para>For standard issue types, Bugs and Tasks, there are several default public views; for example, Active Bugs and Created By Me. You can change these standard views and create new ones. The Forum issue type has no views, because it has no attributes, but you can define views using the built-in columns. For example, you can create the Created By Me view, analogous to the one that exists for Bugs and Tasks. However, you cannot define the order of attributes, unless you add some attributes to this type.</para>
@@ -266,6 +271,15 @@
       <title>Page Size</title>
       <mediaobject>
         <imageobject><imagedata fileref="images/ch06-fig18.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>In the <guilabel>View Settings</guilabel> group the <guilabel>Hide the ID column</guilabel> option is available. When you enable it, the ID column will not be displayed in the list of issues. This change will affect all users and all types of issues. When you hide the ID column, issues can still be sorted by this column, and the identifier of the selected issue will still be displayed in the <guilabel>Properties</guilabel> group in issue details.</para>
+
+    <figure>
+      <title>View Settings</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig18-01.png" format="PNG"/></imageobject>
       </mediaobject>
     </figure>
 

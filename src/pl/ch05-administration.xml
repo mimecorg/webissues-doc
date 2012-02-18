@@ -338,7 +338,7 @@
   <sect1 id="webissues.admin.updating">
     <title>Aktualizacja systemu</title>
 
-    <para>Jedną z czynności konserwacyjnych jest aktualizacja systemu WebIssues do nowej wersji. Nowe wersje rozwiązują problemy i dodają nowe funkcje, więc zalecana jest okresowa aktualizacja oprogramowania.</para>
+    <para>Jedną z czynności konserwacyjnych jest aktualizacja systemu WebIssues do nowszej wersji. Nowe wersje rozwiązują problemy i dodają nowe funkcje, więc zalecana jest okresowa aktualizacja oprogramowania. Aby szybko sprawdzić, czy jest dostępna nowsza wersja systemu, kliknij <guilabel>Narzędzia</guilabel> i <guilabel>O programie WebIssues</guilabel>, a następnie w grupie <guilabel>Najnowsza wersja</guilabel> kliknij przycisk <guibutton>Sprawdź</guibutton>. Program Desktop Client domyślnie automatycznie sprawdza, czy jest dostępna nowa wersja (patrz sekcja <xref linkend="webissues.work.personal.client"/>).</para>
 
     <para>Przed rozpoczęciem aktualizacji, zaleca się utworzyć kopię zapasową bazy danych i plików systemu WebIssues, a także wyłączyć serwer WWW, aby zapobiec korzystaniu z systemu w trakcie aktualizacji.</para>
 
@@ -357,11 +357,20 @@
 
     <note>
       <title>Notatka</title>
-      <para>Wersje systemu oznaczone jako <literal>alpha</literal> lub <literal>beta</literal> to tak zwane wersje deweloperskie. Umożliwiają one testowanie nowych funkcji przed wydaniem oficjalnej wersji, jednak nie zaleca się ich używać do celów produkcyjnych. Wersja deweloperska systemu może być używana tylko z tą samą wersją programu Desktop Client. Dodatkowo w przypadku wersji <literal>alpha</literal> nie ma możliwości aktualizacji bazy danych do nowszej wersji.</para>
+      <para>Wersje systemu oznaczone jako <literal>alpha</literal> lub <literal>beta</literal> to tak zwane wersje deweloperskie. Umożliwiają one testowanie nowych funkcji przed wydaniem oficjalnej wersji, jednak nie zaleca się ich używać do celów produkcyjnych. Wersja deweloperska systemu może być używana tylko z tą samą wersją programu Desktop Client. Dodatkowo w przypadku wersji <literal>alpha</literal> nie ma możliwości aktualizacji bazy danych do nowszej wersji. Natomiast wersja <literal>1.0-beta1</literal> i późniejsze mogą być zaktualizowane do wersji produkcyjnej.</para>
     </note>
 
-    <para>Bezpośrednia aktualizacja z wersji 0.8.5 serwera nie jest możliwa, jednak istnieje możliwość zaimportowania instniejących danych z serwera WebIssues w wersji 0.8.5 podczas instalacji nowej wersji systemu. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.installation"/>.</para>
+    <para>Procedura aktualizacji serwera z wersji 0.8.5 jest nieco inna, ponieważ w tym przypadku istniejące dane muszą zostać zaimportowane do nowych tabel w bazie danych. Po utworzeniu kopii zapasowej i wyłączeniu serwera WWW, usuń pliki i podkatalogi z katalogu, w którym został zainstalowany serwer WebIssues, z wyjątkiem podkatalogu <literal>storage</literal>. Następnie rozpakuj pakiet nowej wersji w odpowiednie miejsce i nadaj prawo zapisu do podkatalogu <literal>data/sites</literal> wszystkim użytkownikom lub użytkownikowi, w kontekście którego działa usługa WWW. Włącz serwer WWW i otwórz główną stronę systemu WebIssues w przeglądarce. Powinna zostać wyświetlona informacja, że serwer nie jest skonfigurowany.</para>
 
-    </sect1>
+    <para>Wykonaj wszystkie kroki podobnie jak podczas instalowania nowej instancji serwera. Pamiętaj, że nowy serwer musi być zainstalowany w tej samej bazie danych, co jego poprzednia wersja, ale nowe tabele muszą mieć inny prefiks niż ten, który był użyty w wersji 0.8.5. W grupie opcji <guilabel>Początkowa konfiguracja</guilabel> wybierz opcję <guilabel>Importuj dane z serwera WebIssues 0.8.5</guilabel> i podaj prefiks tabel źródłowych. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.installation"/>.</para>
+
+    <para>Upewnij się, że katalogi <literal>data</literal> oraz <literal>common/data</literal> są zabezpieczone przed dostępem przez przeglądarkę internetową, a plik konfiguracyjny systemu WebIssues jest chroniony przed niepowołanym dostępem. Jeśli w wersji 0.8.5 załączniki były przechowywane w systemie plików, to po zakończeniu instalacji musisz je także przenieść do odpowiedniego katalogu w nowej wersji serwera. W przypadku domyślnej konfiguracji będzie to katalog <literal>data/sites/default/storage</literal>.</para>
+
+    <note>
+      <title>Notatka</title>
+      <para>Ponieważ baza danych w wersji 0.8.5 nie wymuszała ścisłej integralności danych, może się zdarzyć, że podczas importu danych do nowych tabel wystąpi błąd integralności. W takim wypadku popraw dane źródłowe, usuń tabele docelowe i ponów proces importu. Aby sprawdzić, w których tabelach występują błędy, przydatne może być włączenie debugowania. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
+    </note>
+
+  </sect1>
 
 </chapter>

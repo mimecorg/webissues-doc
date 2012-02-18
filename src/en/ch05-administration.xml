@@ -338,7 +338,7 @@
   <sect1 id="webissues.admin.updating">
     <title>Updating the system</title>
 
-    <para>One of the maintenance tasks is updating the WebIssues system to a new version. New versions fix potential problems and add new features, so it is recommended to periodically update the software.</para>
+    <para>One of the maintenance tasks is updating the WebIssues system to a newer version. New versions fix potential problems and add new features, so it is recommended to periodically update the software. To quickly check if a newer version of the system is available, click <guilabel>Tools</guilabel> and <guilabel>About WebIssues</guilabel>, and then in the <guilabel>Latest Version</guilabel> group, click the <guibutton>Check</guibutton> button. The Desktop Client by default automatically checks if a new version is available (see <xref linkend="webissues.work.personal.client"/>).</para>
 
     <para>Before the upgrade, it is recommended to back up the database and WebIssues system files, and also disable the web server to prevent other users from accessing the system during the upgrade.</para>
 
@@ -357,11 +357,20 @@
 
     <note>
       <title>Note</title>
-      <para>Versions marked as <literal>alpha</literal> or <literal>beta</literal> are the so-called developer versions. They allow for testing new features before the official version is released, but it is not recommended to use them for production purposes. Development versions of the system can only be used with the same version of the Desktop Client. Additionally, in case of an <literal>alpha</literal> version, it's not possible to update the database to a newer version.</para>
+      <para>Versions marked as <literal>alpha</literal> or <literal>beta</literal> are the so-called developer versions. They allow for testing new features before the official version is released, but it is not recommended to use them for production purposes. Development versions of the system can only be used with the same version of the Desktop Client. Additionally, in case of an <literal>alpha</literal> version, it's not possible to update the database to a newer version. However, version <literal>1.0-beta1</literal> and later can be updated to the production version.</para>
     </note>
 
-    <para>Although a direct upgrade from version 0.8.5 of the server is not possible, existing data can be imported from version 0.8.5 of the WebIssues server when installing a new version of the system. More information can be found in <xref linkend="webissues.prep.installation"/>.</para>
+    <para>The procedure of updating the server from version 0.8.5 is a bit different, because in this case the existing data must be imported to new tables in the database. After backing up and disabling the web server, delete all files and subdirectories from the directory where you installed the WebIssues server, except the <literal>storage</literal> subdirectory. Then unpack the new version of the package to the appropriate location, and give all users, or the user which the web server runs as, write permission to the <literal>data/sites</literal> subdirectory. Enable the web server and open the main page of WebIssues in the browser. You should see the information that the server is not configured.</para>
 
-    </sect1>
+    <para>Perform all steps like when installing a new instance of the server. Remember that the new server must be installed in the same database as its previous version, but the new tables must have a different prefix than the one that was used in version 0.8.5. In the <guilabel>Initial Configuration</guilabel> group, select <guilabel>Import data from WebIssues Server 0.8.5</guilabel> and enter the prefix of the source tables. For more information, see <xref linkend="webissues.prep.installation"/>.</para>
+
+    <para>Make sure that the directories <literal>data</literal> and <literal>common/data</literal> are protected from accessing through a web browser, and the configuration file of the WebIssues system is protected against unauthorized access. If in version 0.8.5 attachments were stored in the file system, then after installation you must also move them to the appropriate directory in the new version of the server. In a default configuration, it will be the <literal>data/sites/default/storage</literal> directory.</para>
+
+    <note>
+      <title>Note</title>
+      <para>Because the database in version 0.8.5 didn't strictly enforce data integrity, when you import data into new tables, some integrity errors may occur. In this case, correct the source data, delete the destination tables and run the import process again. To see which tables contain errors, you may want to enable debugging. For more information, please visit <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
+    </note>
+
+  </sect1>
 
 </chapter>
