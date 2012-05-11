@@ -136,7 +136,9 @@
       </mediaobject>
     </figure>
 
-    <para>Podaj poprawny adres e-mail, na który będą wysyłane twoje powiadomienia. Wybierz opcję <guilabel>Pomijaj sprawy które przeczytałem</guilabel>, jeśli nie chcesz otrzymywać powiadomień o tych sprawach, które już przeczytałeś (np. jeśli sam je utworzyłeś lub zmieniłeś).</para>
+    <para>Podaj poprawny adres e-mail, na który będą wysyłane twoje powiadomienia. Wybierz opcję <guilabel>Załącz szczegóły spraw w powiadomieniach i raportach podsumowujących</guilabel>, jeśli chcesz, aby e-maile zawierały szczegóły spraw oraz historię zmian oraz ostatio dodanych komentarzy i załączników. W przeciwnym wypadku wysyłane będzie tylko podsumowanie spraw.</para>
+
+    <para>Wybierz opcję <guilabel>Nie powiadamiaj o sprawach, które przeczytałem</guilabel>, jeśli nie chcesz otrzymywać powiadomień o tych sprawach, które już przeczytałeś (np. jeśli sam je utworzyłeś lub zmieniłeś). Również szczegóły spraw, które już przeczytałeś, będą wtedy pomijane. Opcja ta nie ma wpływu na raporty podsumowujące, które zawsze zawierają wszystkie sprawy i zmiany.</para>
 
     <para>Skonfiguruj również harmonogram powiadomień, wybierając dni i godziny, w jakich będą wysyłane podsumowania powiadomień oraz raporty podsumowujące. W zależności od potrzeb, możesz otrzymywać podsumowania raz w tygodniu lub kilka razy w tygodniu, codziennie o określonej godzinie lub kilka razy dziennie.</para>
 
@@ -158,14 +160,16 @@
 
     <para>Raporty podsumowujące zawierają listę wszystkich spraw, niezależnie od tego czy zostały one zmienione od ostatniego powiadomienia i czy były przez ciebie przeczytane. Są one więc przydatne, jeśli chcesz śledzić stan wszystkich spraw spełniających określone kryteria, na przykład aby kontrolować, czy aktywne błędy są rozwiązywane na bieżąco.</para>
 
-    <para>Wszystkie powiadomienia e-mailowe zawierają w nagłówku nazwę projektu oraz folderu i alertu, których dotyczą, a także listę spraw. Lista zawiera takie same kolumny, jak widok, z którym jest powiązany dany alert.</para>
+    <para>Wszystkie powiadomienia mailowe zawierają w nagłówku nazwę projektu oraz folderu i alertu, których dotyczą, a także listę spraw. Lista zawiera takie same kolumny, jak widok, z którym jest powiązany dany alert.</para>
 
     <figure>
-      <title>Powiadomienie e-mailowe</title>
+      <title>Powiadomienie mailowe</title>
       <mediaobject>
         <imageobject><imagedata fileref="images/ch04-fig09.png" format="PNG"/></imageobject>
       </mediaobject>
     </figure>
+
+    <para>Jeśli wybrałeś odpowiednią opcję, powiadomienia mailowe będą również zawierać szczegóły każdej ze spraw, podobnie jak w widoku szczegółów sprawy w głównym oknie programu.</para>
 
   </sect1>
 

@@ -306,6 +306,11 @@
 
       <para>Aby sprawdzić, czy cykliczne zadanie się uruchamia, przejdź do Panelu administracyjnego i kliknij <guilabel>Ogólne informacje</guilabel>. W ramce <guilabel>Zadanie cykliczne</guilabel> powinna być wyświetlona data i czas ostatniego uruchomienia zadania. Każde uruchomienie zadania jest także zalogowane w Dzienniku zdarzeń systemu WebIssues.</para>
 
+      <tip>
+        <title>Wskazówka</title>
+        <para>Więcej informacji na temat używania powiadomień e-mailowych znajdziesz w sekcji <xref linkend="webissues.track.alerts" />.</para>
+      </tip>
+
     </sect2>
 
   </sect1>

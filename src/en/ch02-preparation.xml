@@ -306,6 +306,11 @@
 
       <para>To check whether the cron job is being executed, go to the Administration Panel and click <guilabel>General Information</guilabel>. In the <guilabel>Cron Job</guilabel> section, the date and time when the job was last run should be displayed. Each execution of the job is also logged in the Event Log of the WebIssues system.</para>
 
+      <tip>
+        <title>Tip</title>
+        <para>You can find more information about using email notifications in <xref linkend="webissues.track.alerts" />.</para>
+      </tip>
+
     </sect2>
 
   </sect1>

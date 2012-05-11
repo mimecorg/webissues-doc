@@ -136,7 +136,9 @@
       </mediaobject>
     </figure>
 
-    <para>Enter a valid email to which the notifications will be sent. Select <guilabel>Do not include issues that I have already read</guilabel> if you don't want to receive notifications about issues that you've read (for example, if you created or modified them by yourself).</para>
+    <para>Enter a valid email to which the notifications will be sent. Select <guilabel>Include issue details in notifications and summary reports</guilabel>, if you want the emails to contain also issue details and the history of changes and recently added comments and attachments. Otherwise only a summary of issues will be sent.</para>
+
+    <para>Select <guilabel>Do not notify about issues that I have already read</guilabel> if you don't want to receive notifications about issues that you've read (for example, if you created or modified them by yourself). Also issue details, that you've read, will not be included in that case. This option doesn't affect summary reports, which always contain all issues and changes.</para>
 
     <para>Also set up the notifications schedule, by selecting days and hours at which the summary notification and summary reports will be sent. Depending on your needs, you can receive a summary once a week, several times a week, at a specified time every day, or several times a day.</para>
 
@@ -166,6 +168,8 @@
         <imageobject><imagedata fileref="images/ch04-fig09.png" format="PNG"/></imageobject>
       </mediaobject>
     </figure>
+
+    <para>If you selected the appropriate option, email notifications will also include details of each issue, similar to the issue details view in the main window of the program.</para>
 
   </sect1>
 
