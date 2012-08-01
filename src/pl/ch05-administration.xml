@@ -51,6 +51,12 @@
         </listitem>
       </varlistentry>
       <varlistentry>
+        <term>Zgłoszenia rejestracji</term>
+        <listitem>
+          <para>Pozwala zatwierdzać lub odrzucać zgłoszenia rejestracji użytkowników. Moduł ten jest dostępny tylko, jeśli w ustawieniach serwera została włączona opcja rejstracji użytkowników. Patrz sekcja <xref linkend="webissues.admin.register"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
         <term>Typy spraw</term>
         <listitem>
           <para>Pozwala dostosować typy spraw oraz publiczne widoki. Patrz sekcje <xref linkend="webissues.custom.types"/> oraz <xref linkend="webissues.custom.views"/>.</para>
@@ -232,9 +238,13 @@
         <para>Unikaj zmieniania nazwy użytkowników, którzy mają przypisane do siebie sprawy. Wartości atrybutów są przechowywane jako tekst, więc zmiana nazwy użytkownika nie spowoduje automatycznej zmiany wartości atrybutów <quote>Przypisany do</quote>. Może to spowodować, że użytkownik przestanie widzieć przypisane do siebie sprawy.</para>
       </tip>
 
+      <para>Aby zarządzać listą projektów dostępnych dla wybranego użytkownika, użyj polecenia <guilabel>Projekty użytkownika</guilabel>. Możesz również zarządzać listą użytkowników, którzy mają dostęp do wybranego projektu. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.admin.users.members"/>.</para>
+
       <para>Możesz również zmienić ustawienia dowolnego użytkownika za pomocą polecenia <guilabel>Ustawienia użytkownika</guilabel>. Każdy użytkownik może również zmienić własne ustawienia, korzystając z opcji <guilabel>Ustawienia użytkownika</guilabel> w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna progamu Desktop Client. Więcej informacji na temat ustawień użytkownika znajdziesz w sekcjach <xref linkend="webissues.work.personal"/>.</para>
 
-      <para>System WebIssues nie pozwala na usuwanie istniejących użytkowników, ponieważ przechowuje on wszystkie informacje historyczne, na przykład zmiany dokonane przez poszczególnych użytkowników. Zamiast tego możesz zmienić poziom uprawnień użytkowników, którzy nie powinni już mieć dostępu do systemu, na wyłączony.</para>
+      <para>System WebIssues nie pozwala na usuwanie istniejących użytkowników, ponieważ przechowuje on wszystkie informacje historyczne, na przykład zmiany dokonane przez poszczególnych użytkowników. Zamiast tego możesz zmienić poziom uprawnień użytkowników, którzy nie powinni już mieć dostępu do systemu, na wyłączony. Użyj opcji filtrowania w prawym górnym rogu listy, aby ukryć wyłączone konta użytkowników.</para>
+
+      <para>System WebIssues umożliwia użytkownikom samodzielnie dokonywać rejestracji nowych kont. W takim wypadku niezbędna jest akceptacja zgłoszeń rejestracji przez administratora systemu. Więcej informacji na ten temat znajdziesz w sekcjach <xref linkend="webissues.admin.register"/> oraz <xref linkend="webissues.custom.settings"/>.</para>
 
     </sect2>
 
@@ -291,7 +301,47 @@
 
       <para>Aby usunąć członka projektu, wybierz go z listy i kliknij <guilabel>Usuń członka</guilabel>. W przypadku programu Desktop Client, możesz wybrać kilku członków z listy i zmienić ich poziom dostępu lub usunąć z projektu jednocześnie.</para>
 
+      <para>Istnieje również możliwość wyświetlenia listy dostępnych projektów dla wybranego użytkownika, a także dodanie użytkownika do wybranych projektów oraz usunięcie i zmiana poziomu dostępu. Jest ona szczególnie przydatna podczas tworzenia nowych kont użytkowników. Jednak w odróżnieniu od funkcji zarządzania członkami projektu, jest ona dostępna tylko dla administratorów systemu.</para>
+
+      <para>Aby zarządzać projektami użytkownika, przejdź do Panelu administracyjnego i kliknij <guilabel>Konta użytkowników</guilabel>. W przypadku programu Desktop Client, użyj polecenia <guilabel>Użytkownicy</guilabel> z paska narzędzi głównego okna. Następnie wybierz użytkownika z listy i kliknij <guilabel>Projekty użytkownika</guilabel>. Lista projektów użytkownika jest analogiczna do listy członków projektu.</para>
+
+      <figure>
+        <title>Lista projektów użytkownika</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig10-01.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Aby dodać użytkownika do projektów, wybierz polecenie <guilabel>Dodaj projekty</guilabel>. Zaznacz jeden lub więcej projektów, a następnie wybierz odpowiedni poziom dostępu i kliknij <guibutton>OK</guibutton>. Aby zmienić poziom dostępu do projektu, wybierz projekt z listy i kliknij <guilabel>Zmień dostęp</guilabel>. Następnie wybierz nowy poziom dostępu i kliknij <guibutton>OK</guibutton>. Aby usunąć użytkownika z projektu, wybierz go z listy i kliknij <guilabel>Usuń projekt</guilabel>. W przypadku programu Desktop Client, możesz wybrać kilka projektów naraz, by zmienić lub usunąć dostęp do nich.</para>
+
     </sect2>
+
+  </sect1>
+
+  <sect1 id="webissues.admin.register">
+    <title>Zgłoszenia rejestracji</title>
+
+    <para>Administator systemu WebIssues może włączyć opcję, która pozwala użytkownikom samodzielnie dokonywać rejestracji nowych kont. Nowy użytkownik podaje nazwę, login i hasło oraz adres e-mail, który podlega weryfikacji poprzez wysłanie wiadomości aktywacyjnej. Aktywne zgłoszenia rejestracji muszą następnie zostać zatwierdzone przez administratora. Trzeba również określić, do jakich projektów użytkownik będzie miał dostęp. Dopiero wtedy użytkownik będzie mógł zalogować się do systemu.</para>
+
+    <note>
+      <title>Notatka</title>
+      <para>Więcej informacji na temat rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.work.login"/>. Informacje na temat włączania i konfigurowania modułu rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
+    </note>
+
+    <para>Aby wyświetlić aktywne zgłoszenia rejestracji, które oczekują na akceptację, przejdź do Panelu administracyjnego i kliknij <guilabel>Zgłoszenia rejestracji</guilabel>. Funkcja ta nie jest dostępna w programie Desktop Client.</para>
+
+    <figure>
+      <title>Zgłoszenia rejestracji</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch05-fig10-02.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Aby zatwierdzić zgłoszenie rejestracji, wybierz je z listy, a następnie użyj polecenia <guilabel>Zatwierdź zgłoszenie</guilabel>. Zaznacz projekty, do których użytkownik będzie miał dostęp i kliknij <guibutton>OK</guibutton>. Zgłoszenie rejestracji zniknie z listy, a nowy użytkownik pojawi się na liście kont użytkowników, gdzie możesz zmienić nazwę, poziom dostępu, ustawienia i hasło użytkownika, tak jak w przypadku kont utworzonych bezpośrednio przez admnistratora. Użytkownik otrzyma również powiadomienie mailowe o zatwierdzeniu jego zgłoszenia.</para>
+
+    <para>Aby odrzucić wybrane zgłoszenie rejestracji, użyj polecenia <guilabel>Odrzuć zgłoszenie</guilabel>. Zostanie ono usunięte z listy zgłoszeń, a użytkownik otrzyma powiadomienie mailowe o odrzuceniu zgłoszenia.</para>
+
+    <para>Jeśli chcesz otrzymywać automatyczne powiadomienia o nowych zgłoszeniach rejestracji, które oczekują na zatwierdzenie, podaj swój adres e-mail w <xref linkend="webissues.custom.settings">ustawieniach serwera</xref>.</para>
 
   </sect1>
 

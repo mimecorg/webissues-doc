@@ -104,6 +104,10 @@
       <para>W przypadku systemów Windows oraz OS X program Desktop Client automatycznie wykrywa systemowe ustawienia serwera proxy. Natomiast w przypadku systemu Linux, musisz wpisać parametry połączenia, jeśli chcesz korzystać z serwera proxy. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.work.personal.client"/>.</para>
     </note>
 
+    <para>Jeśli administrator serwera WebIssues włączył taką opcję, to możesz utworzyć nowe konto i po zatwierdzeniu zgłoszenia rejestracji przez administratora otrzymasz dostęp do systemu. Aby rozpocząć tworzenie nowego konta, kliknij odnośnik <guilabel>Zarejestruj nowe konto</guilabel> w oknie logowania programu Web Client. Następnie podaj nazwę użytkownika, która będzie widoczna dla wszystkich użytkowników, na ogół imię i nazwisko. Wprowadź login oraz hasło, których będziesz używać, aby się zalogować. Podaj także adres e-mail. Następnie kliknij <guibutton>Zarejestruj</guibutton>.</para>
+
+    <para>Poprawność podanego przez ciebie adresu e-mail zostanie sprawdzona poprzez wysłanie wiadomości z odnośnikiem aktywacyjnym. Kliknij odnośnik lub skopiuj adres, aby otworzyć go przeglądarce. Wiadomość tą powinieneś otrzymać niedługo po zarejestrowaniu. Gdy aktywujesz zgłoszenie, zostanie ono przesłane do zatwierdzenia przez administratora systemu. Po zatwierdzeniu otrzymasz wiadomość z potwierdzeniem i możesz zalogować się do systemu przy pomocy podanego wcześniej loginu i hasła.</para>
+
   </sect1>
 
   <sect1 id="webissues.work.issues">

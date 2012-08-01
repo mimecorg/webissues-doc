@@ -283,6 +283,20 @@
       </mediaobject>
     </figure>
 
+    <para>Opcja <guilabel>Włącz rejestrację użytkowników</guilabel> pozwala na włączenie modułu, który umożliwia użytkownikom rejestrację nowego konta. Dodatkowo, możesz podać adres e-mail, na który będą wysyłane powiadomienia o zgłoszeniach, które oczekują na zatwierdzenie przez administratora systemu. Będą one wysyłane, gdy pojawią się nowe zgłoszenia rejestracji do zatwierdzenia, jednak nie częściej, niż co godzinę. Więcej informacji na temat rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.work.login"/> oraz <xref linkend="webissues.admin.register"/>.</para>
+
+    <figure>
+      <title>Rejestracja użytkowników</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig18-02.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <note>
+      <title>Notatka</title>
+      <para>Aby moduł rejestracji użytkowników działał, musisz prawidłowo skonfigurować ustawienia e-maili. Wysyłanie powiadomień o nowych zgłoszeniach rejestracji wymaga również działającego zadania cyklicznego. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.notifications"/>.</para>
+    </note>
+
     <para>Opcje z grupy <guilabel>Ograniczenia</guilabel> umożliwiają administratorowi systemu określenie maksymalnej długości komentarzy oraz maksymalnej wielkości załączników, jakie mogą być dodawane przez użytkowników.</para>
 
     <figure>
@@ -311,7 +325,7 @@
       <para>Przechowywanie dużych załączników w bazie danych może wymagać odpowiedniej konfiguracji serwera bazy danych i może być nieoptymalne w porównaniu z systemem plików. Ponadto wiele usług hostingowych znacznie ogranicza maksymalny rozmiar bazy danych, jednocześnie oferując dużo dostępnej przestrzeni dyskowej. Z drugiej strony, przechowywanie załączników wyłącznie w bazie danych ułatwia tworzenie kopii zapasowych systemu, gdyż nie ma w tym wypadku konieczności dodatkowego archiwizowania plików. W niektórych przypadkach może być również bezpieczniejsze.</para>
     </note>
 
-    <para>Opcje z grupy <guilabel>Maksymalny czas życia</guilabel> pozwalają na zdefiniowanie czasu, po jakim nieaktywne sesje użytkowników są usuwane, a także czasu, przez jaki w systemie przechowywane są wpisy w Dzienniku zdarzeń. Natomiast ustawienie <guilabel>Usuwanie śmieci</guilabel> pozwala określić prawdopodobieństwo, z jakim uruchamiany jest proces usuwania nieaktywnych sesji i starych wpisów w Dzienniku zdarzeń. Zmniejsz to prawdopodobieństwo, jeśli serwer jest mocno obciążony, lub wybierz opcję <quote>Użyj zadania cyklicznego</quote>, jeśli w systemie jest aktywny mechanizm wysyłania powiadomień mailowych (patrz sekcja <xref linkend="webissues.prep.nofitications.cron"/>).</para>
+    <para>Opcje z grupy <guilabel>Maksymalny czas życia</guilabel> pozwalają na zdefiniowanie czasu, po jakim nieaktywne sesje użytkowników są usuwane, a także czasu, przez jaki w systemie przechowywane są wpisy w Dzienniku zdarzeń oraz zgłoszenia rejestracji użytkowników, które oczekują na potwierdzenie adresu e-mail. Natomiast ustawienie <guilabel>Usuwanie śmieci</guilabel> pozwala określić prawdopodobieństwo, z jakim uruchamiany jest proces usuwania nieaktywnych sesji, starych wpisów w Dzienniku zdarzeń i niepotwierdzonych zgłoszeń. Zmniejsz to prawdopodobieństwo, jeśli serwer jest mocno obciążony, lub wybierz opcję <quote>Użyj zadania cyklicznego</quote>, jeśli w systemie jest aktywny mechanizm wysyłania powiadomień mailowych (patrz sekcja <xref linkend="webissues.prep.nofitications.cron"/>).</para>
 
     <figure>
       <title>Maksymalny czas życia i Usuwanie śmieci</title>
