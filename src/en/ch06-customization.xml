@@ -283,6 +283,20 @@
       </mediaobject>
     </figure>
 
+    <para>The <guilabel>Enable user registration</guilabel> option allows you to enable a module that allows users to register a new account. Additionally, you can enter an e-mail address to which notifications are sent about requests that are waiting for approval by the system administrator. They will be sent when there are new registration requests for approval, but not more often than once an hour. For more information about user registration, see <xref linkend="webissues.work.login"/> and <xref linkend="webissues.admin.register"/>.</para>
+
+    <figure>
+      <title>User Registration</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig18-02.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <note>
+      <title>Note</title>
+      <para>For the user registration module to work, you must properly configure the emails. Sending notifications with new registration requests also requires a working cron job. For more information, see <xref linkend="webissues.prep.notifications"/>.</para>
+    </note>
+
     <para>Options from the <guilabel>Limits</guilabel> group allow the system administrator to specify the maximum length of comments and the maximum size of attachments that can be added by users.</para>
 
     <figure>
@@ -311,7 +325,7 @@
       <para>Storing large attachments in the database may require appropriate configuration of the database server, and can be less optimal compared to the file system. In addition, many hosting services significantly limit the maximum size of the database, while offering plenty of available disk space. On the other hand, storing attachments only in the database makes it easier to backup the system, since there is no need to backup additional files. In some cases it may also be safer.</para>
     </note>
 
-    <para>Options from the <guilabel>Maximum Lifetime</guilabel> group allow you to define the time after which inactive user sessions are removed, and the maximum amount of time the entries in the Event Log are stored by the system. The <guilabel>Garbage Collection</guilabel> setting determines the probability of running the clean up process, which removes inactive sessions and old entries in the Event Log. Reduce the probability if the server is heavily loaded, or select <quote>Use cron job</quote> if the mechanism of sending email notifications is active (see <xref linkend="webissues.prep.nofitications.cron"/>).</para>
+    <para>Options from the <guilabel>Maximum Lifetime</guilabel> group allow you to define the time after which inactive user sessions are removed, and the maximum amount of time the entries in the Event Log and the user registration requests that are waiting for email address confirmation are stored by the system. The <guilabel>Garbage Collection</guilabel> setting determines the probability of running the clean up process, which removes inactive sessions, old entries in the Event Log and unconfirmed requests. Reduce the probability if the server is heavily loaded, or select <quote>Use cron job</quote> if the mechanism of sending email notifications is active (see <xref linkend="webissues.prep.nofitications.cron"/>).</para>
 
     <figure>
       <title>Maximum Lifetime &amp; Garbage Collection</title>

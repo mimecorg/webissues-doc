@@ -51,7 +51,13 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Issue Types</term>
+        <term>Registration Requests</term>
+        <listitem>
+          <para>Allows approving or rejecting user registration requests. This module is available only if user registration was enabled in server settings. See <xref linkend="webissues.admin.register"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+      <term>Issue Types</term>
         <listitem>
           <para>Allows customizing issue types and public views. See <xref linkend="webissues.custom.types"/> and <xref linkend="webissues.custom.views"/>.</para>
         </listitem>
@@ -232,9 +238,13 @@
         <para>Avoid changing the names of users who have assigned issues. Attribute values ​​are stored as text, so changing the user name will not automatically change the values ​​of <quote>Assigned to</quote> attributes. This may cause the user to no longer see those assigned issues.</para>
       </tip>
 
+      <para>To manage the list of projects available for the selected user, use the <guilabel>User Projects</guilabel> command. You can also manage the list of users who have access to the selected project. For more information, please refer to <xref linkend="webissues.admin.users.members"/>.</para>
+
       <para>You can also change the preferences of any user using the <guilabel>User Preferences</guilabel> command. All users can also change their own settings, using the <guilabel>User Prererences</guilabel> command in the <guilabel>Tools</guilabel> window or in the toolbar of the Desktop Client main window. For more information about user preferences, see <xref linkend="webissues.work.personal"/>.</para>
 
-      <para>The WebIssues system does not allow to delete existing users, because it keeps all the historical information; for example, changes made by individual users. Instead, you can change the access level of users to disabled, when they should no longer be able to use the system.</para>
+      <para>The WebIssues system does not allow to delete existing users, because it keeps all the historical information; for example, changes made by individual users. Instead, you can change the access level of users to disabled, when they should no longer be able to use the system. Use the filtering options in the upper right corner of the list to hide disabled user accounts.</para>
+
+      <para>The WebIssues system allows users to register new accounts by themselves. In this case it is necessary for the system administrator to the approve registration requests. For more information, see <xref linkend="webissues.admin.register"/> and <xref linkend="webissues.custom.settings"/>.</para>
 
     </sect2>
 
@@ -291,7 +301,47 @@
 
       <para>To remove a member of the project, select the member on the list and click <guilabel>Remove Member</guilabel>. In case of the Desktop Client, you can choose several members on the list, and change their access level or remove them from the project simultaneously.</para>
 
+      <para>You can also view a list of available projects for the selected user, as well as to add a user to the selected projects, remove and change the access level. It is especially useful when creating new user accounts. However, unlike the project members management function, it is available only to system administrators.</para>
+
+      <para>To manage user projects, go to the Administration Panel and click and click <guilabel>User Accounts</guilabel>. In the Desktop Client, use the <guilabel>Users</guilabel> command from the toolbar of the main window. Then select the user from the list and click <guilabel>User Projects</guilabel>. The list of user projects is analogous to the list of project members.</para>
+
+      <figure>
+        <title>List of user projects</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig10-01.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>To add a user to some projects, use the <guilabel>Add Projects</guilabel> command. Select one or more projects, choose the appropriate access level and click <guibutton>OK</guibutton>. To change the access level to a project, select a project from the list and click <guilabel>Change Access</guilabel>. Then choose the new access level and click <guibutton>OK</guibutton>. To remove a user from a project, select it from the list and click <guilabel>Remove Project</guilabel>. In the Desktop Client, you can select several projects at once and change or remove access to them.</para>
+
     </sect2>
+
+  </sect1>
+
+  <sect1 id="webissues.admin.register">
+    <title>Registration requests</title>
+
+    <para>The WebIssues system administator can enable an option that allows users to register new accounts. A new user has to provide the name, login and password, and the email address, which is verified by sending an activation message. Active registration requests must then be approved by the administrator. Also the projets that the new user has access must be specified. Only then the user will be able to log into the system.</para>
+
+    <note>
+      <title>Note</title>
+      <para>For more information about user registration, please refer to <xref linkend="webissues.work.login"/>. You will find more information about enabling and configuring the user registration module in <xref linkend="webissues.custom.settings"/>.</para>
+    </note>
+
+    <para>To see active registration requests, that awail approval, go to the Administration Panel and click <guilabel>Registration Requests</guilabel>. This function is not available in the Desktop Client.</para>
+
+    <figure>
+      <title>Registration requests</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch05-fig10-02.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>To approve a registration request, select it from the list, and use the <guilabel>Approve Request</guilabel> command. Select the projects to which the user will have access and click <guibutton>OK</guibutton>. The registration request will disappear from the list, and a new user will appear in the list of user accounts, where you can change the name, access level, settings and password, just like for accounts created directly by the admininistrator. The user will also receive an email notification that the request was approved.</para>
+
+    <para>To reject the selected registration request, use the <guilabel>Reject Request</guilabel> command. The request will be removed from the list, and the user will receive an email notification that the request was rejected.</para>
+
+    <para>If you want to receive automatic notifications about new registration requests that are waiting for approval, enter your e-mail in <xref linkend="webissues.custom.settings">the server settings</xref>.</para>
 
   </sect1>
 

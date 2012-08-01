@@ -104,6 +104,10 @@
       <para>On Windows and OS X the Desktop Client automatically detects system proxy settings. However in case of Linux, you must enter the connection parameters if you want to use a proxy. For more information, see <xref linkend="webissues.work.personal.client"/>.</para>
     </note>
 
+    <para>If the WebIssues server administrator has enabled this option, you can create a new account with the approval of the administrator, so that you can access the system. To start creating a new account, click the <guilabel>Register a new account</guilabel> link in the login window of the Web Client. Then enter the user name that will be visible to all users, usually your first and last name. Enter your login and password that you will use to login. Also enter your e-mail address. Then click <guibutton>Register</guibutton>.</para>
+
+    <para>The specified e-mail address will be verified by sending a message with an activation link. Click the link or copy the address to open it in the browser. You should reeive this message shortly after registration. When you activate the registration request, it will be submitted for approval by the system administrator. Once approved, you will receive a confirmation message and you will be able to login to the system using the previously specified login and password.</para>
+
   </sect1>
 
   <sect1 id="webissues.work.issues">
