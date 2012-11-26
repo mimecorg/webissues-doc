@@ -40,7 +40,7 @@
 
     <para>In case of MySQL, support for the InnoDB engine is required. The PostgreSQL database should be created with Unicode character encoding. Also remember that you can only use the SQL Server database if the WebIssues server is installed on a computer running Windows.</para>
 
-    <para>The WebIssues server also requires PHP, version 5.2.1 or newer, integrated with the web server. In case of IIS server, to get the best performance it's recommended to use the <literal>fastcgi</literal> module and the <literal>wincache</literal> extension. PHP must also have the <literal>mbstring</literal> extension installed, and if you're using a MySQL or PostrgreSQL database, also the <literal>mysqli</literal> or <literal>pgsql</literal> extension, respectively.</para>
+    <para>The WebIssues server also requires PHP, version 5.2.1 or newer, integrated with the web server. In case of IIS server, to get the best performance it's recommended to use the <literal>fastcgi</literal> module and the <literal>wincache</literal> extension. PHP must also have the <literal>mbstring</literal> extension installed, and if you're using a MySQL or PostrgreSQL database, also the <literal>mysqli</literal> or <literal>pgsql</literal> extension, respectively. In case of a SQL Server database, the <literal>com_dotnet</literal> is required; it is not enabled by default since version 5.3.15 and 5.4.5 of PHP.</para>
 
     <para>If you're installing the WebIssues server using an external web hosting service, make sure that it meets all these requirements. To create a database and configure the web server, use the tools provided by hosting provider and refer to the available documentation.</para>
 

@@ -512,6 +512,15 @@
         </mediaobject>
       </figure>
 
+      <para>Options in the <guilabel>View Settings</guilabel> group make it possible to select the order in which changes are displayed in the issue history view. Also it is possible to select the default filter in the issue history; you can display all history or just comments and attachments. The default values of these options depend on server settings.</para>
+
+      <figure>
+        <title>View settings</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig27-01.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
       <para>If the administrator of the WebIssues system enabled email notifications, you can also configure these notifications in the preferences window. For more information, see <xref linkend="webissues.track.alerts"/>.</para>
 
       <para>The system administrator can not only change the global settings, but also the individual settings for any user. To do this, open the list of user accounts, select the user whose settings you want to change, and use the <guilabel>User Preferences</guilabel> command.</para>

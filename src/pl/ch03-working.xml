@@ -512,6 +512,15 @@
         </mediaobject>
       </figure>
 
+      <para>Opcje w grupie <guilabel>Ustawienia widoków</guilabel> umożliwiają wybranie kolejności, w jakiej wyświetlane są zmiany w widoku historii sprawy, oraz domyślnego filtra w historii sprawy. Można domyślnie wyświetlać całą historię lub tylko komentarze i załączniki. Domyślne wartości tych opcji są zgodne z ustawieniami serwera.</para>
+
+      <figure>
+        <title>Ustawienia widoków</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig27-01.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
       <para>Jeśli administrator systemu WebIssues włączył możliwość otrzymywania powiadomień mailowych, w oknie preferencji użytkownika możesz zmienić ustawienia tych powiadomień. Aby uzyskać więcej informacji na ten temat, patrz sekcja <xref linkend="webissues.track.alerts"/>.</para>
 
       <para>Administrator systemu może zmienić nie tylko globalne ustawienia, ale także indywidualne ustawienia dla dowolnego użytkownika. Aby to zrobić, otwórz listę kont użytkowników, wybierz użytkownika, którego ustawienia chcesz zmienić, i użyj polecenia <guilabel>Ustawienia użytkownika</guilabel>.</para>

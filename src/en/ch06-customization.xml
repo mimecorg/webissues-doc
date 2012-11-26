@@ -185,6 +185,8 @@
       <para>Each view contains the ID and Name columns, which you can't delete or move. However, you can hide the ID column from all views, if you think that it's unnecessary. To do this, select the <guibutton>Hide the ID Column</guibutton> option described in <xref linkend="webissues.custom.settings"/>. The column will then be hidden from all public and private views.</para>
     </tip>
 
+    <para>The initial view is the view which is automatically selected when a folder of the given type is opened. By default it's the <quote>All Issues</quote> view, also known as the default view. Using the <guilabel>Modify</guilabel> option in the <guilabel>Initial View</guilabel> box you can select any public view. This way you can configure WebIssues so that, for example, only Active Bugs are displayed after opening a folder, and the All Issues view must be selected from the view drop down list in order to see other bugs.</para>
+
     <para>Just like each user can define any number of personal views for each issue type, the administrator of WebIssues system can define public views for each type. Everyone can use public views, but only the administrator has the right to create and modify them.</para>
 
     <para>For standard issue types, Bugs and Tasks, there are several default public views; for example, Active Bugs and Created By Me. You can change these standard views and create new ones. The Forum issue type has no views, because it has no attributes, but you can define views using the built-in columns. For example, you can create the Created By Me view, analogous to the one that exists for Bugs and Tasks. However, you cannot define the order of attributes, unless you add some attributes to this type.</para>
@@ -274,7 +276,9 @@
       </mediaobject>
     </figure>
 
-    <para>In the <guilabel>View Settings</guilabel> group the <guilabel>Hide the ID column</guilabel> option is available. When you enable it, the ID column will not be displayed in the list of issues. This change will affect all users and all types of issues. When you hide the ID column, issues can still be sorted by this column, and the identifier of the selected issue will still be displayed in the <guilabel>Properties</guilabel> group in issue details.</para>
+    <para>Options from the <guilabel>View Settings</guilabel> group affect all users and all types of issues. When the <guilabel>Hide the ID column</guilabel> option is enabled, the ID column will not be displayed in the list of issues. When you hide the ID column, issues can still be sorted by this column, and the identifier of the selected issue will still be displayed in the <guilabel>Properties</guilabel> group in issue details view. When the <guilabel>Hide attributes with empty values</guilabel> option is enabled, attributes that don't have any value are not included in the issue details view. This option is usefult when issue types contain a lot of attributes, which are not always used.</para>
+
+    <para>You can select the order in which changes are displayed in the issue history view. Also it is possible to select the default filter in the issue history; you can display all history or just comments and attachments. Individual users may change these settings using the <guilabel>User Preferences</guilabel> command.</para>
 
     <figure>
       <title>View Settings</title>
