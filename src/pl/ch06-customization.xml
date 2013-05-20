@@ -287,6 +287,15 @@
       </mediaobject>
     </figure>
 
+    <para>Możesz zmienić domyślny format tekstu używanego dla nowych opisów i komentarzy. Domyślnie używany jest <guilabel>Tekst ze znacznikami</guilabel>. Możesz zmienić tą opcję na <guilabel>Zwykły tekst</guilabel>, jeśli wolisz tekst bez formatowania, taki jak w starszych wersjach systemu WebIssues. Pamiętaj, że poszczególni użytkownicy mogą zmienić tą opcję w swoich ustawieniach użytkownika, a także dla poszczególnych opisów i komentarzy.</para>
+
+      <figure>
+        <title>Edycja</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch06-fig18-03.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
     <para>Opcja <guilabel>Włącz rejestrację użytkowników</guilabel> pozwala na włączenie modułu, który umożliwia użytkownikom rejestrację nowego konta. Dodatkowo, możesz podać adres e-mail, na który będą wysyłane powiadomienia o zgłoszeniach, które oczekują na zatwierdzenie przez administratora systemu. Będą one wysyłane, gdy pojawią się nowe zgłoszenia rejestracji do zatwierdzenia, jednak nie częściej, niż co godzinę. Więcej informacji na temat rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.work.login"/> oraz <xref linkend="webissues.admin.register"/>.</para>
 
     <figure>

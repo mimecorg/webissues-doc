@@ -115,19 +115,226 @@
 
     <para>Click on the folder named Bugs to open it. If you have just created a new server, the folder will be empty, so let's start with creating the first issue.</para>
 
-    <sect2 id="webissues.work.issues.attributes">
-      <title>Attributes of an issue</title>
+    <para>Select the <guilabel>Add Issue</guilabel> command (if you are using the Desktop Client, you must click on the list of issues for the command to appear). The first part of the window will display a number of fields:</para>
 
-      <para>Select the <guilabel>Add issue</guilabel> command (if you are using the Desktop Client, you must click on the list of issues for the command to appear). The following window will be displayed:</para>
+    <figure>
+      <title>Adding an issue</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig06.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>The name of the issue is a required field, so let's type <quote>My first issue</quote>. The remaining fields are the attributes of the issue. Status and Priority are also required fields, but they have a default initial value. Depending on the type of the attributes, they accept different kinds of values. See <xref linkend="webissues.work.issues.attributes"/> for more information about attribute types.</para>
+
+    <para>For starters, assign the bug to yourself and change its severity to 1 &mdash; after all, it's the first bug recorded in the system.</para>
+
+    <para>Then type the text explaining the issue in the description field. The description is optional and can be left empty; in that case it can be added later. However, in most cases it's most convenient to provide the description directly when adding the issue to the system.</para>
+      
+    <figure>
+      <title>Issue description</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig06-01.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>All spaces and line breaks in the text will be preserved and long lines will be wrapped if necessary. Links in text will be automatically recognized and highlighted. You can use simple markup to change text format, for example use bold and italic font or create bullet lists and blocks of code. The toolbar above the text field will help you enter the correct markup. See <xref linkend="webissues.work.issues.comments"/> for more information about text formatting.</para>
+
+    <para>Press <guibutton>OK</guibutton> to confirm adding the issue. If the value of one of the attributes is incorrect, you will receive an error. Otherwise, the new issue will appear in the list and its details will be displayed below:</para>
+
+    <figure>
+      <title>Details of the new issue</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig07.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <sect2 id="webissues.work.issues.comments">
+      <title>Comments and descriptions</title>
+
+      <para>The description is useful to provide information about the issue, but sometimes additional information or questions are necessary. Comments can be used for that purpose. To write a comment, choose <guilabel>Add Comment</guilabel> (make sure that the history of the issue is the active panel, if you are using the Desktop Client). The new window consists almost entirely of a text edit box:</para>
 
       <figure>
-        <title>Adding an issue</title>
+        <title>Issue comment</title>
         <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig06.png" format="PNG"/></imageobject>
+          <imageobject><imagedata fileref="images/ch03-fig08.png" format="PNG"/></imageobject>
         </mediaobject>
       </figure>
 
-      <para>The name of the issue is a required field, so let's type <quote>My first issue</quote>. The remaining fields are the attributes of the issue. Status and Priority are also required fields, but they have a default initial value. Depending on the type of the attributes, they accept different kinds of values:</para>
+      <para>The text will appear exactly as typed, with all spaces and new lines preserved. This allows you, for example, to paste fragments of code and error logs without worrying that they will become unreadable. Long lines are automatically wrapped, depending on the width of the window. Web addresses and email addresses are automatically converted into clickable links. The same rules apply for comments, issue descriptions and project descriptions.</para>
+
+      <tip>
+        <title>Tip</title>
+        <para>Automatic recognition of links works not only in descriptions and comments, but also in the names of issues and attribute values​​, and even in descriptions of attachments.</para>
+      </tip>
+
+      <para>When the <guilabel>Text with Markup</guilabel> option is selected, you can also use some special markup to change the font style, create links, bullet lists, etc. Note that this option is usually enabled by default, but you can change it in your preferences. By selecting the <guilabel>Plain Text</guilabel> option, you can disable all special formatting, except for web and email addresses and identifiers, which will still be converted to links automatically.</para>
+
+      <para>The toolbar above the text field will automatically enter appropriate markup tags for you so that you don't have to remember them. Simply place the text cursor where you want the markup inserted or select a fragment of text to surround it with formatting tags. The following tags are recognized when markup is enabled:</para>
+
+      <table frame="all">
+        <title>Markup summary</title>
+        <tgroup cols="2">
+          <thead>
+            <row>
+              <entry>Example</entry>
+              <entry>Result</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry><programlisting>This text is **bold**.</programlisting></entry>
+              <entry>This text is <emphasis role="bold">bold</emphasis>.</entry>
+            </row>
+            <row>
+              <entry><programlisting>This text is __italic__.</programlisting></entry>
+              <entry>This text is <emphasis>italic</emphasis>.</entry>
+            </row>
+            <row>
+              <entry><programlisting>This text is `monospace`.</programlisting></entry>
+              <entry>This text is <literal>monospace</literal>.</entry>
+            </row>
+            <row>
+              <entry><programlisting>This is a [www.mimec.org link].</programlisting></entry>
+              <entry>This is a <ulink url="http://www.mimec.org/">link</ulink>.</entry>
+            </row>
+            <row>
+              <entry>
+<programlisting>[list]
+* first item
+* second item
+* third item
+** first sub-item
+** second sub-item
+[/list]
+</programlisting>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>first item</para>
+                  </listitem>
+                  <listitem>
+                    <para>second item</para>
+                  </listitem>
+                  <listitem>
+                    <para>third item</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para>first sub-item</para>
+                      </listitem>
+                      <listitem>
+                        <para>second sub-item</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>
+<programlisting>[quote Title]
+This is a quote.
+[/quote]
+</programlisting>
+              </entry>
+              <entry>
+                <blockquote>
+<literallayout><emphasis role="bold">Title:</emphasis>
+This is a quote.</literallayout>
+                </blockquote>
+              </entry>
+            </row>
+            <row>
+              <entry>
+<programlisting>[code C++]
+for ( int i = 0; i &lt; 10; i++ )
+    printf( "%d\n", i );
+[/code]
+</programlisting>
+              </entry>
+              <entry>
+<programlisting>for ( int i = 0; i &lt; 10; i++ )
+    printf( "%d\n", i );
+</programlisting>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+
+      <para>Bold and italic font tags can be nested and combined with other markup, but within the monospace font tags all other markup is ignored. This allows pasting single line snippets of code without breaking formatting.</para>
+
+      <para>Links in square brackets are similar to the automatic links, but they allow the text of the link to be customized. If the text is not given, the address is displayed instead. You can wrap all addresses in square brackets to ensure that they are correctly recognized.</para>
+
+      <para>Items of a bullet lists can be nested up to six levels by using the appropriate number of asterisks. There can be any number of spaces before the asterisks and at least one space between the asterisks and the text of the item. List items can consists of any number of lines, they may even contain nested quotes or code blocks.</para>
+
+      <para>Quotes are displayed in a dashed frame and they may have an optional title. You can easily quote existing comments or the description of the issue by using the <guibutton>Reply</guibutton> command. This will open a new comment window with the original comment or description automatically included and marked with the quote tags. Quoted text may contain other markup, including nested quotes, lists and code blocks.</para>
+
+      <para>Code blocks are useful for pasting fragments of code, log files, etc. The are displayed verbatim, with all markup is ignored, and using a monospace font. However, unlike the monospace font tags, a comment block may contain multiple lines. In addition, the language of the code block can be specified, enabling syntax highlighting. Supported languages include: HTML, XML, C, C++, C#, Java, Bash (equivalent to SH), Python, Perl, Ruby, JavaScript (equivalent to JS), CSS, SQL, VB and PHP.</para>
+
+      <para>You can use the <guibutton>Preview</guibutton> button in the toolbar above the text field to see a preview of the text with all formatting applied, to verify that it looks correctly.</para>
+
+      <para>Comments are displayed in the issue history together with other changes in chronological order. Using the filter links on the right side, you can choose to display only the specific information. You can change the default filter and the order of changes (oldest first or newest first) in your user preferences.</para>
+
+      <figure>
+        <title>Issue history with a comment</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig09.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <tip>
+        <title>Tip</title>
+        <para>In the Desktop Client, all windows containing the comment or description text field don't block the rest of the windows. You can switch to another's issue details while filing a new issue or adding a comment, for example. Using the web browser you can achieve a similar effect by opening pages in multiple tabs.</para>
+      </tip>
+
+    </sect2>
+
+    <sect2 id="webissues.work.issues.links">
+      <title>Links to items</title>
+
+      <para>You can create links to other issues and to comments or attachments. To demonstrate this, let's create another issue called <quote>Second issue</quote>, leaving the default values ​​of attributes. Let's assume that the identifier of the first issue is #1, and the second is #6.</para>
+
+      <para>If you add a comment to the first issue, and type <quote>#6</quote>, it will be replaced with a link to the other issue. Similarly, if you now add a comment to the second issue, writing <quote>#1</quote>, it will become a link to the first issue. In this way, you can create links between issues, refer to other comments in your own comments, etc. When markup is enabled, identifiers can also be used in square brackets to create links with custom text. Just like external addresses, identifiers are also converted to links in descriptions, attribute values, etc.</para>
+
+      <figure>
+        <title>Link to an issue</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig10.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <note>
+        <title>Note</title>
+        <para>Identifiers of issues are unique and increasing, but not necessarily in consecutive numerical order. In our example, the ID of the second issue is #6, not #2, because the identifiers are also assigned to comments, attachments and other changes, making them easier to manage by the system.</para>
+      </note>
+
+      <para>To quickly go to the issue, comment or attachment with the given identifier, you can also use the Go To Item command. In the Web Client, click <guilabel>Tools</guilabel> in the the upper right corner of the window, then click <guilabel>Go To Item</guilabel>. In the Desktop Client this command is always available in the the main window toolbar, you can also press <shortcut><keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo></shortcut>.</para>
+
+      <figure>
+        <title>Going to an item</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig11.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Then enter the identifier you are looking for and press <guibutton>OK</guibutton>. If there is an issue with this identifier, it will be displayed. If the identifier represents a comment or an attachment, you will see the issue which contains the item, and the history will be scrolled to the item.</para>
+
+    </sect2>
+
+    <sect2 id="webissues.work.issues.attributes">
+      <title>Editing attributes</title>
+
+      <para>The <guilabel>Edit Attributes</guilabel> command allows you to edit issue, i.e., change the value of each attribute and the name of the issue. Select the first issue and select that command. You will see the same window as in case of adding a new issue, containing current values ​​of attributes.</para>
+
+      <figure>
+        <title>Changing attributes of an issue</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig12.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>The following types of attributes are supported in WebIssues:</para>
 
       <variablelist>
         <varlistentry>
@@ -162,91 +369,12 @@
         </varlistentry>
       </variablelist>
 
-      <para>For starters, assign the bug to yourself and change its severity to 1 &mdash; after all, it's the first bug recorded in the system.</para>
-
       <tip>
         <title>Tip</title>
         <para>If you don't see some user in the drop down list, it probably means that the user was not added to the project members; see <xref linkend="webissues.admin.users"/>.</para>
       </tip>
 
-      <para>Then press <guibutton>OK</guibutton>. If the value of one of the attributes is incorrect, you will receive an error. Otherwise, the new issue will appear in the list and its details will be displayed below:</para>
-
-      <figure>
-        <title>Details of the new issue</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig07.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-    </sect2>
-
-    <sect2 id="webissues.work.issues.comments">
-      <title>Comments and editing</title>
-
-      <para>For now, it doen't look very impressive. The system has registered that you have created the issue, you gave it the name and changed the value of two attributes. Now let's write a comment. To do this, choose <guilabel>Add Comment</guilabel> (make sure that the history of the issue is the active panel, if you are using the Desktop Client).</para>
-
-      <para>The new window consists almost entirely of a text edit box. In case of the Desktop Client, you can leave this window open and return to another window, for example, to view the history of the issue. Using a web browser you can also add a new comment in a separate window, if you right-click on the link and select an appropriate option.</para>
-
-      <para>Returning to our window, type the text of the comment regarding the first issue:</para>
-
-      <figure>
-        <title>Adding a comment</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig08.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <para>The text will appear exactly as typed, with all spaces and new lines preserved. This allows you, for example, to paste fragments of code and error logs without worrying that they will become unreadable. Long lines are automatically wrapped, depending on the width of the window. Web addresses and email addresses are automatically converted into clickable links.</para>
-
-      <figure>
-        <title>Issue history with a comment</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig09.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <tip>
-        <title>Tip</title>
-        <para>Automatic recognition of links works not only in the text of comments, but also in the names of issues and attribute values​​, and even in descriptions of attachments.</para>
-      </tip>
-
-      <para>You can also create links to other issues and to comments or attachments. To demonstrate this, let's create another issue called <quote>Second issue</quote>, leaving the default values ​​of attributes. Let's assume that the identifier of the first issue is #1, and the second is #5.</para>
-
-      <para>If you add a comment to the first issue, and type <quote>#5</quote>, it will be replaced with a link to the other issue. Similarly, if you now add a comment to the second issue, writing <quote>#1</quote>, it will become a link to the first issue. In this way, you can create links between issues, refer to other comments in your own comments, etc.</para>
-
-      <figure>
-        <title>Link to an issue</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig10.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <note>
-        <title>Note</title>
-        <para>Identifiers of issues are unique and increasing, but not necessarily in consecutive numerical order. In our example, the ID of the second issue is #5, not #2, because the identifiers are also assigned to comments, attachments and other changes, making them easier to manage by the system.</para>
-      </note>
-
-      <para>To quickly go to the issue, comment or attachment with the given identifier, you can also use the Go To Item command. In the Web Client, click <guilabel>Tools</guilabel> in the the upper right corner of the window, then click <guilabel>Go To Item</guilabel>. In the Desktop Client this command is always available in the the main window toolbar, you can also press <shortcut><keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo></shortcut>.</para>
-
-      <figure>
-        <title>Going to an item</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig11.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <para>Then enter the identifier you are looking for and press <guibutton>OK</guibutton>. If there is an issue with this identifier, it will be displayed. If the identifier represents a comment or an attachment, you will see the issue which contains the item, and the history will be scrolled to the item.</para>
-
-      <para>The <guilabel>Edit Attributes</guilabel> command allows you to edit issue, i.e., change the value of each attribute and the name of the issue. Select the first issue and select that command. You will see the same window as in case of adding a new issue, containing current values ​​of attributes. Change the status of issue to Resolved, and select Fixed in the Resolution field. Then press <guibutton>OK</guibutton> to save your changes.</para>
-
-      <figure>
-        <title>Changing attributes of an issue</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig12.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <para>Note that the WebIssues system automatically remembers your changes and displays them in the history of the issue. This allows you to track the entire life cycle of the issue, changes of its status and all operations performed with the issue.</para>
+      <para>Change the status of issue to Resolved, and select Fixed in the Resolution field. Then press <guibutton>OK</guibutton> to save your changes. Note that the WebIssues system automatically remembers your changes and displays them in the history of the issue. This allows you to track the entire life cycle of the issue, changes of its status and all operations performed with the issue.</para>
 
       <figure>
         <title>Issue history after the change</title>
@@ -400,11 +528,13 @@
   <sect1 id="webissues.work.advanced">
     <title>Advanced editing</title>
 
-    <para>It's possible to edit and remove comments in the WebIssues system. This can be done by the user who created the comment, and the administrator of the system or the project, to which the issue belongs. An administrator may thus act as a moderator of comments. Users without administrator privileges can't modify or delete comments created by other users.</para>
+    <para>It's possible to add a description to an existing issue and to edit or delete a description. Only the person who created the issue, and the administrator of the system or the project, is allowed to do that.</para>
+
+    <para>Comments can also be edited and deleted. This can be done by the user who created the comment, and the administrator of the system or the project, to which the issue belongs. An administrator may thus act as a moderator of descriptions and comments. Users without administrator privileges can't modify or delete descriptions and comments created by other users.</para>
 
     <para>You can also change the name and description of the attachments, and to remove them. As with comments, this can be done by the user who created the attachment or by an administrator. You can't modify or replace the attached file &mdash; in order to do this, you need to remove the attachment and add the new file as a separate attachment.</para>
 
-    <para>To edit or delete a comment or an attachment, click the <guilabel>Edit</guilabel> or <guilabel>Delete</guilabel> button in the upper right corner of each item in the issue history. If the comment or attachment has been edited, its last modification date and the person who edited it is displayed in addition to the creation date and author.</para>
+    <para>To edit or delete a description, comment or attachment, click the <guilabel>Edit</guilabel> or <guilabel>Delete</guilabel> button in the upper right corner of the corresponding item in the issue details view. If the item has been edited, its last modification date and the person who edited it is displayed in addition to the creation date and author.</para>
 
     <figure>
       <title>History after editing a comment</title>
@@ -521,6 +651,15 @@
         </mediaobject>
       </figure>
 
+      <para>You can select the default format of text used for new descriptions and comments. Use <guilabel>Plain Text</guilabel> if you don't want any formatting or <guilabel>Text with Markup</guilabel> if you want to use simple formatting tags. Note that when editing existing comments and descriptions, the original format will be preserved by default. The default value depends on the global server setting.</para>
+
+      <figure>
+        <title>Editing</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig27-02.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
       <para>If the administrator of the WebIssues system enabled email notifications, you can also configure these notifications in the preferences window. For more information, see <xref linkend="webissues.track.alerts"/>.</para>
 
       <para>The system administrator can not only change the global settings, but also the individual settings for any user. To do this, open the list of user accounts, select the user whose settings you want to change, and use the <guilabel>User Preferences</guilabel> command.</para>
@@ -549,8 +688,6 @@
 
       <para>In case of the Windows system, you can also specify whether the Desktop Client should be automatically run whenever you log into the system. This allows you to configure the program to be always running, connected to the server and instantly available.</para>
 
-      <para>Use the <guilabel>Fonts</guilabel> options to change the fonts used in the comment editing window, and in the issue history view.</para>
-
       <para>If the <guilabel>Enable automatic checking for latest version</guilabel> option is active, the program will notify you if a newer version available. If you disable this option, you can still manually check if an update is available. To do this, open the window with information about the program. In the Web Client, click <guilabel>Tools</guilabel> and then <guilabel>About WebIssues</guilabel> if you are the system administrator. In the Desktop Client, click the question mark icon in the upper right corner of the window or press <shortcut><keycap>F1</keycap></shortcut>. Then click the <guibutton>Check Now</guibutton> button. If an update is available, you can open a page containing information about it, and also a page that allows you to download it.</para>
 
       <para>The second tab allows you to change more advanced settings of the Desktop Client:</para>
@@ -565,8 +702,6 @@
       <para>The <guilabel>Behavior</guilabel> group of options allows you to select the default action when you click on a link to an attachment. By default the program will ask whether you want to open it using the default application, or save it in a selected location on the disk. You can also right-click on the link to quickly select the desired operation.</para>
 
       <para>The <guilabel>Update Intervals</guilabel> determine the intervals at which the program automatically retrieves data from the server (in minutes). The first interval determines how often the program updates the tree of projects and folders, lists of issues and the state of active alerts. The second interval specifies how often it updates issue types, views and other data that do not change very often.</para>
-
-      <para>The <guilabel>Cache Settings</guilabel> options allow you to specify the maximum number of issues for which the full history is remembered (separately for each server), and the maximum total size of locally stored attachments for all servers.</para>
 
       <para>The <guilabel>Proxy Settings</guilabel> allow you to define the parameters of the proxy server, which will be used to connect to the WebIssues system. On Windows and OS X it will automatically detect your system settings, so manual configuration is usually not necessary. However, in case of Linux, you must enter the connection parameters if you want to use a proxy. If the proxy requires authentication, you will be prompted for a username and password when opening a connection.</para>
 

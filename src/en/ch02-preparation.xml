@@ -38,18 +38,19 @@
 
     <para>In order to install the system, you must create a database on one of these servers and a user account with sufficient permissions to create tables and indexes in the database.</para>
 
-    <para>In case of MySQL, support for the InnoDB engine is required. The PostgreSQL database should be created with Unicode character encoding. Also remember that you can only use the SQL Server database if the WebIssues server is installed on a computer running Windows.</para>
+    <para>In case of MySQL, support for the InnoDB engine is required. In case of PostgreSQL, the database should be created with Unicode character encoding. The SQL Server database can only be used if the WebIssues server is installed on Windows.</para>
 
-    <para>The WebIssues server also requires PHP, version 5.2.1 or newer, integrated with the web server. In case of IIS server, to get the best performance it's recommended to use the <literal>fastcgi</literal> module and the <literal>wincache</literal> extension. PHP must also have the <literal>mbstring</literal> extension installed, and if you're using a MySQL or PostrgreSQL database, also the <literal>mysqli</literal> or <literal>pgsql</literal> extension, respectively. In case of a SQL Server database, the <literal>com_dotnet</literal> is required; it is not enabled by default since version 5.3.15 and 5.4.5 of PHP.</para>
+    <para>The WebIssues server also requires PHP, version 5.2.1 or newer, integrated with the web server. In case of IIS server, to get the best performance it's recommended to use the <literal>fastcgi</literal> module and the <literal>wincache</literal> extension. PHP must also have the <literal>mbstring</literal> extension installed and enabled in <literal>php.ini</literal>, and if you're using a MySQL or PostrgreSQL database, also the <literal>mysqli</literal> or <literal>pgsql</literal> extension, respectively. In case of a SQL Server database, since version 5.3.15 and 5.4.5 of PHP, the <literal>com_dotnet</literal> extension must be enabled.</para>
 
     <para>If you're installing the WebIssues server using an external web hosting service, make sure that it meets all these requirements. To create a database and configure the web server, use the tools provided by hosting provider and refer to the available documentation.</para>
 
     <warning>
       <title>Warning</title>
       <para>Some hosting services may have a specific configuration or other restrictions which make it difficult or even impossible to correctly install WebIssues server. They may, for example, limit the amount of available memory, the database size, or the size of files uploaded to the server.</para>
+      <para>Installing WebIssues on a server with the <literal>mod_security</literal> module enabled may cause problems. Depending on the configuration, it may prevent the Desktop Client from accessing the server or block legitimate requests containing certain words. It is recommended to disable <literal>mod_security</literal> completely or disable the rules that cause problems. For more information, please visit <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
     </warning>
 
-    <para>Before installing the WebIssues server on your computer (for personal or testing purposes) or on a computer that belongs to your company or organization, install and configure the necessary components, and then create a database using the appropriate administrative tools. Refer to the documentation of these tools to get more information about them. More information about creating databases and configuring the web server can be found at <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
+    <para>Before installing the WebIssues server, install and configure the necessary components, and then create a database using the appropriate administrative tools. Refer to the documentation of these tools to get more information about them. More information about creating databases and configuring the web server can be found at <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
 
   </sect1>
 
@@ -61,7 +62,7 @@
     <sect2 id="webissues.prep.installation.files">
       <title>Copying files</title>
 
-      <para>Download and unpack the WebIssues server package &mdash; it contains a directory named <literal>webissues-x.y</literal> (where <literal>x.y</literal> is the version of the package). Then move all files and subdirectories from that directory to the root directory of the web server. External hosting services usually use the FTP protocol for copying files to the server, so you'll need an FTP client.</para>
+      <para>Download and unpack the WebIssues server package &mdash; it contains a directory named <literal>webissues-x.y</literal> (where <literal>x.y</literal> is the version of the package). Then move all files and subdirectories from that directory to the root directory of the web server. External hosting services typically use the FTP protocol for copying files to the server, so you'll need an FTP client.</para>
 
       <note>
         <title>Note</title>
@@ -69,11 +70,11 @@
         <para>You can also create multiple separate instances of the WebIssues server in a single installation. Individual instances can be accessed through different domain names or subdomains, or in different virtual subdirectories. For more information, please visit <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
       </note>
 
-      <para>Then give all users, or the user which the web server runs as, write permission to the <filename>data/sites</filename> subdirectory. To do this, use the file manager or the FTP client, or run the <literal>chmod</literal> command from the command line. A configuration file will be created in this directory during the installation. Also files attached to the issues will be stored there.</para>
+      <para>Then make sure that the web server user account has write permission to the <filename>data/sites</filename> subdirectory. To do this, use the file manager or the FTP client, or run the <literal>chmod</literal> command from the command line. A configuration file will be created in this directory during the installation. Also files attached to the issues will be stored there.</para>
 
       <warning>
         <title>Warning</title>
-        <para>Make sure the <filename>data</filename> and <filename>common/data</filename> directories are protected from unauthorized access using the web browser. Otherwise unauthorized persons will be able, for example, to download attachments stored in the system. If you're using Apache, you can use the <filename>.htaccess</filename> files which are included in the source package for that purpose. For more information, please visit <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
+        <para>Make sure the <filename>data</filename> and <filename>common/data</filename> directories are protected from unauthorized access from the web. Otherwise it will be possible to download attachments without proper authorization. If you're using Apache, you can use the <filename>.htaccess</filename> files which are included in the source package for that purpose. For more information, visit <ulink url="http://wiki.mimec.org/wiki/WebIssues/Installation"/>.</para>
         <para>After the installation, also make sure that the WebIssues system configuration file is protected against unauthorized access, since it contains the username and password used to connect to the database. This is particularly important when using public hosting services.</para>
         <para>To ensure maximum security, it's recommended that configuration files and attachments are not stored in the <filename>data</filename> directory, but in a different location, outside the root directory of the web server. More information about changing the location of the directory containing these files can be found at <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
       </warning>
@@ -103,17 +104,17 @@
         </mediaobject>
       </figure>
 
-      <para>You will be asked to enter information necessary to connect to the database that you previously created. You must first determine its type; depending on your PHP configuration, you can choose a MySQL, PostgreSQL or SQL Server database. If any of these options is not available, it means that the required PHP extension is not installed or is disabled.</para>
+      <para>You will be asked to enter information necessary to connect to the database that you previously created. Select the type of the database, then enter the host name of the database server, if it's located on a different computer than the web server, the name of the database and the login and password of a user with the right to create tables in the database. In case of SQL Server, you can leave the user name and password blank to use integrated Windows authentication.</para>
 
-      <para>Then enter the host name of the database server, if it's located on a different computer than the web server, the name of the database and the login and password of a user with the right to create tables in the database. In case of SQL Server, you can leave the user name and password blank to use integrated Windows authentication.</para>
+      <para>Leave the <guilabel>Install a new server</guilabel> option selected if you are creating a new server. If you want to create a new configuration file for a previously created server instead, select the <guilabel>Use an existing server</guilabel> option. In that case, you will not be prompted for the parameters of the server and the database will not be modified, unless it needs to be updated to a newer version.</para>
 
       <note>
         <title>Note</title>
-        <para>During installation, you can also specify a prefix which will be added before the names of all tables and other objects in the database. For example, if you choose <literal>wi_</literal>prefix, tables named <literal>wi_server</literal>, <literal>wi_users</literal>, etc., will be created.</para>
+        <para>You can also specify a prefix which will be added before the names of all tables and other objects in the database. For example, if you choose <literal>wi_</literal> prefix, tables will be named <literal>wi_server</literal>, <literal>wi_users</literal>, etc.</para>
         <para>By choosing a unique prefix, you can install many different applications using a single database. You can also create several separate instances of the WebIssues server in a single database.</para>
       </note>
 
-      <para>Enter the necessary information and proceed to the next step. The WebIssues system will try to connect to the database server, and in case of an error it will display an appropriate message. If the connection succeeds and the database doesn't already contain the tables required by the system, you will see the following page:</para>
+      <para>Enter the necessary information and proceed to the next step. The WebIssues system will try to connect to the database server, and in case of an error it will display an appropriate message. If the connection succeeds, you will see the following page:</para>
 
       <figure>
         <title>Parameters of the new server</title>
@@ -122,24 +123,15 @@
         </mediaobject>
       </figure>
 
-      <para>Enter the name of the server which will be visible to all users in the upper left corner of the page. Also enter the password for the Administrator account, which you can later use to log into the server and change its settings.</para>
+      <para>Enter the name of the server which will be visible to all users in the title bar. Also enter the password for the Administrator account, which you can later use to log into the server and change its settings.</para>
 
       <para>By default, the installer will create several predefined types of issues and views. You should leave this setting to quickly start working with the system. Later you will be able to freely adjust and even remove those built-in types. However, if you want to manually create all types of issues from scratch, select <guilabel>Do not install any issue types</guilabel>.</para>
 
-      <note>
-        <title>Note</title>
-        <para>You can import data from version 0.8.5 of the WebIssues server to the new version of the system. The new server must be installed in the same database as its previous version. Therefore you must use a different prefix for the names of the new tables, than the one that was used in version 0.8.5. Select <guilabel>Import data from WebIssues Server 0.8.5</guilabel> and optionally enter a prefix for the source tables.</para>
-        <para>When installing a new server, all data stored in the database is copied, but the source tables are not modified or removed. Thus, if the import process fails, you can correct any errors and try installing the new version again. If attachments were stored in the file system, you must also copy them from the old version to the appropriate directory in the new version of the server; the installer will not do it automatically.</para>
-        <para>If version 0.8.5 of the system used a version of the database earlier than the currently required version, before the installation you must first update the database server to a newer version. After updating a MySQL database from a version older than 4.1, you also need to convert all text columns to binary, and then back to text with <literal>utf8</literal> encoding, in order to ensure proper encoding of text. Read <ulink url="http://dev.mysql.com/doc/refman/4.1/en/charset-conversion.html"/> for more information about converting columns.</para>
-      </note>
-
-      <para>Go to the next page, which contains a brief summary of the operations that will be performed. Click <guibutton>Install</guibutton> to begin the installation. This may take a few seconds, or a bit longer in case of importing existing data. If the installation is successful, a message will appear.</para>
-
-      <para>If you want to create a new configuration file for a previously created server, enter the connection parameters for the database containing data of the server instance. The page used for entering parameters of a new server will be omitted in this case, and the database will not be modified in any way. Instead, the installer will display the name and other information about the existing server, and the installation process will only create a new configuration file.</para>
+      <para>Go to the next page, which contains a brief summary of the operations that will be performed. Click <guibutton>Install</guibutton> to begin the installation. This may take some time. If the installation is successful, a message will appear and you can start using the system.</para>
 
       <tip>
         <title>Tip</title>
-        <para>In order to create a new configuration file in the future, for example after moving the database to another server, you must first delete an existing configuration file. This is a protection against unauthorized access to the installation procedure.</para>
+        <para>In order to create a new configuration file in the future, for example after moving the database to another server, simply delete the configuration file. Then you will be prompted to run the installer which will let you create a new configuration file with appropriate settings.</para>
       </tip>
 
     </sect2>
@@ -223,7 +215,7 @@
 
       <tip>
         <title>Tip</title>
-        <para>The Project Administrator can create and modify folders, as well as change permissions of other users for this project. He can also delete issues and delete and modify other users' comments.</para>
+        <para>The Project Administrator can create and modify folders, modify the project description and change permissions of other users for this project. He can also delete issues and delete and modify other users' comments.</para>
       </tip>
 
       <para>A configured list of members of the project may look like below:</para>
@@ -302,7 +294,7 @@
 
       <para>If the job is executed locally, it should run the <literal>cron/job.php</literal> script using the PHP interpreter. For more information about running PHP from the command line, see <ulink url="http://www.php.net/manual/en/features.commandline.options.php"/>.</para>
 
-      <para>If you use an external cron service or run the task from another computer, the script should be run remotely through its full URL, for example <literal>http://www.example.com/cron/job.php</literal>. To do this, you can for example use the <literal>wget</literal> or <literal>curl</literal> program, you can also use any web browser running in text mode.</para>
+      <para>If you use an external cron service or run the task from another computer, the script should be run remotely through its full URL, for example <literal>http://www.example.com/cron/job.php</literal>. To do this, you can for example use a program like <literal>wget</literal> or <literal>curl</literal>.</para>
 
       <para>To check whether the cron job is being executed, go to the Administration Panel and click <guilabel>General Information</guilabel>. In the <guilabel>Cron Job</guilabel> section, the date and time when the job was last run should be displayed. Each execution of the job is also logged in the Event Log of the WebIssues system.</para>
 

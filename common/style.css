@@ -269,3 +269,46 @@ h2.subtitle {
 code {
   font: 10pt/150% Consolas, 'DejaVu Sans Mono', 'Lucida Console', Monospace;
 }
+
+pre {
+  margin: 0;
+  font: 10pt/150% Consolas, 'DejaVu Sans Mono', 'Lucida Console', Monospace;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+}
+
+table th {
+  margin: 0;
+  padding: 0.2em 0.25em;
+  background: #eeeeee;
+  border: none;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  vertical-align: top;
+  text-align: left;
+}
+
+table td {
+  margin: 0;
+  padding: 0.2em 0.25em;
+  border: none;
+  border-top: 1px solid #dddddd;
+  vertical-align: top;
+}
+
+blockquote {
+  margin: 0.2em 1em;
+  padding: 0.3em 0.5em;
+  border: 1px dashed #dddddd;
+}
+
+.literallayout p {
+  margin: 0;
+}

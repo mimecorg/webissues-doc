@@ -287,6 +287,15 @@
       </mediaobject>
     </figure>
 
+    <para>You can select the default format of text used for new descriptions and comments. By default <guilabel>Text with Markup</guilabel> is used. You can switch to <guilabel>Plain Text</guilabel> if you prefer text without any formating like in older versions of WebIssues. Note that individual users may override this setting in their personal preferences, as well as for individual descriptions and comments.</para>
+
+      <figure>
+        <title>Editing</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch06-fig18-03.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
     <para>The <guilabel>Enable user registration</guilabel> option allows you to enable a module that allows users to register a new account. Additionally, you can enter an e-mail address to which notifications are sent about requests that are waiting for approval by the system administrator. They will be sent when there are new registration requests for approval, but not more often than once an hour. For more information about user registration, see <xref linkend="webissues.work.login"/> and <xref linkend="webissues.admin.register"/>.</para>
 
     <figure>

@@ -36,6 +36,8 @@
       </mediaobject>
     </figure>
 
+    <para>Począwszy od wersji 1.1 systemu WebIssues, sprawy mogą również mieć opis, który jest dłuższym tekstem wyjaśniającym szczegóły sprawy. Zwykle jest on wprowadzany przy tworzeniu sprawy, ale może również być dodany lub zmieniony później.</para>
+
     <para>Każda sprawa zarejestrowana w systemie posiada swoją historię, uszeregowaną chronologicznie począwszy od momentu utworzenia. Składają się na nią zmiany wartości poszczególnych atrybutów, a także komentarze oraz załączone pliki. Umożliwia to prześledzenie całego cyklu życia danej sprawy, odtworzenie jej stanu w dowolnym momencie, a także sprawdzenie, kto, kiedy i w jaki sposób zmodyfikował daną sprawę.</para>
 
     <figure>
@@ -70,11 +72,11 @@
     <sect2 id="webissues.intro.lifecycle.forum">
       <title>Proste forum</title>
 
-      <para>Jan Kowalski jest nowym pracownikiem w twojej firmie i dopiero uczy się używać różnych programów, które są mu potrzebne do pracy. Jeden z programów księgowych, Big Finances, nie chce się uruchomić i zamiast tego wyświetlił niezrozumiały komunikat błędu. Kowalski loguje się do systemu WebIssues i otwiera folder Pomoc. Następnie dodaje nową sprawę i nadaje jej nazwę <quote>Problem z Big Finances</quote>. Tworzy również komentarz, w którym opisuje, co robił kiedy wystąpił problem, a na koniec dołącza zrzut ekranu z komunikatem błędu w postaci pliku graficznego.</para>
+      <para>Jan Kowalski jest nowym pracownikiem w twojej firmie i dopiero uczy się używać różnych programów, które są mu potrzebne do pracy. Jeden z programów księgowych, Big Finances, nie chce się uruchomić i zamiast tego wyświetlił niezrozumiały komunikat błędu. Kowalski loguje się do systemu WebIssues i otwiera folder Pomoc. Następnie dodaje nową sprawę i nadaje jej nazwę <quote>Problem z Big Finances</quote>. W opisie sprawy wyjaśnia, co robił kiedy wystąpił problem. Dołącza również zrzut ekranu z komunikatem błędu w postaci pliku graficznego.</para>
 
       <para>Ponieważ starasz się pomagać nowym pracownikom, regularnie w ciągu dnia zaglądasz do folderu Pomoc. Wszystkie wątki (sprawy) są domyślnie posortowane według daty ostatniej modyfikacji. Co więcej, nowe wątki, których jeszcze nie czytałeś, są oznaczone żółtym symbolem zamkniętej koperty i dodatkowo pogrubione &mdash; podobnie jak w wielu programach pocztowych czy forach dyskusyjnych. Otwierasz sprawę, czytasz opis problemu i otwierasz załącznik.</para>
 
-      <para>To dość częsty problem &mdash; wystarczy skasować jeden błędny plik i program Big Finances znowu powinien działać. Dodajesz do sprawy nowy komentarz, w którym opisujesz sposób postępowania. Niedługo potem Kowalski zagląda znowu do katalogu Pomoc i zauważa, że jego sprawa jest oznaczona zieloną, zamkniętą kopertą i pogrubiona. Oznacza to, że ktoś inny zmodyfikował sprawę od czasu, kiedy ją ostatnio otwierał. Kowalski czyta twój komentarz, wykonuje opisane kroki i uruchamia program. Następnie odpisuje, że zaproponowane przez ciebie rozwiązanie pomogło rozwiązać problem. Przeglądając ponownie folder Pomoc szybko zauważasz zieloną kopertę &mdash; kolejny raz pomogłeś komuś nawet nie ruszając się z miejsca.</para>
+      <para>To dość częsty problem &mdash; wystarczy skasować jeden błędny plik i program Big Finances znowu powinien działać. Dodajesz do sprawy komentarz, w którym opisujesz sposób postępowania. Niedługo potem Kowalski zagląda znowu do katalogu Pomoc i zauważa, że jego sprawa jest oznaczona zieloną, zamkniętą kopertą i pogrubiona. Oznacza to, że ktoś inny zmodyfikował sprawę od czasu, kiedy ją ostatnio otwierał. Kowalski czyta twój komentarz, wykonuje opisane kroki i uruchamia program. Następnie odpisuje, że zaproponowane przez ciebie rozwiązanie pomogło rozwiązać problem. Przeglądając ponownie folder Pomoc szybko zauważasz zieloną kopertę &mdash; kolejny raz pomogłeś komuś nawet nie ruszając się z miejsca.</para>
 
     </sect2>
 
@@ -83,7 +85,7 @@
 
       <para>Pół roku później firma rozrosła się tak, że nie jesteś w stanie już pomagać wszystkim pracownikom, nie zaniedbując własnych obowiązków. Co gorsza pojawiło się nowe oprogramowanie Great Finances, którego nie znasz tak dobrze i nie potrafisz samodzielnie rozwiązać wszystkich problemów. Zwykłe forum dyskusyjne przestało już wystarczać i konieczne było wprowadzenie wirtualnego punktu serwisowego.</para>
 
-      <para>Kowalski od niedawna używa nowego programu Great Finances i radzi sobie dobrze, ale właśnie pojawił się problem przy rozliczaniu faktur. Kowalski loguje się do systemu WebIssues i otwiera folder <quote>Great Finances</quote> &mdash; ze względu na dużą liczbę zgłoszeń, trzeba je było podzielić na osobne foldery związane z poszczególnymi programami. Dodając nową sprawę, oprócz nazwy musi teraz także wypełnić kilka dodatkowych pól (atrybutów) &mdash; rodzaj problemu, nazwa modułu oraz wersja używanego programu. Następnie dodaje komentarz z dokładnym opisem problemu.</para>
+      <para>Kowalski od niedawna używa nowego programu Great Finances i radzi sobie dobrze, ale właśnie pojawił się problem przy rozliczaniu faktur. Kowalski loguje się do systemu WebIssues i otwiera folder <quote>Great Finances</quote> &mdash; ze względu na dużą liczbę zgłoszeń, trzeba je było podzielić na osobne foldery związane z poszczególnymi programami. Dodając nową sprawę, oprócz nazwy musi teraz także wypełnić kilka dodatkowych pól (atrybutów) &mdash; rodzaj problemu, nazwa modułu oraz wersja używanego programu. Załącza również dokładny opis problemu.</para>
 
       <para>W dalszym ciągu regularnie zaglądasz do systemu serwisowego, ale zajmujesz się głównie przypisywaniem nowych zgłoszeń innym osobom, a samodzielnie rozwiązujesz jedynie sprawy związane z programem Big Finances.</para>
 

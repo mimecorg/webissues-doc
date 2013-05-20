@@ -115,19 +115,226 @@
 
     <para>Kliknij na folderze Błędy, aby go otworzyć. Jeśli dopiero utworzyłeś nowy serwer, będzie on pusty, a więc zacznijmy od utworzenia pierwszej sprawy.</para>
 
-    <sect2 id="webissues.work.issues.attributes">
-      <title>Atrybuty sprawy</title>
+    <para>Wybierz polecenie <guilabel>Dodaj sprawę</guilabel> (jeśli korzystasz z programu Desktop Client, musisz kliknąć na liście spraw, aby polecenie to się pojawiło). Pierwsza część okna będzie zawierać kilka pól:</para>
 
-      <para>Wybierz polecenie <guilabel>Dodaj sprawę</guilabel> (jeśli korzystasz z programu Desktop Client, musisz kliknąć na liście spraw, aby polecenie to się pojawiło). Zostanie wyświetlone okno jak poniżej:</para>
+    <figure>
+      <title>Dodawanie sprawy</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig06.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Nazwa sprawy jest wymaganym polem, wpiszmy więc <quote>Moja pierwsza sprawa</quote>. Pozostałe pola to atrybuty sprawy. Pola Status i Priorytet są wymagane, ale mają domyślną wartość początkową. W zależności od rodzaju atrybutu, akceptują one różne typy wartości. Przeczytaj sekcję <xref linkend="webissues.work.issues.attributes"/>, aby uzyskać więcej informacji o typach atrybutów.</para>
+
+    <para>Na początek przypisz nowy błąd do siebie i zmień jego krytyczność na 1 &mdash; w końcu to pierwszy błąd zarejestrowany w systemie.</para>
+
+    <para>Następnie wpisz tekst wyjaśniający sprawę w polu opisu. Opis jest opcjonalny i możesz go pominąć; będziesz go mógł dodać później. Jednak w większości przypadków, najwygodniej jest podać opis bezpośrednio podczas dodawania sprawy do systemu.</para>
+      
+    <figure>
+      <title>Opis sprawy</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig06-01.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Wszystkie odstępy i podziały linii zostaną zachowane, a długie linie będą automatycznie podzielone, jeśli będzie taka potrzeba. Odnośniki w tekście będą automatycznie rozpoznane i podświetlone. Możesz użyć prostych znaczników, by zmienić format tekstu, na przykład użyć pogrubionej czcionki lub kursywy, albo utworzyć listy i bloki kodu. Pasek narzędzi ponad polem tekstowym pomoże ci wprowadzić odpowiedie znaczniki. Przeczytaj sekcję <xref linkend="webissues.work.issues.comments"/>, aby uzyskać więcej informacji o formatowaniu tekstu.</para>
+
+    <para>Naciśnij <guibutton>OK</guibutton> by potwierdzić dodanie nowej sprawy. Jeśli wartość któregoś z atrybutów jest niepoprawna, zostanie wyświetlony błąd. W przeciwnym wypadku, nowa sprawa pojawi się na liście, a poniżej zostaną wyświetlone szczegółowe informacje:</para>
+
+    <figure>
+      <title>Szczegóły utworzonej sprawy</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig07.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <sect2 id="webissues.work.issues.comments">
+      <title>Komentarze i opisy</title>
+
+      <para>Opis jest przydatny, by podać informacje o sprawie, ale czasem niezbędne są dodatkowe informacje lub pytania. W tym celu można użyć komentarzy. Aby napisać komentarz, wybierz polecenie <guilabel>Dodaj komentarz</guilabel> (upewnij się, że aktywna jest historia sprawy, jeśli korzystasz z programu Desktop Client). Nowe okno składa się niemal wyłącznie z pola edycji tekstu:</para>
 
       <figure>
-        <title>Dodawanie sprawy</title>
+        <title>Dodawanie komentarza</title>
         <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig06.png" format="PNG"/></imageobject>
+          <imageobject><imagedata fileref="images/ch03-fig08.png" format="PNG"/></imageobject>
         </mediaobject>
       </figure>
 
-      <para>Nazwa sprawy jest wymaganym polem, wpiszmy więc <quote>Moja pierwsza sprawa</quote>. Pozostałe pola to atrybuty sprawy. Pola Status i Priorytet są wymagane, ale mają domyślną wartość początkową. W zależności od rodzaju atrybutu, akceptują one różne typy wartości:</para>
+      <para>Tekst zostanie wyświetlony dokładnie tak, jak został wpisany, z zachowaniem odstępów i podziału na linie. Umożliwia to wklejanie np. fragmentów kodu źródłowego czy logów bez obaw, że staną się one nieczytelne. Długie linie zostaną automatycznie podzielone, w zależności od szerokości okna. Adresy stron internetowych i adresy e-mail zostaną automatycznie zamienione na odnośniki. Te same zasady obowiązują w przypadku komentarzy, opisów spraw oraz opisów projektów.</para>
+
+      <tip>
+        <title>Wskazówka</title>
+        <para>Automatyczne rozpoznawanie odnośników działa nie tylko w tekście komentarzy, ale także w nazwach spraw i wartościach atrybutów, a nawet w opisach załączników.</para>
+      </tip>
+
+      <para>Jeśli wybierzesz opcję <guilabel>Tekst ze znacznikami</guilabel>, możesz również używać specjalnych znaczników, by zmienić styl czcionki, tworzyć odnośniki, listy, itp. Zwykle ta opcja jest domyślnie wybrana, ale możesz to zmienić w swoich ustawieniach użytkownika. Wybierając opcję <guilabel>Zwykły tekst</guilabel>, możesz wyłączyć specjalne formatowanie, z wyjątkiem adresów internetowych i identyfikatorów, które nadal będą automatycznie zamieniane na odnośniki.</para>
+
+      <para>Pasek narzędzi ponad polem edycji tekstu automatycznie wpisze odpowiednie znaczniki za ciebie, więc nie musisz ich pamiętać. Po prostu umieść kursor w miejscu, gdzie chcesz dodać znaczniki, albo zaznacz fragment tekstu, by otoczyć go odpowiednimi znacznikami formatowania. Następujące znaczniki są rozpoznawane, jeśli zostały one włączone:</para>
+
+      <table frame="all">
+        <title>Podsumowanie znaczników</title>
+        <tgroup cols="2">
+          <thead>
+            <row>
+              <entry>Przykład</entry>
+              <entry>Wynik</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry><programlisting>To jest **pogrubienie**.</programlisting></entry>
+              <entry>To jest <emphasis role="bold">pogrubienie</emphasis>.</entry>
+            </row>
+            <row>
+              <entry><programlisting>To jest __kursywa__.</programlisting></entry>
+              <entry>To jest <emphasis>kursywa</emphasis>.</entry>
+            </row>
+            <row>
+              <entry><programlisting>To jest `czcionka maszynowa`.</programlisting></entry>
+              <entry>To jest <literal>czcionka maszynowa</literal>.</entry>
+            </row>
+            <row>
+              <entry><programlisting>To jest [www.mimec.org odnośnik].</programlisting></entry>
+              <entry>To jest <ulink url="http://www.mimec.org/">odnośnik</ulink>.</entry>
+            </row>
+            <row>
+              <entry>
+<programlisting>[list]
+* pierwszy punkt
+* drugi punkt
+* trzeci punkt
+** pierwszy podpunkt
+** drugi podpunkt
+[/list]
+</programlisting>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>pierwszy punkt</para>
+                  </listitem>
+                  <listitem>
+                    <para>drugi punkt</para>
+                  </listitem>
+                  <listitem>
+                    <para>trzeci punkt</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para>pierwszy podpunkt</para>
+                      </listitem>
+                      <listitem>
+                        <para>drugi podpunkt</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>
+<programlisting>[quote Tytuł]
+To jest cytat.
+[/quote]
+</programlisting>
+              </entry>
+              <entry>
+                <blockquote>
+<literallayout><emphasis role="bold">Tytuł:</emphasis>
+To jest cytat.</literallayout>
+                </blockquote>
+              </entry>
+            </row>
+            <row>
+              <entry>
+<programlisting>[code C++]
+for ( int i = 0; i &lt; 10; i++ )
+    printf( "%d\n", i );
+[/code]
+</programlisting>
+              </entry>
+              <entry>
+<programlisting>for ( int i = 0; i &lt; 10; i++ )
+    printf( "%d\n", i );
+</programlisting>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+
+      <para>Znaczniki pogrubienia i kursywy można łączyć ze sobą i z innymi znacznikami, natomiast między znacznikami czcionki maszynowej, wszystkie inne znaczniki są ignorowane. Dzięki temu można wklejać jednoliniowe fragmenty kodu, nie psując formatowania.</para>
+
+      <para>Odnośniki w nawiasach kwadratowych są podobne do automatycznych odnośników, ale pozwalają na zmianę tekstu odnośnika. Jeśli tekst nie jest podany, zostanie wyświetlony adres. Możesz otaczać wszystkie adresy nawiasami kwadratowymi, by mić pewność , żę zostaną one prawidłowo rozpoznane.</para>
+
+      <para>Podpunkty w listach wypunktowanych mogą tworzyć maksymalnie sześć poziomów zagnieżdżenia poprzez użycie odpowiedniej liczby gwiazdek. Przed gwiazdkami może być dowolna liczba spacji, a między gwiazdkami a tekstem musi być przynajmniej jedna spacja. Punkty w liście mogą składać się z dowolnej liczby linii, mogą także zawierać cytaty i bloki kodu.</para>
+
+      <para>Cytaty są otoczone przerywaną ramką i mogą mieć opcjonalny tytuł. Możesz w łatwy sposób cytować istniejące komentarze lub opisy spraw używając polecenia <guibutton>Odpowiedz</guibutton>. Otworzy ono nowe okno komentarza z automatycznie załączonym oryginalnym komentarzem lub opisem wraz ze znacznikami cytatu. Cytowany tekst może zawierać inne znaczniki, w tym zagnieżdżone cytaty, listy i bloki kodu.</para>
+
+      <para>Bloki kodu mogą być używane do wklejania fragmentów kodu, plików logowania, itp. Są one wyświetlone dosłownie (tzn. wszyskie znaczniki są ignorowane) przy użyciu czcionki maszynowej. Jednak w odróżnieniu od znaczników czcionki maszynowej, blok kodu może zawierać wiele linii. Oprócz tego można określić język bloku kodu, co powoduje włączenie podświetlenia składni. Obsługiwane języki to: HTML, XML, C, C++, C#, Java, Bash (równoważny z SH), Python, Perl, Ruby, JavaScript (równoważny z JS), CSS, SQL, VB oraz PHP.</para>
+
+      <para>Użyj przycisku <guibutton>Podgląd</guibutton> w pasku narzędzi ponad polem edycji tekstu, by zobaczyć podgląd tekstu z formatowaniem i upewnić się, że wygląda on prawidłowo.</para>
+
+      <para>Komentarze są wyświetlane w historii sprawy wraz z innymi zmianami w kolejności chronologicznej. Używając odnośników filtra po prawej stronie, możesz wyświetlić tylko określone informacje. Możesz zmienić domyślny filtr oraz kolejność zmian (od najstarszych lub najnowszych) w swoich ustawieniach użytkownika.</para>
+
+      <figure>
+        <title>Historia sprawy z komentarzem</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig09.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <tip>
+        <title>Wskazówka</title>
+        <para>W programie Desktop Client, wszystkie okna zawierające pole komentarza lub opisu nie blokują pozostałych okien. Możesz więc, na przykład, wyświetlić szczegóły innej sprawy w trakcie dodawania nowej sprawy lub komentarza. Używając przeglądarki, możesz uzyskać podobny efekt otwierając strony w osobnych zakładkach.</para>
+      </tip>
+
+    </sect2>
+
+    <sect2 id="webissues.work.issues.links">
+      <title>Odnośniki do elementów</title>
+
+      <para>Można tworzyć odnośniki do innych spraw, a także do komentarzy lub załączników. Aby to zademonstrować, utwórzmy drugą sprawę i nadajmy jej nazwę <quote>Druga sprawa</quote>, pozostawiając domyślne wartości atrybutów. Załóżmy, że identyfikator pierwszej sprawy to #1, a drugiej #6.</para>
+
+      <para>Jeśli dodasz komentarz do pierwszej sprawy i wpiszesz w nim tekst <quote>#6</quote>, zostanie on zamieniony na odnośnik do drugiej sprawy. Podobnie, jeśli teraz dodasz komentarz do drugiej sprawy, wpisując tekst <quote>#1</quote>, stanie się on odnośnikiem do pierwszej sprawy. W ten sposób możesz tworzyć powiązania między sprawami, odnosić się do innych komentarzy w swoich komentarzach, itp. Jeśli znaczniki są włączone, identyfikatory mogą być również używane w nawiasach kwadratowych, by tworzyć odnośniki z dowolnym tekstem. Podobnie jak adresy zewnętrzne, identyfikatory są również zamieniane na odnośniki w opisach, wartościach atrybutów, itp.</para>
+
+      <figure>
+        <title>Odnośnik do sprawy</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig10.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <note>
+        <title>Notatka</title>
+        <para>Identyfikatory spraw są unikalne i rosnące, ale niekoniecznie są kolejnymi liczbami. W naszym przykładzie druga sprawa ma identyfikator #6, a nie #2, ponieważ identyfikatory są również przypisane komentarzom, załącznikom i innym zmianom, co ułatwia zarządzanie nimi przez system.</para>
+      </note>
+
+      <para>Aby szybko przejść do sprawy, komentarza lub załącznika o podanym identyfikatorze, możesz również skorzystać z polecenia Idź do elementu. W programie Web Client kliknij <guilabel>Narzędzia</guilabel> w prawym górnym rogu okna, a następnie kliknij <guilabel>Idź do elementu</guilabel>. W programie Desktop Client polecenie to jest zawsze dostępne w pasku narzędzi głównego okna, możesz również nacisnąć <shortcut><keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo></shortcut>.</para>
+
+      <figure>
+        <title>Przejście do elementu</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig11.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Następnie wpisz szukany identyfikator i naciśnij <guibutton>OK</guibutton>. Jeśli istnieje sprawa o tym identyfikatorze, zostanie ona wyświetlona. Jeśli natomiast identyfikator reprezentuje komentarz lub załącznik, zostanie wyświetlona sprawa zawierająca ten element, a historia zostanie ustawiona na szukanym elemencie.</para>
+
+    </sect2>
+
+    <sect2 id="webissues.work.issues.attributes">
+      <title>Edycja atrybutów</title>
+
+      <para>Polecenie <guilabel>Edytuj atrybuty</guilabel> umożliwia edycję sprawy, tzn. zmianę wartości poszczególnych atrybutów oraz nazwy sprawy. Zaznacz pierwszą sprawę i wybierz to polecenie. Zostanie wyświetlone takie samo okno, jak w przypadku dodawania nowej sprawy, zawierające aktualne wartości atrybutów.</para>
+
+      <figure>
+        <title>Zmiana atrybutów sprawy</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig12.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>System WebIssues obsługuje następujące rodzaje atrybutów:</para>
 
       <variablelist>
         <varlistentry>
@@ -162,91 +369,12 @@
         </varlistentry>
       </variablelist>
 
-      <para>Na początek przypisz nowy błąd do siebie i zmień jego krytyczność na 1 &mdash; w końcu to pierwszy błąd zarejestrowany w systemie.</para>
-
       <tip>
         <title>Wskazówka</title>
         <para>Jeśli nie widzisz jakiegoś użytkownika w liście wyboru, prawdopodobnie oznacza to, że nie został on dodany do listy członków projektu &mdash; patrz <xref linkend="webissues.admin.users"/>.</para>
       </tip>
 
-      <para>Następnie naciśnij <guibutton>OK</guibutton>. Jeśli wartość któregoś z atrybutów jest niepoprawna, zostanie wyświetlony błąd. W przeciwnym wypadku, nowa sprawa pojawi się na liście, a poniżej zostaną wyświetlone szczegółowe informacje:</para>
-
-      <figure>
-        <title>Szczegóły utworzonej sprawy</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig07.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-    </sect2>
-
-    <sect2 id="webissues.work.issues.comments">
-      <title>Komentarze i edycja</title>
-
-      <para>Na razie nie wygląda to zbyt imponująco. System zarejestrował, że utworzyłeś sprawę, nadałeś jej nazwę i zmieniłeś wartość dwóch atrybutów. Napiszmy teraz jakiś komentarz. W tym celu wybierz polecenie <guilabel>Dodaj komentarz</guilabel> (upewnij się, że aktywna jest historia sprawy, jeśli korzystasz z programu Desktop Client).</para>
-
-      <para>Nowe okno składa się niemal wyłącznie z pola edycji tekstu. W przypadku programu Desktop Client, możesz zostawić to okno otwarte i wrócić do innego okna, na przykład aby przejrzeć historię sprawy. Korzystając z przeglądarki również możesz dodać nowy komentarz w osobnym oknie, jeśli klikniesz prawym przyciskiem na odnośniku i wybierzesz odpowiednią opcję.</para>
-
-      <para>Wracając do naszego okna, wpisz tekst komentarza dotyczącego pierwszej sprawy:</para>
-
-      <figure>
-        <title>Dodawanie komentarza</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig08.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <para>Tekst zostanie wyświetlony dokładnie tak, jak został wpisany, z zachowaniem odstępów i podziału na linie. Umożliwia to wklejanie np. fragmentów kodu źródłowego czy logów bez obaw, że staną się one nieczytelne. Długie linie zostaną automatycznie podzielone, w zależności od szerokości okna. Adresy stron internetowych i adresy e-mail zostaną automatycznie zamienione na odnośniki.</para>
-
-      <figure>
-        <title>Historia sprawy z komentarzem</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig09.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <tip>
-        <title>Wskazówka</title>
-        <para>Automatyczne rozpoznawanie odnośników działa nie tylko w tekście komentarzy, ale także w nazwach spraw i wartościach atrybutów, a nawet w opisach załączników.</para>
-      </tip>
-
-      <para>Można również tworzyć odnośniki do innych spraw, a także do komentarzy lub załączników. Aby to zademonstrować, utwórzmy drugą sprawę i nadajmy jej nazwę <quote>Druga sprawa</quote>, pozostawiając domyślne wartości atrybutów. Załóżmy, że identyfikator pierwszej sprawy to #1, a drugiej #5.</para>
-
-      <para>Jeśli dodasz komentarz do pierwszej sprawy i wpiszesz w nim tekst <quote>#5</quote>, zostanie on zamieniony na odnośnik do drugiej sprawy. Podobnie, jeśli teraz dodasz komentarz do drugiej sprawy, wpisując tekst <quote>#1</quote>, stanie się on odnośnikiem do pierwszej sprawy. W ten sposób możesz tworzyć powiązania między sprawami, odnosić się do innych komentarzy w swoich komentarzach, itp.</para>
-
-      <figure>
-        <title>Odnośnik do sprawy</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig10.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <note>
-        <title>Notatka</title>
-        <para>Identyfikatory spraw są unikalne i rosnące, ale niekoniecznie są kolejnymi liczbami. W naszym przykładzie druga sprawa ma identyfikator #5, a nie #2, ponieważ identyfikatory są również przypisane komentarzom, załącznikom i innym zmianom, co ułatwia zarządzanie nimi przez system.</para>
-      </note>
-
-      <para>Aby szybko przejść do sprawy, komentarza lub załącznika o podanym identyfikatorze, możesz również skorzystać z polecenia Idź do elementu. W programie Web Client kliknij <guilabel>Narzędzia</guilabel> w prawym górnym rogu okna, a następnie kliknij <guilabel>Idź do elementu</guilabel>. W programie Desktop Client polecenie to jest zawsze dostępne w pasku narzędzi głównego okna, możesz również nacisnąć <shortcut><keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo></shortcut>.</para>
-
-      <figure>
-        <title>Przejście do elementu</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig11.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <para>Następnie wpisz szukany identyfikator i naciśnij <guibutton>OK</guibutton>. Jeśli istnieje sprawa o tym identyfikatorze, zostanie ona wyświetlona. Jeśli natomiast identyfikator reprezentuje komentarz lub załącznik, zostanie wyświetlona sprawa zawierająca ten element, a historia zostanie ustawiona na szukanym elemencie.</para>
-
-      <para>Polecenie <guilabel>Zmień atrybuty</guilabel> umożliwia edycję sprawy, tzn. zmianę wartości poszczególnych atrybutów oraz nazwy sprawy. Zaznacz pierwszą sprawę i wybierz to polecenie. Zostanie wyświetlone takie samo okno, jak w przypadku dodawania nowej sprawy, zawierające aktualne wartości atrybutów. Zmień status sprawy na Rozwiązany, a w polu Powód wybierz wartość Naprawiony. Następnie naciśnij <guibutton>OK</guibutton>, aby zapisać zmiany.</para>
-
-      <figure>
-        <title>Zmiana atrybutów sprawy</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch03-fig12.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <para>Zauważ że system WebIssues automatycznie zapamiętał wprowadzone przez ciebie zmiany i wyświetla je w historii sprawy. Umożliwia to śledzenie całego cyklu życia sprawy, zmian statusu i wszystkich operacji wykonywanych na sprawie.</para>
+      <para>Zmień status sprawy na Rozwiązany, a w polu Powód wybierz wartość Naprawiony. Następnie naciśnij <guibutton>OK</guibutton>, aby zapisać zmiany. Zauważ że system WebIssues automatycznie zapamiętał wprowadzone przez ciebie zmiany i wyświetla je w historii sprawy. Umożliwia to śledzenie całego cyklu życia sprawy, zmian statusu i wszystkich operacji wykonywanych na sprawie.</para>
 
       <figure>
         <title>Historia sprawy po zmianie</title>
@@ -400,11 +528,13 @@
   <sect1 id="webissues.work.advanced">
     <title>Zaawansowana edycja</title>
 
-    <para>System WebIssues umożliwia edycję oraz usuwanie komentarzy. Może to zrobić użytkownik, który utworzył dany komentarz, a także administrator systemu lub projektu, do którego należy dana sprawa. Administrator może więc pełnić rolę moderatora komentarzy. Użytkownik bez uprawnień administratora nie może natomiast modyfikować ani usuwać komentarzy innych użytkowników.</para>
+    <para>Można dodać opis do istniejącej sprawy, a także edytować lub usunąć opis. Może to zrobić tylko osoba która utworzyła daną sprawę, a także administrator systemu lub projektu.</para>
+
+    <para>Komentarze rónież mogą być edytowane oraz usuwane. Może to zrobić użytkownik, który utworzył dany komentarz, a także administrator systemu lub projektu, do którego należy dana sprawa. Administrator może więc pełnić rolę moderatora opisów i komentarzy. Użytkownik bez uprawnień administratora nie może natomiast modyfikować ani usuwać opisów ani komentarzy innych użytkowników.</para>
 
     <para>Możliwa jest także zmiana nazwy oraz opisu załączników, a także ich usuwanie. Podobnie jak w przypadku komentarzy, może to zrobić użytkownik, który utworzył załącznik lub administrator. Nie można natomiast zmodyfikować lub podmienić dołączonego pliku &mdash; aby to zrobić, musisz usunąć załącznik i dodać nowy plik jako osobny załącznik.</para>
 
-    <para>Aby edytować lub usunąć komentarz lub załącznik, kliknij odnośnik <guilabel>Edytuj</guilabel> lub <guilabel>Usuń</guilabel> znajdujący się w prawym górnym rogu danego elementu w historii sprawy. Jeśli komentarz lub załącznik był edytowany, oprócz daty utworzenia i autora, wyświetlona jest także data jego ostatniej modyfikacji i osoba, która go edytowała.</para>
+    <para>Aby edytować lub usunąć opis, komentarz lub załącznik, kliknij odnośnik <guilabel>Edytuj</guilabel> lub <guilabel>Usuń</guilabel> znajdujący się w prawym górnym rogu danego elementu w widoku szczegółów sprawy. Jeśli element był edytowany, oprócz daty utworzenia i autora, wyświetlona jest także data jego ostatniej modyfikacji i osoba, która go edytowała.</para>
 
     <figure>
       <title>Historia po edycji komentarza</title>
@@ -521,6 +651,15 @@
         </mediaobject>
       </figure>
 
+      <para>Możesz wybrać domyślny format tekstu używany dla nowych opisów i komentarzy. Wybierz opcję <guilabel>Zwykły tekst</guilabel> aby wyłączyć formatowanie lub <guilabel>Tekst ze znacznikami</guilabel> jeśli chcesz użyć prostych znaczników formatowania. Podczas edycji istniejących opisów i komentarzy, ich aktualny format jest domyślnie zachowany. Domyślne ustawienie tej opcji zależy od globalnych ustawień serwera.</para>
+
+      <figure>
+        <title>Edycja</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch03-fig27-02.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
       <para>Jeśli administrator systemu WebIssues włączył możliwość otrzymywania powiadomień mailowych, w oknie preferencji użytkownika możesz zmienić ustawienia tych powiadomień. Aby uzyskać więcej informacji na ten temat, patrz sekcja <xref linkend="webissues.track.alerts"/>.</para>
 
       <para>Administrator systemu może zmienić nie tylko globalne ustawienia, ale także indywidualne ustawienia dla dowolnego użytkownika. Aby to zrobić, otwórz listę kont użytkowników, wybierz użytkownika, którego ustawienia chcesz zmienić, i użyj polecenia <guilabel>Ustawienia użytkownika</guilabel>.</para>
@@ -549,8 +688,6 @@
 
       <para>W przypadku systemu Windows możesz również określić, czy program Desktop Client ma być automatycznie uruchamiany po zalogowaniu do systemu. Dzięki temu możesz tak skonfigurować program, by był zawsze uruchomiony, połączony z serwerem i dostępny pod ręką.</para>
 
-      <para>Grupa opcji <guilabel>Czcionki</guilabel> pozwala zmienić krój i rozmiar czcionek używanych w oknie edycji komentarza oraz w widoku historii sprawy.</para>
-
       <para>Jeśli opcja <guilabel>Włącz automatyczne sprawdzanie najnowszej wersji</guilabel> jest aktywna, program wyświetli powiadomienie, jeśli jest dostępna jego nowsza wersja. Jeśli wyłączysz tą opcję, możesz w dalszym ciągu ręcznie sprawdzić, czy jest dostępna aktualizacja. W tym celu otwórz okno informacji o programie. W programie Web Client kliknij <guilabel>Narzędzia</guilabel>, a następnie <guilabel>O programie WebIssues</guilabel>, jeśli jesteś administratorem systemu. W programie Desktop Client kliknij ikonkę pytajnika w prawym górnym rogu okna lub naciśnij <shortcut><keycap>F1</keycap></shortcut>). Kliknij przycisk <guibutton>Sprawdź teraz</guibutton>. Jeśli dostępna jest aktualizacja, możesz otworzyć stronę zawierającą informacje o niej, a także stronę umożliwiającą jej pobranie.</para>
 
       <para>Druga zakładka umożliwia zmianę bardziej zaawansowanych ustawień programu Desktop Client:</para>
@@ -565,8 +702,6 @@
       <para>Grupa opcji <guilabel>Zachowanie</guilabel> pozwala wybrać domyślną akcję po kliknięciu na odnośnik do załącznika. Domyślnie program wyświetli pytanie, czy chcesz go otworzyć w domyślnej aplikacji, czy zapisać w wybranym miejscu na dysku. Możesz również kliknąć prawym przyciskiem na odnośniku, aby szybko wybrać żądaną operację.</para>
 
       <para><guilabel>Okresy odświeżania</guilabel> określają częstotliwość z jaką program automatycznie pobiera dane z serwera (w minutach). Pierwszy okres określa jak często program aktualizuje drzewo projektów i folderów, listy spraw oraz stan aktywnych alertów. Drugi okres określa jak często odświeżane są typy spraw, widoki i inne dane, które nie zmieniają się zbyt często.</para>
-
-      <para>Opcje <guilabel>Ustawienia cache'u</guilabel> pozwalają określić maksymalną liczbę spraw, dla których pamiętana jest pełna historia (osobno dla każdego serwera), a także maksymalny łączny rozmiar przechowywanych lokalnie załączników dla wszystkich serwerów.</para>
 
       <para><guilabel>Ustawienia proxy</guilabel> pozwalają zdefiniować parametry serwera proxy, przez który program będzie się łączyć z systemem WebIssues. W przypadku systemów Windows oraz OS X program automatycznie wykrywa ustawienia systemowe, więc zwykle ręczna konfiguracja nie jest konieczna. Natomiast w przypadku systemu Linux, musisz wpisać parametry połączenia, jeśli chcesz korzystać z serwera proxy. Jeśli proxy wymaga uwierzytelnienia, zostaniesz poproszony o nazwę użytkownika i hasło w momencie otwarcia połączenia.</para>
 

@@ -352,7 +352,7 @@
     
     <para>Jeśli jesteś administratorem systemu, możesz zarządzać wszystkimi projektami oraz tworzyć nowe projekty. Jeśli jesteś administratorem projektu, możesz zarządzać jego członkami i folderami.</para>
 
-    <para>Aby dodać nowy projekt, wybierz polecenie <guilabel>Dodaj projekt</guilabel>, a następnie podaj nazwę projektu i naciśnij <guibutton>OK</guibutton>.</para>
+    <para>Aby dodać nowy projekt, wybierz polecenie <guilabel>Dodaj projekt</guilabel>, a następnie podaj nazwę i opcjonalny opis projektu i naciśnij <guibutton>OK</guibutton>.</para>
 
     <figure>
       <title>Tworzenie projektu</title>
@@ -369,6 +369,8 @@
       <title>Uwaga</title>
       <para>Usuwając projekty lub foldery zwracaj szczególną uwagę, czy omyłkowo nie kasujesz niewłaściwych danych. Wszystkie zawarte w nich sprawy są trwale i nieodwracalnie usuwane z systemu i nie ma możliwości ich przywrócenia.</para>
     </warning>
+
+    <para>Opis projektu jest wyświetlany, gdy projekt zostanie wybrany w drzewie projektów, zarówno w programie Web Client, jak i Desktop Client. Możesz go użyć, by przekazać informacje o projekcie, w tym odnośniki do ważnych spraw lub zasobów zewnętrznych. Administratorzy systemu oraz projektu mogą dodać opis do istniejącego projektu, edytować opis i usunąć go. Opisy projektów używają tego samego formatu, co opisy spraw i komentarze. Aby uzyskać więcej informacji, patrz sekcja <xref linkend="webissues.work.issues.comments"/>.</para>
 
     <para>Aby dodać nowy folder, wybierz projekt i kliknij <guilabel>Dodaj folder</guilabel>.</para>
 
@@ -394,7 +396,7 @@
 
     <note>
       <title>Notatka</title>
-      <para>Jeśli nie możesz wyłączyć serwera ani zablokować dostępu do niego, to możesz również tymczasowo zmienić nazwę pliku konfiguracyjnego <literal>config.inc.php</literal>, który domyślnie znajduje się w podkatalogu <literal>data/sites/default</literal>. Możesz nawet całkowicie usunąć ten plik, a potem odtworzyć go za pomocą instalatora, gdyż w momencie instalacji istniejąca baza danych zostanie zachowana i w razie potrzeby zaktualizowana do nowej wersji.</para>
+      <para>Jeśli nie możesz wyłączyć serwera ani zablokować dostępu do niego, to możesz również tymczasowo zmienić nazwę pliku konfiguracyjnego <literal>config.inc.php</literal>, który domyślnie znajduje się w podkatalogu <literal>data/sites/default</literal>. Możesz nawet całkowicie usunąć ten plik, a potem odtworzyć go za pomocą instalatora, gdyż w momencie instalacji istniejąca baza danych zostanie zachowana i automatycznie zaktualizowana do nowej wersji.</para>
     </note>
 
     <para>Najpierw usuń wszystkie pliki i podkatalogi z katalogu, w którym został zainstalowany serwer WebIssues, pamiętając o pozostawieniu podkatalogu <literal>data</literal>, który przechowuje pliki związane z daną instalacją, na przykład pliki konfiguracyjne i załączniki spraw. Jeśli utworzyłeś własny plik <literal>.htaccess</literal> lub <literal>web.config</literal> (w przypadku serwera IIS), to również zachowaj jego kopię, aby móc go później przywrócić.</para>
@@ -403,23 +405,16 @@
 
     <para>Po zakończeniu kopiowania plików włącz serwer WWW i otwórz główną stronę systemu WebIssues w przeglądarce. Jeśli istnieje konieczność aktualizacji bazy danych, to zostanie wyświetlony odpowiedni komunikat. Zostaniesz poproszony o wpisanie loginu i hasła administratora systemu WebIssues, a następnie baza danych zostanie zaktualizowana do bieżącej wersji. W przeciwnym wypadku system jest od razu gotowy do pracy.</para>
 
-    <para>Zaleca się również aktualizować program Desktop Client do nowszej wersji na komputerach osób, które z niego korzystają. Generalnie jednak program Desktop Client może się komunikować zarówno ze starszą, jak i nowszą wersją serwera, pod warunkiem że dwie pierwsze cyfry numeru wersji są zgodne. Klient w wersji 0.9.x nie będzie zatem działał z systemem 1.0, a klient 1.0 z systemem 0.8.x, ale można te wersje zainstalować równolegle na jednym komputerze.</para>
+    <para>Zaleca się również aktualizować program Desktop Client do nowszej wersji na komputerach osób, które z niego korzystają. Generalnie jednak program Desktop Client może się komunikować zarówno ze starszą, jak i nowszą wersją serwera, pod warunkiem że dwie pierwsze cyfry numeru wersji są zgodne. Klient w wersji 1.0 nie będzie zatem działał z systemem 1.1, a klient 1.1 z systemem 1.0, ale można te wersje zainstalować równolegle na jednym komputerze.</para>
 
     <note>
       <title>Notatka</title>
-      <para>Wersje systemu oznaczone jako <literal>alpha</literal> lub <literal>beta</literal> to tak zwane wersje deweloperskie. Umożliwiają one testowanie nowych funkcji przed wydaniem oficjalnej wersji, jednak nie zaleca się ich używać do celów produkcyjnych. Wersja deweloperska systemu może być używana tylko z tą samą wersją programu Desktop Client. Dodatkowo w przypadku wersji <literal>alpha</literal> nie ma możliwości aktualizacji bazy danych do nowszej wersji. Natomiast wersja <literal>1.0-beta1</literal> i późniejsze mogą być zaktualizowane do wersji produkcyjnej.</para>
+      <para>Wersje systemu oznaczone jako <literal>beta</literal> to tak zwane wersje deweloperskie. Umożliwiają one testowanie nowych funkcji przed wydaniem oficjalnej wersji, jednak nie zaleca się ich używać do celów produkcyjnych. Wersja deweloperska systemu może być używana tylko z tą samą wersją programu Desktop Client. Można zaktualizować system z wersji produkcyjnej do nowszej wersji deweloperskiej (na przykład z 1.0.5 do 1.1-beta1), a także z wersji deweloperskiej do ostatecznej wersji produkcyjnej (na przykład z 1.1-beta1 do 1.1).</para>
     </note>
 
-    <para>Procedura aktualizacji serwera z wersji 0.8.5 jest nieco inna, ponieważ w tym przypadku istniejące dane muszą zostać zaimportowane do nowych tabel w bazie danych. Po utworzeniu kopii zapasowej i wyłączeniu serwera WWW, usuń pliki i podkatalogi z katalogu, w którym został zainstalowany serwer WebIssues, z wyjątkiem podkatalogu <literal>storage</literal>. Następnie rozpakuj pakiet nowej wersji w odpowiednie miejsce i nadaj prawo zapisu do podkatalogu <literal>data/sites</literal> wszystkim użytkownikom lub użytkownikowi, w kontekście którego działa usługa WWW. Włącz serwer WWW i otwórz główną stronę systemu WebIssues w przeglądarce. Powinna zostać wyświetlona informacja, że serwer nie jest skonfigurowany.</para>
+    <para>Podczas aktualizacji serwera z wersji 1.0 do wersji 1.1, pierwszy komentarz każdej sprawy zostanie automatycznie przekształcony w jej opis, pod warunkiem że został on utworzony przez tą samą osobę, która utworzyła sprawę, i nie później niż 15 minut po jej utworzeniu. Możesz przejrzeć sprawy po aktualizacji i w razie potrzeby zmienić opisy. Pamiętaj, że wszystkie komentarze i opisy zaktualizowane z wersji 1.0 będą używać tekstu bez znaczników, ale możesz zmienić ich format podczas edycji.</para>
 
-    <para>Wykonaj wszystkie kroki podobnie jak podczas instalowania nowej instancji serwera. Pamiętaj, że nowy serwer musi być zainstalowany w tej samej bazie danych, co jego poprzednia wersja, ale nowe tabele muszą mieć inny prefiks niż ten, który był użyty w wersji 0.8.5. W grupie opcji <guilabel>Początkowa konfiguracja</guilabel> wybierz opcję <guilabel>Importuj dane z serwera WebIssues 0.8.5</guilabel> i podaj prefiks tabel źródłowych. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.installation"/>.</para>
-
-    <para>Upewnij się, że katalogi <literal>data</literal> oraz <literal>common/data</literal> są zabezpieczone przed dostępem przez przeglądarkę internetową, a plik konfiguracyjny systemu WebIssues jest chroniony przed niepowołanym dostępem. Jeśli w wersji 0.8.5 załączniki były przechowywane w systemie plików, to po zakończeniu instalacji musisz je także przenieść do odpowiedniego katalogu w nowej wersji serwera. W przypadku domyślnej konfiguracji będzie to katalog <literal>data/sites/default/storage</literal>.</para>
-
-    <note>
-      <title>Notatka</title>
-      <para>Ponieważ baza danych w wersji 0.8.5 nie wymuszała ścisłej integralności danych, może się zdarzyć, że podczas importu danych do nowych tabel wystąpi błąd integralności. W takim wypadku popraw dane źródłowe, usuń tabele docelowe i ponów proces importu. Aby sprawdzić, w których tabelach występują błędy, przydatne może być włączenie debugowania. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Configuration"/>.</para>
-    </note>
+    <para>Aby zaktualizować serwer z wersji 0.8.5, musisz najpierw zainstalować wersję 1.0 serwera i wybrać opcję importu istniejących danych z wersji 0.8.5. Następnie możesz zaktualizować serwer z wersji 1.0 do 1.1.</para>
 
   </sect1>
 
