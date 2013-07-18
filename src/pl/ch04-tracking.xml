@@ -173,4 +173,39 @@
 
   </sect1>
 
+  <sect1 id="webissues.track.subscriptions">
+    <title>Subskrypcje</title>
+
+    <para>O ile alerty umożliwiają otrzymywanie powiadomień o wielu spraw z określonego folderu, to subskrypcje umożliwiają otrzymywanie powiadomień o poszczególych, wybranych sprawach. Możesz dodać subskrybować dowolną sprawę, do której masz dostęp, używając polecenia <guilabel>Subskrybuj</guilabel> w widoku szczegółów sprawy. Subskrybowana sprawa ma małą, zieloną strzałkę w prawym dolnym rogu swojej ikony. Aby anulować subskrybcję dla wybranej sprawy, użyj polecenia <guilabel>Usuń subskrypcję</guilabel>. Pamiętaj, że subskrypcje są dostępne tylko jeśli wysyłanie e-maili zostało włączone na serwerze. Musisz rówież skonfigurować prawidłowy adres e-mail w swoich preferencjach.</para>
+
+    <figure>
+      <title>Subskrybowane sprawy</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch04-fig10.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Gdy sprawa jest subskrybowana, będziesz otrzymywał wiadomość e-mail za każdym razem, gdy ktoś ją zmodyfikuje poprzez edycję atrybutów, dodanie lub zmianę opisu, albo dodanie komentarza lub załącznika. Wiadomość ta zawsze będzie zawierać szczegóły zmian, niezależnie od ustawienia powiadomień w preferencjach użytkownika. Również przeczytany bądź nieprzeczytany status sprawy jest ignorowany. Otrzymasz powiadomienie subskrypcji nawet jeśli przeczytałeś sprawę zanim e-mail zostanie wysłany. Jednak zmiany, których sam dokonasz, w tym własne komentarze i załączniki, nie będą uwzględniane w powiadomieniach subskrypcji.</para>
+
+    <para>W zależności od potrzeb możesz używać zarówno powiadomień dla alertów, jak i subskrypcji. Choć alerty i subskrypcje są podobnymi pojęciami, jest kilka istotnych różnic:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Powiadomienia alertów mogą być wysyłane jako natychmiastowe powiadomienia, podsumowania powiadomień lub raporty podsumowujące. Powiadomienia subskrypcji są zawsze wysyłane od razu po zmienie sprawy, tzn. tak często jak zadanie cykliczne jest uruchamiane na serwerze.</para>
+      </listitem>
+      <listitem>
+        <para>Powiadomienia alertów są wysyłane dla wszystkich spraw z danego folderu, albo dla spraw spełniających określone kryteria, na przykład przypisanych do ciebie albo utworzonych przz ciebie. Dzięki temu nie musisz ręcznie oznaczać poszczególnych spraw, dla których chcesz otrzymywać powiadomienia. Z kolei subskrypcje umożliwiają wybranie pojedyńczych spraw o których chcesz być powiadamiany.</para>
+      </listitem>
+      <listitem>
+        <para>W zależności od preferencji, powiadomienia alertów mogą zawierać jedynie listę spraw lub również szczegóły ostatnich modyfikacji tych spraw. Powiadomienia subskrypcji zawsze zawierają szczegóły modyfikacji.</para>
+      </listitem>
+      <listitem>
+        <para>Możesz skonfigurować powiadomienia alertów tak, by były wysyłane tylko dla nieprzeczytanych spraw i zmian. Z kolei subskrypcje uwzględniają jedynie zmiany dokonane przez innych użytkowników, niezależnie od statusu przeczytania sprawy.</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Subskrypcje są również bardzo użyteczne w połączeniu ze skrzynką odbiorczą, ponieważ nadawcy wiadomości mogą automatycznie subskrybować utworzone sprawy. Pozwala to nawet zewnętrznym użytkownikom na subskrybowanie spraw i otrzymywanie powiadomień. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.inbox" />.</para>
+
+  </sect1>
+
 </chapter>

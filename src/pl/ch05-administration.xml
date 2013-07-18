@@ -45,6 +45,12 @@
         </listitem>
       </varlistentry>
       <varlistentry>
+        <term>Ustawienia skrzynki odbiorczej</term>
+        <listitem>
+          <para>Pozwala zmienić ustawienia skrzynki odbiorczej umożliwiającej odbieranie e-maili. Patrz sekcja <xref linkend="webissues.prep.inbox"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
         <term>Konta użytkowników</term>
         <listitem>
           <para>Pozwala zarządzać kontami użytkowników systemu WebIssues. Patrz sekcja <xref linkend="webissues.admin.users"/>.</para>

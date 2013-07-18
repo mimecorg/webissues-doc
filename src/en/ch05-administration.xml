@@ -41,7 +41,13 @@
       <varlistentry>
         <term>Email Settings</term>
         <listitem>
-          <para>Allows configuring the settings of notification emails . See <xref linkend="webissues.prep.notifications"/>.</para>
+          <para>Allows configuring the settings of notification emails. See <xref linkend="webissues.prep.notifications"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Inbox Settings</term>
+        <listitem>
+          <para>Allows configuring the email inbox for receiving emails. See <xref linkend="webissues.prep.inbox"/>.</para>
         </listitem>
       </varlistentry>
       <varlistentry>

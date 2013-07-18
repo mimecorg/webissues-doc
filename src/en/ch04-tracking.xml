@@ -173,4 +173,39 @@
 
   </sect1>
 
+  <sect1 id="webissues.track.subscriptions">
+    <title>Subscriptions</title>
+
+    <para>While alerts make it possible to receive notifications about multiple issues from a specific folder, subscriptions allow receiving email notifications about individual selected issues. You can subscribe to any issue you have access to using the <guilabel>Subscribe</guilabel> command in the issue details view. A subscribed issue has a small green arrow in the bottom right corner of its icon. To cancel a subscription for selected issue, use the <guilabel>Unsubscribe</guilabel> command. Note that subscriptions are only available when sending emails is enabled on the server. Also you need to set up a valid email address in your user preferences.</para>
+
+    <figure>
+      <title>Subscribed issues</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch04-fig10.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Once an issue is subscribed, you will receive an email whenever someone modifies it by editing its attributes, adding or modifying its description, adding a comment or attachment. The email will always contain the details of the changes, regardless of the notification settings in your user preferences. Also the read or unread state of the issue is ignored. You will receive a subscription notification even if you read the issue before the email is sent. However, changes made by you, including your own comments and attachments, will not be included in the subscription notifications.</para>
+
+    <para>You can use a combination of alert notifications and subscription, depending on your needs. Although alerts and subscriptions are similar concepts, there are a few important differences:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Alert notifications can be sent as immediate notifications, summary notifications or summary reports. Subscription notifications are always sent immediately after a change is made, i.e. as frequent as the cron job runs on the server.</para>
+      </listitem>
+      <listitem>
+        <para>Alert notifications are sent for all issues in a folder, or all issues matching certain criteria, for example assigned to you or created by you. This way you don't have to manually mark individual issues that you want to receive notificaions for. On the other hand, subscriptions make it possible for you to select individual issues that you want to be notified about.</para>
+      </listitem>
+      <listitem>
+        <para>Depending on the preferences, alert notifications can contain only a list of issues, or also the details of recent modifications of the issues. Subscription notifications always include the detailed modifications.</para>
+      </listitem>
+      <listitem>
+        <para>You can configure alert notifications to only be sent for unread issues and changes. On the other hand, subscriptions will only include changes made by other users, regardless of the read state of the issue.</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Subscriptions are also very useful in connection with the email inbox feature, because the email senders can be automatically subscribed to created issues. This even allows external users to subscribe to issues and receive notifications. For more information, see <xref linkend="webissues.prep.inbox" />.</para>
+
+  </sect1>
+
 </chapter>

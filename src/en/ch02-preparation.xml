@@ -307,4 +307,101 @@
 
   </sect1>
 
+  <sect1 id="webissues.prep.inbox">
+    <title>Email inbox</title>
+
+    <para>The WebIssues system also has the ability to receive emails from selected email account and create issues based on these emails, as well as create comments and attachments for existing issues. Combined with email subscriptions, this allows for setting up two way email communication with the WebIssues system. It's even possible for external users, who don't have a WebIssues account, to communicate with the WebIssues system in this way, which is very useful for various support services.</para>
+
+    <para>Although it is possible to use email inbox without sending emails, in that case you won't be able to use automatic replies and subscriptions. Also when sending emails is not configured, WebIssues users don't have an associated email account, so all emails are treated as if they are sent by external users. For more information about configuring the outbound email server, see <xref linkend="webissues.prep.nofitications.email" />. You also must ensure that the cron job is correctly configured. For more information, see <xref linkend="webissues.prep.nofitications.cron" />.</para>
+
+    <para>If you want the WebIssues system to receive emails, go to the Administration Panel and click <guilabel>Inbox Settings</guilabel>.</para>
+
+    <figure>
+      <title>Inbox settings</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch02-fig11.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Select the protocol that will be used to communicate with the email server. It is recommended to use an <guilabel>IMAP server</guilabel> if possible, however a <guilabel>POP3 server</guilabel> is also supported. Also specify the email address of the inbox. In the <guilabel>Inbox Server</guilabel> section, enter the address of the server and the port number. Select the appropriate encryption mode if your server supports it. Also specify the user name and password used to authenticate the connection. You can specify the name of the mailbox from which messages will be processed. If you leave it empty, the current user's personal inbox will be assumed.</para>
+
+    <note>
+      <title>Note</title>
+      <para>Although the same email address can be used for sending outgoing messages and for the email inbox, it is recommended to use two separate email addresses. This reduces the risk of creating an infinite loop when a notification email is bounced by the recipient's email server, and the bounced message is processed by the email inbox.</para>
+    </note>
+
+    <para>Enable the <guilabel>Do not validate server certificate</guilabel> option if you are using an encrypted connection to a local server which uses a self-signed certificate. When using an IMAP server, you can also enable the <guilabel>Leave processed messages on the server</guilabel>. By default, WebIssues will automatically delete processed emails from the server. If you enable this option, messages will be only marked as read and they will be left on the server. In that case you need to ensure that there is some retention policy on the server which removes old emails to prevent filling the inbox. Note that this option is not available when using a POP3 server.</para>
+
+    <para>Click <guibutton>Test Connection</guibutton> to confirm that the WebIssues can connect to the server using the specified information. It will not process any messages, only a success or error message will be displayed.</para>
+
+    <para>When an email is sent to the WebIssues server inbox, it is registered as a new issue in the selected folder. The subject of the message becomes the name of the issue. All attributes are set to their initial, default values. The text body of the email is automatically added as the description of the issue, along with most important message headers, including the sender and recipients. When the email has a HTML body, it is added as an attachment, which can be easily opened and viewed in the browser. Any files attached to the email are also added as attachments to the issue.</para>
+
+    <para>When the subject of the email contains an identifier enclosed in square brackets, for example <literal>[#123]</literal>, the body of the email is added as a new comment to the issue with given identifier. The HTML body and attached files are added as attachments to the issue. Typically you can add comments to existing issues by simply responding to the confirmation message sent when the issue is created or to the subscription notification message, because they already contain the identifier of the issue in the subject. Note that you should include your comment at the beginning of the email. The body of the quoted notification message will not be included in the comment, because it is automatically cut off at the first line containing the dashes.</para>
+
+    <sect2 id="webissues.prep.inbox.advanced">
+      <title>Advanced settings</title>
+
+      <para>By default only messages sent by WebIssues users are accepted. The sender's email address is compared with the email address configured in the user's preferences. Emails sent from addresses which do not match any WebIssues users are ignored. Note that the issue is created or modified on behalf of the user associated with the email address, so that user must have access to the project and folder containing the issue. Otherwise the message is ignored and a warning is added to the Event Log.</para>
+
+      <para>If you enable the <guilabel>Accept messages from external users</guilabel> option, messages sent from addresses which don't have a matching WebIssues user will also be accepted. In that case you must also select the <guilabel>Robot user account</guilabel> on whose behalf such issues will be created or modified. The robot user account also must have access to the project containing the issue, so by changing the permissions of the robot user account, you can control which parts of the system are accessible to external users. Although the issue appears to be created or modified by the robot user, the actual sender of the message can be seen in the headers in the beginning of the description or comment.</para>
+
+      <figure>
+        <title>External users</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig12.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <tip>
+        <title>Tip</title>
+        <para>When messages from external users are accepted, the WebIssues server will not attempt to filter the received messages in any way. If you want to blacklist or whitelist certain addresses or filter out spam and other unwanted messages, you should configure such filtering on the email server.</para>
+        <para>For example, you can create a separate mailbox from which WebIssues receives messages, and set up a rule which only moves messages matching certain criteria to this mailbox. Refer to the documentation of your email server for more information.</para>
+      </tip>
+
+      <para>In the simplest scenario, all issues are created in a single folder, which can be selected using the <guilabel>Default folder</guilabel> option. However, you can also enable the <guilabel>Map address extensions to project and folder</guilabel> option, which makes it possible to determine the project and folder where the issue is created based on the address used to send the message to the WebIssues inbox.</para>
+
+      <figure>
+        <title>Folder mapping</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig13.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>There are two ways to set up mapping the email address to project and folder. The first way is to enable email address extensions in the email server. For example, when the inbox address is <literal>service@example.com</literal>, an email sent to <literal>service+myproject-bugs@example.com</literal> will be registered as an issue in the <quote>My project</quote> project, in the <quote>Bugs</quote> folder. Another solution is to set up an alias, for example <literal>service-myproject-bugs@example.com</literal>, which maps to the <literal>service@example.com</literal> address. Refer to the email server's documentation for more information about setting up address extensions and aliases.</para>
+
+      <note>
+        <title>Note</title>
+        <para>In order for the folder mapping to work, the email address must contain the account name, as defined in the inbox email address, followed by a <literal>+</literal> or <literal>-</literal> character, part of the project name, a <literal>-</literal> and part of the folder name. The domain part must match the inbox email address. The address must be explicitly specified in either To or CC field of the email. Spaces and other non-alphanumeric characters in project and folder names are igored. Only a part of the project or folder name must match, but the mapping must be unambiguous.</para>
+        <para>For example, when a project is named <quote>My first project</quote>, both <literal>service+first-bugs@example.com</literal> and <literal>service+firstproject-bugs@example.com</literal> will match. However, if there are more projects containing <quote>first</quote> in their name, the former example will not be successfully mapped, because it's ambiguous.</para>
+        <para>Be careful when using accented or non-latin characters in project and folder names, because not all email servers will accept email addresses containing such characters. In such case you can add latin-only words to project and folder names which can be used for mapping email addresses.</para>
+      </note>
+
+      <para>When the folder cannot be automatically determined from the email address, the issue is created in the selected default folder. However, when folder mapping is enabled, it is possible not to specify a default folder. In that case any email which cannot be successfully mapped will be igored and a warning will be added to the Event Log. Also note that the actual user or the robot user must have access to the folder, whether it's a mapped folder or the default one.</para>
+
+    </sect2>
+
+    <sect2 id="webissues.prep.inbox.sending">
+      <title>Responses and subscriptions</title>
+
+      <para>When the <guilabel>Send responses when issues are created</guilabel> option is enabled, a confirmation message is sent back to the sender when a new issue is created through the inbox. The automatic reply contains the identifier and the name of the issue. By responding to this message, additional comments and attachments can be created, for example in order to provide more information or ask about the status of the issue.</para>
+
+      <para>When the <guilabel>Subscribe senders to created issues</guilabel> option is enabled, the sender of the message is automatically subscribed to the issue created through the inbox. In that case any changes made by other users, including editing attributes, modifying the description, adding comments and attachments, are automatically sent as notification emails. See <xref linkend="webissues.track.subscriptions" /> for more information.</para>
+
+      <figure>
+        <title>Sending emails</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch02-fig14.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>By responding to the subscription notification message, when the email inbox is enabled, it is possible to add more comments and attachments to the issue. This way you can track the state of issues and add comments to it entirely by email, without having to log into the WebIssues system.</para>
+
+      <para>Automatic subscriptions also work for external users. This makes it possible for persons without a WebIssues account to receive notifications and interact with issues that they created. In a typical service desk scenario, when someone sends a message to the inbox account, an issue is created and the sender is automatically subscribed to the issue. When a support person modifies the issue or adds a comment using the WebIssues system, a subscription notification is automatically sent to the creator of the issue. He can then reply to the notification email in order to provide more information. This way external users can communicate with the WebIssues system using email and entire communication is tracked in the issue history.</para>
+
+      <para>Note that the sender is not subscribed to an existing issue when adding a comment. Also an automatic response is not sent in that case. Any other recipients of the email are not automatically subscribed to the created issue.</para>
+
+    </sect2>
+
+  </sect1>
+
 </chapter>
