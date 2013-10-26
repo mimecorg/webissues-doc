@@ -60,7 +60,9 @@
       </mediaobject>
     </figure>
 
-    <para>It's not possible to define permissions at a lower level of detail than an single project. All members of the project have equal access to all information contained in this project and the ability to modify them. However the WebIssues system ensures security and prevents unauthorized access to data by unauthorized persons.</para>
+    <para>It's not possible to define permissions at a lower level of detail than an single project. All members of the project have equal access to all information contained in this project and the ability to modify them. However the WebIssues system ensures security and prevents unauthorized access to data.</para>
+
+    <para>Starting with version 1.1 of WebIssues it is also possible to view all issues of a given type in a single list. This is especially useful if there are many projects in the system and instead of constantly switching between folders, you can see all issues, filter them if necessary and work with them.</para>
 
   </sect1>
 

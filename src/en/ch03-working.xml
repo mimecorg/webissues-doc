@@ -16,6 +16,8 @@
 
     <para>Actually there are more similarities, because the main window of the application consists of three panels resembling popular email programs. On the left there is a tree of projects and folders. On the right at the top there is a list of issues in the selected folder. On the right at the bottom there are the details of the selected issue. The selected folder and issue are highlighted, and you can perform various operations with them.</para>
 
+    <para>By selecting a project in the tree, you can display its description or modify it if you have permissions. The special <quote>All Projects</quote> item contains global lists of issues of each type. By selecting a global list, you can display all issues of a particilar type (for example all bugs or tasks) in a single view, regardless of their project and folder.</para>
+
     <para>Below is the Web Client window showing a few issues and the history of an issue:</para>
 
     <figure>
@@ -104,9 +106,33 @@
       <para>On Windows and OS X the Desktop Client automatically detects system proxy settings. However in case of Linux, you must enter the connection parameters if you want to use a proxy. For more information, see <xref linkend="webissues.work.personal.client"/>.</para>
     </note>
 
-    <para>If the WebIssues server administrator has enabled this option, you can create a new account with the approval of the administrator, so that you can access the system. To start creating a new account, click the <guilabel>Register a new account</guilabel> link in the login window of the Web Client. Then enter the user name that will be visible to all users, usually your first and last name. Enter your login and password that you will use to login. Also enter your e-mail address. Then click <guibutton>Register</guibutton>.</para>
+    <sect2 id="webissues.work.login.anonymous">
+      <title>Anonymous access</title>
 
-    <para>The specified e-mail address will be verified by sending a message with an activation link. Click the link or copy the address to open it in the browser. You should reeive this message shortly after registration. When you activate the registration request, it will be submitted for approval by the system administrator. Once approved, you will receive a confirmation message and you will be able to login to the system using the previously specified login and password.</para>
+      <para>If the adminstrator of the WebIssues server has enabled anonymous access, and you don't have an account in the system, you can use the <guilabel>Anonymous Access</guilabel> command in the login window of the Web Client to access the system without loggin in. You will only have read only access to selected projects and you won't be able to add or edit any issues. You will be able to see project descriptions, issues and comments and to download attachments from the public projects. You will also be able to use public views, but you won't be able to create your own views, use alerts or subscribe to issues.</para>
+
+      <para>Anonymous access is only available in the Web Client. In order to access the system using the Desktop Client, you need to be a registered user.</para>
+
+      <note>
+        <title>Note</title>
+        <para>For more information about enabling anonymous access, see <xref linkend="webissues.custom.settings"/>.</para>
+      </note>
+
+    </sect2>
+
+    <sect2 id="webissues.work.login.register">
+      <title>User registration</title>
+
+      <para>If the WebIssues server administrator has enabled this option, you can register a new account in the sytem. Depending on the configuration, the approval of the administrator may be necessary to complete registration. To start creating a new account, click the <guilabel>Register New Account</guilabel> link in the login window of the Web Client. If you are using the system in anonymous mode, you can click <guilabel>Register</guilabel> in the upper right corner. Enter the user name that will be visible to all users, usually your first and last name. Then enter your login and password that you will use to log in to the system. Also enter your e-mail address and click <guibutton>Register</guibutton>.</para>
+
+      <para>The specified e-mail address will be verified by sending a message with an activation link. Click the link or copy the address to open it in the browser. You should reeive this message shortly after registration. When you activate the registration request, you will be able to log in immediately using the specified login and password, or you will have to wait for administrator's approval. Once your registration request is approved, you will receive a confirmation message and you will be able to log in.</para>
+
+      <note>
+        <title>Note</title>
+        <para>For more information about enabling and configuring user registration, see <xref linkend="webissues.custom.settings"/>.</para>
+      </note>
+
+    </sect2>
 
   </sect1>
 
@@ -138,6 +164,11 @@
     </figure>
 
     <para>All spaces and line breaks in the text will be preserved and long lines will be wrapped if necessary. Links in text will be automatically recognized and highlighted. You can use simple markup to change text format, for example use bold and italic font or create bullet lists and blocks of code. The toolbar above the text field will help you enter the correct markup. See <xref linkend="webissues.work.issues.comments"/> for more information about text formatting.</para>
+
+    <tip>
+      <title>Tip</title>
+      <para>You can also create issues from a global list of issues of a particular type. For example, if you select the Bugs list under the <quote>All Projects</quote> item and select the <guilabel>Add Issue</guilabel> command, an additional field will appear prompting you to choose the folder in which the issue will be created.</para>
+    </tip>
 
     <para>Press <guibutton>OK</guibutton> to confirm adding the issue. If the value of one of the attributes is incorrect, you will receive an error. Otherwise, the new issue will appear in the list and its details will be displayed below:</para>
 
@@ -460,11 +491,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>Select other available views, to see that every time different issues are displayed and the layout of visible columns changes. This allows each user to focus only on those issues that are currently interesting &mdash; for example, a tester can view the list of fixed bugs, that need to be verified, and a developer can display the list of bugs assigned to him, that must be solved.</para>
 
-    <tip>
-      <title>Tip</title>
-      <para>Although views make it much easier to work with a large number of issues, you should anticipate what will happen in your system over the next few years. For example, if there are 10 new issues created every day by average, in a year there will be more than 3000 issues.</para>
-      <para>Although there is no specified limit of issues per one folder, a large number of issues  may adversely affect system performance. In this situation, you should divide the issues into separate folders, for example, by date of creation or a version of the project to which they refer.</para>
-    </tip>
+    <para>If there are many different projects and folders in the system, finding the information that you need may be even more difficult. The global lists may be helpful in this case. You can display all issues of a particular type by selecting the global list from the <quote>All Projects</quote> item in the project tree. You can use sorting, searching and views in the global lists exactly the same way as in a folder. For example, you can display all active bugs from all projects and folders. You can also perform all operations on issues exactly like when viewing a folder. The global lists include an additional Location column, which displays the name of the project and folder where each issue is located.</para>
 
     <para>Sometimes it is not enough to use the existing public views. In that case, you can create your own, personal views, which may have any filtering criteria, columns and sorting order.</para>
 
@@ -552,7 +579,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>The administrator can also move an issue to another folder using the <guilabel>Move Issue</guilabel> command. The target folder must be of the same type as the issue being moved, because issues of various types can't be combined in a single folder. To move the issue to a folder belonging to another project, you must be an administrator of both projects, or the system administrator. The transfer operation is registered in the history of the issue.</para>
 
-    <para>Each user can clone an existing issue, creating a new issue in the same folder, or another folder of the same type. To clone the issue, select the <guilabel>Clone Issue</guilabel> command, then select the destination folder and click <guibutton>OK</guibutton>. The new issue by default has the same name and attribute values​​, as the issue being cloned. If necessary, you can change these values, and then click <guibutton>OK</guibutton>. The new issue is in no way connected with the original issue, but you can create such connection using a link to the issue (see <xref linkend="webissues.work.issues.comments"/>). Also the history of changes won't be retained, and the comments and attachments won't be added to the cloned issue.</para>
+    <para>Each user can clone an existing issue, creating a new issue in the same folder, or another folder of the same type. To clone the issue, select the <guilabel>Clone Issue</guilabel> command. The new issue by default has the same name, location and attribute values​​ as the issue being cloned. If necessary, you can change these values, and then click <guibutton>OK</guibutton>. The new issue is in no way connected with the original issue, but you can create such connection using a link to the issue (see <xref linkend="webissues.work.issues.comments"/>). Also the history of changes won't be retained, and the comments and attachments won't be added to the cloned issue.</para>
 
     <para>There are also no restrictions when it comes to editing the attributes of the issue. Each user can freely modify them, but all changes are permanently recorded by the system and the only way of undoing them is to edit them once again.</para>
 
@@ -563,7 +590,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>The Desktop Client allows you to create simple reports containing a list of issues or details of the selected issue. These reports can be directly printed or saved as a PDF or HTML document. You can also export the list of issues to a CSV file, which can be imported into a spreadsheet or an external database.</para>
 
-    <para>To create a report based on a list issues, open the folder, and select the view if you want to filter the issues. Make sure that the list of issues is active by clicking on it, and then select the <guibutton>Print</guibutton> command to print the report, or <guibutton>Export</guibutton> to save it in PDF format. To export the list as a document in HTML format or as a CSV file, expand the menu next to the <guibutton>Export</guibutton> button and select the appropriate option.</para>
+    <para>To create a report based on a list of issues, open the folder or global list of issues, and select the view if you want to filter the issues. Make sure that the list of issues is active by clicking on it, and then select the <guibutton>Print</guibutton> command to print the report, or <guibutton>Export</guibutton> to save it in PDF format. To export the list as a document in HTML format or as a CSV file, expand the menu next to the <guibutton>Export</guibutton> button and select the appropriate option.</para>
 
     <figure>
       <title>Printing a list of issues</title>

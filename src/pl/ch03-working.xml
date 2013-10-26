@@ -16,6 +16,8 @@
 
     <para>Na tym zresztą nie kończą się podobieństwa, gdyż główne okno programu składa się z trzech paneli, których układ przypomina popularne programy pocztowe. Po lewej stronie znajduje się drzewo projektów i folderów. Po prawej stronie u góry wyświetlana jest lista spraw w wybranym w drzewie folderze. Z kolei po prawej stronie na dole pokazane są szczegóły wybranej na liście sprawy. Wybrany folder i sprawa są podświetlone i możesz na nich wykonywać różne operacje.</para>
 
+    <para>Wybierając w drzwie projekt, możesz wyświetlić jego opis i zmodyfikować go, jeśli masz do tego uprawnienia. Specjalny element <quote>Wszystkie projekty</quote> zawiera globalne listy spraw każdego typu. Wybierając globalną listę, możesz wyświetlić wszystkie sprawy określonego typu (np. wszystkie błędy lub zadania) w jednym widoku, niezależnie od projektu i folderu, do którego należą.</para>
+
     <para>Poniżej przedstawione jest okno programu Web Client z widoczną przykładową listą spraw i historią sprawy:</para>
 
     <figure>
@@ -104,9 +106,33 @@
       <para>W przypadku systemów Windows oraz OS X program Desktop Client automatycznie wykrywa systemowe ustawienia serwera proxy. Natomiast w przypadku systemu Linux, musisz wpisać parametry połączenia, jeśli chcesz korzystać z serwera proxy. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.work.personal.client"/>.</para>
     </note>
 
-    <para>Jeśli administrator serwera WebIssues włączył taką opcję, to możesz utworzyć nowe konto i po zatwierdzeniu zgłoszenia rejestracji przez administratora otrzymasz dostęp do systemu. Aby rozpocząć tworzenie nowego konta, kliknij odnośnik <guilabel>Zarejestruj nowe konto</guilabel> w oknie logowania programu Web Client. Następnie podaj nazwę użytkownika, która będzie widoczna dla wszystkich użytkowników, na ogół imię i nazwisko. Wprowadź login oraz hasło, których będziesz używać, aby się zalogować. Podaj także adres e-mail. Następnie kliknij <guibutton>Zarejestruj</guibutton>.</para>
+    <sect2 id="webissues.work.login.anonymous">
+      <title>Dostęp anonimowy</title>
 
-    <para>Poprawność podanego przez ciebie adresu e-mail zostanie sprawdzona poprzez wysłanie wiadomości z odnośnikiem aktywacyjnym. Kliknij odnośnik lub skopiuj adres, aby otworzyć go przeglądarce. Wiadomość tą powinieneś otrzymać niedługo po zarejestrowaniu. Gdy aktywujesz zgłoszenie, zostanie ono przesłane do zatwierdzenia przez administratora systemu. Po zatwierdzeniu otrzymasz wiadomość z potwierdzeniem i możesz zalogować się do systemu przy pomocy podanego wcześniej loginu i hasła.</para>
+      <para>Jeśli administrator systemu WebIssues włączył dostęp anonimowy, a nie masz konta w systemie, możesz użyć polecenia <guilabel>Dostęp anonimowy</guilabel> w oknie logowania programu Web Client, aby uzyskać dostęp do systemu bez logowania. Będziesz miał wyłącznie dostęp tylko do odczytu do wybranych projektów i nie będziesz mógł dodawać lub edytować żadnych spraw. Będziesz mógł zobaczyć opisy projektów, sprawy i komentarze, oraz ściągać załączniki w publicznych projektach. Będziesz mógł również korzystać z publicznych widoków, ale nie będziesz mógł tworzyć własnych widoków, używać alertów ani subskrybować spraw.</para>
+
+      <para>Dostęp anonimowy jest możliwy tylko za pomocą programu Web Client. Aby korzystać z systemu za pomocą programu Desktop Client, musisz być zarejestrowanym użytkownikiem.</para>
+
+      <note>
+        <title>Note</title>
+        <para>Więcej informacji o włączaniu dostępu anonimowego znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
+      </note>
+
+    </sect2>
+
+    <sect2 id="webissues.work.login.register">
+      <title>Rejestracja użytkowników</title>
+
+      <para>Jeśli administrator serwera WebIssues włączył taką opcję, to możesz utworzyć nowe konto i po zatwierdzeniu zgłoszenia rejestracji przez administratora otrzymasz dostęp do systemu. Aby rozpocząć tworzenie nowego konta, kliknij odnośnik <guilabel>Zarejestruj nowe konto</guilabel> w oknie logowania programu Web Client. Następnie podaj nazwę użytkownika, która będzie widoczna dla wszystkich użytkowników, na ogół imię i nazwisko. Wprowadź login oraz hasło, których będziesz używać, aby się zalogować. Podaj także adres e-mail. Następnie kliknij <guibutton>Zarejestruj</guibutton>.</para>
+
+      <para>Poprawność podanego przez ciebie adresu e-mail zostanie sprawdzona poprzez wysłanie wiadomości z odnośnikiem aktywacyjnym. Kliknij odnośnik lub skopiuj adres, aby otworzyć go przeglądarce. Wiadomość tą powinieneś otrzymać niedługo po zarejestrowaniu. Gdy aktywujesz zgłoszenie, zostanie ono przesłane do zatwierdzenia przez administratora systemu. Po zatwierdzeniu otrzymasz wiadomość z potwierdzeniem i możesz zalogować się do systemu przy pomocy podanego wcześniej loginu i hasła.</para>
+
+      <note>
+        <title>Note</title>
+        <para>Więcej informacji o włączaniu i konfigurowaniu rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
+      </note>
+
+    </sect2>
 
   </sect1>
 
@@ -138,6 +164,11 @@
     </figure>
 
     <para>Wszystkie odstępy i podziały linii zostaną zachowane, a długie linie będą automatycznie podzielone, jeśli będzie taka potrzeba. Odnośniki w tekście będą automatycznie rozpoznane i podświetlone. Możesz użyć prostych znaczników, by zmienić format tekstu, na przykład użyć pogrubionej czcionki lub kursywy, albo utworzyć listy i bloki kodu. Pasek narzędzi ponad polem tekstowym pomoże ci wprowadzić odpowiedie znaczniki. Przeczytaj sekcję <xref linkend="webissues.work.issues.comments"/>, aby uzyskać więcej informacji o formatowaniu tekstu.</para>
+
+    <tip>
+      <title>Wskazówka</title>
+      <para>Możesz również tworzyć sprawy z globalnej listy spraw określonego typu. Na przykład, jeśli wybierzesz listę Błędy poniżej elementu <quote>Wszystkie projekty</quote> i wybierzesz polecenie <guilabel>Dodaj sprawę</guilabel>, pojawi się dodatkowe pole umożliwiające wybór folderu, w którym zostanie utworzona sprawa.</para>
+    </tip>
 
     <para>Naciśnij <guibutton>OK</guibutton> by potwierdzić dodanie nowej sprawy. Jeśli wartość któregoś z atrybutów jest niepoprawna, zostanie wyświetlony błąd. W przeciwnym wypadku, nowa sprawa pojawi się na liście, a poniżej zostaną wyświetlone szczegółowe informacje:</para>
 
@@ -460,11 +491,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>Wybierz inne dostępne widoki, aby przekonać się, że za każdym razem wyświetlane są inne sprawy i zmienia się układ widocznych kolumn. Dzięki temu każdy użytkownik może skupić się tylko na tych sprawach, które go w danym momencie interesują &mdash; np. tester może oglądać listę rozwiązanych błędów, które musi zweryfikować, a programista listę przypisanych do niego błędów, które musi rozwiązać.</para>
 
-    <tip>
-      <title>Wskazówka</title>
-      <para>Mimo że widoki znacznie ułatwiają pracę z dużą liczbą spraw, powinieneś przewidzieć, co się będzie działo z twoim systemem w ciągu kilku najbliższych lat. Jeśli na przykład codziennie rejestrowanych jest średnio 10 nowych spraw, to za rok będzie ich ponad 3000.</para>
-      <para>Wprawdzie nie ma określonego limitu spraw przypadających na jeden folder, to jednak duża ich liczba może negatywnie wpływać na wydajność systemu. W takiej sytuacji powinieneś podzielić sprawy na osobne foldery, na przykład według daty wprowadzenia lub wersji projektu, którego dotyczą.</para>
-    </tip>
+    <para>Jeśli w systemie istnieje wiele różnych projektów i folderów, znalezienie potrzebnej informacji może być jeszcze trudniejsze. W tym przypadku pomocne mogą być globalne listy spraw. Możesz wyświetlić wszystkie sprawy określonego typu, wybierając globalną listę pod elementem <quote>Wszystkie projekty</quote> w drzewie projektów. Możesz używać sortowania, wyszukiwania oraz widoków dokładnie w taki sam sposób jak w folderze. Możesz na przykład wyświetlić wszystkie aktywne błędy z wszystkich projektów i folderów. Możesz również wykonywać operacje na sprawach tak samo, jak wyświetlając folder. Globalne listy zawierają dodatkową kolumnę Lokalizacja, która wyświetla nazwę projektu i folderu zawierającego każdą sprawę.</para>
 
     <para>Korzystanie z istniejących, publicznych widoków może być czasem niewystarczające. W takiej sytuacji możesz utworzyć swój własny, prywatny widok, który może mieć dowolne kryteria filtrowania, kolumny oraz sortowanie.</para>
 
@@ -552,7 +579,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>Administrator może także przenieść sprawę do innego folderu za pomocą polecenia <guilabel>Przenieś sprawę</guilabel>. Docelowy folder musi być tego samego typu, co przenoszona sprawa, ponieważ nie można łączyć w jednym folderze spraw różnego typu. Aby przenieść sprawę do folderu znajdującego się w innym projekcie, musisz być administratorem obu projektów albo administratorem systemu. Operacja przeniesienia sprawy zostaje zarejestrowana w jej historii.</para>
 
-    <para>Każdy użytkownik może sklonować istniejącą sprawę, tworząc nową sprawę w tym samym folderze lub w innym folderze tego samego typu. Aby sklonować sprawę, wybierz polecenie <guilabel>Sklonuj sprawę</guilabel>, a następnie wybierz docelowy folder i kliknij <guibutton>OK</guibutton>. Nowa sprawa ma domyślnie taką samą nazwę i wartości atrybutów, jak klonowana sprawa. Możesz w razie potrzeby zmienić te wartości, a następnie ponownie kliknij <guibutton>OK</guibutton>. Nowa sprawa nie jest w żaden sposób powiązana z originalną sprawą, jednak możesz takie powiązanie utworzyć, używając odnośnika do sprawy (patrz sekcja <xref linkend="webissues.work.issues.comments"/>). Nie zachowuje również historii zmian oraz komentarzy i załączników dodanych do klonowanej sprawy.</para>
+    <para>Każdy użytkownik może sklonować istniejącą sprawę, tworząc nową sprawę w tym samym folderze lub w innym folderze tego samego typu. Aby sklonować sprawę, wybierz polecenie <guilabel>Sklonuj sprawę</guilabel>. Nowa sprawa ma domyślnie taką samą nazwę, lokalizację i wartości atrybutów, jak klonowana sprawa. Możesz w razie potrzeby zmienić te wartości, a następnie ponownie kliknij <guibutton>OK</guibutton>. Nowa sprawa nie jest w żaden sposób powiązana z originalną sprawą, jednak możesz takie powiązanie utworzyć, używając odnośnika do sprawy (patrz sekcja <xref linkend="webissues.work.issues.comments"/>). Nie zachowuje również historii zmian oraz komentarzy i załączników dodanych do klonowanej sprawy.</para>
 
     <para>Nie ma również żadnych ograniczeń, jeśli chodzi o edycję atrybutów sprawy. Każdy użytkownik może je dowolnie modyfikować, jednak każda zmiana jest trwale rejestrowana przez system i jedyną możliwością jej cofnięcia jest ponowna edycja.</para>
 
@@ -563,7 +590,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>Program Desktop Client umożliwia tworzenie prostych raportów zawierających listę spraw lub szczegóły wybranej sprawy. Raporty takie możesz od razu drukować lub zapisać jako dokument w formacie PDF lub HTML. Listę spraw możesz również eksportować do pliku w formacie CSV, który może być następnie zaimportowany do arkusza kalkulacyjnego lub do zewnętrznej bazy danych.</para>
 
-    <para>Aby utworzyć raport na podstawie listy spraw, otwórz odpowiedni folder i wybierz widok, jeśli chcesz przefiltrować sprawy. Upewnij się że lista spraw jest aktywna, klikając na niej, a następnie wybierz polecenie <guibutton>Drukuj</guibutton>, aby wydrukować raport, lub <guibutton>Eksportuj</guibutton>, aby zapisać go w formacie PDF. Aby wyeksportować listę jako dokument w formacie HTML lub jako plik CSV, rozwiń menu obok przycisku <guibutton>Eksportuj</guibutton> i wybierz odpowiednią opcję.</para>
+    <para>Aby utworzyć raport na podstawie listy spraw, otwórz odpowiedni folder lub globalną listę i wybierz widok, jeśli chcesz przefiltrować sprawy. Upewnij się że lista spraw jest aktywna, klikając na niej, a następnie wybierz polecenie <guibutton>Drukuj</guibutton>, aby wydrukować raport, lub <guibutton>Eksportuj</guibutton>, aby zapisać go w formacie PDF. Aby wyeksportować listę jako dokument w formacie HTML lub jako plik CSV, rozwiń menu obok przycisku <guibutton>Eksportuj</guibutton> i wybierz odpowiednią opcję.</para>
 
     <figure>
       <title>Drukowanie listy spraw</title>

@@ -289,14 +289,27 @@
 
     <para>You can select the default format of text used for new descriptions and comments. By default <guilabel>Text with Markup</guilabel> is used. You can switch to <guilabel>Plain Text</guilabel> if you prefer text without any formating like in older versions of WebIssues. Note that individual users may override this setting in their personal preferences, as well as for individual descriptions and comments.</para>
 
-      <figure>
-        <title>Editing</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch06-fig18-03.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
+    <figure>
+      <title>Editing</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig18-03.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
 
-    <para>The <guilabel>Enable user registration</guilabel> option allows you to enable a module that allows users to register a new account. Additionally, you can enter an e-mail address to which notifications are sent about requests that are waiting for approval by the system administrator. They will be sent when there are new registration requests for approval, but not more often than once an hour. For more information about user registration, see <xref linkend="webissues.work.login"/> and <xref linkend="webissues.admin.register"/>.</para>
+    <para>The <guilabel>Enable anonymous access</guilabel> option enables read-only access to public projects without logging in to the Web Client. Note that when you enable anonymous access, all issues, comments and attachments from the public projects become accessible to everyone. The public content can also be indexed by web search engines if the server is accessible from the Internet. Anonymous users can use public views, but they cannot create their own views, use alerts or subscribe to issues. In addition, only registered and logged in users are allowed to add new issues and edit existing issues. Because of this, anonymous access is often used in combination with user self-registration (see below).</para>
+
+    <para>Anonymous users won't be able to access anything unless there is at least one public project in the system. For more information about changing project access, see <xref linkend="webissues.admin.projects.permissions"/>. For more information about accessing the system in anonymous mode, see <xref linkend="webissues.work.login"/>.</para>
+
+    <figure>
+      <title>Anonymous access</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig18-04.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>The <guilabel>Enable user registration</guilabel> option allows new users to register themselves in the system. By default, administrator's approval is required before new users can access the system. You can enter an optional e-mail address to which notifications are sent when there are new requests awaiting approval, not more often than once an hour. During the approval, the administrator can assign user's permissions to selected projects. See <xref linkend="webissues.admin.register"/> for more information about approving registration requests.</para>
+
+    <para>If you select the <guilabel>Enable automatic approval</guilabel> option, registered users can log in to the system immediately after their email address is verified, without administrator's approval. In this case, new users do not become members of any projects, so they only have access to public projects. Because of this, automatic approval is only useful if there is at least one public project in the system. For more information about changing project access, see <xref linkend="webissues.admin.projects.permissions"/>. For more information about user registration, see <xref linkend="webissues.work.login"/>.</para>
 
     <figure>
       <title>User Registration</title>
@@ -307,7 +320,7 @@
 
     <note>
       <title>Note</title>
-      <para>For the user registration module to work, you must properly configure the emails. Sending notifications with new registration requests also requires a working cron job. For more information, see <xref linkend="webissues.prep.notifications"/>.</para>
+      <para>For user self-registration to work, you must properly configure the emails. Sending notifications about pending registration requests also requires a working cron job. For more information, see <xref linkend="webissues.prep.notifications"/>.</para>
     </note>
 
     <para>Options from the <guilabel>Limits</guilabel> group allow the system administrator to specify the maximum length of comments and the maximum size of attachments that can be added by users.</para>

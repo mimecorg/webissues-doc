@@ -289,14 +289,27 @@
 
     <para>Możesz zmienić domyślny format tekstu używanego dla nowych opisów i komentarzy. Domyślnie używany jest <guilabel>Tekst ze znacznikami</guilabel>. Możesz zmienić tą opcję na <guilabel>Zwykły tekst</guilabel>, jeśli wolisz tekst bez formatowania, taki jak w starszych wersjach systemu WebIssues. Pamiętaj, że poszczególni użytkownicy mogą zmienić tą opcję w swoich ustawieniach użytkownika, a także dla poszczególnych opisów i komentarzy.</para>
 
-      <figure>
-        <title>Edycja</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch06-fig18-03.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
+    <figure>
+      <title>Edycja</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig18-03.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
 
-    <para>Opcja <guilabel>Włącz rejestrację użytkowników</guilabel> pozwala na włączenie modułu, który umożliwia użytkownikom rejestrację nowego konta. Dodatkowo, możesz podać adres e-mail, na który będą wysyłane powiadomienia o zgłoszeniach, które oczekują na zatwierdzenie przez administratora systemu. Będą one wysyłane, gdy pojawią się nowe zgłoszenia rejestracji do zatwierdzenia, jednak nie częściej, niż co godzinę. Więcej informacji na temat rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.work.login"/> oraz <xref linkend="webissues.admin.register"/>.</para>
+    <para>Opcja <guilabel>Włącz dostęp anonimowy</guilabel> umożliwia dostęp tylko do odczytu do publicznych projektó bez logowania się do programu Web Client. Pamiętaj, że jeśli włączysz dostęp anonimowy, wszystkie sprawy, komentarze i załączniki w publicznych projektach będą dostępne dla wszystkich. Publiczna zawartość może być również indeksowana przez wyszukiwarki jeśli serwer jest dostępny w Internecie. Anonimowi użytkownicy mogą używać publicznych widoków, ale nie mogą tworzyć własnych widoków, używać alertów ani subskrybować spraw. Dodatkowo, tylko zarejestrowani i zalogowani użytkownicy mają prawo dodawać nowe sprawy i edytować istniejące. Dlatego dostęp anonimowy jest często używany w połączeniu z rejestracją użytkowników (patrz niżej).</para>
+
+    <para>Anonimowi użytkownicy nie będą mieli dostępu do żadnych informacji jeśli w systemie nie istnieje przynajmniej jeden publiczny projekt. Więcej informacji na temat zmiany dostępu do projektu znajdziesz w sekcji <xref linkend="webissues.admin.projects.permissions"/>. Więcej informacji o anonimowym dostępie do systemu znajdziesz w sekcji <xref linkend="webissues.work.login"/>.</para>
+
+    <figure>
+      <title>Dostęp anonimowy</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch06-fig18-04.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Opcja <guilabel>Włącz rejestrację użytkowników</guilabel> umożliwia użytkownikom rejestrację nowego konta. Domyślnie, wymagane jest zatwierdzenie przez administratora, zanim nowi użytkownicy mogą się zalogować. Możesz podać adres e-mail, na który będą wysyłane powiadomienia o zgłoszeniach, które oczekują na zatwierdzenie, nie częściej, niż co godzinę. Podczas zatwierdzania administrator może przypisać użytkownika do określonych projektów. Więcej informacji na temat zatwierdzania zgłoszeń rejestracji znajdzesz w sekcji <xref linkend="webissues.admin.register"/>.</para>
+
+    <para>Jeśli wybierzesz opcję <guilabel>Włącz automatyczne zatwierdzanie</guilabel>, zarejestrowani użytkownicy będą mogli zalogować się do systemu od razu po weryfikacji adresu e-mail, bez zatwierdzania przez administratora. W tym wypadku nowi użytkownicy nie stają się członkami żadnych projektów, więc mają dostęp jedynie do publicznych projektów. Z tego powodu automatyczne zatwierdzanie jest użyteczne tylko w przypadku, gdy w systemie istnieje przynajmniej jeden publiczny projekt. Więcej informacji na temat zmiany dostępu do projektu znajdziesz w sekcji <xref linkend="webissues.admin.projects.permissions"/>. Więcej informacji o rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.work.login"/>.</para>
 
     <figure>
       <title>Rejestracja użytkowników</title>
@@ -307,7 +320,7 @@
 
     <note>
       <title>Notatka</title>
-      <para>Aby moduł rejestracji użytkowników działał, musisz prawidłowo skonfigurować ustawienia e-maili. Wysyłanie powiadomień o nowych zgłoszeniach rejestracji wymaga również działającego zadania cyklicznego. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.notifications"/>.</para>
+      <para>Aby rejestracja użytkowników działała, musisz prawidłowo skonfigurować ustawienia e-maili. Wysyłanie powiadomień o nowych zgłoszeniach rejestracji wymaga również działającego zadania cyklicznego. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.notifications"/>.</para>
     </note>
 
     <para>Opcje z grupy <guilabel>Ograniczenia</guilabel> umożliwiają administratorowi systemu określenie maksymalnej długości komentarzy oraz maksymalnej wielkości załączników, jakie mogą być dodawane przez użytkowników.</para>

@@ -93,11 +93,9 @@
       <para>Unikalny identyfikator umożliwia rozróżnienie poszczególnych instancji serwera WebIssues przez program Desktop Client, niezależnie od ich nazwy i adresu URL. Jest on automatycznie generowany w momencie instalacji i normalnie nie ma potrzeby go zmieniać. Zmiana tego identyfikatora może być potrzebna w sytuacji, gdy instancja serwera zostanie sklonowana (na przykład jeśli przed wdrożeniem aktualizacji na środowisku produkcyjnym jest ona testowana na tymczasowej kopii), a także po ręcznym wprowadzeniu zmian w bazie danych (na przykład po przywróceniu poprzedniej wersji bazy danych z kopii zapasowej).</para>
     </note>
 
-    <para>W kolejnej części okna wyświetlone są podstawowe informacje na temat twojego serwera: nazwa instancji (zwykle będzie to <literal>default</literal>, chyba że tworzysz wiele instancji serwera w ramach jednej instalacji), bazowy adres URL serwera oraz ścieżka katalogu, w którym znajduje się plik konfiguracyjny. Jest również wyświetlona wersja PHP, serwera WWW i systemu operacyjnego oraz nazwa komputera, na którym jest zainstalowany system WebIssues.</para>
+    <para>Kolejna część okna pokazuje konfigurację twojego serwera: status anonimowego dostępu i rejestracji użytkowników, konfigurację poczty wychodzącej i przychodzącej oraz czas ostatniego wykonania zadania cyklicznego, które jest niezbędne do wysyłania i odbierania poczty. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.nofitications.cron"/>.</para>
 
-    <para>Wyświetlone są również informacje na temat bazy danych: rodzaj i wersja serwera bazy danych, nazwa hosta i nazwa bazy danych oraz opcjonalny prefiks nazw tabel w bazie danych.</para>
-
-    <para>Ostatnia część okna zawiera informacje na temat ostatniego uruchomienia zadania cyklicznego. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.nofitications.cron"/>.</para>
+    <para>W kolejnej części okna wyświetlone są informacje na temat bazy danych: rodzaj i wersja serwera bazy danych, nazwa hosta i nazwa bazy danych oraz opcjonalny prefiks nazw tabel w bazie danych. Dalej wyświetlone są podstawowe informacje na temat twojego serwera: nazwa instancji (zwykle będzie to <literal>default</literal>, chyba że tworzysz wiele instancji serwera w ramach jednej instalacji), bazowy adres URL serwera oraz ścieżka katalogu, w którym znajduje się plik konfiguracyjny. Jest również wyświetlona wersja PHP, serwera WWW i systemu operacyjnego oraz nazwa komputera, na którym jest zainstalowany system WebIssues.</para>
 
   </sect1>
 
@@ -178,29 +176,6 @@
 
       <para>Każdy użytkownik posiada unikalny, niezmienny login, używany wraz z hasłem podczas logowania do systemu. Posiada również nazwę, widoczną dla innych użytkowników, którą administrator może w razie potrzeby zmieniać. W zależności od przyjętej konwencji może to być imię i nazwisko, adres e-mail lub dowolna inna nazwa.</para>
 
-      <para>Zarządzanie uprawnieniami w systemie WebIssues jest stosunkowo proste. Istnieją trzy globalne poziomy dostępu:</para>
-
-      <variablelist>
-        <varlistentry>
-          <term>Administrator systemu</term>
-          <listitem>
-            <para>Użytkownik o tym poziomie ma dostęp do wszystkich funkcji Panelu administracyjnego. Może więc zarządzać kontami użytkowników i dostosowywać typy spraw i publiczne widoki. Jest również członkiem i administratorem wszystkich istniejących w systemie projektów, nawet jeśli nie zostały mu jawnie nadane odpowiednie uprawnienia. Pierwsze takie konto jest tworzone w momencie instalacji.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Zwykły użytkownik</term>
-          <listitem>
-            <para>Użytkownik o tym poziomie dostępu może zalogować się do systemu i zmieniać swoje personalne ustawienia. Ma dostęp jedynie do tych projektów, do których zostały mu nadane określone uprawnienia. Może być administratorem wybranych projektów, ale nie może tworzyć nowych projektów.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Wyłączony</term>
-          <listitem>
-            <para>Użytkownik o tym poziomie dostępu nie może zalogować się do systemu i nie ma dostępu do żadnej jego części.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-
       <para>Aby utworzyć nowe konto użytkownika, wybierz polecenie <guilabel>Dodaj użytkownika</guilabel>.</para>
 
       <figure>
@@ -228,7 +203,59 @@
         <para>Jeśli zapomniałeś hasła administratora systemu, nie możesz w prosty sposób go odzyskać. Wszystkie hasła są przechowywane w bazie danych w postaci bezpiecznych hashów, które praktycznie uniemożliwiają odtworzenie oryginalnego hasła. Mając dostęp do bazy danych możesz jednak zresetować hasło administratora, generując nowy hash i wpisując go do kolumny <literal>user_passwd</literal> dla odpowiedniego użytkownika w tabeli <literal>users</literal>. System WebIssues używa algorytmu <quote>Portable PHP password hashing framework</quote>, zgodnego z takimi programami jak Wordpress czy Drupal, możesz więc użyć jednego z dostępnych dla tych programów <ulink url="http://scriptserver.mainframe8.com/wordpress_password_hasher.php">generatorów hashów</ulink>.</para>
       </note>
 
-      <para>Aby zmienić globalny poziom dostępu użytkownika, wybierz go z listy i kliknij <guilabel>Zmień dostęp</guilabel>. Następnie wybierz nowy poziom dostępu i kliknij <guibutton>OK</guibutton>. Nie możesz sam pozbawić się prawa administratora systemu, ponieważ w systemie musi istnieć przynajmniej jedno aktywne konto administratora.</para>
+      <para>Aby zmienić nazwę użytkownika, wybierz go z listy i kliknij <guilabel>Zmień nazwę użytkownika</guilabel>. Podaj nową nazwę i kliknij <guibutton>OK</guibutton>.</para>
+
+      <tip>
+        <title>Wskazówka</title>
+        <para>Unikaj zmieniania nazwy użytkowników, którzy mają przypisane do siebie sprawy. Wartości atrybutów są przechowywane jako tekst, więc zmiana nazwy użytkownika nie spowoduje automatycznej zmiany wartości atrybutów <quote>Przypisany do</quote>. Może to spowodować, że użytkownik przestanie widzieć przypisane do siebie sprawy.</para>
+      </tip>
+
+      <para>Nowo utworzony użytkownik nie ma dostępu do żadnego projektu, chyba że jest administratorem systemu. Aby zmienić globalny dostęp i zarządzać listą projektów dostępnych dla wybranego użytkownika, użyj polecenia <guilabel>Zarządzaj uprawnieniami</guilabel>. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.admin.users.permissions"/> poniżej.</para>
+
+      <para>Możesz również zmienić ustawienia dowolnego użytkownika za pomocą polecenia <guilabel>Ustawienia użytkownika</guilabel>. Każdy użytkownik może również zmienić własne ustawienia, korzystając z opcji <guilabel>Ustawienia użytkownika</guilabel> w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna progamu Desktop Client. Więcej informacji na temat ustawień użytkownika znajdziesz w sekcjach <xref linkend="webissues.work.personal"/>.</para>
+
+      <para>System WebIssues nie pozwala na usuwanie istniejących użytkowników, ponieważ przechowuje on wszystkie informacje historyczne, na przykład zmiany dokonane przez poszczególnych użytkowników. Zamiast tego możesz zmienić poziom uprawnień użytkowników, którzy nie powinni już mieć dostępu do systemu, na wyłączony. Użyj opcji filtrowania w prawym górnym rogu listy, aby ukryć wyłączone konta użytkowników.</para>
+
+      <para>System WebIssues umożliwia użytkownikom samodzielnie dokonywać rejestracji nowych kont. Więcej informacji na ten konfigurowania rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
+
+    </sect2>
+
+    <sect2 id="webissues.admin.users.permissions">
+      <title>Uprawnienia użytkownika</title>
+
+      <para>Aby zmienić globalny dostęp i zarządzać projektami użytkownika, przejdź do Panelu administracyjnego i kliknij <guilabel>Konta użytkowników</guilabel>. W przypadku programu Desktop Client, użyj polecenia <guilabel>Użytkownicy</guilabel> z paska narzędzi głównego okna. Następnie wybierz użytkownika z listy i kliknij <guilabel>Projekty użytkownika</guilabel>. Lista projektów użytkownika jest analogiczna do listy członków projektu.</para>
+
+      <figure>
+        <title>Uprawnienia użytkownika</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig10-01.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Zarządzanie uprawnieniami w systemie WebIssues jest stosunkowo proste. Istnieją trzy globalne poziomy dostępu:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>Administrator systemu</term>
+          <listitem>
+            <para>Administrator systemu ma dostęp do wszystkich funkcji Panelu administracyjnego. Może więc zarządzać kontami użytkowników i dostosowywać typy spraw i publiczne widoki. Jest również członkiem i administratorem wszystkich istniejących w systemie projektów, nawet jeśli nie zostały mu jawnie nadane odpowiednie uprawnienia. Pierwsze takie konto jest tworzone w momencie instalacji.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Zwykły użytkownik</term>
+          <listitem>
+            <para>Zwykły użytkownik może zalogować się do systemu i zmieniać swoje personalne ustawienia. Ma dostęp jedynie do publicznych projektów oraz do tych projektów, do których zostały mu nadane określone uprawnienia. Może być administratorem wybranych projektów, ale nie może tworzyć nowych projektów. Każdy nowy użytkownik domyślnie jest zwykłym użytkownikiem.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Wyłączony</term>
+          <listitem>
+            <para>Wyłączony użytkownik nie może zalogować się do systemu i nie ma dostępu do żadnej jego części.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+      <para>Aby zmienić globalny poziom dostępu użytkownika, wybierz kliknij polecenie <guilabel>Zmień</guilabel> w ramce <guilabel>Dostęp globalny</guilabel>. Następnie wybierz nowy poziom dostępu i kliknij <guibutton>OK</guibutton>. Nie możesz sam pozbawić się prawa administratora systemu, ponieważ w systemie musi istnieć przynajmniej jedno aktywne konto administratora.</para>
 
       <figure>
         <title>Zmiana dostępu użytkownika</title>
@@ -237,53 +264,147 @@
         </mediaobject>
       </figure>
 
-      <para>Aby zmienić nazwę użytkownika, wybierz go z listy i kliknij <guilabel>Zmień nazwę użytkownika</guilabel>. Podaj nową nazwę i kliknij <guibutton>OK</guibutton>.</para>
+      <para>Aby dodać użytkownika do projektów, wybierz polecenie <guilabel>Dodaj projekty</guilabel>. Zaznacz jeden lub więcej projektów, a następnie wybierz odpowiedni poziom dostępu i kliknij <guibutton>OK</guibutton>. Aby zmienić poziom dostępu do projektu, wybierz projekt z listy i kliknij <guilabel>Zmień dostęp</guilabel>. Następnie wybierz nowy poziom dostępu i kliknij <guibutton>OK</guibutton>. Więcej informacji na temat konfigurowania dostępu do projektów znajdziesz w sekcji <xref linkend="webissues.admin.projects.permissions"/>.</para>
+
+      <para>Aby usunąć użytkownika z projektu, wybierz go z listy i kliknij <guilabel>Usuń projekt</guilabel>. W przypadku programu Desktop Client, możesz wybrać kilka projektów naraz, by zmienić lub usunąć dostęp do nich.</para>
 
       <tip>
         <title>Wskazówka</title>
-        <para>Unikaj zmieniania nazwy użytkowników, którzy mają przypisane do siebie sprawy. Wartości atrybutów są przechowywane jako tekst, więc zmiana nazwy użytkownika nie spowoduje automatycznej zmiany wartości atrybutów <quote>Przypisany do</quote>. Może to spowodować, że użytkownik przestanie widzieć przypisane do siebie sprawy.</para>
+        <para>Istnieje również możliwość przypisania użytkowników do projektów za pomocą polecenia <guilabel>Zarządzaj uprawnieniami</guilabel> w liście projektów. Jest to szczególnie użyteczne w trakcie tworzenia nowego projektu. Poza tym, w przeciwieństwie do zarządzania uprawnieniami użytkowników, ta funkcja jest dostępna również dla administratorów projektów. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.admin.projects.permissions"/>.</para>
       </tip>
-
-      <para>Aby zarządzać listą projektów dostępnych dla wybranego użytkownika, użyj polecenia <guilabel>Projekty użytkownika</guilabel>. Możesz również zarządzać listą użytkowników, którzy mają dostęp do wybranego projektu. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.admin.users.members"/>.</para>
-
-      <para>Możesz również zmienić ustawienia dowolnego użytkownika za pomocą polecenia <guilabel>Ustawienia użytkownika</guilabel>. Każdy użytkownik może również zmienić własne ustawienia, korzystając z opcji <guilabel>Ustawienia użytkownika</guilabel> w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna progamu Desktop Client. Więcej informacji na temat ustawień użytkownika znajdziesz w sekcjach <xref linkend="webissues.work.personal"/>.</para>
-
-      <para>System WebIssues nie pozwala na usuwanie istniejących użytkowników, ponieważ przechowuje on wszystkie informacje historyczne, na przykład zmiany dokonane przez poszczególnych użytkowników. Zamiast tego możesz zmienić poziom uprawnień użytkowników, którzy nie powinni już mieć dostępu do systemu, na wyłączony. Użyj opcji filtrowania w prawym górnym rogu listy, aby ukryć wyłączone konta użytkowników.</para>
-
-      <para>System WebIssues umożliwia użytkownikom samodzielnie dokonywać rejestracji nowych kont. W takim wypadku niezbędna jest akceptacja zgłoszeń rejestracji przez administratora systemu. Więcej informacji na ten temat znajdziesz w sekcjach <xref linkend="webissues.admin.register"/> oraz <xref linkend="webissues.custom.settings"/>.</para>
 
     </sect2>
 
-    <sect2 id="webissues.admin.users.members">
-      <title>Członkowie projektu</title>
+  </sect1>
 
-      <para>Nowo utworzony użytkownik nie ma dostępu do żadnego projektu, chyba że jest administratorem systemu. Aby zarządzać uprawnieniami użytkowników do poszczególnych projektów, kliknij <guilabel>Zarządzaj projektami</guilabel> w oknie głównym, wybierz projekt, a następnie użyj polecenia <guilabel>Członkowie projektu</guilabel>. W przypadku programu Desktop Client, polecenie to jest dostępne bezpośrednio w oknie głównym, jeśli uaktywnisz drzewo projektów.</para>
+  <sect1 id="webissues.admin.register">
+    <title>Zgłoszenia rejestracji</title>
+
+    <para>Administator systemu WebIssues może włączyć opcję, która pozwala użytkownikom samodzielnie dokonywać rejestracji nowych kont. Nowy użytkownik podaje nazwę, login i hasło oraz adres e-mail, który podlega weryfikacji poprzez wysłanie wiadomości aktywacyjnej. Jeśli nie zostało włączone automatyczne zatwierdzanie zgłoszeń, zgłoszenia rejestracji muszą następnie zostać zatwierdzone przez administratora. Podczas zatwierdzania trzeba określić, do jakich projektów użytkownik będzie miał dostęp. Dopiero wtedy użytkownik będzie mógł zalogować się do systemu.</para>
+
+    <note>
+      <title>Notatka</title>
+      <para>Więcej informacji na temat rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.work.login"/>. Informacje na temat włączania i konfigurowania rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
+    </note>
+
+    <para>Aby wyświetlić aktywne zgłoszenia rejestracji, które oczekują na zatwierdzenie, przejdź do Panelu administracyjnego i kliknij <guilabel>Zgłoszenia rejestracji</guilabel>. Funkcja ta nie jest dostępna w programie Desktop Client.</para>
+
+    <figure>
+      <title>Zgłoszenia rejestracji</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch05-fig10-02.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Aby zatwierdzić zgłoszenie rejestracji, wybierz je z listy, a następnie użyj polecenia <guilabel>Zatwierdź zgłoszenie</guilabel>. Zaznacz projekty, do których użytkownik będzie miał dostęp i kliknij <guibutton>OK</guibutton>. Pamiętaj, że nowy użytkownik zawsze ma dostęp do wszystkich publicznych projektów, tak jak wszyscy inni użytkownicy. Dlatego, jeśli używasz publicznych projektów, ręczne zatwierdzanie zgłoszeń może nie być konieczne.</para>
+
+    <para>Zatwierdzone zgłoszenie rejestracji zniknie z listy, a nowy użytkownik pojawi się na liście kont użytkowników, gdzie możesz zmienić jego nazwę, uprawnienia, ustawienia i hasło, tak jak w przypadku kont utworzonych bezpośrednio przez admnistratora. Użytkownik otrzyma również powiadomienie mailowe o zatwierdzeniu jego zgłoszenia.</para>
+
+    <para>Aby odrzucić wybrane zgłoszenie rejestracji, użyj polecenia <guilabel>Odrzuć zgłoszenie</guilabel>. Zostanie ono usunięte z listy zgłoszeń, a użytkownik otrzyma powiadomienie mailowe o odrzuceniu zgłoszenia.</para>
+
+    <para>Jeśli chcesz otrzymywać automatyczne powiadomienia o nowych zgłoszeniach rejestracji, które oczekują na zatwierdzenie, podaj swój adres e-mail w opcjach rejestracji użytkowników. Więcej informacji znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
+
+  </sect1>
+
+  <sect1 id="webissues.admin.projects">
+    <title>Zarządzanie projektami</title>
+
+    <para>Jeśli używasz programu Desktop Client, możesz zarządzać projektami i folderami bezpośrednio z głównego okna programu. Odpowiednie polecenia są dostępne, jeśli uaktywnisz drzewo projektów, klikając na nim. W przypadku programu Web Client, wybierz polecenie <guilabel>Zarządzaj projektami</guilabel>, widoczne nad drzewem projektu, aby przejść do okna zarządzania projektami i folderami.</para>
+    
+    <para>Jeśli jesteś administratorem systemu, możesz zarządzać wszystkimi projektami oraz tworzyć nowe projekty. Jeśli jesteś administratorem projektu, możesz zarządzać jego członkami i folderami.</para>
+
+    <para>Aby dodać nowy projekt, wybierz polecenie <guilabel>Dodaj projekt</guilabel>, a następnie podaj nazwę i opcjonalny opis projektu i naciśnij <guibutton>OK</guibutton>.</para>
+
+    <figure>
+      <title>Tworzenie projektu</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch05-fig11.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Administrator systemu może zmienić nazwę dowolnego projektu. W tym celu wybierz projekt i kliknij <guilabel>Zmień nazwę projektu</guilabel>. Możesz również usuwać projekty używając polecenia <guilabel>Usuń projekt</guilabel>. Jeśli projekt nie jest pusty, zostanie wyświetlone odpowiednie ostrzeżenie.</para>
+
+    <warning>
+      <title>Uwaga</title>
+      <para>Usuwając projekty lub foldery zwracaj szczególną uwagę, czy omyłkowo nie kasujesz niewłaściwych danych. Wszystkie zawarte w nich sprawy są trwale i nieodwracalnie usuwane z systemu i nie ma możliwości ich przywrócenia.</para>
+    </warning>
+
+    <para>Opis projektu jest wyświetlany, gdy projekt zostanie wybrany w drzewie projektów, zarówno w programie Web Client, jak i Desktop Client. Możesz go użyć, by przekazać informacje o projekcie, w tym odnośniki do ważnych spraw lub zasobów zewnętrznych. Administratorzy systemu oraz projektu mogą dodać opis do istniejącego projektu, edytować opis i usunąć go. Opisy projektów używają tego samego formatu, co opisy spraw i komentarze. Aby uzyskać więcej informacji, patrz sekcja <xref linkend="webissues.work.issues.comments"/>.</para>
+
+    <sect2 id="webissues.admin.projects.folders">
+      <title>Zarządzanie folderami</title>
+
+      <para>Aby dodać nowy folder, wybierz projekt i kliknij <guilabel>Dodaj folder</guilabel>.</para>
 
       <figure>
-        <title>Lista członków projektu</title>
+        <title>Tworzenie folderu</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig12.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Tworząc folder, musisz nadać mu nazwę, która jest unikalna w ramach danego projektu, a także wybrać typ spraw, które będą w nim przechowywane. Po utworzeniu folderu nie możesz zmienić jego typu. Możesz natomiast zmienić nazwę folderu, używając polecenia <guilabel>Zmień nazwę folderu</guilabel> oraz usunąć go za pomocą polecenia <guilabel>Usuń folder</guilabel>.</para>
+
+      <para>Możesz również przenieść folder z jednego projektu do drugiego. Aby to zrobić, musisz być administratorem systemu lub obu projektów &mdash; źródłowego i docelowego. Wybierz folder, który chcesz przenieść i kliknij <guilabel>Przenieś folder</guilabel>. Następnie wybierz z listy docelowy projekt i kliknij <guibutton>OK</guibutton>.</para>
+
+    </sect2>
+
+    <sect2 id="webissues.admin.projects.permissions">
+      <title>Uprawnienia projektu</title>
+
+      <para>Po utworzeniu nowego projektu, żaden zwykły użytkownik nie ma do niego dostępu. Aby zarządzać uprawnieniami użytkowników do poszczególnych projektów, kliknij <guilabel>Zarządzaj projektami</guilabel> w oknie głównym, wybierz projekt, a następnie użyj polecenia <guilabel>Zarządzaj uprawnieniami</guilabel>. W przypadku programu Desktop Client, polecenie to jest dostępne bezpośrednio w oknie głównym, jeśli uaktywnisz drzewo projektów.</para>
+
+      <figure>
+        <title>Uprawnienia projektu</title>
         <mediaobject>
           <imageobject><imagedata fileref="images/ch05-fig08.png" format="PNG"/></imageobject>
         </mediaobject>
       </figure>
 
-      <para>Istnieją dwa poziomy dostępu użytkowników do projektów:</para>
+      <para>Istnieją dwa globalne poziomy dostępu do projektów:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>Zwykły projekt</term>
+          <listitem>
+            <para>Zwykłe projekty są widoczne tylko dla administratorów systemu i zwykłych użytkowników, którzy są członkami danego projektu. Wszystkie nowe projekty są domyślnie zwykłymi projektami.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Publiczny projekt</term>
+          <listitem>
+            <para>Publiczne projekty są widoczne dla wszystkich użytkowników systemu, zarówno administratorów, jak i zwykłych użytkowników. Nie ma potrzeby jawnego nadawania uprawnień poszczególnym członkom, z wyjątkiem administratorów projektu. Jest to przydatne w przypadku projektów zawierających wspólne dane, takie jak fora dyskusyjne, a także w przypadku, gdy nie jest konieczne ograniczanie dostępu użytkowników do poszczególnych projektów. Dodatkowo, jeśli został włączony dostęp anonimowy, projekt jest dostępny w trybie tylko do odczytu bez konieczności logowania się do systemu.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+      <para>Aby zmienić globalny dostęp dla projektu, kliknij polecenie <guilabel>Zmień</guilabel> w ramce <guilabel>Globalny dostęp</guilabel>. Następnie wybierz nowy poziom dostępu i kliknij <guibutton>OK</guibutton>.</para>
+
+      <figure>
+        <title>Globalny dostęp do projektu</title>
+        <mediaobject>
+          <imageobject><imagedata fileref="images/ch05-fig08-01.png" format="PNG"/></imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Możesz również przypisać określony dostęp do projektu poszczególnym użytkownikom. Istnieją dwa poziomy dostępu użytkowników do projektów:</para>
 
       <variablelist>
         <varlistentry>
           <term>Administrator projektu</term>
           <listitem>
-            <para>Użytkownik o tym poziomie dostępu może zarządzać członkami i folderami danego projektu. Może również usuwać i przenosić sprawy oraz edytować i usuwać wszystkie komentarze i załączniki w ramach tego projektu.</para>
+            <para>Administrator projektu może zarządzać uprawnieniami i folderami danego projektu. Może również usuwać i przenosić sprawy oraz edytować i usuwać wszystkie komentarze i załączniki w ramach tego projektu. Może także zarządzać publicznymi alertami oraz zmieniać opis projektu.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term>Zwykły członek</term>
           <listitem>
-            <para>Użytkownik o tym poziomie dostępu może przeglądać sprawy we wszystkich folderach, zarządzać swoimi alertami, a także tworzyć nowe sprawy i edytować istniejące. Może również dodawać komentarze i załączniki oraz edytować i usuwać własne komentarze i załączniki.</para>
+            <para>Zwykły członek może przeglądać sprawy we wszystkich folderach, zarządzać swoimi alertami, a także tworzyć nowe sprawy i edytować istniejące. Może również dodawać komentarze i załączniki oraz edytować i usuwać własne komentarze i załączniki.</para>
           </listitem>
         </varlistentry>
       </variablelist>
 
-      <para>Globalny poziom uprawnień użytkownika jest zawsze ważniejszy, niż uprawnienia dla danego projektu. Administrator systemu automatycznie staje się administratorem wszystkich projektów, a użytkownik wyłączony traci dostęp do wszystkich projektów. Natomiast zwykły użytkownik ma dostęp tylko do tych projektów, których jest członkiem, zgodnie z nadanymi mu uprawnieniami.</para>
+      <para>Globalne uprawnienia użytkownika są zawsze ważniejsze, niż uprawnienia dla danego projektu. Administrator systemu automatycznie staje się administratorem wszystkich projektów, a użytkownik wyłączony traci dostęp do wszystkich projektów. Natomiast zwykły użytkownik ma dostęp tylko do publicznych projektów oraz do tych projektów, których jest członkiem, zgodnie z nadanymi mu uprawnieniami.</para>
 
       <para>Aby dodać członków projektu, wybierz polecenie <guilabel>Dodaj członków</guilabel>.</para>
 
@@ -307,89 +428,7 @@
 
       <para>Aby usunąć członka projektu, wybierz go z listy i kliknij <guilabel>Usuń członka</guilabel>. W przypadku programu Desktop Client, możesz wybrać kilku członków z listy i zmienić ich poziom dostępu lub usunąć z projektu jednocześnie.</para>
 
-      <para>Istnieje również możliwość wyświetlenia listy dostępnych projektów dla wybranego użytkownika, a także dodanie użytkownika do wybranych projektów oraz usunięcie i zmiana poziomu dostępu. Jest ona szczególnie przydatna podczas tworzenia nowych kont użytkowników. Jednak w odróżnieniu od funkcji zarządzania członkami projektu, jest ona dostępna tylko dla administratorów systemu.</para>
-
-      <para>Aby zarządzać projektami użytkownika, przejdź do Panelu administracyjnego i kliknij <guilabel>Konta użytkowników</guilabel>. W przypadku programu Desktop Client, użyj polecenia <guilabel>Użytkownicy</guilabel> z paska narzędzi głównego okna. Następnie wybierz użytkownika z listy i kliknij <guilabel>Projekty użytkownika</guilabel>. Lista projektów użytkownika jest analogiczna do listy członków projektu.</para>
-
-      <figure>
-        <title>Lista projektów użytkownika</title>
-        <mediaobject>
-          <imageobject><imagedata fileref="images/ch05-fig10-01.png" format="PNG"/></imageobject>
-        </mediaobject>
-      </figure>
-
-      <para>Aby dodać użytkownika do projektów, wybierz polecenie <guilabel>Dodaj projekty</guilabel>. Zaznacz jeden lub więcej projektów, a następnie wybierz odpowiedni poziom dostępu i kliknij <guibutton>OK</guibutton>. Aby zmienić poziom dostępu do projektu, wybierz projekt z listy i kliknij <guilabel>Zmień dostęp</guilabel>. Następnie wybierz nowy poziom dostępu i kliknij <guibutton>OK</guibutton>. Aby usunąć użytkownika z projektu, wybierz go z listy i kliknij <guilabel>Usuń projekt</guilabel>. W przypadku programu Desktop Client, możesz wybrać kilka projektów naraz, by zmienić lub usunąć dostęp do nich.</para>
-
     </sect2>
-
-  </sect1>
-
-  <sect1 id="webissues.admin.register">
-    <title>Zgłoszenia rejestracji</title>
-
-    <para>Administator systemu WebIssues może włączyć opcję, która pozwala użytkownikom samodzielnie dokonywać rejestracji nowych kont. Nowy użytkownik podaje nazwę, login i hasło oraz adres e-mail, który podlega weryfikacji poprzez wysłanie wiadomości aktywacyjnej. Aktywne zgłoszenia rejestracji muszą następnie zostać zatwierdzone przez administratora. Trzeba również określić, do jakich projektów użytkownik będzie miał dostęp. Dopiero wtedy użytkownik będzie mógł zalogować się do systemu.</para>
-
-    <note>
-      <title>Notatka</title>
-      <para>Więcej informacji na temat rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.work.login"/>. Informacje na temat włączania i konfigurowania modułu rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
-    </note>
-
-    <para>Aby wyświetlić aktywne zgłoszenia rejestracji, które oczekują na akceptację, przejdź do Panelu administracyjnego i kliknij <guilabel>Zgłoszenia rejestracji</guilabel>. Funkcja ta nie jest dostępna w programie Desktop Client.</para>
-
-    <figure>
-      <title>Zgłoszenia rejestracji</title>
-      <mediaobject>
-        <imageobject><imagedata fileref="images/ch05-fig10-02.png" format="PNG"/></imageobject>
-      </mediaobject>
-    </figure>
-
-    <para>Aby zatwierdzić zgłoszenie rejestracji, wybierz je z listy, a następnie użyj polecenia <guilabel>Zatwierdź zgłoszenie</guilabel>. Zaznacz projekty, do których użytkownik będzie miał dostęp i kliknij <guibutton>OK</guibutton>. Zgłoszenie rejestracji zniknie z listy, a nowy użytkownik pojawi się na liście kont użytkowników, gdzie możesz zmienić nazwę, poziom dostępu, ustawienia i hasło użytkownika, tak jak w przypadku kont utworzonych bezpośrednio przez admnistratora. Użytkownik otrzyma również powiadomienie mailowe o zatwierdzeniu jego zgłoszenia.</para>
-
-    <para>Aby odrzucić wybrane zgłoszenie rejestracji, użyj polecenia <guilabel>Odrzuć zgłoszenie</guilabel>. Zostanie ono usunięte z listy zgłoszeń, a użytkownik otrzyma powiadomienie mailowe o odrzuceniu zgłoszenia.</para>
-
-    <para>Jeśli chcesz otrzymywać automatyczne powiadomienia o nowych zgłoszeniach rejestracji, które oczekują na zatwierdzenie, podaj swój adres e-mail w <xref linkend="webissues.custom.settings">ustawieniach serwera</xref>.</para>
-
-  </sect1>
-
-  <sect1 id="webissues.admin.projects">
-    <title>Zarządzanie projektami</title>
-
-    <para>Jeśli używasz programu Desktop Client, możesz zarządzać projektami i folderami bezpośrednio z głównego okna programu. Odpowiednie polecenia są dostępne, jeśli uaktywnisz drzewo projektów, klikając na nim. W przypadku programu Web Client, wybierz polecenie <guilabel>Zarządzaj projektami</guilabel>, widoczne nad drzewem projektu, aby przejść do okna zarządzania projektami i folderami.</para>
-    
-    <para>Jeśli jesteś administratorem systemu, możesz zarządzać wszystkimi projektami oraz tworzyć nowe projekty. Jeśli jesteś administratorem projektu, możesz zarządzać jego członkami i folderami.</para>
-
-    <para>Aby dodać nowy projekt, wybierz polecenie <guilabel>Dodaj projekt</guilabel>, a następnie podaj nazwę i opcjonalny opis projektu i naciśnij <guibutton>OK</guibutton>.</para>
-
-    <figure>
-      <title>Tworzenie projektu</title>
-      <mediaobject>
-        <imageobject><imagedata fileref="images/ch05-fig11.png" format="PNG"/></imageobject>
-      </mediaobject>
-    </figure>
-
-    <para>Po utworzeniu nowego projektu, żaden zwykły użytkownik nie ma do niego dostępu. Więcej informacji na temat udzielania użytkownikom dostępu do projektów znajdziesz w sekcji <xref linkend="webissues.admin.users.members"/>.</para>
-
-    <para>Administrator systemu może zmienić nazwę dowolnego projektu. W tym celu wybierz projekt i kliknij <guilabel>Zmień nazwę projektu</guilabel>. Możesz również usuwać projekty używając polecenia <guilabel>Usuń projekt</guilabel>. Jeśli projekt nie jest pusty, zostanie wyświetlone odpowiednie ostrzeżenie.</para>
-
-    <warning>
-      <title>Uwaga</title>
-      <para>Usuwając projekty lub foldery zwracaj szczególną uwagę, czy omyłkowo nie kasujesz niewłaściwych danych. Wszystkie zawarte w nich sprawy są trwale i nieodwracalnie usuwane z systemu i nie ma możliwości ich przywrócenia.</para>
-    </warning>
-
-    <para>Opis projektu jest wyświetlany, gdy projekt zostanie wybrany w drzewie projektów, zarówno w programie Web Client, jak i Desktop Client. Możesz go użyć, by przekazać informacje o projekcie, w tym odnośniki do ważnych spraw lub zasobów zewnętrznych. Administratorzy systemu oraz projektu mogą dodać opis do istniejącego projektu, edytować opis i usunąć go. Opisy projektów używają tego samego formatu, co opisy spraw i komentarze. Aby uzyskać więcej informacji, patrz sekcja <xref linkend="webissues.work.issues.comments"/>.</para>
-
-    <para>Aby dodać nowy folder, wybierz projekt i kliknij <guilabel>Dodaj folder</guilabel>.</para>
-
-    <figure>
-      <title>Tworzenie folderu</title>
-      <mediaobject>
-        <imageobject><imagedata fileref="images/ch05-fig12.png" format="PNG"/></imageobject>
-      </mediaobject>
-    </figure>
-
-    <para>Tworząc folder, musisz nadać mu nazwę, która jest unikalna w ramach danego projektu, a także wybrać typ spraw, które będą w nim przechowywane. Po utworzeniu folderu nie możesz zmienić jego typu. Możesz natomiast zmienić nazwę folderu, używając polecenia <guilabel>Zmień nazwę folderu</guilabel> oraz usunąć go za pomocą polecenia <guilabel>Usuń folder</guilabel>.</para>
-
-    <para>Możesz również przenieść folder z jednego projektu do drugiego. Aby to zrobić, musisz być administratorem systemu lub obu projektów &mdash; źródłowego i docelowego. Wybierz folder, który chcesz przenieść i kliknij <guilabel>Przenieś folder</guilabel>. Następnie wybierz z listy docelowy projekt i kliknij <guibutton>OK</guibutton>.</para>
 
   </sect1>
 

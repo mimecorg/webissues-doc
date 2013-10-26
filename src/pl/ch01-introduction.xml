@@ -62,6 +62,8 @@
 
     <para>Nie ma możliwości definiowania uprawnień na niższym poziomie szczegółowości niż pojedynczy projekt. Wszyscy członkowie projektu mają zatem równoprawny dostęp do wszystkich informacji zawartych w tym projekcie i możliwość ich modyfikowania. System WebIssues zapewnia natomiast bezpieczeństwo przed niepowołanym dostępem do danych przez nieuprawnione osoby.</para>
 
+    <para>Począwszy od wersji 1.1 systemu WebIssues możliwe jest również wyświetlenie wszystkich spraw danego typu w jednej liście. Jest to szczególnie przydatne, jeśli w systemie istnieje wiele projektów. Zamiast stale przełączać się między projektami, możesz zobaczyć wszystkie sprawy, filtrować je w razie potrzeby i pracować z nimi.</para>
+
   </sect1>
 
   <sect1 id="webissues.intro.lifecycle">
