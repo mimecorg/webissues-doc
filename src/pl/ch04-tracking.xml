@@ -68,9 +68,9 @@
       </mediaobject>
     </figure>
 
-    <para>Jeśli alert zawiera nieprzeczytane sprawy, jego ikona zmieni się na zamkniętą, żółtą kopertę. Podobnie jeśli zawiera on zmienione sprawy, zostanie wyświetlona koperta w kolorze zielonym. Otwierając okno alertów, możesz więc szybko sprawdzić, czy jakieś sprawy wymagają twojej uwagi.</para>
+    <para>Jeśli alert zawiera nieprzeczytane sprawy, jego ikona zmieni się na zamkniętą, żółtą kopertę. Podobnie, jeśli zawiera on zmienione sprawy, zostanie wyświetlona koperta w kolorze zielonym. Otwierając okno alertów, możesz więc szybko sprawdzić, czy jakieś sprawy wymagają twojej uwagi.</para>
 
-    <para>Powtórz teraz te same czynności, aby utworzyć alert <quote>Aktywne zadania</quote> w folderze Zadania. Jeśli używasz programu Desktop Client, zauważysz że alerty są widoczne w drzewie projektów i folderów:</para>
+    <para>Powtórz teraz te same czynności, aby utworzyć alert <quote>Aktywne zadania</quote> w folderze Zadania. Jeśli używasz programu Desktop Client, zauważysz, że alerty są widoczne w drzewie projektów i folderów:</para>
 
     <figure>
       <title>Drzewo z alertami</title>
@@ -123,7 +123,7 @@
         </varlistentry>
       </variablelist>
 
-      <para>Rodzaj powiadomień możesz określić w momencie tworzenia alertu, pod warunkiem że wysyłanie e-maili zostało włączone. Możesz go także w dowolnej chwili zmienić dla istniejącego alertu. W tym celu wybierz alert w oknie zarządzania alertami i wybierz polecenie <guilabel>Zmień alert</guilabel>.</para>
+      <para>Rodzaj powiadomień możesz określić w momencie tworzenia alertu, pod warunkiem, że wysyłanie e-maili zostało włączone. Możesz go także w dowolnej chwili zmienić dla istniejącego alertu. W tym celu wybierz alert w oknie zarządzania alertami i wybierz polecenie <guilabel>Zmień alert</guilabel>.</para>
 
       <figure>
         <title>Zmiana alertu</title>
@@ -152,7 +152,7 @@
         </mediaobject>
       </figure>
 
-      <para>Podaj poprawny adres e-mail, na który będą wysyłane twoje powiadomienia. Wybierz opcję <guilabel>Załącz szczegóły spraw w powiadomieniach i raportach podsumowujących</guilabel>, jeśli chcesz, aby e-maile zawierały szczegóły spraw oraz historię zmian oraz ostatio dodanych komentarzy i załączników. W przeciwnym wypadku wysyłane będzie tylko podsumowanie spraw.</para>
+      <para>Podaj poprawny adres e-mail, na który będą wysyłane twoje powiadomienia. Wybierz opcję <guilabel>Załącz szczegóły spraw w powiadomieniach i raportach podsumowujących</guilabel>, jeśli chcesz, aby e-maile zawierały szczegóły spraw oraz historię zmian oraz ostatnio dodanych komentarzy i załączników. W przeciwnym wypadku wysyłane będzie tylko podsumowanie spraw.</para>
 
       <para>Wybierz opcję <guilabel>Nie powiadamiaj o sprawach, które przeczytałem</guilabel>, jeśli nie chcesz otrzymywać powiadomień o tych sprawach, które już przeczytałeś (np. jeśli sam je utworzyłeś lub zmieniłeś). Również szczegóły spraw, które już przeczytałeś, będą wtedy pomijane. Opcja ta nie ma wpływu na raporty podsumowujące, które zawsze zawierają wszystkie sprawy i zmiany.</para>
 
@@ -174,7 +174,7 @@
 
       <tip>
         <title>Wskazówka</title>
-        <para>Zamiast konfigurować odzielne alerty dla każdego folderu określonego typu, wygodniejsze może być utworzenie pojedynczego alertu związanego z globalną listą spraw. Aby utworzyć lub zarządzać globalnymi alertami, otwórz globalną listę odpowiedniego typu i wybierz polecenie <guilabel>Zarządzaj alertami</guilabel>. Dodatkową zaletą jest to, że wysyłany jest tylko jeden e-mail zawierający wszystkie nowe i zmienione sprawy, zamiast osobnych e-maili dla każdego folderu.</para>
+        <para>Zamiast konfigurować oddzielne alerty dla każdego folderu określonego typu, wygodniejsze może być utworzenie pojedynczego alertu związanego z globalną listą spraw. Aby utworzyć lub zarządzać globalnymi alertami, otwórz globalną listę odpowiedniego typu i wybierz polecenie <guilabel>Zarządzaj alertami</guilabel>. Dodatkową zaletą jest to, że wysyłany jest tylko jeden e-mail zawierający wszystkie nowe i zmienione sprawy, zamiast osobnych e-maili dla każdego folderu.</para>
       </tip>
 
     </sect2>
@@ -182,7 +182,7 @@
     <sect2 id="webissues.track.alerts.public">
       <title>Publiczne alerty</title>
 
-      <para>Administratorzy projektów oraz administratorzy systemu mogą tworzyć publiczne alerty wspólne dla wszystkich użytkowników. Na przykład, aby wszyscy użytkownicy mogli śledzić aktywne błedy przypisane do nich w określonym folderze, otwórz ten folder, wybierz polecenie <guilabel>Zarządzaj alertami</guilabel>, a następnie wybierz <guilabel>Dodaj publiczny alert</guilabel>. Wybierz widok <quote>Moje aktywne błędy</quote> z listy i naciśnij <guibutton>OK</guibutton>.</para>
+      <para>Administratorzy projektów oraz administratorzy systemu mogą tworzyć publiczne alerty wspólne dla wszystkich użytkowników. Na przykład, aby wszyscy użytkownicy mogli śledzić aktywne błędy przypisane do nich w określonym folderze, otwórz ten folder, wybierz polecenie <guilabel>Zarządzaj alertami</guilabel>, a następnie wybierz <guilabel>Dodaj publiczny alert</guilabel>. Wybierz widok <quote>Moje aktywne błędy</quote> z listy i naciśnij <guibutton>OK</guibutton>.</para>
 
       <figure>
         <title>Lista alertów z publicznym alertem</title>
@@ -193,16 +193,16 @@
 
       <para>Wszyscy użytkownicy będą teraz widzieć ten alert w drzewie projektów w programie Desktop Client. Publiczne alerty można odróżnić od prywatnych alertów za pomocą małego symbolu użytkownika w rogu ikony.</para>
 
-      <para>Możesz wybrać typ i harmonogram e-maili dla publicznego alertu, aby włączyć wysyłanie powiadomień e-mailowych. Powiadomienia dla publicznych alertów związanych z folderami są wysyłane do wszystkich użytkowników mających dostęp do tego folderu, niezależnie od tego, czy są jawnie przypisani jako członkowie projektu. Jeśli folder należy do publicznego projektu, powiadomienia są wysyłane do wszystkich aktywnych użytkowników. Powiadomienia dla publicznych alertów związanych z globalnymi listami spraw są wysyłane do wszystkich aktywnych użytkowników, którzy mają dostęp do przynajmniej jednego folderu danego typu. Tylko użytkownicy mający skonfigurowany poprawny adres e-mail w ustawieniach użytkownika będą otrzymywać powiadomenia e-mailowe.</para>
+      <para>Możesz wybrać typ i harmonogram e-maili dla publicznego alertu, aby włączyć wysyłanie powiadomień e-mailowych. Powiadomienia dla publicznych alertów związanych z folderami są wysyłane do wszystkich użytkowników mających dostęp do tego folderu, niezależnie od tego, czy są jawnie przypisani jako członkowie projektu. Jeśli folder należy do publicznego projektu, powiadomienia są wysyłane do wszystkich aktywnych użytkowników. Powiadomienia dla publicznych alertów związanych z globalnymi listami spraw są wysyłane do wszystkich aktywnych użytkowników, którzy mają dostęp do przynajmniej jednego folderu danego typu. Tylko użytkownicy mający skonfigurowany poprawny adres e-mail w ustawieniach użytkownika będą otrzymywać powiadomienia e-mailowe.</para>
 
       <note>
         <title>Notatka</title>
-        <para>Powiadomenia podsumowujące dla publicznych alertów są zawsze wysyłane zgodnie ze strefą czasową serwera, a ustawienia strefy czasowej poszczególnych użytkowników są ignorowane. Jednak inne ustawienia użytkowników, takie jak załączanie szczegółów spraw w powiadomieniach i raportach podsumowujących oraz nie powiadamianie o sprawach, które użytkownik przeczytał, są przestrzegane dla poszczególnych użytkowników.</para>
+        <para>Powiadomienia podsumowujące dla publicznych alertów są zawsze wysyłane zgodnie ze strefą czasową serwera, a ustawienia strefy czasowej poszczególnych użytkowników są ignorowane. Jednak inne ustawienia użytkowników, takie jak załączanie szczegółów spraw w powiadomieniach i raportach podsumowujących oraz nie powiadamianie o sprawach, które użytkownik przeczytał, są przestrzegane dla poszczególnych użytkowników.</para>
       </note>
 
-      <para>Publiczny alert może być związany z publicznym widokiem lub z widokiem <quote>Wszystkie sprawy</quote>. Nie może być powiązany z prywatnym widokiem; musisz najpier opublikować taki widok, aby był on dostępny dla wszystkich użytkowników.</para>
+      <para>Publiczny alert może być związany z publicznym widokiem lub z widokiem <quote>Wszystkie sprawy</quote>. Nie może być powiązany z prywatnym widokiem; musisz najpierw opublikować taki widok, aby był on dostępny dla wszystkich użytkowników.</para>
 
-      <para>Zwykli użytkownicy nie mogą usuwać ani zmieniać ustawień publicznych alertów. Nie mogą rówież tworzyć prywatnych alertów związanych z tym samym widokiem, co już instniejący alert publiczny. Kiedy publiczny alert jest tworzony, wszystkie prywatne alerty związane z tym samym widokiem zostają usunięte.</para>
+      <para>Zwykli użytkownicy nie mogą usuwać ani zmieniać ustawień publicznych alertów. Nie mogą również tworzyć prywatnych alertów związanych z tym samym widokiem, co już istniejący alert publiczny. Kiedy publiczny alert jest tworzony, wszystkie prywatne alerty związane z tym samym widokiem zostają usunięte.</para>
 
       <tip>
         <title>Wskazówka</title>
@@ -216,7 +216,7 @@
   <sect1 id="webissues.track.subscriptions">
     <title>Subskrypcje</title>
 
-    <para>O ile alerty umożliwiają otrzymywanie powiadomień o wielu spraw z określonego folderu, to subskrypcje umożliwiają otrzymywanie powiadomień o poszczególych, wybranych sprawach. Możesz dodać subskrybować dowolną sprawę, do której masz dostęp, używając polecenia <guilabel>Subskrybuj</guilabel> w widoku szczegółów sprawy. Subskrybowana sprawa ma małą, zieloną strzałkę w prawym dolnym rogu swojej ikony. Aby anulować subskrybcję dla wybranej sprawy, użyj polecenia <guilabel>Usuń subskrypcję</guilabel>. Pamiętaj, że subskrypcje są dostępne tylko jeśli wysyłanie e-maili zostało włączone na serwerze. Musisz rówież skonfigurować prawidłowy adres e-mail w swoich preferencjach.</para>
+    <para>O ile alerty umożliwiają otrzymywanie powiadomień o wielu spraw z określonego folderu, to subskrypcje umożliwiają otrzymywanie powiadomień o poszczególnych, wybranych sprawach. Możesz dodać subskrybować dowolną sprawę, do której masz dostęp, używając polecenia <guilabel>Subskrybuj</guilabel> w widoku szczegółów sprawy. Subskrybowana sprawa ma małą, zieloną strzałkę w prawym dolnym rogu swojej ikony. Aby anulować subskrypcję dla wybranej sprawy, użyj polecenia <guilabel>Usuń subskrypcję</guilabel>. Pamiętaj, że subskrypcje są dostępne tylko jeśli wysyłanie e-maili zostało włączone na serwerze. Musisz również skonfigurować prawidłowy adres e-mail w swoich preferencjach.</para>
 
     <figure>
       <title>Subskrybowane sprawy</title>
@@ -225,16 +225,16 @@
       </mediaobject>
     </figure>
 
-    <para>Gdy sprawa jest subskrybowana, będziesz otrzymywał wiadomość e-mail za każdym razem, gdy ktoś ją zmodyfikuje poprzez edycję atrybutów, dodanie lub zmianę opisu, albo dodanie komentarza lub załącznika. Wiadomość ta zawsze będzie zawierać szczegóły zmian, niezależnie od ustawienia powiadomień w preferencjach użytkownika. Również przeczytany bądź nieprzeczytany status sprawy jest ignorowany. Otrzymasz powiadomienie subskrypcji nawet jeśli przeczytałeś sprawę zanim e-mail zostanie wysłany. Jednak zmiany, których sam dokonasz, w tym własne komentarze i załączniki, nie będą uwzględniane w powiadomieniach subskrypcji.</para>
+    <para>Gdy sprawa jest subskrybowana, będziesz otrzymywał wiadomość e-mail za każdym razem, gdy ktoś ją zmodyfikuje poprzez edycję atrybutów, dodanie lub zmianę opisu, albo dodanie komentarza lub załącznika. Wiadomość ta zawsze będzie zawierać szczegóły zmian, niezależnie od ustawienia powiadomień w preferencjach użytkownika. Również przeczytany bądź nieprzeczytany status sprawy jest ignorowany. Otrzymasz powiadomienie subskrypcji, nawet jeśli przeczytałeś sprawę zanim e-mail zostanie wysłany. Jednak zmiany, których sam dokonasz, w tym własne komentarze i załączniki, nie będą uwzględniane w powiadomieniach subskrypcji.</para>
 
     <para>W zależności od potrzeb możesz używać zarówno powiadomień dla alertów, jak i subskrypcji. Choć alerty i subskrypcje są podobnymi pojęciami, jest kilka istotnych różnic:</para>
 
     <itemizedlist>
       <listitem>
-        <para>Powiadomienia alertów mogą być wysyłane jako natychmiastowe powiadomienia, podsumowania powiadomień lub raporty podsumowujące. Powiadomienia subskrypcji są zawsze wysyłane od razu po zmienie sprawy, tzn. tak często jak zadanie cykliczne jest uruchamiane na serwerze.</para>
+        <para>Powiadomienia alertów mogą być wysyłane jako natychmiastowe powiadomienia, podsumowania powiadomień lub raporty podsumowujące. Powiadomienia subskrypcji są zawsze wysyłane od razu po zmianie sprawy, tzn. tak często jak zadanie cykliczne jest uruchamiane na serwerze.</para>
       </listitem>
       <listitem>
-        <para>Powiadomienia alertów są wysyłane dla wszystkich spraw z danego folderu, albo dla spraw spełniających określone kryteria, na przykład przypisanych do ciebie albo utworzonych przz ciebie. Dzięki temu nie musisz ręcznie oznaczać poszczególnych spraw, dla których chcesz otrzymywać powiadomienia. Z kolei subskrypcje umożliwiają wybranie pojedyńczych spraw o których chcesz być powiadamiany.</para>
+        <para>Powiadomienia alertów są wysyłane dla wszystkich spraw z danego folderu, albo dla spraw spełniających określone kryteria, na przykład przypisanych do ciebie albo utworzonych prez ciebie. Dzięki temu nie musisz ręcznie oznaczać poszczególnych spraw, dla których chcesz otrzymywać powiadomienia. Z kolei subskrypcje umożliwiają wybranie pojedynczych spraw, o których chcesz być powiadamiany.</para>
       </listitem>
       <listitem>
         <para>W zależności od preferencji, powiadomienia alertów mogą zawierać jedynie listę spraw lub również szczegóły ostatnich modyfikacji tych spraw. Powiadomienia subskrypcji zawsze zawierają szczegóły modyfikacji.</para>

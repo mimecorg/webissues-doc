@@ -70,7 +70,7 @@
       </varlistentry>
     </variablelist>
 
-    <para>In the Desktop Client it is possible to administer users and projects and and to manage issue types and views. The <guilabel>Users</guilabel> and <guilabel>Types</guilabel> commands are available directly from the main window's toolbar. However, the full Administration Panel is not available. In order to access the event log or change system settings, you must therefore use the Web Client.</para>
+    <para>In the Desktop Client it is possible to administer users and projects and to manage issue types and views. The <guilabel>Users</guilabel> and <guilabel>Types</guilabel> commands are available directly from the main window's toolbar. However, the full Administration Panel is not available. In order to access the event log or change system settings, you must therefore use the Web Client.</para>
 
   </sect1>
 
@@ -111,7 +111,7 @@
       </mediaobject>
     </figure>
 
-    <para>The event log contains information about errors, access to the system, important administrative operations and cron job executions. It is independent from the logs of PHP, the web server and the operating system. Its purpose is to supplement those information, not to replace them. In particular, some serious errors (such as lack of access to the database) can not be stored in the event log of the WebIssues server.</para>
+    <para>The event log contains information about errors, access to the system, important administrative operations and cron job executions. It is independent from the logs of PHP, the web server and the operating system. Its purpose is to supplement those information, not to replace them. In particular, some serious errors (such as lack of access to the database) cannot be stored in the event log of the WebIssues server.</para>
 
     <para>Events in the event log are divided into four types:</para>
 
@@ -200,7 +200,7 @@
 
       <note>
         <title>Note</title>
-        <para>If you forget the system administrator's password, you cann't easily recover it. All passwords are stored in a database as secure hashes, and it's practically impossible to recreate the original password. However, if you have  access to the database, you can reset the administrator's password, by generating a new hash and storing it in the <literal>user_passwd</literal> column for the corresponding user in the <literal>users</literal> table. WebIssues uses the <quote>Portable PHP password hashing framework</quote>, which is compatible with such programs as Wordpress or Drupal, so you can use one of the available <ulink url="http://scriptserver.mainframe8.com/wordpress_password_hasher.php">hash generators</ulink> for these programs.</para>
+        <para>If you forget the system administrator's password, you cannot easily recover it. All passwords are stored in a database as secure hashes, and it's practically impossible to recreate the original password. However, if you have  access to the database, you can reset the administrator's password, by generating a new hash and storing it in the <literal>user_passwd</literal> column for the corresponding user in the <literal>users</literal> table. WebIssues uses the <quote>Portable PHP password hashing framework</quote>, which is compatible with such programs as WordPress or Drupal, so you can use one of the available <ulink url="http://scriptserver.mainframe8.com/wordpress_password_hasher.php">hash generators</ulink> for these programs.</para>
       </note>
 
       <para>To change the name of a user, select that user on the list and click <guilabel>Rename User</guilabel>. Enter a new name and click <guibutton>OK</guibutton>.</para>
@@ -212,7 +212,7 @@
 
       <para>A newly created user has no access to any project, unless he is the system administrator. To change the global access and manage the list of projects available for the selected user, use the <guilabel>Manage Permissions</guilabel> command. For more information see <xref linkend="webissues.admin.users.permissions"/> below.</para>
 
-      <para>You can also change the preferences of any user using the <guilabel>User Preferences</guilabel> command. All users can also change their own settings, using the <guilabel>User Prererences</guilabel> command in the <guilabel>Tools</guilabel> window or in the toolbar of the Desktop Client main window. For more information about user preferences, see <xref linkend="webissues.work.personal"/>.</para>
+      <para>You can also change the preferences of any user using the <guilabel>User Preferences</guilabel> command. All users can also change their own settings, using the <guilabel>User Preferences</guilabel> command in the <guilabel>Tools</guilabel> window or in the toolbar of the Desktop Client main window. For more information about user preferences, see <xref linkend="webissues.work.personal"/>.</para>
 
       <para>The WebIssues system does not allow to delete existing users, because it keeps all the historical information; for example, changes made by individual users. Instead, you disable access for selected users when they should no longer be able to use the system. Use the filtering options in the upper right corner of the list to hide disabled user accounts.</para>
 
@@ -280,14 +280,14 @@
   <sect1 id="webissues.admin.register">
     <title>Registration requests</title>
 
-    <para>The WebIssues system administator can enable an option that allows users to register new accounts. A new user has to provide the name, login and password, and the email address, which is verified by sending an activation message. Unless automatic approval of registration requests is enabled, registration requests must be approved by the administrator. During the approval, the projects to which the new user has access must be specified. Only then the user will be able to log into the system.</para>
+    <para>The WebIssues system administrator can enable an option that allows users to register new accounts. A new user has to provide the name, login and password, and the email address, which is verified by sending an activation message. Unless automatic approval of registration requests is enabled, registration requests must be approved by the administrator. During the approval, the projects to which the new user has access must be specified. Only then the user will be able to log into the system.</para>
 
     <note>
       <title>Note</title>
       <para>For more information about user registration, please refer to <xref linkend="webissues.work.login"/>. You will find more information about enabling and configuring user self-registration in <xref linkend="webissues.custom.settings"/>.</para>
     </note>
 
-    <para>To see active registration requests, that are waiting for approval, go to the Administration Panel and click <guilabel>Registration Requests</guilabel>. This function is not available in the Desktop Client.</para>
+    <para>To see active registration requests that are waiting for approval, go to the Administration Panel and click <guilabel>Registration Requests</guilabel>. This function is not available in the Desktop Client.</para>
 
     <figure>
       <title>Registration requests</title>
@@ -417,7 +417,7 @@
 
       <para>Select one or more users who are not yet members of the project. Then select the appropriate level of access and click <guibutton>OK</guibutton>.</para>
 
-      <para>To change the access for an existing member, select the member on the list and click <guilabel>Change Access</guilabel>. Then select the new level of access and click <guibutton>OK </guibutton>. You can't deprive your own project administrator rights, unless you are a system administrator.</para>
+      <para>To change the access for an existing member, select the member on the list and click <guilabel>Change Access</guilabel>. Then select the new level of access and click <guibutton>OK</guibutton>. You can't deprive your own project administrator rights, unless you are a system administrator.</para>
 
       <figure>
         <title>Changing member's access</title>

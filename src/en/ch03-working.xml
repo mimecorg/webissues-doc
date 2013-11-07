@@ -16,7 +16,7 @@
 
     <para>Actually there are more similarities, because the main window of the application consists of three panels resembling popular email programs. On the left there is a tree of projects and folders. On the right at the top there is a list of issues in the selected folder. On the right at the bottom there are the details of the selected issue. The selected folder and issue are highlighted, and you can perform various operations with them.</para>
 
-    <para>By selecting a project in the tree, you can display its description or modify it if you have permissions. The special <quote>All Projects</quote> item contains global lists of issues of each type. By selecting a global list, you can display all issues of a particilar type (for example all bugs or tasks) in a single view, regardless of their project and folder.</para>
+    <para>By selecting a project in the tree, you can display its description or modify it if you have permissions. The special <quote>All Projects</quote> item contains global lists of issues of each type. By selecting a global list, you can display all issues of a particular type (for example all bugs or tasks) in a single view, regardless of their project and folder.</para>
 
     <para>Below is the Web Client window showing a few issues and the history of an issue:</para>
 
@@ -109,7 +109,7 @@
     <sect2 id="webissues.work.login.anonymous">
       <title>Anonymous access</title>
 
-      <para>If the adminstrator of the WebIssues server has enabled anonymous access, and you don't have an account in the system, you can use the <guilabel>Anonymous Access</guilabel> command in the login window of the Web Client to access the system without loggin in. You will only have read only access to selected projects and you won't be able to add or edit any issues. You will be able to see project descriptions, issues and comments and to download attachments from the public projects. You will also be able to use public views, but you won't be able to create your own views, use alerts or subscribe to issues.</para>
+      <para>If the administrator of the WebIssues server has enabled anonymous access, and you don't have an account in the system, you can use the <guilabel>Anonymous Access</guilabel> command in the login window of the Web Client to access the system without logging in. You will only have read only access to selected projects and you won't be able to add or edit any issues. You will be able to see project descriptions, issues and comments and to download attachments from the public projects. You will also be able to use public views, but you won't be able to create your own views, use alerts or subscribe to issues.</para>
 
       <para>Anonymous access is only available in the Web Client. In order to access the system using the Desktop Client, you need to be a registered user.</para>
 
@@ -123,9 +123,9 @@
     <sect2 id="webissues.work.login.register">
       <title>User registration</title>
 
-      <para>If the WebIssues server administrator has enabled this option, you can register a new account in the sytem. Depending on the configuration, the approval of the administrator may be necessary to complete registration. To start creating a new account, click the <guilabel>Register New Account</guilabel> link in the login window of the Web Client. If you are using the system in anonymous mode, you can click <guilabel>Register</guilabel> in the upper right corner. Enter the user name that will be visible to all users, usually your first and last name. Then enter your login and password that you will use to log in to the system. Also enter your e-mail address and click <guibutton>Register</guibutton>.</para>
+      <para>If the WebIssues server administrator has enabled this option, you can register a new account in the system. Depending on the configuration, the approval of the administrator may be necessary to complete registration. To start creating a new account, click the <guilabel>Register New Account</guilabel> link in the login window of the Web Client. If you are using the system in anonymous mode, you can click <guilabel>Register</guilabel> in the upper right corner. Enter the user name that will be visible to all users, usually your first and last name. Then enter your login and password that you will use to log in to the system. Also enter your e-mail address and click <guibutton>Register</guibutton>.</para>
 
-      <para>The specified e-mail address will be verified by sending a message with an activation link. Click the link or copy the address to open it in the browser. You should reeive this message shortly after registration. When you activate the registration request, you will be able to log in immediately using the specified login and password, or you will have to wait for administrator's approval. Once your registration request is approved, you will receive a confirmation message and you will be able to log in.</para>
+      <para>The specified e-mail address will be verified by sending a message with an activation link. Click the link or copy the address to open it in the browser. You should receive this message shortly after registration. When you activate the registration request, you will be able to log in immediately using the specified login and password, or you will have to wait for administrator's approval. Once your registration request is approved, you will receive a confirmation message and you will be able to log in.</para>
 
       <note>
         <title>Note</title>
@@ -301,7 +301,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
       <para>Quotes are displayed in a dashed frame and they may have an optional title. You can easily quote existing comments or the description of the issue by using the <guibutton>Reply</guibutton> command. This will open a new comment window with the original comment or description automatically included and marked with the quote tags. Quoted text may contain other markup, including nested quotes, lists and code blocks.</para>
 
-      <para>Code blocks are useful for pasting fragments of code, log files, etc. The are displayed verbatim, with all markup is ignored, and using a monospace font. However, unlike the monospace font tags, a comment block may contain multiple lines. In addition, the language of the code block can be specified, enabling syntax highlighting. Supported languages include: HTML, XML, C, C++, C#, Java, Bash (equivalent to SH), Python, Perl, Ruby, JavaScript (equivalent to JS), CSS, SQL, VB and PHP.</para>
+      <para>Code blocks are useful for pasting fragments of code, log files, etc. They are displayed verbatim, with all markup is ignored, and using a monospace font. However, unlike the monospace font tags, a comment block may contain multiple lines. In addition, the language of the code block can be specified, enabling syntax highlighting. Supported languages include: HTML, XML, C, C++, C#, Java, Bash (equivalent to SH), Python, Perl, Ruby, JavaScript (equivalent to JS), CSS, SQL, VB and PHP.</para>
 
       <para>You can use the <guibutton>Preview</guibutton> button in the toolbar above the text field to see a preview of the text with all formatting applied, to verify that it looks correctly.</para>
 
@@ -340,7 +340,7 @@ for ( int i = 0; i &lt; 10; i++ )
         <para>Identifiers of issues are unique and increasing, but not necessarily in consecutive numerical order. In our example, the ID of the second issue is #6, not #2, because the identifiers are also assigned to comments, attachments and other changes, making them easier to manage by the system.</para>
       </note>
 
-      <para>To quickly go to the issue, comment or attachment with the given identifier, you can also use the Go To Item command. In the Web Client, click <guilabel>Tools</guilabel> in the the upper right corner of the window, then click <guilabel>Go To Item</guilabel>. In the Desktop Client this command is always available in the the main window toolbar, you can also press <shortcut><keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo></shortcut>.</para>
+      <para>To quickly go to the issue, comment or attachment with the given identifier, you can also use the Go To Item command. In the Web Client, click <guilabel>Tools</guilabel> in the upper right corner of the window, then click <guilabel>Go To Item</guilabel>. In the Desktop Client this command is always available in the main window toolbar, you can also press <shortcut><keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo></shortcut>.</para>
 
       <figure>
         <title>Going to an item</title>
@@ -377,13 +377,13 @@ for ( int i = 0; i &lt; 10; i++ )
         <varlistentry>
           <term>Dropdown list</term>
           <listitem>
-            <para>This attribute accepts one of the specific values​​, just like the Status field, where you have to choose one of Active, Resolved or Closed. There is also a variant of this attribute that accepts any value, and the list is merely auxiliary, and another variant where you can enter mutliple values separated with commas.</para>
+            <para>This attribute accepts one of the specific values​​, just like the Status field, where you have to choose one of Active, Resolved or Closed. There is also a variant of this attribute that accepts any value, and the list is merely auxiliary, and another variant where you can enter multiple values separated with commas.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term>User</term>
           <listitem>
-            <para>The value of this attribute can be the name of any user of the WebIssues system or a member of the project. The Assigned To field is an example of such attribute. There is also a variant where you can select mutliple users separated with commas.</para>
+            <para>The value of this attribute can be the name of any user of the WebIssues system or a member of the project. The Assigned To field is an example of such attribute. There is also a variant where you can select multiple users separated with commas.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
@@ -464,7 +464,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <tip>
       <title>Tip</title>
-      <para>To quickly find a issue with given identifier, use the <guilabel>Go To item</guilabel> command. See <xref linkend="webissues.work.issues.comments"/> for more information about identifiers of issues, comments and attachments.</para>
+      <para>To quickly find an issue with given identifier, use the <guilabel>Go To item</guilabel> command. See <xref linkend="webissues.work.issues.comments"/> for more information about identifiers of issues, comments and attachments.</para>
     </tip>
 
     <para>In everyday work, however, it's most useful to use views. Each view has filter conditions, which limit the displayed list of issues to those that meet certain criteria. Each view also has its own column layout, and default sort order. In other words, the view defines which issues from all issues in the folder are visible, and which columns from all available columns are displayed.</para>
@@ -489,13 +489,13 @@ for ( int i = 0; i &lt; 10; i++ )
       </mediaobject>
     </figure>
 
-    <para>Select other available views, to see that every time different issues are displayed and the layout of visible columns changes. This allows each user to focus only on those issues that are currently interesting &mdash; for example, a tester can view the list of fixed bugs, that need to be verified, and a developer can display the list of bugs assigned to him, that must be solved.</para>
+    <para>Select other available views, to see that every time different issues are displayed and the layout of visible columns changes. This allows each user to focus only on those issues that are currently interesting &mdash; for example, a tester can view the list of fixed bugs, that need to be verified, and a developer can display the list of bugs assigned to him that must be solved.</para>
 
     <para>If there are many different projects and folders in the system, finding the information that you need may be even more difficult. The global lists may be helpful in this case. You can display all issues of a particular type by selecting the global list from the <quote>All Projects</quote> item in the project tree. You can use sorting, searching and views in the global lists exactly the same way as in a folder. For example, you can display all active bugs from all projects and folders. You can also perform all operations on issues exactly like when viewing a folder. The global lists include an additional Location column, which displays the name of the project and folder where each issue is located.</para>
 
     <para>Sometimes it is not enough to use the existing public views. In that case, you can create your own, personal views, which may have any filtering criteria, columns and sorting order.</para>
 
-    <para>Click <guilabel>Add View</guilabel> to quickly create a new view for the current type of issues. Suppose you want to display only critical bugs, so we will call our view <quote>Critical bugs</quote>. The Severity column is not needed, because it will always have a value of 1, so uncheck it on the list of columns. Add the Created By and Created Date columns, so that you know who and when created the the issue. To move the Assigned To and Status columns to the end of the list, set the values defining their order to 10 and 11, respectively.</para>
+    <para>Click <guilabel>Add View</guilabel> to quickly create a new view for the current type of issues. Suppose you want to display only critical bugs, so we will call our view <quote>Critical bugs</quote>. The Severity column is not needed, because it will always have a value of 1, so uncheck it on the list of columns. Add the Created By and Created Date columns, so that you know who and when created the issue. To move the Assigned To and Status columns to the end of the list, set the values defining their order to 10 and 11, respectively.</para>
 
     <figure>
       <title>Editing view columns</title>
@@ -523,7 +523,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <tip>
       <title>Tip</title>
-      <para>Two special values can be used in the definition of a filter. The value <quote>[Today]</quote> is replaced by the current date (with the possibility of adding or subtracting a specified numer of days), an the value <quote>[Me]</quote> is replaced by the name of the current user.</para>
+      <para>Two special values can be used in the definition of a filter. The value <quote>[Today]</quote> is replaced by the current date (with the possibility of adding or subtracting a specified number of days), and the value <quote>[Me]</quote> is replaced by the name of the current user.</para>
     </tip>
 
     <figure>
@@ -640,7 +640,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
       <para>To change the user preferences in the Web Client, click <guilabel>Tools</guilabel> and then <guilabel>User Preferences</guilabel>. In the Desktop Client, the <guilabel>User Preferences</guilabel> command is available directly from the main window's toolbar.</para>
 
-      <para>The <guilabel>Regional Options</guilabel> allow you to select the language for the Web Client (after logging into the system), and the language in which you will receive email notifications. In case of the Destkop Client, the language of the user interface depends on the program settings and do not change when you connect to a server. Use the WebIssues Settings command (see below) to change these settings.</para>
+      <para>The <guilabel>Regional Options</guilabel> allow you to select the language for the Web Client (after logging into the system), and the language in which you will receive email notifications. In case of the Desktop Client, the language of the user interface depends on the program settings and do not change when you connect to a server. Use the WebIssues Settings command (see below) to change these settings.</para>
 
       <para>You can also select your preferred time zone. This setting determines the time zone for dates displayed in the Web Client, and for email notifications. However the Desktop Client always displays dates according to local time zone the computer on which it is running, and it does not take into account server settings or user preferences.</para>
 

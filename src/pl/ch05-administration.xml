@@ -59,7 +59,7 @@
       <varlistentry>
         <term>Zgłoszenia rejestracji</term>
         <listitem>
-          <para>Pozwala zatwierdzać lub odrzucać zgłoszenia rejestracji użytkowników. Moduł ten jest dostępny tylko, jeśli w ustawieniach serwera została włączona opcja rejstracji użytkowników. Patrz sekcja <xref linkend="webissues.admin.register"/>.</para>
+          <para>Pozwala zatwierdzać lub odrzucać zgłoszenia rejestracji użytkowników. Moduł ten jest dostępny tylko, jeśli w ustawieniach serwera została włączona opcja rejestracji użytkowników. Patrz sekcja <xref linkend="webissues.admin.register"/>.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -196,11 +196,11 @@
         </mediaobject>
       </figure>
 
-      <para>Jeśli zmieniasz swoje własne hasło, dla większego bezpieczeństwa musisz dodatkowo wpisać swoje aktualne hasło. Każdy użytkownik może w dowolnej chwili zmienić swoje własne hasło, korzystając z opcji <guilabel>Zmień hasło</guilabel> dostępnej w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna progamu Desktop Client.</para>
+      <para>Jeśli zmieniasz swoje własne hasło, dla większego bezpieczeństwa musisz dodatkowo wpisać swoje aktualne hasło. Każdy użytkownik może w dowolnej chwili zmienić swoje własne hasło, korzystając z opcji <guilabel>Zmień hasło</guilabel> dostępnej w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna programu Desktop Client.</para>
 
       <note>
         <title>Notatka</title>
-        <para>Jeśli zapomniałeś hasła administratora systemu, nie możesz w prosty sposób go odzyskać. Wszystkie hasła są przechowywane w bazie danych w postaci bezpiecznych hashów, które praktycznie uniemożliwiają odtworzenie oryginalnego hasła. Mając dostęp do bazy danych możesz jednak zresetować hasło administratora, generując nowy hash i wpisując go do kolumny <literal>user_passwd</literal> dla odpowiedniego użytkownika w tabeli <literal>users</literal>. System WebIssues używa algorytmu <quote>Portable PHP password hashing framework</quote>, zgodnego z takimi programami jak Wordpress czy Drupal, możesz więc użyć jednego z dostępnych dla tych programów <ulink url="http://scriptserver.mainframe8.com/wordpress_password_hasher.php">generatorów hashów</ulink>.</para>
+        <para>Jeśli zapomniałeś hasła administratora systemu, nie możesz w prosty sposób go odzyskać. Wszystkie hasła są przechowywane w bazie danych w postaci bezpiecznych hashów, które praktycznie uniemożliwiają odtworzenie oryginalnego hasła. Mając dostęp do bazy danych możesz jednak zresetować hasło administratora, generując nowy hash i wpisując go do kolumny <literal>user_passwd</literal> dla odpowiedniego użytkownika w tabeli <literal>users</literal>. System WebIssues używa algorytmu <quote>Portable PHP password hashing framework</quote>, zgodnego z takimi programami jak WordPress czy Drupal, możesz więc użyć jednego z dostępnych dla tych programów <ulink url="http://scriptserver.mainframe8.com/wordpress_password_hasher.php">generatorów hashów</ulink>.</para>
       </note>
 
       <para>Aby zmienić nazwę użytkownika, wybierz go z listy i kliknij <guilabel>Zmień nazwę użytkownika</guilabel>. Podaj nową nazwę i kliknij <guibutton>OK</guibutton>.</para>
@@ -212,7 +212,7 @@
 
       <para>Nowo utworzony użytkownik nie ma dostępu do żadnego projektu, chyba że jest administratorem systemu. Aby zmienić globalny dostęp i zarządzać listą projektów dostępnych dla wybranego użytkownika, użyj polecenia <guilabel>Zarządzaj uprawnieniami</guilabel>. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.admin.users.permissions"/> poniżej.</para>
 
-      <para>Możesz również zmienić ustawienia dowolnego użytkownika za pomocą polecenia <guilabel>Ustawienia użytkownika</guilabel>. Każdy użytkownik może również zmienić własne ustawienia, korzystając z opcji <guilabel>Ustawienia użytkownika</guilabel> w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna progamu Desktop Client. Więcej informacji na temat ustawień użytkownika znajdziesz w sekcjach <xref linkend="webissues.work.personal"/>.</para>
+      <para>Możesz również zmienić ustawienia dowolnego użytkownika za pomocą polecenia <guilabel>Ustawienia użytkownika</guilabel>. Każdy użytkownik może również zmienić własne ustawienia, korzystając z opcji <guilabel>Ustawienia użytkownika</guilabel> w oknie <guilabel>Narzędzia</guilabel> lub na pasku narzędzi głównego okna programu Desktop Client. Więcej informacji na temat ustawień użytkownika znajdziesz w sekcjach <xref linkend="webissues.work.personal"/>.</para>
 
       <para>System WebIssues nie pozwala na usuwanie istniejących użytkowników, ponieważ przechowuje on wszystkie informacje historyczne, na przykład zmiany dokonane przez poszczególnych użytkowników. Zamiast tego możesz zmienić poziom uprawnień użytkowników, którzy nie powinni już mieć dostępu do systemu, na wyłączony. Użyj opcji filtrowania w prawym górnym rogu listy, aby ukryć wyłączone konta użytkowników.</para>
 
@@ -280,7 +280,7 @@
   <sect1 id="webissues.admin.register">
     <title>Zgłoszenia rejestracji</title>
 
-    <para>Administator systemu WebIssues może włączyć opcję, która pozwala użytkownikom samodzielnie dokonywać rejestracji nowych kont. Nowy użytkownik podaje nazwę, login i hasło oraz adres e-mail, który podlega weryfikacji poprzez wysłanie wiadomości aktywacyjnej. Jeśli nie zostało włączone automatyczne zatwierdzanie zgłoszeń, zgłoszenia rejestracji muszą następnie zostać zatwierdzone przez administratora. Podczas zatwierdzania trzeba określić, do jakich projektów użytkownik będzie miał dostęp. Dopiero wtedy użytkownik będzie mógł zalogować się do systemu.</para>
+    <para>Administrator systemu WebIssues może włączyć opcję, która pozwala użytkownikom samodzielnie dokonywać rejestracji nowych kont. Nowy użytkownik podaje nazwę, login i hasło oraz adres e-mail, który podlega weryfikacji poprzez wysłanie wiadomości aktywacyjnej. Jeśli nie zostało włączone automatyczne zatwierdzanie zgłoszeń, zgłoszenia rejestracji muszą następnie zostać zatwierdzone przez administratora. Podczas zatwierdzania trzeba określić, do jakich projektów użytkownik będzie miał dostęp. Dopiero wtedy użytkownik będzie mógł zalogować się do systemu.</para>
 
     <note>
       <title>Notatka</title>
@@ -298,7 +298,7 @@
 
     <para>Aby zatwierdzić zgłoszenie rejestracji, wybierz je z listy, a następnie użyj polecenia <guilabel>Zatwierdź zgłoszenie</guilabel>. Zaznacz projekty, do których użytkownik będzie miał dostęp i kliknij <guibutton>OK</guibutton>. Pamiętaj, że nowy użytkownik zawsze ma dostęp do wszystkich publicznych projektów, tak jak wszyscy inni użytkownicy. Dlatego, jeśli używasz publicznych projektów, ręczne zatwierdzanie zgłoszeń może nie być konieczne.</para>
 
-    <para>Zatwierdzone zgłoszenie rejestracji zniknie z listy, a nowy użytkownik pojawi się na liście kont użytkowników, gdzie możesz zmienić jego nazwę, uprawnienia, ustawienia i hasło, tak jak w przypadku kont utworzonych bezpośrednio przez admnistratora. Użytkownik otrzyma również powiadomienie mailowe o zatwierdzeniu jego zgłoszenia.</para>
+    <para>Zatwierdzone zgłoszenie rejestracji zniknie z listy, a nowy użytkownik pojawi się na liście kont użytkowników, gdzie możesz zmienić jego nazwę, uprawnienia, ustawienia i hasło, tak jak w przypadku kont utworzonych bezpośrednio przez administratora. Użytkownik otrzyma również powiadomienie mailowe o zatwierdzeniu jego zgłoszenia.</para>
 
     <para>Aby odrzucić wybrane zgłoszenie rejestracji, użyj polecenia <guilabel>Odrzuć zgłoszenie</guilabel>. Zostanie ono usunięte z listy zgłoszeń, a użytkownik otrzyma powiadomienie mailowe o odrzuceniu zgłoszenia.</para>
 

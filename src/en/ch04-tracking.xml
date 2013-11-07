@@ -24,7 +24,7 @@
     <para>Click on the second issue to open it. Notice how the icon changes to an open envelope:</para>
 
     <figure>
-      <title>Status of issues after openining</title>
+      <title>Status of issues after opening</title>
       <mediaobject>
         <imageobject><imagedata fileref="images/ch04-fig02.png" format="PNG"/></imageobject>
       </mediaobject>
@@ -97,7 +97,7 @@
 
       <note>
         <title>Note</title>
-        <para>For more information about configuring sending emails read the <xref linkend="webissues.prep.notifications"/>.</para>
+        <para>For more information about configuring sending emails read <xref linkend="webissues.prep.notifications"/>.</para>
       </note>
 
       <para>There are three types of notifications available in the WebIssues system:</para>
@@ -154,7 +154,7 @@
 
       <para>Enter a valid email to which the notifications will be sent. Select <guilabel>Include issue details in notifications and summary reports</guilabel>, if you want the emails to contain also issue details and the history of changes and recently added comments and attachments. Otherwise only a summary of issues will be sent.</para>
 
-      <para>Select <guilabel>Do not notify about issues that I have already read</guilabel> if you don't want to receive notifications about issues that you've read (for example, if you created or modified them by yourself). Also issue details, that you've read, will not be included in that case. This option doesn't affect summary reports, which always contain all issues and changes.</para>
+      <para>Select <guilabel>Do not notify about issues that I have already read</guilabel> if you don't want to receive notifications about issues that you've read (for example, if you created or modified them by yourself). Also issue details that you've read, will not be included in that case. This option doesn't affect summary reports, which always contain all issues and changes.</para>
 
       <warning>
         <title>Warning</title>
@@ -191,9 +191,9 @@
         </mediaobject>
       </figure>
 
-      <para>All users will now see the alert in their project tree in the Desktop Client. Public alerts can be distinguished from personal alerts by a small user symbol in the corer of the icon.</para>
+      <para>All users will now see the alert in their project tree in the Desktop Client. Public alerts can be distinguished from personal alerts by a small user symbol in the corner of the icon.</para>
 
-      <para>You can configure email type and schedule for a public alert in order to enable sending email notifications. Notifications for public alerts associated with a folder are sent to all users who can access the folder, regardless of whether or not they are explicitly listed as project memebers. If the folder belongs to a public project, notifications are sent to all active users. Notifications for public alerts associated with a global list of issues are sent to all active users who have access to at least one folder of the given type. Only users who have a valid email address configured in their user preferences will receive email notifications.</para>
+      <para>You can configure email type and schedule for a public alert in order to enable sending email notifications. Notifications for public alerts associated with a folder are sent to all users who can access the folder, regardless of whether or not they are explicitly listed as project members. If the folder belongs to a public project, notifications are sent to all active users. Notifications for public alerts associated with a global list of issues are sent to all active users who have access to at least one folder of the given type. Only users who have a valid email address configured in their user preferences will receive email notifications.</para>
 
       <note>
         <title>Note</title>
@@ -234,7 +234,7 @@
         <para>Alert notifications can be sent as immediate notifications, summary notifications or summary reports. Subscription notifications are always sent immediately after a change is made, i.e. as frequent as the cron job runs on the server.</para>
       </listitem>
       <listitem>
-        <para>Alert notifications are sent for all issues in a folder, or all issues matching certain criteria, for example assigned to you or created by you. This way you don't have to manually mark individual issues that you want to receive notificaions for. On the other hand, subscriptions make it possible for you to select individual issues that you want to be notified about.</para>
+        <para>Alert notifications are sent for all issues in a folder, or all issues matching certain criteria, for example assigned to you or created by you. This way you don't have to manually mark individual issues that you want to receive notifications for. On the other hand, subscriptions make it possible for you to select individual issues that you want to be notified about.</para>
       </listitem>
       <listitem>
         <para>Depending on the preferences, alert notifications can contain only a list of issues, or also the details of recent modifications of the issues. Subscription notifications always include the detailed modifications.</para>

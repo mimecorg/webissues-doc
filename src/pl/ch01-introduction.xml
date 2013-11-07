@@ -74,7 +74,7 @@
     <sect2 id="webissues.intro.lifecycle.forum">
       <title>Proste forum</title>
 
-      <para>Jan Kowalski jest nowym pracownikiem w twojej firmie i dopiero uczy się używać różnych programów, które są mu potrzebne do pracy. Jeden z programów księgowych, Big Finances, nie chce się uruchomić i zamiast tego wyświetlił niezrozumiały komunikat błędu. Kowalski loguje się do systemu WebIssues i otwiera folder Pomoc. Następnie dodaje nową sprawę i nadaje jej nazwę <quote>Problem z Big Finances</quote>. W opisie sprawy wyjaśnia, co robił kiedy wystąpił problem. Dołącza również zrzut ekranu z komunikatem błędu w postaci pliku graficznego.</para>
+      <para>Jan Kowalski jest nowym pracownikiem w twojej firmie i dopiero uczy się używać różnych programów, które są mu potrzebne do pracy. Jeden z programów księgowych, Big Finances, nie chce się uruchomić i zamiast tego wyświetlił niezrozumiały komunikat błędu. Kowalski loguje się do systemu WebIssues i otwiera folder Pomoc. Następnie dodaje nową sprawę i nadaje jej nazwę <quote>Problem z Big Finances</quote>. W opisie sprawy wyjaśnia, co robił, kiedy wystąpił problem. Dołącza również zrzut ekranu z komunikatem błędu w postaci pliku graficznego.</para>
 
       <para>Ponieważ starasz się pomagać nowym pracownikom, regularnie w ciągu dnia zaglądasz do folderu Pomoc. Wszystkie wątki (sprawy) są domyślnie posortowane według daty ostatniej modyfikacji. Co więcej, nowe wątki, których jeszcze nie czytałeś, są oznaczone żółtym symbolem zamkniętej koperty i dodatkowo pogrubione &mdash; podobnie jak w wielu programach pocztowych czy forach dyskusyjnych. Otwierasz sprawę, czytasz opis problemu i otwierasz załącznik.</para>
 

@@ -50,7 +50,7 @@
 
     <para>Musisz przede wszystkim podać listę możliwych do wybrania wartości. W tym celu wpisz każdą wartość, w tym wypadku nazwę modułu, w osobnym wierszu. Domyślnie lista wyboru wymusza wybranie jednej ze zdefiniowanych wartości. Jeśli jednak wybierzesz opcję <guilabel>Zezwól na podawanie własnych wartości</guilabel>, to w momencie dodawania lub edycji sprawy będzie możliwe wpisanie dowolnej wartości atrybutu. Dzięki temu będzie można wpisać nazwę modułu, który nie został uwzględniony na liście. W tym wypadku możliwe jest również podanie minimalnej i maksymalnej długości tekstu, podobnie jak dla atrybutów tekstowych.</para>
 
-    <para>Opcja <guilabel>Zezwól na wybieranie wielu wartości</guilabel> umożlwia wybranie z listy więcej niż jednej wartości, oddzielonych przecinkami. Jest to przydatne, jeśli zgłaszane błędy mogą być powiązane z kilkoma modułami jednocześnie. Obie opcje można ze sobą łączyć, będzie wtedy możliwe wpisanie kilku wartości, niekoniecznie wybranych z listy. Taki tryb działania atrybutu umożliwia na przykład oznaczanie spraw <quote>tagami</quote>, które mogą być predefiniowane, ale mogą być również wpisywane spoza listy.</para>
+    <para>Opcja <guilabel>Zezwól na wybieranie wielu wartości</guilabel> umożliwia wybranie z listy więcej niż jednej wartości, oddzielonych przecinkami. Jest to przydatne, jeśli zgłaszane błędy mogą być powiązane z kilkoma modułami jednocześnie. Obie opcje można ze sobą łączyć, będzie wtedy możliwe wpisanie kilku wartości, niekoniecznie wybranych z listy. Taki tryb działania atrybutu umożliwia na przykład oznaczanie spraw <quote>tagami</quote>, które mogą być predefiniowane, ale mogą być również wpisywane spoza listy.</para>
 
     <para>Kolejnym typem atrybutu jest <guilabel>Liczba</guilabel>. Załóżmy, że chcemy do typu spraw Zadania dodać atrybut Pracochłonność, którego wartość jest wyrażona w godzinach. Wybierz typ <guilabel>Liczba</guilabel> z listy typów atrybutów i kliknij <guibutton>Edytuj</guibutton>.</para>
 
@@ -233,11 +233,11 @@
 
     <para>Zmiana języka systemu wpłynie na wszystkich użytkowników (o ile nie wybrali własnego preferowanego języka), a także na język nowych komunikatów w Dzienniku zdarzeń systemu WebIssues. Nazwy istniejących typów spraw, atrybutów i innych danych, oraz istniejące komunikaty w Dzienniku zdarzeń pozostaną niezmienione.</para>
 
-    <para>Każdy użytkownik może wybrać własny preferowany język. Natomiast w przypadku programu Destkop Client, język interfejsu użytkownika zależy od ustawień programu i nie zmienia się po zalogowaniu do serwera. Przeczytaj sekcję <xref linkend="webissues.work.personal"/>, aby uzyskać więcej informacji na ten temat.</para>
+    <para>Każdy użytkownik może wybrać własny preferowany język. Natomiast w przypadku programu Desktop Client, język interfejsu użytkownika zależy od ustawień programu i nie zmienia się po zalogowaniu do serwera. Przeczytaj sekcję <xref linkend="webissues.work.personal"/>, aby uzyskać więcej informacji na ten temat.</para>
 
     <note>
       <title>Notatka</title>
-      <para>System WebIssues został przetłumaczony na kilka języków, instnieje jednak możliwość tworzenia nowych tłumaczeń. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Translation"/>. Tłumaczenia są tworzone przez wolontariuszy, więc jeśli utworzyłeś własne tłumaczenie, skontaktuj się z autorami systemu, aby udostępnić je innym użytkownikom.</para>
+      <para>System WebIssues został przetłumaczony na kilka języków, istnieje jednak możliwość tworzenia nowych tłumaczeń. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://wiki.mimec.org/wiki/WebIssues/Translation"/>. Tłumaczenia są tworzone przez wolontariuszy, więc jeśli utworzyłeś własne tłumaczenie, skontaktuj się z autorami systemu, aby udostępnić je innym użytkownikom.</para>
     </note>
 
     <para>Domyślnie system WebIssues używa lokalnej strefy czasowej serwera, na którym jest zainstalowany. Administrator systemu można zmienić domyślną strefę czasową poprzez <guilabel>Ustawienia serwera</guilabel> w Panelu administracyjnym. Zmiana ta wpłynie na wszystkich użytkowników (o ile nie wybrali własnej strefy czasowej). Wyświetlane daty są automatycznie przeliczane zgodnie z wybraną strefą czasową.</para>
@@ -249,7 +249,7 @@
       <para>W zależności od ustawień, atrybuty typu Data i czas mogą być automatycznie przeliczane, zgodnie z aktualną strefą czasową, lub wyświetlane bez konwersji strefy czasowej (patrz <xref linkend="webissues.custom.types"/>). Opcja bez konwersji jest pozostawiona głównie dla zachowania zgodności z wersją 0.8 serwera, jeśli jednak z systemu korzystają użytkownicy znajdujących się w różnych strefach czasowych, zaleca się użyć opcji automatycznego dostosowania czasu do lokalnej strefy czasowej.</para>
     </note>
 
-    <para>Format w jakim wyświetlane są liczby, data i czas, a także pierwszy dzień tygodnia w kalendarzu, zależą od aktualnego języka, w jakim wyświetlany jest interfejs użytkownika. Administrator systemu może dostosować te ustawienia dla wszystkich użytkowników, korzystając z polecenia <guilabel>Ustawienia serwera</guilabel> w Panelu administracyjnym. Każdy użytkownik może natomiast wybrać własne ustawienia, korzystając z polecenia <guilabel>Ustawienia użytkownika</guilabel>.</para>
+    <para>Format, w jakim wyświetlane są liczby, data i czas, a także pierwszy dzień tygodnia w kalendarzu, zależą od aktualnego języka, w jakim wyświetlany jest interfejs użytkownika. Administrator systemu może dostosować te ustawienia dla wszystkich użytkowników, korzystając z polecenia <guilabel>Ustawienia serwera</guilabel> w Panelu administracyjnym. Każdy użytkownik może natomiast wybrać własne ustawienia, korzystając z polecenia <guilabel>Ustawienia użytkownika</guilabel>.</para>
 
     <figure>
       <title>Formaty</title>
@@ -263,7 +263,7 @@
   <sect1 id="webissues.custom.settings">
     <title>Ustawienia zaawansowane</title>
 
-    <para>Aby zmienić zaawansowane ustwienia serwera, przejdź do Panelu administracyjnego i kliknij <guilabel>Ustawienia serwera</guilabel>. Opcja ta nie jest dostępna w programie Desktop Client. Zmiany ustawień może dokonać jedynie administrator systemu.</para>
+    <para>Aby zmienić zaawansowane ustawienia serwera, przejdź do Panelu administracyjnego i kliknij <guilabel>Ustawienia serwera</guilabel>. Opcja ta nie jest dostępna w programie Desktop Client. Zmiany ustawień może dokonać jedynie administrator systemu.</para>
 
     <para>Grupy opcji <guilabel>Ustawienia regionalne</guilabel> oraz <guilabel>Formaty</guilabel> zostały opisane w sekcji <xref linkend="webissues.custom.locale"/>.</para>
 
@@ -296,9 +296,9 @@
       </mediaobject>
     </figure>
 
-    <para>Opcja <guilabel>Włącz dostęp anonimowy</guilabel> umożliwia dostęp tylko do odczytu do publicznych projektó bez logowania się do programu Web Client. Pamiętaj, że jeśli włączysz dostęp anonimowy, wszystkie sprawy, komentarze i załączniki w publicznych projektach będą dostępne dla wszystkich. Publiczna zawartość może być również indeksowana przez wyszukiwarki jeśli serwer jest dostępny w Internecie. Anonimowi użytkownicy mogą używać publicznych widoków, ale nie mogą tworzyć własnych widoków, używać alertów ani subskrybować spraw. Dodatkowo, tylko zarejestrowani i zalogowani użytkownicy mają prawo dodawać nowe sprawy i edytować istniejące. Dlatego dostęp anonimowy jest często używany w połączeniu z rejestracją użytkowników (patrz niżej).</para>
+    <para>Opcja <guilabel>Włącz dostęp anonimowy</guilabel> umożliwia dostęp tylko do odczytu do publicznych projektów bez logowania się do programu Web Client. Pamiętaj, że jeśli włączysz dostęp anonimowy, wszystkie sprawy, komentarze i załączniki w publicznych projektach będą dostępne dla wszystkich. Publiczna zawartość może być również indeksowana przez wyszukiwarki, jeśli serwer jest dostępny w Internecie. Anonimowi użytkownicy mogą używać publicznych widoków, ale nie mogą tworzyć własnych widoków, używać alertów ani subskrybować spraw. Dodatkowo, tylko zarejestrowani i zalogowani użytkownicy mają prawo dodawać nowe sprawy i edytować istniejące. Dlatego dostęp anonimowy jest często używany w połączeniu z rejestracją użytkowników (patrz niżej).</para>
 
-    <para>Anonimowi użytkownicy nie będą mieli dostępu do żadnych informacji jeśli w systemie nie istnieje przynajmniej jeden publiczny projekt. Więcej informacji na temat zmiany dostępu do projektu znajdziesz w sekcji <xref linkend="webissues.admin.projects.permissions"/>. Więcej informacji o anonimowym dostępie do systemu znajdziesz w sekcji <xref linkend="webissues.work.login"/>.</para>
+    <para>Anonimowi użytkownicy nie będą mieli dostępu do żadnych informacji, jeśli w systemie nie istnieje przynajmniej jeden publiczny projekt. Więcej informacji na temat zmiany dostępu do projektu znajdziesz w sekcji <xref linkend="webissues.admin.projects.permissions"/>. Więcej informacji o anonimowym dostępie do systemu znajdziesz w sekcji <xref linkend="webissues.work.login"/>.</para>
 
     <figure>
       <title>Dostęp anonimowy</title>
@@ -307,7 +307,7 @@
       </mediaobject>
     </figure>
 
-    <para>Opcja <guilabel>Włącz rejestrację użytkowników</guilabel> umożliwia użytkownikom rejestrację nowego konta. Domyślnie, wymagane jest zatwierdzenie przez administratora, zanim nowi użytkownicy mogą się zalogować. Możesz podać adres e-mail, na który będą wysyłane powiadomienia o zgłoszeniach, które oczekują na zatwierdzenie, nie częściej, niż co godzinę. Podczas zatwierdzania administrator może przypisać użytkownika do określonych projektów. Więcej informacji na temat zatwierdzania zgłoszeń rejestracji znajdzesz w sekcji <xref linkend="webissues.admin.register"/>.</para>
+    <para>Opcja <guilabel>Włącz rejestrację użytkowników</guilabel> umożliwia użytkownikom rejestrację nowego konta. Domyślnie, wymagane jest zatwierdzenie przez administratora, zanim nowi użytkownicy mogą się zalogować. Możesz podać adres e-mail, na który będą wysyłane powiadomienia o zgłoszeniach, które oczekują na zatwierdzenie, nie częściej, niż co godzinę. Podczas zatwierdzania administrator może przypisać użytkownika do określonych projektów. Więcej informacji na temat zatwierdzania zgłoszeń rejestracji znajdziesz w sekcji <xref linkend="webissues.admin.register"/>.</para>
 
     <para>Jeśli wybierzesz opcję <guilabel>Włącz automatyczne zatwierdzanie</guilabel>, zarejestrowani użytkownicy będą mogli zalogować się do systemu od razu po weryfikacji adresu e-mail, bez zatwierdzania przez administratora. W tym wypadku nowi użytkownicy nie stają się członkami żadnych projektów, więc mają dostęp jedynie do publicznych projektów. Z tego powodu automatyczne zatwierdzanie jest użyteczne tylko w przypadku, gdy w systemie istnieje przynajmniej jeden publiczny projekt. Więcej informacji na temat zmiany dostępu do projektu znajdziesz w sekcji <xref linkend="webissues.admin.projects.permissions"/>. Więcej informacji o rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.work.login"/>.</para>
 

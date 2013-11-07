@@ -110,7 +110,7 @@
 
     <warning>
       <title>Warning</title>
-      <para>When deleting attributes, pay particular attention whether you do not unintentionally delete the wrong data. All current and historical values of the attribute ​​are permanently and irreversibly removed from the system and it's not possibile to restore them.</para>
+      <para>When deleting attributes, pay particular attention whether you do not unintentionally delete the wrong data. All current and historical values of the attribute ​​are permanently and irreversibly removed from the system and it's not possible to restore them.</para>
     </warning>
 
     <para>In addition to modifying predefined types issues, the WebIssues system also allows creating entirely new issue types. Let's suppose that we want to create a simple calendar with events related to different people. Click <guilabel>Add Type</guilabel> to create a new type of issues.</para>
@@ -137,7 +137,7 @@
 
     <warning>
       <title>Warning</title>
-      <para>When deleting issue types, pay particular attention whether you do not unintentionally delete the wrong data. All folders and issues of this type ​​are permanently and irreversibly removed from the system and it's not possibile to restore them.</para>
+      <para>When deleting issue types, pay particular attention whether you do not unintentionally delete the wrong data. All folders and issues of this type ​​are permanently and irreversibly removed from the system and it's not possible to restore them.</para>
     </warning>
 
   </sect1>
@@ -233,14 +233,14 @@
 
     <para>Changing the system language will affect all users (unless they have chosen their own preferred language) and also the language of new messages in the Event Log of the WebIssues system. Names of existing issue types, attributes and other data, and existing messages in the Event Log will remain unchanged.</para>
 
-    <para>Each user can choose their own preferred language. In case of the Destkop Client, the language of the user interface depends on the settings of the program and does not change after you log into the server. Read <xref linkend="webissues.work.personal"/> for more information.</para>
+    <para>Each user can choose their own preferred language. In case of the Desktop Client, the language of the user interface depends on the settings of the program and does not change after you log into the server. Read <xref linkend="webissues.work.personal"/> for more information.</para>
 
     <note>
       <title>Note</title>
       <para>The WebIssues system has been translated into several languages, but it is possible to create new translations. For more information, please visit <ulink url="http://wiki.mimec.org/wiki/WebIssues/Translation"/>. Translations are created by volunteers, so if you have created your own translation, please contact the authors of the system to share it with other users.</para>
     </note>
 
-    <para>By default the WebIssues system uses the local time zone of the server on which it is installed. The system administrator can change the default time zone through the <guilabel>Server Settings</guilabel> command in the Administration Panel. This change will affect all users (unless they they chose their own time zone). Displayed dates are automatically recalculated according to the selected time zone.</para>
+    <para>By default the WebIssues system uses the local time zone of the server on which it is installed. The system administrator can change the default time zone through the <guilabel>Server Settings</guilabel> command in the Administration Panel. This change will affect all users (unless they chose their own time zone). Displayed dates are automatically recalculated according to the selected time zone.</para>
 
     <para>The time zone setting determines the time zone for dates displayed in the Web Client, and also for mail notifications. However, the Desktop Client always displays dates according to the local time zone of the computer on which it's running, and it does not take into account server settings or user preferences.</para>
 
@@ -276,7 +276,7 @@
       </mediaobject>
     </figure>
 
-    <para>Options from the <guilabel>View Settings</guilabel> group affect all users and all types of issues. When the <guilabel>Hide the ID column</guilabel> option is enabled, the ID column will not be displayed in the list of issues. When you hide the ID column, issues can still be sorted by this column, and the identifier of the selected issue will still be displayed in the <guilabel>Properties</guilabel> group in issue details view. When the <guilabel>Hide attributes with empty values</guilabel> option is enabled, attributes that don't have any value are not included in the issue details view. This option is usefult when issue types contain a lot of attributes, which are not always used.</para>
+    <para>Options from the <guilabel>View Settings</guilabel> group affect all users and all types of issues. When the <guilabel>Hide the ID column</guilabel> option is enabled, the ID column will not be displayed in the list of issues. When you hide the ID column, issues can still be sorted by this column, and the identifier of the selected issue will still be displayed in the <guilabel>Properties</guilabel> group in issue details view. When the <guilabel>Hide attributes with empty values</guilabel> option is enabled, attributes that don't have any value are not included in the issue details view. This option is useful when issue types contain a lot of attributes, which are not always used.</para>
 
     <para>You can select the order in which changes are displayed in the issue history view. Also it is possible to select the default filter in the issue history; you can display all history or just comments and attachments. Individual users may change these settings using the <guilabel>User Preferences</guilabel> command.</para>
 
@@ -287,7 +287,7 @@
       </mediaobject>
     </figure>
 
-    <para>You can select the default format of text used for new descriptions and comments. By default <guilabel>Text with Markup</guilabel> is used. You can switch to <guilabel>Plain Text</guilabel> if you prefer text without any formating like in older versions of WebIssues. Note that individual users may override this setting in their personal preferences, as well as for individual descriptions and comments.</para>
+    <para>You can select the default format of text used for new descriptions and comments. By default <guilabel>Text with Markup</guilabel> is used. You can switch to <guilabel>Plain Text</guilabel> if you prefer text without any formatting like in older versions of WebIssues. Note that individual users may override this setting in their personal preferences, as well as for individual descriptions and comments.</para>
 
     <figure>
       <title>Editing</title>
@@ -337,7 +337,7 @@
       <para>The maximum size of the attachment that can be sent to the system also depends on appropriate configuration of the web server and PHP. For more information, please visit <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
     </note>
 
-    <para>By default, small attachments are stored in the database, and large ones directly in the filesystem. Depending on your needs, you can change the threshold value or force storing all attachments only in the database or file system. The maximum size of attachments stored in the database can be specified in the <guilabel>Attachment Storage</guilabel> group.</para>
+    <para>By default, small attachments are stored in the database, and large ones directly in the file system. Depending on your needs, you can change the threshold value or force storing all attachments only in the database or file system. The maximum size of attachments stored in the database can be specified in the <guilabel>Attachment Storage</guilabel> group.</para>
 
     <figure>
       <title>Attachment Storage</title>
@@ -348,10 +348,10 @@
 
     <note>
       <title>Note</title>
-      <para>Storing large attachments in the database may require appropriate configuration of the database server, and can be less optimal compared to the file system. In addition, many hosting services significantly limit the maximum size of the database, while offering plenty of available disk space. On the other hand, storing attachments only in the database makes it easier to backup the system, since there is no need to backup additional files. In some cases it may also be safer.</para>
+      <para>Storing large attachments in the database may require appropriate configuration of the database server, and can be less optimal compared to the file system. In addition, many hosting services significantly limit the maximum size of the database, while offering plenty of available disk space. On the other hand, storing attachments only in the database makes it easier to back up the system, since there is no need to back up additional files. In some cases it may also be safer.</para>
     </note>
 
-    <para>Options from the <guilabel>Maximum Lifetime</guilabel> group allow you to define the time after which inactive user sessions are removed, and the maximum amount of time the entries in the Event Log and the user registration requests that are waiting for email address confirmation are stored by the system. The <guilabel>Garbage Collection</guilabel> setting determines the probability of running the clean up process, which removes inactive sessions, old entries in the Event Log and unconfirmed requests. Reduce the probability if the server is heavily loaded, or select <quote>Use cron job</quote> if the mechanism of sending email notifications is active (see <xref linkend="webissues.prep.nofitications.cron"/>).</para>
+    <para>Options from the <guilabel>Maximum Lifetime</guilabel> group allow you to define the time after which inactive user sessions are removed, and the maximum amount of time the entries in the Event Log and the user registration requests that are waiting for email address confirmation are stored by the system. The <guilabel>Garbage Collection</guilabel> setting determines the probability of running the cleanup process, which removes inactive sessions, old entries in the Event Log and unconfirmed requests. Reduce the probability if the server is heavily loaded, or select <quote>Use cron job</quote> if the mechanism of sending email notifications is active (see <xref linkend="webissues.prep.nofitications.cron"/>).</para>
 
     <figure>
       <title>Maximum Lifetime &amp; Garbage Collection</title>

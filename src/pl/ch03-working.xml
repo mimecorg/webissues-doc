@@ -16,7 +16,7 @@
 
     <para>Na tym zresztą nie kończą się podobieństwa, gdyż główne okno programu składa się z trzech paneli, których układ przypomina popularne programy pocztowe. Po lewej stronie znajduje się drzewo projektów i folderów. Po prawej stronie u góry wyświetlana jest lista spraw w wybranym w drzewie folderze. Z kolei po prawej stronie na dole pokazane są szczegóły wybranej na liście sprawy. Wybrany folder i sprawa są podświetlone i możesz na nich wykonywać różne operacje.</para>
 
-    <para>Wybierając w drzwie projekt, możesz wyświetlić jego opis i zmodyfikować go, jeśli masz do tego uprawnienia. Specjalny element <quote>Wszystkie projekty</quote> zawiera globalne listy spraw każdego typu. Wybierając globalną listę, możesz wyświetlić wszystkie sprawy określonego typu (np. wszystkie błędy lub zadania) w jednym widoku, niezależnie od projektu i folderu, do którego należą.</para>
+    <para>Wybierając w drzewie projekt, możesz wyświetlić jego opis i zmodyfikować go, jeśli masz do tego uprawnienia. Specjalny element <quote>Wszystkie projekty</quote> zawiera globalne listy spraw każdego typu. Wybierając globalną listę, możesz wyświetlić wszystkie sprawy określonego typu (np. wszystkie błędy lub zadania) w jednym widoku, niezależnie od projektu i folderu, do którego należą.</para>
 
     <para>Poniżej przedstawione jest okno programu Web Client z widoczną przykładową listą spraw i historią sprawy:</para>
 
@@ -114,7 +114,7 @@
       <para>Dostęp anonimowy jest możliwy tylko za pomocą programu Web Client. Aby korzystać z systemu za pomocą programu Desktop Client, musisz być zarejestrowanym użytkownikiem.</para>
 
       <note>
-        <title>Note</title>
+        <title>Notatka</title>
         <para>Więcej informacji o włączaniu dostępu anonimowego znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
       </note>
 
@@ -128,7 +128,7 @@
       <para>Poprawność podanego przez ciebie adresu e-mail zostanie sprawdzona poprzez wysłanie wiadomości z odnośnikiem aktywacyjnym. Kliknij odnośnik lub skopiuj adres, aby otworzyć go przeglądarce. Wiadomość tą powinieneś otrzymać niedługo po zarejestrowaniu. Gdy aktywujesz zgłoszenie, zostanie ono przesłane do zatwierdzenia przez administratora systemu. Po zatwierdzeniu otrzymasz wiadomość z potwierdzeniem i możesz zalogować się do systemu przy pomocy podanego wcześniej loginu i hasła.</para>
 
       <note>
-        <title>Note</title>
+        <title>Notatka</title>
         <para>Więcej informacji o włączaniu i konfigurowaniu rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
       </note>
 
@@ -163,7 +163,7 @@
       </mediaobject>
     </figure>
 
-    <para>Wszystkie odstępy i podziały linii zostaną zachowane, a długie linie będą automatycznie podzielone, jeśli będzie taka potrzeba. Odnośniki w tekście będą automatycznie rozpoznane i podświetlone. Możesz użyć prostych znaczników, by zmienić format tekstu, na przykład użyć pogrubionej czcionki lub kursywy, albo utworzyć listy i bloki kodu. Pasek narzędzi ponad polem tekstowym pomoże ci wprowadzić odpowiedie znaczniki. Przeczytaj sekcję <xref linkend="webissues.work.issues.comments"/>, aby uzyskać więcej informacji o formatowaniu tekstu.</para>
+    <para>Wszystkie odstępy i podziały linii zostaną zachowane, a długie linie będą automatycznie podzielone, jeśli będzie taka potrzeba. Odnośniki w tekście będą automatycznie rozpoznane i podświetlone. Możesz użyć prostych znaczników, by zmienić format tekstu, na przykład użyć pogrubionej czcionki lub kursywy, albo utworzyć listy i bloki kodu. Pasek narzędzi ponad polem tekstowym pomoże ci wprowadzić odpowiednie znaczniki. Przeczytaj sekcję <xref linkend="webissues.work.issues.comments"/>, aby uzyskać więcej informacji o formatowaniu tekstu.</para>
 
     <tip>
       <title>Wskazówka</title>
@@ -295,13 +295,13 @@ for ( int i = 0; i &lt; 10; i++ )
 
       <para>Znaczniki pogrubienia i kursywy można łączyć ze sobą i z innymi znacznikami, natomiast między znacznikami czcionki maszynowej, wszystkie inne znaczniki są ignorowane. Dzięki temu można wklejać jednoliniowe fragmenty kodu, nie psując formatowania.</para>
 
-      <para>Odnośniki w nawiasach kwadratowych są podobne do automatycznych odnośników, ale pozwalają na zmianę tekstu odnośnika. Jeśli tekst nie jest podany, zostanie wyświetlony adres. Możesz otaczać wszystkie adresy nawiasami kwadratowymi, by mić pewność , żę zostaną one prawidłowo rozpoznane.</para>
+      <para>Odnośniki w nawiasach kwadratowych są podobne do automatycznych odnośników, ale pozwalają na zmianę tekstu odnośnika. Jeśli tekst nie jest podany, zostanie wyświetlony adres. Możesz otaczać wszystkie adresy nawiasami kwadratowymi, by mieć pewność, że zostaną one prawidłowo rozpoznane.</para>
 
       <para>Podpunkty w listach wypunktowanych mogą tworzyć maksymalnie sześć poziomów zagnieżdżenia poprzez użycie odpowiedniej liczby gwiazdek. Przed gwiazdkami może być dowolna liczba spacji, a między gwiazdkami a tekstem musi być przynajmniej jedna spacja. Punkty w liście mogą składać się z dowolnej liczby linii, mogą także zawierać cytaty i bloki kodu.</para>
 
       <para>Cytaty są otoczone przerywaną ramką i mogą mieć opcjonalny tytuł. Możesz w łatwy sposób cytować istniejące komentarze lub opisy spraw używając polecenia <guibutton>Odpowiedz</guibutton>. Otworzy ono nowe okno komentarza z automatycznie załączonym oryginalnym komentarzem lub opisem wraz ze znacznikami cytatu. Cytowany tekst może zawierać inne znaczniki, w tym zagnieżdżone cytaty, listy i bloki kodu.</para>
 
-      <para>Bloki kodu mogą być używane do wklejania fragmentów kodu, plików logowania, itp. Są one wyświetlone dosłownie (tzn. wszyskie znaczniki są ignorowane) przy użyciu czcionki maszynowej. Jednak w odróżnieniu od znaczników czcionki maszynowej, blok kodu może zawierać wiele linii. Oprócz tego można określić język bloku kodu, co powoduje włączenie podświetlenia składni. Obsługiwane języki to: HTML, XML, C, C++, C#, Java, Bash (równoważny z SH), Python, Perl, Ruby, JavaScript (równoważny z JS), CSS, SQL, VB oraz PHP.</para>
+      <para>Bloki kodu mogą być używane do wklejania fragmentów kodu, plików logowania, itp. Są one wyświetlone dosłownie (tzn. wszystkie znaczniki są ignorowane) przy użyciu czcionki maszynowej. Jednak w odróżnieniu od znaczników czcionki maszynowej, blok kodu może zawierać wiele linii. Oprócz tego można określić język bloku kodu, co powoduje włączenie podświetlenia składni. Obsługiwane języki to: HTML, XML, C, C++, C#, Java, Bash (równoważny z SH), Python, Perl, Ruby, JavaScript (równoważny z JS), CSS, SQL, VB oraz PHP.</para>
 
       <para>Użyj przycisku <guibutton>Podgląd</guibutton> w pasku narzędzi ponad polem edycji tekstu, by zobaczyć podgląd tekstu z formatowaniem i upewnić się, że wygląda on prawidłowo.</para>
 
@@ -383,7 +383,7 @@ for ( int i = 0; i &lt; 10; i++ )
         <varlistentry>
           <term>Użytkownik</term>
           <listitem>
-            <para>Wartością tego atrybutu może być nazwa dowolnego użytkownika z całego systemu WebIssues lub z określonego projektu. Przykładem jest atrybut Przypisany do. Istnieje rówież wariant pozwalający na wybranie wielu użytkowników oddzielonych przecinkami.</para>
+            <para>Wartością tego atrybutu może być nazwa dowolnego użytkownika z całego systemu WebIssues lub z określonego projektu. Przykładem jest atrybut Przypisany do. Istnieje również wariant pozwalający na wybranie wielu użytkowników oddzielonych przecinkami.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
@@ -405,7 +405,7 @@ for ( int i = 0; i &lt; 10; i++ )
         <para>Jeśli nie widzisz jakiegoś użytkownika w liście wyboru, prawdopodobnie oznacza to, że nie został on dodany do listy członków projektu &mdash; patrz <xref linkend="webissues.admin.users"/>.</para>
       </tip>
 
-      <para>Zmień status sprawy na Rozwiązany, a w polu Powód wybierz wartość Naprawiony. Następnie naciśnij <guibutton>OK</guibutton>, aby zapisać zmiany. Zauważ że system WebIssues automatycznie zapamiętał wprowadzone przez ciebie zmiany i wyświetla je w historii sprawy. Umożliwia to śledzenie całego cyklu życia sprawy, zmian statusu i wszystkich operacji wykonywanych na sprawie.</para>
+      <para>Zmień status sprawy na Rozwiązany, a w polu Powód wybierz wartość Naprawiony. Następnie naciśnij <guibutton>OK</guibutton>, aby zapisać zmiany. Zauważ, że system WebIssues automatycznie zapamiętał wprowadzone przez ciebie zmiany i wyświetla je w historii sprawy. Umożliwia to śledzenie całego cyklu życia sprawy, zmian statusu i wszystkich operacji wykonywanych na sprawie.</para>
 
       <figure>
         <title>Historia sprawy po zmianie</title>
@@ -414,7 +414,7 @@ for ( int i = 0; i &lt; 10; i++ )
         </mediaobject>
       </figure>
 
-      <para>Domyślnie w historii sprawy wyświetlone są wszystkie zmiany, komentarze i załączniki. Jeśli nie chcesz widzieć pełnej historii sprawy, a na przykład tylko komentarze, wybierz jedną z opcji filtrowania dostępnych w prawym górnym rogu widoku historii. Aby wyszukać określony tekst w treści komentarza lub innej zmiany, w programie Desktop Client użyj polecenia <guilabel>Znajdź</guilabel> lub naciśnij klawisze <shortcut><keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo></shortcut>, aby wyświetlić pasek wyszukiwania. Wpisz szukany fragment tekstu, a następnie użyj klawiszy <shortcut><keycap>F3</keycap></shortcut> i <shortcut><keycombo><keycap>Shift</keycap><keycap>F3</keycap></keycombo></shortcut> aby znaleźć następne lub poprzednie wystąpienie tekstu. W przypadku programu Web Client możesz użyć funkcji wyszukiwania wbudowanej w przeglądarkę.</para>
+      <para>Domyślnie w historii sprawy wyświetlone są wszystkie zmiany, komentarze i załączniki. Jeśli nie chcesz widzieć pełnej historii sprawy, a na przykład tylko komentarze, wybierz jedną z opcji filtrowania dostępnych w prawym górnym rogu widoku historii. Aby wyszukać określony tekst w treści komentarza lub innej zmiany, w programie Desktop Client użyj polecenia <guilabel>Znajdź</guilabel> lub naciśnij klawisze <shortcut><keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo></shortcut>, aby wyświetlić pasek wyszukiwania. Wpisz szukany fragment tekstu, a następnie użyj klawiszy <shortcut><keycap>F3</keycap></shortcut> i <shortcut><keycombo><keycap>Shift</keycap><keycap>F3</keycap></keycombo></shortcut>, aby znaleźć następne lub poprzednie wystąpienie tekstu. W przypadku programu Web Client możesz użyć funkcji wyszukiwania wbudowanej w przeglądarkę.</para>
 
     </sect2>
 
@@ -447,7 +447,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
       <note>
         <title>Notatka</title>
-        <para>Maksymalny rozmiar załącznika, jaki możesz dołączyć do sprawy, zależy od konfiguracji systemu WebIssues. Możesz go zmienić w ustawieniach systemu WebIssues (przeczytaj <xref linkend="webissues.custom.settings"/> aby uzyskać więcej informacji). Przesyłanie dużych załączników wymaga również odpowiedniej konfiguracji serwera WWW oraz PHP. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
+        <para>Maksymalny rozmiar załącznika, jaki możesz dołączyć do sprawy, zależy od konfiguracji systemu WebIssues. Możesz go zmienić w ustawieniach systemu WebIssues (przeczytaj <xref linkend="webissues.custom.settings"/>, aby uzyskać więcej informacji). Przesyłanie dużych załączników wymaga również odpowiedniej konfiguracji serwera WWW oraz PHP. Więcej informacji na ten temat znajdziesz na stronie <ulink url="http://php.net/manual/en/features.file-upload.common-pitfalls.php"/>.</para>
         <para>Małe załączniki są domyślnie przechowywane w bazie danych, a duże bezpośrednio w systemie plików. W zależności od potrzeb możesz zmienić wartość progową lub wymusić przechowywanie wszystkich załączników tylko w bazie danych lub w systemie plików, zmieniając ustawienia systemu WebIssues. Sposób przechowywania załączników nie ma znaczenia z punktu widzenia programów klienckich.</para>
       </note>
 
@@ -464,7 +464,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <tip>
       <title>Wskazówka</title>
-      <para>Aby szybko znaleźć sprawę o danym identyfikatorze, użyj polecenia <guilabel>Idź do elementu</guilabel>. Patrz sekcja <xref linkend="webissues.work.issues.comments"/>, aby uzyskać więcej informacji na temat identifikatorów spraw, komentarzy i załączników.</para>
+      <para>Aby szybko znaleźć sprawę o danym identyfikatorze, użyj polecenia <guilabel>Idź do elementu</guilabel>. Patrz sekcja <xref linkend="webissues.work.issues.comments"/>, aby uzyskać więcej informacji na temat identyfikatorów spraw, komentarzy i załączników.</para>
     </tip>
 
     <para>Najbardziej przydatne w codziennej pracy jest jednak korzystanie z widoków. Każdy widok posiada warunki filtrowania, które ograniczają listę wyświetlonych spraw do tych, które spełniają określone kryteria. Każdy widok posiada również własny układ kolumn oraz domyślny porządek sortowania. Innymi słowy, widok mówi o tym, które sprawy spośród wszystkich spraw w danym folderze są widoczne, oraz które kolumny spośród wszystkich dostępnych kolumn są wyświetlone.</para>
@@ -533,7 +533,7 @@ for ( int i = 0; i &lt; 10; i++ )
       </mediaobject>
     </figure>
 
-    <para>Kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć wszystkie filtry. Zauważ że ponownie można dodać warunki zawierające te pola, które są już wykorzystane. Możesz więc tworzyć złożone filtry w rodzaju <quote>starszy niż 7 dni i jednocześnie nie starszy niż miesiąc</quote>.</para>
+    <para>Kliknij <guibutton>Odśwież</guibutton>, aby zobaczyć wszystkie filtry. Zauważ, że ponownie można dodać warunki zawierające te pola, które są już wykorzystane. Możesz więc tworzyć złożone filtry w rodzaju <quote>starszy niż 7 dni i jednocześnie nie starszy niż miesiąc</quote>.</para>
 
     <para>Zapisz zmiany klikając <guibutton>OK</guibutton>. Oczywiście lista nie będzie teraz zawierać żadnej sprawy, ponieważ w systemie nie ma jeszcze spraw starszych niż 7 dni.</para>
 
@@ -555,9 +555,9 @@ for ( int i = 0; i &lt; 10; i++ )
   <sect1 id="webissues.work.advanced">
     <title>Zaawansowana edycja</title>
 
-    <para>Można dodać opis do istniejącej sprawy, a także edytować lub usunąć opis. Może to zrobić tylko osoba która utworzyła daną sprawę, a także administrator systemu lub projektu.</para>
+    <para>Można dodać opis do istniejącej sprawy, a także edytować lub usunąć opis. Może to zrobić tylko osoba, która utworzyła daną sprawę, a także administrator systemu lub projektu.</para>
 
-    <para>Komentarze rónież mogą być edytowane oraz usuwane. Może to zrobić użytkownik, który utworzył dany komentarz, a także administrator systemu lub projektu, do którego należy dana sprawa. Administrator może więc pełnić rolę moderatora opisów i komentarzy. Użytkownik bez uprawnień administratora nie może natomiast modyfikować ani usuwać opisów ani komentarzy innych użytkowników.</para>
+    <para>Komentarze również mogą być edytowane oraz usuwane. Może to zrobić użytkownik, który utworzył dany komentarz, a także administrator systemu lub projektu, do którego należy dana sprawa. Administrator może więc pełnić rolę moderatora opisów i komentarzy. Użytkownik bez uprawnień administratora nie może natomiast modyfikować ani usuwać opisów ani komentarzy innych użytkowników.</para>
 
     <para>Możliwa jest także zmiana nazwy oraz opisu załączników, a także ich usuwanie. Podobnie jak w przypadku komentarzy, może to zrobić użytkownik, który utworzył załącznik lub administrator. Nie można natomiast zmodyfikować lub podmienić dołączonego pliku &mdash; aby to zrobić, musisz usunąć załącznik i dodać nowy plik jako osobny załącznik.</para>
 
@@ -579,7 +579,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>Administrator może także przenieść sprawę do innego folderu za pomocą polecenia <guilabel>Przenieś sprawę</guilabel>. Docelowy folder musi być tego samego typu, co przenoszona sprawa, ponieważ nie można łączyć w jednym folderze spraw różnego typu. Aby przenieść sprawę do folderu znajdującego się w innym projekcie, musisz być administratorem obu projektów albo administratorem systemu. Operacja przeniesienia sprawy zostaje zarejestrowana w jej historii.</para>
 
-    <para>Każdy użytkownik może sklonować istniejącą sprawę, tworząc nową sprawę w tym samym folderze lub w innym folderze tego samego typu. Aby sklonować sprawę, wybierz polecenie <guilabel>Sklonuj sprawę</guilabel>. Nowa sprawa ma domyślnie taką samą nazwę, lokalizację i wartości atrybutów, jak klonowana sprawa. Możesz w razie potrzeby zmienić te wartości, a następnie ponownie kliknij <guibutton>OK</guibutton>. Nowa sprawa nie jest w żaden sposób powiązana z originalną sprawą, jednak możesz takie powiązanie utworzyć, używając odnośnika do sprawy (patrz sekcja <xref linkend="webissues.work.issues.comments"/>). Nie zachowuje również historii zmian oraz komentarzy i załączników dodanych do klonowanej sprawy.</para>
+    <para>Każdy użytkownik może sklonować istniejącą sprawę, tworząc nową sprawę w tym samym folderze lub w innym folderze tego samego typu. Aby sklonować sprawę, wybierz polecenie <guilabel>Sklonuj sprawę</guilabel>. Nowa sprawa ma domyślnie taką samą nazwę, lokalizację i wartości atrybutów, jak klonowana sprawa. Możesz w razie potrzeby zmienić te wartości, a następnie ponownie kliknij <guibutton>OK</guibutton>. Nowa sprawa nie jest w żaden sposób powiązana z oryginalną sprawą, jednak możesz takie powiązanie utworzyć, używając odnośnika do sprawy (patrz sekcja <xref linkend="webissues.work.issues.comments"/>). Nie zachowuje również historii zmian oraz komentarzy i załączników dodanych do klonowanej sprawy.</para>
 
     <para>Nie ma również żadnych ograniczeń, jeśli chodzi o edycję atrybutów sprawy. Każdy użytkownik może je dowolnie modyfikować, jednak każda zmiana jest trwale rejestrowana przez system i jedyną możliwością jej cofnięcia jest ponowna edycja.</para>
 
@@ -590,7 +590,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>Program Desktop Client umożliwia tworzenie prostych raportów zawierających listę spraw lub szczegóły wybranej sprawy. Raporty takie możesz od razu drukować lub zapisać jako dokument w formacie PDF lub HTML. Listę spraw możesz również eksportować do pliku w formacie CSV, który może być następnie zaimportowany do arkusza kalkulacyjnego lub do zewnętrznej bazy danych.</para>
 
-    <para>Aby utworzyć raport na podstawie listy spraw, otwórz odpowiedni folder lub globalną listę i wybierz widok, jeśli chcesz przefiltrować sprawy. Upewnij się że lista spraw jest aktywna, klikając na niej, a następnie wybierz polecenie <guibutton>Drukuj</guibutton>, aby wydrukować raport, lub <guibutton>Eksportuj</guibutton>, aby zapisać go w formacie PDF. Aby wyeksportować listę jako dokument w formacie HTML lub jako plik CSV, rozwiń menu obok przycisku <guibutton>Eksportuj</guibutton> i wybierz odpowiednią opcję.</para>
+    <para>Aby utworzyć raport na podstawie listy spraw, otwórz odpowiedni folder lub globalną listę i wybierz widok, jeśli chcesz przefiltrować sprawy. Upewnij się, że lista spraw jest aktywna, klikając na niej, a następnie wybierz polecenie <guibutton>Drukuj</guibutton>, aby wydrukować raport, lub <guibutton>Eksportuj</guibutton>, aby zapisać go w formacie PDF. Aby wyeksportować listę jako dokument w formacie HTML lub jako plik CSV, rozwiń menu obok przycisku <guibutton>Eksportuj</guibutton> i wybierz odpowiednią opcję.</para>
 
     <figure>
       <title>Drukowanie listy spraw</title>
@@ -617,7 +617,7 @@ for ( int i = 0; i &lt; 10; i++ )
       <para>W zależności od ustawień regionalnych, Excel może czasem źle odczytać plik CSV, tak że wszystkie pola są wyświetlone w jednej kolumnie, albo źle zinterpretować kodowanie znaków. W takim wypadku użyj funkcji importu pliku tekstowego, wybierz kodowanie znaków UTF-8 i wybierz przecinek jako separator kolumn. To samo dotyczy innych aplikacji importujących pliki CSV.</para>
     </tip>
 
-    <para>Aby utworzyć raport na podstawie pojedynczej sprawy, wybierz sprawę i upewnij się że widok historii sprawy jest aktywny, klikając na nim. Następnie wybierz polecenie <guibutton>Drukuj</guibutton>, aby wydrukować raport, lub <guibutton>Eksportuj</guibutton>, aby zapisać go w formacie PDF. Możesz również wyeksportować raport jako dokument w formacie HTML, wybierając odpowiednią opcję z rozwijanego menu.</para>
+    <para>Aby utworzyć raport na podstawie pojedynczej sprawy, wybierz sprawę i upewnij się, że widok historii sprawy jest aktywny, klikając na nim. Następnie wybierz polecenie <guibutton>Drukuj</guibutton>, aby wydrukować raport, lub <guibutton>Eksportuj</guibutton>, aby zapisać go w formacie PDF. Możesz również wyeksportować raport jako dokument w formacie HTML, wybierając odpowiednią opcję z rozwijanego menu.</para>
 
     <para>Raport może mieć postać podsumowania, w którym wyświetlone są tylko właściwości i atrybuty wybranej sprawy. Może też mieć postać pełnego raportu, zawierającego również historię sprawy. W przypadku pełnego raportu, brane jest pod uwagę ustawienie filtra historii (np. tylko komentarze, tylko załączniki).</para>
 
@@ -640,7 +640,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
       <para>Aby zmienić ustawienia użytkownika w programie Web Client, kliknij <guilabel>Narzędzia</guilabel>, a następnie <guilabel>Ustawienia użytkownika</guilabel>. W przypadku programu Desktop Client, polecenie <guilabel>Ustawienia użytkownika</guilabel> jest dostępne bezpośrednio z paska narzędzi okna głównego.</para>
 
-      <para><guilabel>Ustawienia regionalne</guilabel> pozwalają określić język dla programu Web Client (po zalogowaniu do systemu), a także język, w jakim będziesz otrzymywać powiadomienia mailowe. W przypadku programu Destkop Client, język interfejsu użytkownika zależy od ustawień programu i nie zmienia się po zalogowaniu do serwera. Użyj polecenia Ustawienia WebIssues (patrz niżej), aby zmienić te ustawienia.</para>
+      <para><guilabel>Ustawienia regionalne</guilabel> pozwalają określić język dla programu Web Client (po zalogowaniu do systemu), a także język, w jakim będziesz otrzymywać powiadomienia mailowe. W przypadku programu Desktop Client, język interfejsu użytkownika zależy od ustawień programu i nie zmienia się po zalogowaniu do serwera. Użyj polecenia Ustawienia WebIssues (patrz niżej), aby zmienić te ustawienia.</para>
 
       <para>Możesz również wybrać własną preferowaną strefę czasową. Ustawienie to określa strefę czasową dla dat wyświetlanych w programie Web Client, a także dla powiadomień mailowych. Natomiast program Desktop Client zawsze wyświetla daty zgodnie z lokalną strefą czasową komputera, na którym jest uruchomiony, i nie bierze pod uwagę ustawień serwera ani preferencji użytkownika.</para>
 
@@ -651,7 +651,7 @@ for ( int i = 0; i &lt; 10; i++ )
         </mediaobject>
       </figure>
 
-      <para>Format w jakim wyświetlane są liczby, data i czas, a także pierwszy dzień tygodnia w kalendarzu, zależą od aktualnego języka, w jakim wyświetlany jest interfejs użytkownika. Możesz zmienić te ustawienia za pomocą grupy opcji <guilabel>Formaty</guilabel>. Zmiany te będą miały wpływ zarówno na program Web Client, jak i Desktop Client (po połączeniu z danym serwerem).</para>
+      <para>Format, w jakim wyświetlane są liczby, data i czas, a także pierwszy dzień tygodnia w kalendarzu, zależą od aktualnego języka, w jakim wyświetlany jest interfejs użytkownika. Możesz zmienić te ustawienia za pomocą grupy opcji <guilabel>Formaty</guilabel>. Zmiany te będą miały wpływ zarówno na program Web Client, jak i Desktop Client (po połączeniu z danym serwerem).</para>
 
       <figure>
         <title>Formaty</title>
@@ -678,7 +678,7 @@ for ( int i = 0; i &lt; 10; i++ )
         </mediaobject>
       </figure>
 
-      <para>Możesz wybrać domyślny format tekstu używany dla nowych opisów i komentarzy. Wybierz opcję <guilabel>Zwykły tekst</guilabel> aby wyłączyć formatowanie lub <guilabel>Tekst ze znacznikami</guilabel> jeśli chcesz użyć prostych znaczników formatowania. Podczas edycji istniejących opisów i komentarzy, ich aktualny format jest domyślnie zachowany. Domyślne ustawienie tej opcji zależy od globalnych ustawień serwera.</para>
+      <para>Możesz wybrać domyślny format tekstu używany dla nowych opisów i komentarzy. Wybierz opcję <guilabel>Zwykły tekst</guilabel>, aby wyłączyć formatowanie lub <guilabel>Tekst ze znacznikami</guilabel>, jeśli chcesz użyć prostych znaczników formatowania. Podczas edycji istniejących opisów i komentarzy, ich aktualny format jest domyślnie zachowany. Domyślne ustawienie tej opcji zależy od globalnych ustawień serwera.</para>
 
       <figure>
         <title>Edycja</title>
@@ -696,7 +696,7 @@ for ( int i = 0; i &lt; 10; i++ )
     <sect2 id="webissues.work.personal.client">
       <title>Ustawienia programu Desktop Client</title>
 
-      <para>Aby zmienić ustawienia programu Desktop Client, kliknij ikonkę klucza znajdującą się w prawym górnym rogu okna programu. Ustawienia te nie zależą od tego, z którym serwerem systemu WebIssues się łączysz i są pamiętane jedynie na lokalnym komputerze. Możesz je zmieniać nawet jeśli nie jesteś połączony z żadnym serwerem.</para>
+      <para>Aby zmienić ustawienia programu Desktop Client, kliknij ikonkę klucza znajdującą się w prawym górnym rogu okna programu. Ustawienia te nie zależą od tego, z którym serwerem systemu WebIssues się łączysz i są pamiętane jedynie na lokalnym komputerze. Możesz je zmieniać nawet, jeśli nie jesteś połączony z żadnym serwerem.</para>
 
       <para>Pierwsza zakładka zawiera podstawowe ustawienia programu:</para>
 
@@ -711,7 +711,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
       <para>Jeśli włączysz opcję <guilabel>Zadokuj główne okno w obszarze powiadomień</guilabel>, program pozostanie uruchomiony w tle nawet po zamknięciu głównego okna. W każdej chwili możesz ponownie otworzyć to okno, klikając na ikonę programu w pasku powiadomień systemowych. Aby zakończyć działanie programu, zamiast zamykać okno, kliknij przycisk <guibutton>Zakończ</guibutton> dostępny w prawym górnym rogu po włączeniu tej opcji.</para>
 
-      <para><guilabel>Opcje uruchamiania</guilabel> pozwalają określić zachowanie programu po jego uruchomieniu. Jeśli główne okno jest zadokowane, możesz określić, czy po uruchomieniu ma ono być zawsze widoczne, zawsze schowane lub widoczne lub schowane w zależności od stanu w momencie zamknięcia programu. Możesz również określić, czy program ma automatycznie łączyć się z ostatnio używanym serwerem, wyświetlać okno wyboru serwera lub łączyć się tylko jeśli był połączony w momecie zamknięcia.</para>
+      <para><guilabel>Opcje uruchamiania</guilabel> pozwalają określić zachowanie programu po jego uruchomieniu. Jeśli główne okno jest zadokowane, możesz określić, czy po uruchomieniu ma ono być zawsze widoczne, zawsze schowane lub widoczne lub schowane w zależności od stanu w momencie zamknięcia programu. Możesz również określić, czy program ma automatycznie łączyć się z ostatnio używanym serwerem, wyświetlać okno wyboru serwera lub łączyć się tylko, jeśli był połączony w momencie zamknięcia.</para>
 
       <para>W przypadku systemu Windows możesz również określić, czy program Desktop Client ma być automatycznie uruchamiany po zalogowaniu do systemu. Dzięki temu możesz tak skonfigurować program, by był zawsze uruchomiony, połączony z serwerem i dostępny pod ręką.</para>
 
@@ -728,7 +728,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
       <para>Grupa opcji <guilabel>Zachowanie</guilabel> pozwala wybrać domyślną akcję po kliknięciu na odnośnik do załącznika. Domyślnie program wyświetli pytanie, czy chcesz go otworzyć w domyślnej aplikacji, czy zapisać w wybranym miejscu na dysku. Możesz również kliknąć prawym przyciskiem na odnośniku, aby szybko wybrać żądaną operację.</para>
 
-      <para><guilabel>Okresy odświeżania</guilabel> określają częstotliwość z jaką program automatycznie pobiera dane z serwera (w minutach). Pierwszy okres określa jak często program aktualizuje drzewo projektów i folderów, listy spraw oraz stan aktywnych alertów. Drugi okres określa jak często odświeżane są typy spraw, widoki i inne dane, które nie zmieniają się zbyt często.</para>
+      <para><guilabel>Okresy odświeżania</guilabel> określają częstotliwość, z jaką program automatycznie pobiera dane z serwera (w minutach). Pierwszy okres określa jak często program aktualizuje drzewo projektów i folderów, listy spraw oraz stan aktywnych alertów. Drugi okres określa jak często odświeżane są typy spraw, widoki i inne dane, które nie zmieniają się zbyt często.</para>
 
       <para><guilabel>Ustawienia proxy</guilabel> pozwalają zdefiniować parametry serwera proxy, przez który program będzie się łączyć z systemem WebIssues. W przypadku systemów Windows oraz OS X program automatycznie wykrywa ustawienia systemowe, więc zwykle ręczna konfiguracja nie jest konieczna. Natomiast w przypadku systemu Linux, musisz wpisać parametry połączenia, jeśli chcesz korzystać z serwera proxy. Jeśli proxy wymaga uwierzytelnienia, zostaniesz poproszony o nazwę użytkownika i hasło w momencie otwarcia połączenia.</para>
 
