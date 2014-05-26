@@ -289,6 +289,17 @@ for ( int i = 0; i &lt; 10; i++ )
 </programlisting>
               </entry>
             </row>
+            <row>
+              <entry>
+<programlisting>[rtl]
+To jest tekst od prawej do lewej.
+[/rtl]
+</programlisting>
+              </entry>
+              <entry>
+                <para align="right">.To jest tekst od prawej do lewej</para>
+              </entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
@@ -302,6 +313,8 @@ for ( int i = 0; i &lt; 10; i++ )
       <para>Cytaty są otoczone przerywaną ramką i mogą mieć opcjonalny tytuł. Możesz w łatwy sposób cytować istniejące komentarze lub opisy spraw używając polecenia <guibutton>Odpowiedz</guibutton>. Otworzy ono nowe okno komentarza z automatycznie załączonym oryginalnym komentarzem lub opisem wraz ze znacznikami cytatu. Cytowany tekst może zawierać inne znaczniki, w tym zagnieżdżone cytaty, listy i bloki kodu.</para>
 
       <para>Bloki kodu mogą być używane do wklejania fragmentów kodu, plików logowania, itp. Są one wyświetlone dosłownie (tzn. wszystkie znaczniki są ignorowane) przy użyciu czcionki maszynowej. Jednak w odróżnieniu od znaczników czcionki maszynowej, blok kodu może zawierać wiele linii. Oprócz tego można określić język bloku kodu, co powoduje włączenie podświetlenia składni. Obsługiwane języki to: HTML, XML, C, C++, C#, Java, Bash (równoważny z SH), Python, Perl, Ruby, JavaScript (równoważny z JS), CSS, SQL, VB oraz PHP.</para>
+
+      <para>Bloki od prawej do lewej mogą być używane do zamieszczania fragmentów tekstu w języku zapisywanym od prawej do lewej strony, np. arabskim. Mogą one zawierać inne zagnieżdżone bloki.</para>
 
       <para>Użyj przycisku <guibutton>Podgląd</guibutton> w pasku narzędzi ponad polem edycji tekstu, by zobaczyć podgląd tekstu z formatowaniem i upewnić się, że wygląda on prawidłowo.</para>
 
@@ -460,11 +473,11 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>Z upływem czasu foldery zawierają coraz więcej spraw i znalezienie pożądanej informacji może być trudne. Możesz oczywiście posortować listę spraw po dowolnej kolumnie, nie tylko według identyfikatorów, ale również według nazwy lub wartości dowolnego atrybutu. Może to ułatwić wyszukanie potrzebnej informacji, ale nie zawsze jest wystarczające.</para>
 
-    <para>Lista spraw posiada również funkcję szybkiego wyszukiwania. Wpisz szukane słowo lub jego fragment w polu tekstowym po prawej stronie nad listą i naciśnij <guibutton>Szukaj</guibutton>, a wyświetlone zostaną tylko sprawy zawierające w nazwie szukany fragment tekstu. W programie Desktop Client wyszukiwanie działa od razu, gdy wpiszesz tekst, możesz również nacisnąć klawisz <shortcut><keycap>F3</keycap></shortcut>, aby szybko uaktywnić pole wyszukiwania. Możesz również wyszukiwać sprawy po nazwie użytkownika, który je utworzył lub zmodyfikował, a także po dowolnym atrybucie typu Tekst, Lista wyboru lub Użytkownik. Aby wybrać kolumnę, w której chcesz wyszukiwać, kliknij ikonkę znajdującą się z lewej strony pola wyszukiwania i wybierz odpowiednią opcję. Po wpisaniu szukanego fragmentu tekstu, zostaną wyświetlone tylko sprawy zawierające ten fragment w wybranej kolumnie.</para>
+    <para>Lista spraw posiada również funkcję szybkiego wyszukiwania. Wpisz szukane słowo lub jego fragment w polu tekstowym po prawej stronie nad listą i naciśnij <guibutton>Szukaj</guibutton>, a wyświetlone zostaną tylko sprawy zawierające w nazwie szukany fragment tekstu. W programie Desktop Client wyszukiwanie działa od razu, gdy wpiszesz tekst, możesz również nacisnąć klawisz <shortcut><keycap>F3</keycap></shortcut>, aby szybko uaktywnić pole wyszukiwania. Możesz również wyszukiwać sprawy po identyfikatorze, po nazwie użytkownika, który je utworzył lub zmodyfikował, a także po dowolnym atrybucie typu Tekst, Lista wyboru lub Użytkownik. Aby wybrać kolumnę, w której chcesz wyszukiwać, kliknij ikonkę znajdującą się z lewej strony pola wyszukiwania i wybierz odpowiednią opcję. Po wpisaniu szukanego fragmentu tekstu lub identyfikatora, zostaną wyświetlone tylko sprawy zawierające ten fragment w wybranej kolumnie lub sprawa o danym identyfikatorze.</para>
 
     <tip>
       <title>Wskazówka</title>
-      <para>Aby szybko znaleźć sprawę o danym identyfikatorze, użyj polecenia <guilabel>Idź do elementu</guilabel>. Patrz sekcja <xref linkend="webissues.work.issues.comments"/>, aby uzyskać więcej informacji na temat identyfikatorów spraw, komentarzy i załączników.</para>
+      <para>Aby szybko znaleźć sprawę o danym identyfikatorze w dowolnym folderze, użyj polecenia <guilabel>Idź do elementu</guilabel>. Patrz sekcja <xref linkend="webissues.work.issues.comments"/>, aby uzyskać więcej informacji na temat identyfikatorów spraw, komentarzy i załączników.</para>
     </tip>
 
     <para>Najbardziej przydatne w codziennej pracy jest jednak korzystanie z widoków. Każdy widok posiada warunki filtrowania, które ograniczają listę wyświetlonych spraw do tych, które spełniają określone kryteria. Każdy widok posiada również własny układ kolumn oraz domyślny porządek sortowania. Innymi słowy, widok mówi o tym, które sprawy spośród wszystkich spraw w danym folderze są widoczne, oraz które kolumny spośród wszystkich dostępnych kolumn są wyświetlone.</para>
@@ -588,7 +601,7 @@ for ( int i = 0; i &lt; 10; i++ )
   <sect1 id="webissues.work.export">
     <title>Drukowanie i eksportowanie</title>
 
-    <para>Program Desktop Client umożliwia tworzenie prostych raportów zawierających listę spraw lub szczegóły wybranej sprawy. Raporty takie możesz od razu drukować lub zapisać jako dokument w formacie PDF lub HTML. Listę spraw możesz również eksportować do pliku w formacie CSV, który może być następnie zaimportowany do arkusza kalkulacyjnego lub do zewnętrznej bazy danych.</para>
+    <para>Program Desktop Client umożliwia tworzenie prostych raportów zawierających listę spraw lub szczegóły wybranej sprawy. Raporty takie możesz od razu drukować lub zapisać jako dokument w formacie PDF lub HTML. Zarówno w programie Desktop Client, jak i Web Client, możesz również eksportować listę spraw do pliku w formacie CSV, który może być następnie zaimportowany do arkusza kalkulacyjnego lub do zewnętrznej bazy danych.</para>
 
     <para>Aby utworzyć raport na podstawie listy spraw, otwórz odpowiedni folder lub globalną listę i wybierz widok, jeśli chcesz przefiltrować sprawy. Upewnij się, że lista spraw jest aktywna, klikając na niej, a następnie wybierz polecenie <guibutton>Drukuj</guibutton>, aby wydrukować raport, lub <guibutton>Eksportuj</guibutton>, aby zapisać go w formacie PDF. Aby wyeksportować listę jako dokument w formacie HTML lub jako plik CSV, rozwiń menu obok przycisku <guibutton>Eksportuj</guibutton> i wybierz odpowiednią opcję.</para>
 
@@ -601,7 +614,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>Raport może mieć postać prostej tabeli, w której mogą być zawarte tylko kolumny widoczne w wybranym widoku lub wszystkie kolumny systemowe i kolumny zdefiniowane przez użytkownika (atrybuty). Raport może mieć również formę podsumowania zawierającego właściwości i atrybuty poszczególnych spraw. W przypadku eksportu do formatu CSV, dostępna jest tylko możliwość tworzenia raportu w postaci tabeli.</para>
 
-    <para>Jeśli zapisujesz raport do pliku, wybierz postać raportu, naciśnij <guibutton>OK</guibutton>, a następnie wybierz folder, w którym zostanie zapisany plik i wpisz jego nazwę. Jeśli drukujesz raport, naciśnij <guibutton>OK</guibutton>, a następnie wybierz drukarkę i ewentualnie inne opcje drukowania. Możesz również nacisnąć przycisk <guibutton>Podgląd wydruku</guibutton>, aby zobaczyć raport przed wydrukowaniem.</para>
+    <para>Jeśli zapisujesz raport do pliku, wybierz postać raportu, naciśnij <guibutton>OK</guibutton>, a następnie wybierz folder, w którym zostanie zapisany plik i wpisz jego nazwę. W przypadku programu Web Client, raport zostanie po prostu pobrany przez przeglądarkę. Jeśli drukujesz raport, naciśnij <guibutton>OK</guibutton>, a następnie wybierz drukarkę i ewentualnie inne opcje drukowania. Możesz również nacisnąć przycisk <guibutton>Podgląd wydruku</guibutton>, aby zobaczyć raport przed wydrukowaniem.</para>
 
     <figure>
       <title>Podgląd wydruku</title>
@@ -628,7 +641,7 @@ for ( int i = 0; i &lt; 10; i++ )
   <sect1 id="webissues.work.personal">
     <title>Personalizacja</title>
 
-    <para>Poszczególni użytkownicy systemu WebIssues mają możliwość dostosowania ustawień regionalnych &mdash; języka, strefy czasowej, oraz formatu liczb, daty i czasu. W programie Web Client użytkownicy mogą zmienić preferowaną liczbę spraw na stronie w liście spraw oraz liczbę elementów na stronie historii sprawy. Natomiast w programie Desktop Client można zmienić ustawienia interfejsu użytkownika, czcionki, okres odświeżania danych, itp.</para>
+    <para>Poszczególni użytkownicy systemu WebIssues mają możliwość dostosowania ustawień regionalnych &mdash; języka, strefy czasowej, oraz formatu liczb, daty i czasu. W programie Web Client użytkownicy mogą zmienić preferowaną liczbę projektów na stronie w drzewie projektów, liczbę spraw na stronie w liście spraw oraz liczbę elementów na stronie historii sprawy. Natomiast w programie Desktop Client można zmienić ustawienia interfejsu użytkownika, czcionki, okres odświeżania danych, itp.</para>
 
     <tip>
       <title>Wskazówka</title>
@@ -660,7 +673,7 @@ for ( int i = 0; i &lt; 10; i++ )
         </mediaobject>
       </figure>
 
-      <para>Za pomocą grupy opcji <guilabel>Rozmiar strony</guilabel> możesz określić liczbę spraw, jaka ma być wyświetlana na pojedynczej stronie w liście spraw oraz liczbę elementów na stronie historii sprawy. Opcje te wpływają jedynie na program Web Client, ponieważ program Desktop Client zawsze wyświetla wszystkie sprawy i pełną historię, bez podziału na strony.</para>
+      <para>Za pomocą grupy opcji <guilabel>Rozmiar strony</guilabel> możesz określić liczbę spraw, jaka ma być wyświetlana na pojedynczej stronie w drzewie projektów i liście spraw oraz liczbę elementów na stronie historii sprawy. Opcje te wpływają jedynie na program Web Client, ponieważ program Desktop Client zawsze wyświetla wszystkie projekty i sprawy oraz pełną historię, bez podziału na strony.</para>
 
       <figure>
         <title>Rozmiar strony</title>
@@ -710,6 +723,8 @@ for ( int i = 0; i &lt; 10; i++ )
       <para><guilabel>Ustawienia regionalne</guilabel> pozwalają określić język interfejsu użytkownika dla programu Desktop Client. Domyślnie zależy on od ustawień systemu operacyjnego. Zmiana języka wymaga zamknięcia i ponownego uruchomienia programu.</para>
 
       <para>Jeśli włączysz opcję <guilabel>Zadokuj główne okno w obszarze powiadomień</guilabel>, program pozostanie uruchomiony w tle nawet po zamknięciu głównego okna. W każdej chwili możesz ponownie otworzyć to okno, klikając na ikonę programu w pasku powiadomień systemowych. Aby zakończyć działanie programu, zamiast zamykać okno, kliknij przycisk <guibutton>Zakończ</guibutton> dostępny w prawym górnym rogu po włączeniu tej opcji.</para>
+
+      <para>Możesz użyć opcji <guilabel>Rozmiar tekstu w szczegółach sprawy i podsumowaniu projektu</guilabel> aby zmienić rozmiar czcionki w widoku szczegółów sprawy oraz widoku podsumowania projektu. Jeśli domyślny rozmiar czcionki jest zbyt mały, możesz go ustawić na 125% lub 150% w zależności od potrzeb.</para>
 
       <para><guilabel>Opcje uruchamiania</guilabel> pozwalają określić zachowanie programu po jego uruchomieniu. Jeśli główne okno jest zadokowane, możesz określić, czy po uruchomieniu ma ono być zawsze widoczne, zawsze schowane lub widoczne lub schowane w zależności od stanu w momencie zamknięcia programu. Możesz również określić, czy program ma automatycznie łączyć się z ostatnio używanym serwerem, wyświetlać okno wyboru serwera lub łączyć się tylko, jeśli był połączony w momencie zamknięcia.</para>
 

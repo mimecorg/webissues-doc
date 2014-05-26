@@ -204,4 +204,10 @@
   </span>
 </xsl:template>
 
+<xsl:template match="para[@align]">
+  <p style="text-align: {@align}">
+    <xsl:apply-templates/>
+  </p>
+</xsl:template>
+
 </xsl:stylesheet>

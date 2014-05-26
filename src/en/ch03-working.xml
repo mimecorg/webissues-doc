@@ -289,6 +289,17 @@ for ( int i = 0; i &lt; 10; i++ )
 </programlisting>
               </entry>
             </row>
+            <row>
+              <entry>
+<programlisting>[rtl]
+This is right-to-left text.
+[/rtl]
+</programlisting>
+              </entry>
+              <entry>
+                <para align="right">.This is right-to-left text</para>
+              </entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
@@ -302,6 +313,8 @@ for ( int i = 0; i &lt; 10; i++ )
       <para>Quotes are displayed in a dashed frame and they may have an optional title. You can easily quote existing comments or the description of the issue by using the <guibutton>Reply</guibutton> command. This will open a new comment window with the original comment or description automatically included and marked with the quote tags. Quoted text may contain other markup, including nested quotes, lists and code blocks.</para>
 
       <para>Code blocks are useful for pasting fragments of code, log files, etc. They are displayed verbatim, with all markup is ignored, and using a monospace font. However, unlike the monospace font tags, a comment block may contain multiple lines. In addition, the language of the code block can be specified, enabling syntax highlighting. Supported languages include: HTML, XML, C, C++, C#, Java, Bash (equivalent to SH), Python, Perl, Ruby, JavaScript (equivalent to JS), CSS, SQL, VB and PHP.</para>
+
+      <para>Right-to-left blocks can be used to include fragments of text in a language written right-to-left, for example Arabic. They can contain other nested blocks.</para>
 
       <para>You can use the <guibutton>Preview</guibutton> button in the toolbar above the text field to see a preview of the text with all formatting applied, to verify that it looks correctly.</para>
 
@@ -460,11 +473,11 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>Over time, folders contain more and more issues and finding the desired information can become difficult. You can of course sort the list of issues using any column, not only by identifiers, but also by name or the value of any attribute. This can help you find the information you need, but it's not always enough.</para>
 
-    <para>The list of issues also has a quick search function. Enter a word or its fragment in the text box on the right side above the list and press <guibutton>Search</guibutton>, and you will see only issues which contain the text in their name. In the Desktop Client the search is performed immediately as you type, you can also press <shortcut><keycap>F3</keycap></shortcut> to quickly activate the search box. You can also search by the name of the user who created or modified the issue, as well as by any Text, Dropdown list or User attribute. To select the column in which you want to search, click the icon to the left of the search box and select the appropriate option. After entering the text you want to search, only the issues containing this text in the selected column will be displayed.</para>
+    <para>The list of issues also has a quick search function. Enter a word or its fragment in the text box on the right side above the list and press <guibutton>Search</guibutton>, and you will see only issues which contain the text in their name. In the Desktop Client the search is performed immediately as you type, you can also press <shortcut><keycap>F3</keycap></shortcut> to quickly activate the search box. You can also search by identifier of the issue, by the name of the user who created or modified the issue, as well as by any Text, Dropdown list or User attribute. To select the column in which you want to search, click the icon to the left of the search box and select the appropriate option. After entering the text or identifier you want to search, only the issues containing this text in the selected column or the issue with given identifier will be displayed.</para>
 
     <tip>
       <title>Tip</title>
-      <para>To quickly find an issue with given identifier, use the <guilabel>Go To item</guilabel> command. See <xref linkend="webissues.work.issues.comments"/> for more information about identifiers of issues, comments and attachments.</para>
+      <para>To quickly find an issue with given identifier in any folder, use the <guilabel>Go To item</guilabel> command. See <xref linkend="webissues.work.issues.comments"/> for more information about identifiers of issues, comments and attachments.</para>
     </tip>
 
     <para>In everyday work, however, it's most useful to use views. Each view has filter conditions, which limit the displayed list of issues to those that meet certain criteria. Each view also has its own column layout, and default sort order. In other words, the view defines which issues from all issues in the folder are visible, and which columns from all available columns are displayed.</para>
@@ -588,7 +601,7 @@ for ( int i = 0; i &lt; 10; i++ )
   <sect1 id="webissues.work.export">
     <title>Printing and exporting</title>
 
-    <para>The Desktop Client allows you to create simple reports containing a list of issues or details of the selected issue. These reports can be directly printed or saved as a PDF or HTML document. You can also export the list of issues to a CSV file, which can be imported into a spreadsheet or an external database.</para>
+    <para>The Desktop Client allows you to create simple reports containing a list of issues or details of the selected issue. These reports can be directly printed or saved as a PDF or HTML document. In both the Desktop Client and the Web Client you can also export the list of issues to a CSV file, which can be imported into a spreadsheet or an external database.</para>
 
     <para>To create a report based on a list of issues, open the folder or global list of issues, and select the view if you want to filter the issues. Make sure that the list of issues is active by clicking on it, and then select the <guibutton>Print</guibutton> command to print the report, or <guibutton>Export</guibutton> to save it in PDF format. To export the list as a document in HTML format or as a CSV file, expand the menu next to the <guibutton>Export</guibutton> button and select the appropriate option.</para>
 
@@ -601,7 +614,7 @@ for ( int i = 0; i &lt; 10; i++ )
 
     <para>The report can be a simple table, which can contain only columns which are visible in the selected view, or all system columns and user-defined columns (attributes). The report may also have the form of a summary, including the properties and attributes of individual issues. When exporting to CSV format it is only possible create a table report.</para>
 
-    <para>If you are saving the report to a file, select the type of the report, press <guibutton>OK</guibutton> and then select the folder where you want to save the file and enter its name. When printing a report, press <guibutton>OK</guibutton> and then select the printer and possibly other printing options. You can also press the <guibutton>Print Preview</guibutton> button to see the report before printing.</para>
+    <para>If you are saving the report to a file, select the type of the report, press <guibutton>OK</guibutton> and then select the folder where you want to save the file and enter its name. In case of the Web Client, the report will be simply downloaded by the browser. When printing a report, press <guibutton>OK</guibutton> and then select the printer and possibly other printing options. You can also press the <guibutton>Print Preview</guibutton> button to see the report before printing.</para>
 
     <figure>
       <title>Print preview</title>
@@ -628,7 +641,7 @@ for ( int i = 0; i &lt; 10; i++ )
   <sect1 id="webissues.work.personal">
     <title>Personalization</title>
 
-    <para>Individual users of the WebIssues system can customize the regional settings &mdash; the language, time zone and format or numbers, date and time. Users of the Web Client can change the preferred number of issues displayed on a page of the list of issues and the number of elements on a page of the issue history. In the Desktop Client, you can change the user interface settings, fonts, intervals of updates, etc.</para>
+    <para>Individual users of the WebIssues system can customize the regional settings &mdash; the language, time zone and format or numbers, date and time. Users of the Web Client can change the preferred number of projects displayed on a page of the projects tree, number of issues displayed on a page of the list of issues and number of elements on a page of the issue history. In the Desktop Client, you can change the user interface settings, fonts, intervals of updates, etc.</para>
 
     <tip>
       <title>Tip</title>
@@ -660,7 +673,7 @@ for ( int i = 0; i &lt; 10; i++ )
         </mediaobject>
       </figure>
 
-      <para>Using the <guilabel>Page Size</guilabel> options, you can specify the number of issues to be displayed on a single page in the list of issues, and the number of elements per page in the issue history. These options only affect the Web Client, because the Desktop Client always displays all issues and the entire history without pagination.</para>
+      <para>Using the <guilabel>Page Size</guilabel> options, you can specify the number of issues to be displayed on a single page in the projects tree and list of issues, and the number of elements per page in the issue history. These options only affect the Web Client, because the Desktop Client always displays all projects, all issues and the entire history without pagination.</para>
 
       <figure>
         <title>Page size</title>
@@ -710,6 +723,8 @@ for ( int i = 0; i &lt; 10; i++ )
       <para>The <guilabel>Regional Settings</guilabel> allow you to select the language of the user interface for the Desktop Client. By default, it depends on the operating system settings. After changing the language you must close and restart the program.</para>
 
       <para>If you enable the <guilabel>Dock main window in system tray</guilabel> option, the program keeps running in the background even when you close the main window. You can always re-open this window by clicking on the icon in the system notifications area. To exit the program, instead of closing the window, click the <guibutton>Quit</guibutton> button, available in the upper right corner of the window when you enable this option.</para>
+
+      <para>You can use the <guilabel>Text size in issue details and project summary</guilabel> to change the font size in the issue details view and the project summary view. If the font is too small, you can set it to 125% or 150% depending on your needs.</para>
 
       <para>The <guilabel>Startup Options</guilabel> allow you to specify the behavior of the program when it is started. If the main window is docked, you can specify whether it is always visible at startup, always hidden, or either visible or hidden depending on its state when the program was closed. You can also specify whether the program should automatically connect to the last used server, display the server selection window, or connect only if it was connected when closing.</para>
 

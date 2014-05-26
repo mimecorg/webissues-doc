@@ -267,7 +267,7 @@
 
     <para>Grupy opcji <guilabel>Ustawienia regionalne</guilabel> oraz <guilabel>Formaty</guilabel> zostały opisane w sekcji <xref linkend="webissues.custom.locale"/>.</para>
 
-    <para>Grupa opcji <guilabel>Rozmiar strony</guilabel> umożliwia określenie domyślnej liczby spraw wyświetlanych na pojedynczej stronie w liście spraw oraz domyślnej liczby elementów na stronie historii sprawy. Każdy użytkownik może natomiast wybrać własne preferowane ustawienia, korzystając z polecenia <guilabel>Ustawienia użytkownika</guilabel>. Opcje te wpływają jedynie na program Web Client, ponieważ program Desktop Client zawsze wyświetla wszystkie sprawy i pełną historię, bez podziału na strony.</para>
+    <para>Grupa opcji <guilabel>Rozmiar strony</guilabel> umożliwia określenie domyślnej liczby spraw wyświetlanych na pojedynczej stronie w drzewie projektów i w liście spraw oraz domyślnej liczby elementów na stronie historii sprawy. Każdy użytkownik może natomiast wybrać własne preferowane ustawienia, korzystając z polecenia <guilabel>Ustawienia użytkownika</guilabel>. Opcje te wpływają jedynie na program Web Client, ponieważ program Desktop Client zawsze wyświetla wszystkie projekty i sprawy oraz pełną historię, bez podziału na strony.</para>
 
     <figure>
       <title>Rozmiar strony</title>

@@ -267,7 +267,7 @@
 
     <para>The <guilabel>Regional Options</guilabel> and <guilabel>Formats</guilabel> groups of options are described in <xref linkend="webissues.custom.locale"/>.</para>
 
-    <para>The <guilabel>Page Size</guilabel> groups of options allows you to specify the default number of issues displayed on a single page in the list of issues, and the default number of elements per page in the issue history. Each user can choose their own preferred settings using the <guilabel>User Preferences</guilabel> command. These options only affect the Web Client, because the Desktop Client always displays all issues and complete history without pagination.</para>
+    <para>The <guilabel>Page Size</guilabel> group of options allows you to specify the default number of projects displayed on a single page in the projects tree, the default number of issues per page in the list of issues, and the default number of elements per page in the issue history. Each user can choose their own preferred settings using the <guilabel>User Preferences</guilabel> command. These options only affect the Web Client, because the Desktop Client always displays all projects and issues and the complete history without pagination.</para>
 
     <figure>
       <title>Page Size</title>

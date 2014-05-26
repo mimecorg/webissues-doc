@@ -265,4 +265,10 @@
   </fo:page-sequence>
 </xsl:template>
 
+<xsl:template match="para[@align]">
+  <fo:block text-align="{@align}">
+    <xsl:apply-templates/>
+  </fo:block>
+</xsl:template>
+
 </xsl:stylesheet>
