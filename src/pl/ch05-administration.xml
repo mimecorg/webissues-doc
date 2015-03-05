@@ -68,6 +68,12 @@
           <para>Pozwala dostosować typy spraw oraz publiczne widoki. Patrz sekcje <xref linkend="webissues.custom.types"/> oraz <xref linkend="webissues.custom.views"/>.</para>
         </listitem>
       </varlistentry>
+      <varlistentry>
+      <term>Archiwum projektów</term>
+        <listitem>
+          <para>Pozwala zarządzać zarchiwizowanymi projektami. Patrz sekcja <xref linkend="webissues.admin.projects.archive"/>.</para>
+        </listitem>
+      </varlistentry>
     </variablelist>
 
     <para>W programie Desktop Client istnieje możliwość administrowania użytkownikami i projektami oraz zarządzania typami spraw i widokami. Polecenia <guilabel>Użytkownicy</guilabel> oraz <guilabel>Typy spraw</guilabel> są dostępne bezpośrednio z paska narzędzi głównego okna. Nie jest natomiast dostępny pełny Panel administracyjny. Aby uzyskać dostęp do dziennika zdarzeń lub zmienić ustawienia systemu, musisz zatem skorzystać z programu Web Client.</para>
@@ -326,7 +332,7 @@
 
     <warning>
       <title>Uwaga</title>
-      <para>Usuwając projekty lub foldery zwracaj szczególną uwagę, czy omyłkowo nie kasujesz niewłaściwych danych. Wszystkie zawarte w nich sprawy są trwale i nieodwracalnie usuwane z systemu i nie ma możliwości ich przywrócenia.</para>
+      <para>Usuwając projekty lub foldery zwracaj szczególną uwagę, czy omyłkowo nie kasujesz niewłaściwych danych. Wszystkie zawarte w nich sprawy są trwale i nieodwracalnie usuwane z systemu i nie ma możliwości ich przywrócenia. Możesz zarchiwizować projekt zamiast go usuwać, aby móc go później przywrócić w razie potrzeby.</para>
     </warning>
 
     <para>Opis projektu jest wyświetlany, gdy projekt zostanie wybrany w drzewie projektów, zarówno w programie Web Client, jak i Desktop Client. Możesz go użyć, by przekazać informacje o projekcie, w tym odnośniki do ważnych spraw lub zasobów zewnętrznych. Administratorzy systemu oraz projektu mogą dodać opis do istniejącego projektu, edytować opis i usunąć go. Opisy projektów używają tego samego formatu, co opisy spraw i komentarze. Aby uzyskać więcej informacji, patrz sekcja <xref linkend="webissues.work.issues.comments"/>.</para>
@@ -427,6 +433,26 @@
       </figure>
 
       <para>Aby usunąć członka projektu, wybierz go z listy i kliknij <guilabel>Usuń członka</guilabel>. W przypadku programu Desktop Client, możesz wybrać kilku członków z listy i zmienić ich poziom dostępu lub usunąć z projektu jednocześnie.</para>
+
+    </sect2>
+
+    <sect2 id="webissues.admin.projects.archive">
+      <title>Archiwizacja projektów</title>
+
+      <para>Kiedy projekt nie jest już potrzebny, można go usunąć bez trwałego kasowania. Zarchiwizowany projekt jest usuwany z drzewa projektów i nikt nie ma dostępu do folderów i spraw w tym projekcie. Jednak w przeciwieństwie do usuniętych projektów, zarchiwizowane projekty mogą być w każdej chwili przywrócone. Tylko administratorzy systemu mogą archiwizować i przywracać projekty.</para>
+
+      <para>Aby zarchiwizować projekt, wybierz polecenie <guilabel>Zarządzaj projektami</guilabel> w głównym oknie, następnie wybierz projekt i kliknij <guilabel>Archiwizuj projekt</guilabel>. W przypadku programu Desktop Client, to polecenie jest dostępne bezpośrednio w oknie głównym, jeśli uaktywnisz drzewo projektów.</para>
+
+      <tip>
+        <title>Wskazówka</title>
+        <para>Nie jest możliwe archiwizowanie pojedynczych folderów, ale możesz utworzyć nowy projekt, przenieść folder lub foldery, które chcesz zarchiwizować, do tego projektu, a następnie zarchiwizować ten projekt.</para>
+      </tip>
+
+      <para>Aby wyświetlić listę zarchiwizowanych projektów, przejdź do Panelu administracyjnego i kliknij <guilabel>Archiwum projektów</guilabel>. Ta funkcja nie jest dostępna w programie Desktop Client.</para>
+
+      <para>Aby przywrócić zarchiwizowany projekt, wybierz projekt i kliknij <guilabel>Przywróć projekt</guilabel>. Projekt zostanie usunięty z listy zarchiwizowanych projektów i pojawi się w drzewie projektów. Wszystkie foldery, sprawy, uprawnienia i inne informacje związane z projektem zostaną zachowane.</para>
+
+      <para>Aby trwale usunąć zarchiwizowany projekt, wybierz projekt i kliknij <guilabel>Usuń projekt</guilabel>. W tym wypadku nie będzie już możliwe przywrócenie jakichkolwiek informacji związanych z tym projektem. Możesz również użyć polecenia <guilabel>Zmień nazwę projektu</guilabel> aby zmienić nazwę zarchiwizowanego projektu oraz polecenia <guilabel>Wyświetl opis</guilabel> aby wyświetlić opis projektu, jeśli jest dostępny. Nie ma możliwości wyświetlenia folderów i spraw ani modyfikacji zarchwizowanego projektu.</para>
 
     </sect2>
 

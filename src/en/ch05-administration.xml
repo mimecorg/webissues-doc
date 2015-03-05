@@ -68,6 +68,12 @@
           <para>Allows customizing issue types and public views. See <xref linkend="webissues.custom.types"/> and <xref linkend="webissues.custom.views"/>.</para>
         </listitem>
       </varlistentry>
+      <varlistentry>
+      <term>Projects Archive</term>
+        <listitem>
+          <para>Allows managing archived projects. See <xref linkend="webissues.admin.projects.archive"/>.</para>
+        </listitem>
+      </varlistentry>
     </variablelist>
 
     <para>In the Desktop Client it is possible to administer users and projects and to manage issue types and views. The <guilabel>Users</guilabel> and <guilabel>Types</guilabel> commands are available directly from the main window's toolbar. However, the full Administration Panel is not available. In order to access the event log or change system settings, you must therefore use the Web Client.</para>
@@ -326,7 +332,7 @@
 
     <warning>
       <title>Warning</title>
-      <para>When deleting projects or folders, pay special attention whether you are not mistakenly deleting the wrong data. All issues contained in them are permanently and irreversibly removed from the system, and it's not possible to restore them.</para>
+      <para>When deleting projects or folders, pay special attention whether you are not mistakenly deleting the wrong data. All issues contained in them are permanently and irreversibly removed from the system, and it's not possible to restore them. You can archive a project instead of deleting it to make it possible to restore it later if necessary.</para>
     </warning>
 
     <para>The project description is displayed when the project is selected in the projects tree in both the Web Client and the Desktop Client. It can be used to provide information about the project, including links to important issues or external resources. Both system administrators and project administrators can add a description to an existing project, edit the description and delete it. Project descriptions use the same format as issue descriptions and comments; see <xref linkend="webissues.work.issues.comments"/> for more information.</para>
@@ -427,6 +433,26 @@
       </figure>
 
       <para>To remove a member of the project, select the member on the list and click <guilabel>Remove Member</guilabel>. In case of the Desktop Client, you can choose several members on the list, and change their access or remove them from the project simultaneously.</para>
+
+    </sect2>
+
+    <sect2 id="webissues.admin.projects.archive">
+      <title>Archiving projects</title>
+
+      <para>When a project is no longer needed, it is possible to remove it without permanently deleting it. When a project is archived, it is removed from the projects tree and no one can access any folders and issues in that project. However, unlike deleted projects, archived projects can be restored at any time. Only system administrators can archive and restore projects.</para>
+
+      <para>To archive a project, go to <guilabel>Manage Projects</guilabel> from the main window, select the project, and then click <guilabel>Archive Project</guilabel>. In case of the Desktop Client, this command is available directly from the main window if you activate the projects tree.</para>
+
+      <tip>
+        <title>Tip</title>
+        <para>It is not possible to archive individual folders, but you can create a new project, move the folder or folders that you want to archive to that project, and then archive the project.</para>
+      </tip>
+
+      <para>To open a list of archived projects, go to the Administration Panel and click <guilabel>Projects Archive</guilabel>. This function is not available in the Desktop Client.</para>
+
+      <para>To restore an archived project, select the project and click <guilabel>Restore Project</guilabel>. The project will be removed from the list of archived projects and will appear in the projects tree. The folders, issues, permissions, alerts and other information related to the project will be preserved.</para>
+
+      <para>To permanently delete an archived project, select the project and click <guilabel>Delete Project</guilabel>. In that case it will no longer be possible to restore any information associated with the project. You can also use the <guilabel>Rename Project</guilabel> command to rename an archived project and the <guilabel>View Description</guilabel> command to view the description of the project, if available. Note that it is not possible to access any folders and issues or to modify the project while it's archived.</para>
 
     </sect2>
 
