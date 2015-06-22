@@ -99,9 +99,9 @@
             <xsl:with-param name="prev" select="$prev"/>
             <xsl:with-param name="next" select="$next"/>
           </xsl:call-template>
-          <div id="footer">
-            <xsl:apply-templates select="/book/bookinfo/copyright" mode="titlepage.mode"/>
-          </div>
+        </div>
+        <div id="footer">
+          <xsl:apply-templates select="/book/bookinfo/copyright" mode="titlepage.mode"/>
         </div>
       </div>
     </body>
