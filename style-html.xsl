@@ -139,6 +139,7 @@
         <xsl:text disable-output-escaping="yes"> &amp;raquo;</xsl:text>
       </xsl:if>
     </div>
+    <div class="clear"></div>
   </div>
 </xsl:template>
 
