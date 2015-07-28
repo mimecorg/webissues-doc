@@ -53,6 +53,17 @@
       </listitem>
     </itemizedlist>
 
+    <para>Starting with version 1.1.4, the Web Client also has a simplified mobile version, designed for mobile phones and other devices with small screens. The program detects if the user is using such device and automatically redirects to the mobile version. It is also possible to manually switch between the full and mobile versions of the user interface. To switch to the mobile version, select the <guilabel>Mobile version</guilabel> option in the top right corner of the page. To switch to the full version, expand the tools menu using the button in the top right corner of the page and select the <guilabel>Full version</guilabel> option.</para>
+
+    <figure>
+      <title>Mobile version of the Web Client</title>
+      <mediaobject>
+        <imageobject><imagedata fileref="images/ch03-fig02-01.png" format="PNG"/></imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>The mobile version contains the full functionality of the system related to working with issues. It is possible to display the list of issues, filter and search, view the history of issues, and also create new issues and edit existing ones. The operations on issues or comments are available by expanding the menus in top right corner of the list of issues, issue details or comment. The projects tree and list of issues are automatically collapsed to make working easier, and can be expanded by clicking on their header. The tools menu, available by pressing the button in the top right corner of the page, makes it possible to access such options as going to an issue with givent identifier, changing the password or changing user preferences. However, the mobile version doesn't have administrative functions or advanced functions such as managing views or alerts.</para>
+
     <para>To make it easier to work with the system, both the names of the functions and the graphic symbols of various objects are the same in both client applications. Below is a list of most important graphic symbols used in the WebIssues system:</para>
      
     <figure>
@@ -64,7 +75,7 @@
 
     <tip>
       <title>Tip</title>
-      <para>Both applications provide access to commonly used administrative functions, such as managing projects, users and types of issues. However, some administrative functions are only available through the web browser. These include system configuration and the event log.</para>
+      <para>Both applications provide access to commonly used administrative functions, such as managing projects, users and types of issues. However, some administrative functions are only available through the web browser. These include system configuration and the event log. Administrative options are not available in the mobile version of the Web Client.</para>
     </tip>
 
     <para>The Desktop Client can be installed on any computer with Windows (XP or later versions), Linux or Mac OS X. Installation packages exist for these systems. You can also compile and install the application from source &mdash; for more information, refer to the <literal>INSTALL</literal> file attached in the source package.</para>
@@ -115,7 +126,7 @@
 
       <note>
         <title>Note</title>
-        <para>For more information about enabling anonymous access, see <xref linkend="webissues.custom.settings"/>.</para>
+        <para>For more information about enabling anonymous access, see <xref linkend="webissues.custom.access"/>.</para>
       </note>
 
     </sect2>
@@ -129,7 +140,7 @@
 
       <note>
         <title>Note</title>
-        <para>For more information about enabling and configuring user registration, see <xref linkend="webissues.custom.settings"/>.</para>
+        <para>For more information about enabling and configuring user registration, see <xref linkend="webissues.custom.access"/>.</para>
       </note>
 
     </sect2>
@@ -673,7 +684,7 @@ This is right-to-left text.
         </mediaobject>
       </figure>
 
-      <para>Using the <guilabel>Page Size</guilabel> options, you can specify the number of issues to be displayed on a single page in the projects tree and list of issues, and the number of elements per page in the issue history. These options only affect the Web Client, because the Desktop Client always displays all projects, all issues and the entire history without pagination.</para>
+      <para>Using the <guilabel>Page Size</guilabel> options, you can specify the number of issues to be displayed on a single page in the projects tree and list of issues, and the number of elements per page in the issue history. These options only affect the Web Client, because the Desktop Client always displays all projects, all issues and the entire history without pagination. These options also have no effect in the mobile version, for which the page size is configured separately by the system administrator.</para>
 
       <figure>
         <title>Page size</title>

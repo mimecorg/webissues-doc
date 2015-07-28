@@ -35,7 +35,13 @@
       <varlistentry>
         <term>Ustawienia serwera</term>
         <listitem>
-          <para>Pozwala zmienić ustawienia językowe i inne ustawienia serwera WebIssues. Patrz sekcje <xref linkend="webissues.custom.locale"/> oraz <xref linkend="webissues.custom.settings"/>.</para>
+          <para>Pozwala zmienić ustawienia językowe i inne ustawienia serwera WebIssues. Patrz sekcja <xref linkend="webissues.custom.locale"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Ustawienia dostępu</term>
+        <listitem>
+          <para>Pozwala zmienić ustawienia dostępu anonimowego i rejestracji użytkowników. Patrz sekcja <xref linkend="webissues.custom.access"/>.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -48,6 +54,12 @@
         <term>Ustawienia skrzynki odbiorczej</term>
         <listitem>
           <para>Pozwala zmienić ustawienia skrzynki odbiorczej umożliwiającej odbieranie e-maili. Patrz sekcja <xref linkend="webissues.prep.inbox"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Ustawienia zaawansowane</term>
+        <listitem>
+          <para>Pozwala zmienić pozostałe ustawienia serwera WebIssues. Patrz sekcja <xref linkend="webissues.custom.settings"/>.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -222,7 +234,7 @@
 
       <para>System WebIssues nie pozwala na usuwanie istniejących użytkowników, ponieważ przechowuje on wszystkie informacje historyczne, na przykład zmiany dokonane przez poszczególnych użytkowników. Zamiast tego możesz zmienić poziom uprawnień użytkowników, którzy nie powinni już mieć dostępu do systemu, na wyłączony. Użyj opcji filtrowania w prawym górnym rogu listy, aby ukryć wyłączone konta użytkowników.</para>
 
-      <para>System WebIssues umożliwia użytkownikom samodzielnie dokonywać rejestracji nowych kont. Więcej informacji na ten konfigurowania rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
+      <para>System WebIssues umożliwia użytkownikom samodzielnie dokonywać rejestracji nowych kont. Więcej informacji na ten konfigurowania rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.custom.access"/>.</para>
 
     </sect2>
 
@@ -290,7 +302,7 @@
 
     <note>
       <title>Notatka</title>
-      <para>Więcej informacji na temat rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.work.login"/>. Informacje na temat włączania i konfigurowania rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
+      <para>Więcej informacji na temat rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.work.login"/>. Informacje na temat włączania i konfigurowania rejestracji użytkowników znajdziesz w sekcji <xref linkend="webissues.custom.access"/>.</para>
     </note>
 
     <para>Aby wyświetlić aktywne zgłoszenia rejestracji, które oczekują na zatwierdzenie, przejdź do Panelu administracyjnego i kliknij <guilabel>Zgłoszenia rejestracji</guilabel>. Funkcja ta nie jest dostępna w programie Desktop Client.</para>
@@ -308,7 +320,7 @@
 
     <para>Aby odrzucić wybrane zgłoszenie rejestracji, użyj polecenia <guilabel>Odrzuć zgłoszenie</guilabel>. Zostanie ono usunięte z listy zgłoszeń, a użytkownik otrzyma powiadomienie mailowe o odrzuceniu zgłoszenia.</para>
 
-    <para>Jeśli chcesz otrzymywać automatyczne powiadomienia o nowych zgłoszeniach rejestracji, które oczekują na zatwierdzenie, podaj swój adres e-mail w opcjach rejestracji użytkowników. Więcej informacji znajdziesz w sekcji <xref linkend="webissues.custom.settings"/>.</para>
+    <para>Jeśli chcesz otrzymywać automatyczne powiadomienia o nowych zgłoszeniach rejestracji, które oczekują na zatwierdzenie, podaj swój adres e-mail w opcjach rejestracji użytkowników. Więcej informacji znajdziesz w sekcji <xref linkend="webissues.custom.access"/>.</para>
 
   </sect1>
 

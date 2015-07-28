@@ -264,7 +264,7 @@
         <para>For more information on setting up the standard mechanism for sending emails which is built into PHP, please visit <ulink url="http://php.net/manual/en/mail.configuration.php"/>.</para>
       </note>
 
-      <para>You can also send emails using an external SMTP server. You can either use your company or organization's mail server, or any public email service (e.g. gmail). Select <guilabel>Custom SMTP server</guilabel> and enter the address of the sender. In the <guilabel>SMTP Server</guilabel> section, type the address of the server and the port number of the email service (usually 25 or 465 for encrypted connections). Select the encryption mode, if the SMTP server supports encrypted communication. Also enter the user name and password required to access the SMTP server.</para>
+      <para>You can also send emails using an external SMTP server. You can either use your company or organization's mail server, or any public email service (e.g. gmail). Select <guilabel>Custom SMTP server</guilabel> and enter the address of the sender. In the <guilabel>SMTP Server</guilabel> section, type the address of the server and the port number of the email service (usually 25 or 587 for encrypted connections). Select the encryption mode, if the SMTP server supports encrypted communication. Also enter the user name and password required to access the SMTP server.</para>
 
       <para>Click <guibutton>Test Connection</guibutton> to check whether the SMTP configuration is correct. The WebIssues system will send a test message to its own address. If you receive it, it means that the configuration is correct. Don't forget to save the configuration by clicking <guibutton>OK</guibutton>.</para>
 
@@ -408,7 +408,7 @@
 
       <para>Automatic subscriptions also work for external users. This makes it possible for persons without a WebIssues account to receive notifications and interact with issues that they created. In a typical service desk scenario, when someone sends a message to the inbox account, an issue is created and the sender is automatically subscribed to the issue. When a support person modifies the issue or adds a comment using the WebIssues system, a subscription notification is automatically sent to the creator of the issue. He can then reply to the notification email in order to provide more information. This way external users can communicate with the WebIssues system using email and entire communication is tracked in the issue history.</para>
 
-      <para>You can also enable anonymous access to allow external users to see all issues from public projects using the Web Client, without having to log in. However, keep in mind that in that case all users will have access to all issues, not only those created by themselves. For more information about enabling anonymous access, see <xref linkend="webissues.custom.settings"/>.</para>
+      <para>You can also enable anonymous access to allow external users to see all issues from public projects using the Web Client, without having to log in. However, keep in mind that in that case all users will have access to all issues, not only those created by themselves. For more information about enabling anonymous access, see <xref linkend="webissues.custom.access"/>.</para>
 
       <para>Note that the sender is not subscribed to an existing issue when adding a comment. Also an automatic response is not sent in that case. Any other recipients of the email are not automatically subscribed to the created issue.</para>
 

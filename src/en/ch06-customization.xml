@@ -220,7 +220,7 @@
   </sect1>
 
   <sect1 id="webissues.custom.locale">
-    <title>Regional settings</title>
+    <title>Server settings</title>
 
     <para>The WebIssues system enables full localization &mdash; changing the language, time zone and format of numbers, date and time. The default system language is selected during installation (see <xref linkend="webissues.prep.installation"/>). To change the default system language, go to the Administration Panel and click <guilabel>Server Settings</guilabel>.</para>
 
@@ -258,15 +258,6 @@
       </mediaobject>
     </figure>
 
-  </sect1>
-
-  <sect1 id="webissues.custom.settings">
-    <title>Advanced settings</title>
-
-    <para>To change the advanced settings of the server, go to the Administration Panel and click <guilabel>Server Settings</guilabel>. This option is not available in the Desktop Client. Only the  system administrator can change these settings.</para>
-
-    <para>The <guilabel>Regional Options</guilabel> and <guilabel>Formats</guilabel> groups of options are described in <xref linkend="webissues.custom.locale"/>.</para>
-
     <para>The <guilabel>Page Size</guilabel> group of options allows you to specify the default number of projects displayed on a single page in the projects tree, the default number of issues per page in the list of issues, and the default number of elements per page in the issue history. Each user can choose their own preferred settings using the <guilabel>User Preferences</guilabel> command. These options only affect the Web Client, because the Desktop Client always displays all projects and issues and the complete history without pagination.</para>
 
     <figure>
@@ -275,6 +266,8 @@
         <imageobject><imagedata fileref="images/ch06-fig18.png" format="PNG"/></imageobject>
       </mediaobject>
     </figure>
+
+    <para>The analogous <guilabel>Mobile Page Size</guilabel> group of options allows you to specify the default number of projects displayed on a single page in the projects tree, the default number of issues per page in the list of issues, and the default number of elements per page in the issue history in the mobile version of the Web Client.</para>
 
     <para>Options from the <guilabel>View Settings</guilabel> group affect all users and all types of issues. When the <guilabel>Hide the ID column</guilabel> option is enabled, the ID column will not be displayed in the list of issues. When you hide the ID column, issues can still be sorted by this column, and the identifier of the selected issue will still be displayed in the <guilabel>Properties</guilabel> group in issue details view. When the <guilabel>Hide attributes with empty values</guilabel> option is enabled, attributes that don't have any value are not included in the issue details view. This option is useful when issue types contain a lot of attributes, which are not always used.</para>
 
@@ -295,6 +288,13 @@
         <imageobject><imagedata fileref="images/ch06-fig18-03.png" format="PNG"/></imageobject>
       </mediaobject>
     </figure>
+
+  </sect1>
+
+  <sect1 id="webissues.custom.access">
+    <title>Access settings</title>
+
+    <para>To change the access settings, go to the Administration Panel and click <guilabel>Access Settings</guilabel>. This option is not available in the Desktop Client. Only the system administrator can change these settings.</para>
 
     <para>The <guilabel>Enable anonymous access</guilabel> option enables read-only access to public projects without logging in to the Web Client. Note that when you enable anonymous access, all issues, comments and attachments from the public projects become accessible to everyone. The public content can also be indexed by web search engines if the server is accessible from the Internet. Anonymous users can use public views, but they cannot create their own views, use alerts or subscribe to issues. In addition, only registered and logged in users are allowed to add new issues and edit existing issues. Because of this, anonymous access is often used in combination with user self-registration (see below).</para>
 
@@ -322,6 +322,13 @@
       <title>Note</title>
       <para>For user self-registration to work, you must properly configure the emails. Sending notifications about pending registration requests also requires a working cron job. For more information, see <xref linkend="webissues.prep.notifications"/>.</para>
     </note>
+
+  </sect1>
+
+  <sect1 id="webissues.custom.settings">
+    <title>Advanced settings</title>
+
+    <para>To change the advanced settings of the server, go to the Administration Panel and click <guilabel>Advanced Settings</guilabel>. This option is not available in the Desktop Client. Only the  system administrator can change these settings.</para>
 
     <para>Options from the <guilabel>Limits</guilabel> group allow the system administrator to specify the maximum length of comments and the maximum size of attachments that can be added by users.</para>
 

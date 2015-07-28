@@ -35,7 +35,13 @@
       <varlistentry>
         <term>Server Settings</term>
         <listitem>
-          <para>Allows configuring the language settings, and other settings of the WebIssues server. See <xref linkend="webissues.custom.locale"/> and <xref linkend="webissues.custom.settings"/>.</para>
+          <para>Allows configuring the language settings, and other settings of the WebIssues server. See <xref linkend="webissues.custom.locale"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Access Settings</term>
+        <listitem>
+          <para>Allows configuring anonymous access and user self-registration. See <xref linkend="webissues.custom.access"/>.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -48,6 +54,12 @@
         <term>Inbox Settings</term>
         <listitem>
           <para>Allows configuring the email inbox for receiving emails. See <xref linkend="webissues.prep.inbox"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Advanced Settings</term>
+        <listitem>
+          <para>Allows configuring the remaining settings of the WebIssues server. See <xref linkend="webissues.custom.settings"/>.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -222,7 +234,7 @@
 
       <para>The WebIssues system does not allow to delete existing users, because it keeps all the historical information; for example, changes made by individual users. Instead, you disable access for selected users when they should no longer be able to use the system. Use the filtering options in the upper right corner of the list to hide disabled user accounts.</para>
 
-      <para>The WebIssues system allows users to register new accounts by themselves. For more information about configuring user self-registration, see <xref linkend="webissues.custom.settings"/>.</para>
+      <para>The WebIssues system allows users to register new accounts by themselves. For more information about configuring user self-registration, see <xref linkend="webissues.custom.access"/>.</para>
 
     </sect2>
 
@@ -290,7 +302,7 @@
 
     <note>
       <title>Note</title>
-      <para>For more information about user registration, please refer to <xref linkend="webissues.work.login"/>. You will find more information about enabling and configuring user self-registration in <xref linkend="webissues.custom.settings"/>.</para>
+      <para>For more information about user registration, please refer to <xref linkend="webissues.work.login"/>. You will find more information about enabling and configuring user self-registration in <xref linkend="webissues.custom.access"/>.</para>
     </note>
 
     <para>To see active registration requests that are waiting for approval, go to the Administration Panel and click <guilabel>Registration Requests</guilabel>. This function is not available in the Desktop Client.</para>
@@ -308,7 +320,7 @@
 
     <para>To reject the selected registration request, use the <guilabel>Reject Request</guilabel> command. The request will be removed from the list, and the user will receive an email notification that the request was rejected.</para>
 
-    <para>If you want to receive automatic notifications about new registration requests that are waiting for approval, enter your e-mail in the self-registration options. For more information, see <xref linkend="webissues.custom.settings"/>.</para>
+    <para>If you want to receive automatic notifications about new registration requests that are waiting for approval, enter your e-mail in the self-registration options. For more information, see <xref linkend="webissues.custom.access"/>.</para>
 
   </sect1>
 

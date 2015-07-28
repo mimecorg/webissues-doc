@@ -220,7 +220,7 @@
   </sect1>
 
   <sect1 id="webissues.custom.locale">
-    <title>Ustawienia regionalne</title>
+    <title>Ustawienia serwera</title>
 
     <para>System WebIssues umożliwia pełną lokalizację &mdash; zmianę języka, strefy czasowej, oraz formatu liczb, daty i czasu. Domyślny język systemu wybiera się podczas instalacji (patrz sekcja <xref linkend="webissues.prep.installation"/>). Aby zmienić domyślny język systemu, przejdź do Panelu administracyjnego i kliknij <guilabel>Ustawienia serwera</guilabel>.</para>
 
@@ -258,15 +258,6 @@
       </mediaobject>
     </figure>
 
-  </sect1>
-
-  <sect1 id="webissues.custom.settings">
-    <title>Ustawienia zaawansowane</title>
-
-    <para>Aby zmienić zaawansowane ustawienia serwera, przejdź do Panelu administracyjnego i kliknij <guilabel>Ustawienia serwera</guilabel>. Opcja ta nie jest dostępna w programie Desktop Client. Zmiany ustawień może dokonać jedynie administrator systemu.</para>
-
-    <para>Grupy opcji <guilabel>Ustawienia regionalne</guilabel> oraz <guilabel>Formaty</guilabel> zostały opisane w sekcji <xref linkend="webissues.custom.locale"/>.</para>
-
     <para>Grupa opcji <guilabel>Rozmiar strony</guilabel> umożliwia określenie domyślnej liczby spraw wyświetlanych na pojedynczej stronie w drzewie projektów i w liście spraw oraz domyślnej liczby elementów na stronie historii sprawy. Każdy użytkownik może natomiast wybrać własne preferowane ustawienia, korzystając z polecenia <guilabel>Ustawienia użytkownika</guilabel>. Opcje te wpływają jedynie na program Web Client, ponieważ program Desktop Client zawsze wyświetla wszystkie projekty i sprawy oraz pełną historię, bez podziału na strony.</para>
 
     <figure>
@@ -275,6 +266,8 @@
         <imageobject><imagedata fileref="images/ch06-fig18.png" format="PNG"/></imageobject>
       </mediaobject>
     </figure>
+
+    <para>Analogiczna grupa opcji <guilabel>Rozmiar strony mobilnej</guilabel> umożliwia zmianę liczby spraw wyświetlanych na pojedynczej stronie w drzewie projektów i w liście spraw oraz domyślnej liczby elementów na stronie historii sprawy w mobilnej wersji programu Web Client.</para>
 
     <para>Opcje w grupie <guilabel>Ustawienia widoków</guilabel> wpływają na wszystkich użytkowników i wszystkie typy spraw. Zaznaczenie opcji <guilabel>Ukryj kolumnę ID</guilabel> powoduje, że kolumna ID nie będzie wyświetlona w liście spraw. Po ukryciu kolumny ID, sprawy w dalszym ciągu mogą być domyślnie posortowane po tej kolumnie, a identyfikator wybranej sprawy będzie nadal wyświetlany w polu <guilabel>Właściwości</guilabel> szczegółów sprawy. Z kolei opcja <guilabel>Ukryj atrybuty z pustymi wartościami</guilabel> powoduje, że w szczegółach sprawy pomijane są atrybuty, które nie mają żadnej wartości. Opcja ta jest przydatna, jeśli typy spraw zawierają wiele atrybutów, które nie zawsze są wykorzystywane.</para>
 
@@ -295,6 +288,13 @@
         <imageobject><imagedata fileref="images/ch06-fig18-03.png" format="PNG"/></imageobject>
       </mediaobject>
     </figure>
+
+  </sect1>
+
+  <sect1 id="webissues.custom.access">
+    <title>Ustawienia dostępu</title>
+
+    <para>Aby zmienić ustawienia dostępu, przejdź do Panelu administracyjnego i kliknij <guilabel>Ustawienia dostępu</guilabel>. Opcja ta nie jest dostępna w programie Desktop Client. Zmiany ustawień może dokonać jedynie administrator systemu.</para>
 
     <para>Opcja <guilabel>Włącz dostęp anonimowy</guilabel> umożliwia dostęp tylko do odczytu do publicznych projektów bez logowania się do programu Web Client. Pamiętaj, że jeśli włączysz dostęp anonimowy, wszystkie sprawy, komentarze i załączniki w publicznych projektach będą dostępne dla wszystkich. Publiczna zawartość może być również indeksowana przez wyszukiwarki, jeśli serwer jest dostępny w Internecie. Anonimowi użytkownicy mogą używać publicznych widoków, ale nie mogą tworzyć własnych widoków, używać alertów ani subskrybować spraw. Dodatkowo, tylko zarejestrowani i zalogowani użytkownicy mają prawo dodawać nowe sprawy i edytować istniejące. Dlatego dostęp anonimowy jest często używany w połączeniu z rejestracją użytkowników (patrz niżej).</para>
 
@@ -322,6 +322,13 @@
       <title>Notatka</title>
       <para>Aby rejestracja użytkowników działała, musisz prawidłowo skonfigurować ustawienia e-maili. Wysyłanie powiadomień o nowych zgłoszeniach rejestracji wymaga również działającego zadania cyklicznego. Więcej informacji na ten temat znajdziesz w sekcji <xref linkend="webissues.prep.notifications"/>.</para>
     </note>
+
+  </sect1>
+
+  <sect1 id="webissues.custom.settings">
+    <title>Ustawienia zaawansowane</title>
+
+    <para>Aby zmienić zaawansowane ustawienia serwera, przejdź do Panelu administracyjnego i kliknij <guilabel>Ustawienia zaawansowane</guilabel>. Opcja ta nie jest dostępna w programie Desktop Client. Zmiany ustawień może dokonać jedynie administrator systemu.</para>
 
     <para>Opcje z grupy <guilabel>Ograniczenia</guilabel> umożliwiają administratorowi systemu określenie maksymalnej długości komentarzy oraz maksymalnej wielkości załączników, jakie mogą być dodawane przez użytkowników.</para>
 
